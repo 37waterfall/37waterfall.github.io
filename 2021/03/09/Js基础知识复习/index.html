@@ -6,7 +6,7 @@
 <meta property="og:description" content="敲一遍Markdown😎😎😎">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-03-09T02:44:41.000Z">
-<meta property="article:modified_time" content="2021-03-09T03:40:37.871Z">
+<meta property="article:modified_time" content="2021-03-09T05:55:33.394Z">
 <meta property="article:author" content="LJY">
 <meta property="article:tag" content="使用方法">
 <meta name="twitter:card" content="summary"><title>Js基础知识复习 | LJY_BLOG</title><link ref="canonical" href="http://example.com/2021/03/09/Js%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%A4%8D%E4%B9%A0/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
@@ -130,18 +130,69 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0">
         <h2 id="算术运算符">
           <a href="#算术运算符" class="heading-link"><i class="fas fa-link"></i></a><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h2>
       <ul>
+<li><p>Js 里面用二进制进行运算,不推荐用小数运算,不精确</p>
+</li>
 <li><blockquote>
-<p>Js D</p>
+<p>隐式转换<br>我们知道，”2”+1得到的结果其实是字符串21，但是”2”-1得到的结果却是数值1，这是因为计算机自动帮我们进行了“隐式转换”。<br>也就是说，-、*、/、%这几个符号会自动进行隐式转换。例如：</p>
+</blockquote>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var a = "4" + 3 - 6;</span><br><span class="line">console.log(a);</span><br><span class="line">输出结果：37</span><br></pre></td></tr></tbody></table></div></figure></li>
+<li><blockquote>
+<p>10 + null 结果为 10。<br>10 + undefined 结果为 NaN。<br>任何数据类型和 undefined 运算都是 NaN;<br>任何值和 null 运算，null 可看做 0 运算。</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p> 逻辑与 &amp;&amp;  and 两侧都为true  结果才是 true  只要有一侧为false  结果就为false<br>逻辑或 || or  两侧都为false  结果才是假 false  只要有一侧为true  结果就是true<br>&amp;&amp;比|| 的优先级高,分不清,用括号<br>结果是true or false</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>关系运算符：&lt;、&gt; &lt;= &gt;=等。关系运算符，得到的运算结果都是布尔值：要么是true，要么是false。</p>
+</blockquote>
+</li>
+</ul>
+
+        <h2 id="常用类型转换">
+          <a href="#常用类型转换" class="heading-link"><i class="fas fa-link"></i></a><a href="#常用类型转换" class="headerlink" title="常用类型转换"></a>常用类型转换</h2>
+      <ul>
+<li><blockquote>
+<p>显示类型转换<br>toString()<br>String()<br>Number()<br>parseInt(string)<br>parseFloat(string)<br>Boolean()</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>隐式类型转换<br>isNaN ()<br>自增/自减运算符：++、—-<br>正号/负号：+a、-a<br>加号：+<br>运算符：-、*、/</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>隐式类型转换（特殊）<br>逻辑运算符：&amp;&amp;、||、！ 。非布尔值进行与或运算时，会先将其转换为布尔值，<br>然后再运算，但运算结果是原值。</p>
 </blockquote>
 </li>
 </ul>
 
         <h2 id="循环">
           <a href="#循环" class="heading-link"><i class="fas fa-link"></i></a><a href="#循环" class="headerlink" title="循环"></a>循环</h2>
-      
+      <p>循环的目的：可以重复执行某些代码</p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// 打印倒三角形案例</span><br><span class="line">var str = '';</span><br><span class="line">for (var i = 1; i &lt;= 10; i++) { // 外层循环控制行数</span><br><span class="line">    for (var j = i; j &lt;= 10; j++) { // 里层循环打印的个数不一样  j = i</span><br><span class="line">        str = str + '★';</span><br><span class="line">    }</span><br><span class="line">    str += '\n';</span><br><span class="line">}</span><br><span class="line">console.log(str);</span><br></pre></td></tr></tbody></table></div></figure>
+<hr>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// break 退出整个循环</span><br><span class="line">for (var i = 1; i &lt;= 5; i++) {</span><br><span class="line">    if (i == 3) {</span><br><span class="line">        break;</span><br><span class="line">    }</span><br><span class="line">    console.log('我正在吃第' + i + '个包子');</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+
         <h2 id="数组">
           <a href="#数组" class="heading-link"><i class="fas fa-link"></i></a><a href="#数组" class="headerlink" title="数组"></a>数组</h2>
       
+        <h3 id="创建方式">
+          <a href="#创建方式" class="heading-link"><i class="fas fa-link"></i></a><a href="#创建方式" class="headerlink" title="创建方式"></a>创建方式</h3>
+      <figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var arr = new Array(); // 创建了一个空的数组</span><br><span class="line">var arr = []; // 创建了一个空的数组</span><br><span class="line">var arr1 = [1, 2, 'pink老师', true];</span><br></pre></td></tr></tbody></table></div></figure>
+<p>数组遍历,添加长度,都可以用length方法</p>
+
+        <h3 id="翻转数组">
+          <a href="#翻转数组" class="heading-link"><i class="fas fa-link"></i></a><a href="#翻转数组" class="headerlink" title="翻转数组"></a>翻转数组</h3>
+      <p>从后往前,赋值给新数组</p>
+
+        <h3 id="冒泡排序">
+          <a href="#冒泡排序" class="heading-link"><i class="fas fa-link"></i></a><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3>
+      <figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">//var arr = [5, 4, 3, 2, 1];</span><br><span class="line">  var arr = [4, 1, 2, 3, 5];</span><br><span class="line">  for (var i = 0; i &lt;= arr.length - 1; i++) { // 外层循环管趟数 </span><br><span class="line">   for (var j = 0; j &lt;= arr.length - i - 1; j++) { </span><br><span class="line">  // 里面的循环管 每一趟的交换次数</span><br><span class="line">  // 内部交换2个变量的值 前一个和后面一个数组元素相比较</span><br><span class="line">     if (arr[j] &lt; arr[j + 1]) {</span><br><span class="line">       var temp = arr[j];</span><br><span class="line">       arr[j] = arr[j + 1];</span><br><span class="line">       arr[j + 1] = temp;</span><br><span class="line">      } </span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">  console.log(arr);</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+
         <h2 id="arguments使用">
           <a href="#arguments使用" class="heading-link"><i class="fas fa-link"></i></a><a href="#arguments使用" class="headerlink" title="arguments使用"></a>arguments使用</h2>
       
@@ -171,15 +222,19 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0">
           变量类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">4.</span> <span class="toc-text">
           字符串</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%83%E5%B0%94%E5%9E%8B"><span class="toc-number">5.</span> <span class="toc-text">
           布尔型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">6.</span> <span class="toc-text">
-          算术运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AF"><span class="toc-number">7.</span> <span class="toc-text">
-          循环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E7%BB%84"><span class="toc-number">8.</span> <span class="toc-text">
-          数组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#arguments%E4%BD%BF%E7%94%A8"><span class="toc-number">9.</span> <span class="toc-text">
-          arguments使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0"><span class="toc-number">10.</span> <span class="toc-text">
-          函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-number">11.</span> <span class="toc-text">
-          变量作用域</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1"><span class="toc-number">12.</span> <span class="toc-text">
-          创建对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Math%E5%AF%B9%E8%B1%A1"><span class="toc-number">13.</span> <span class="toc-text">
-          Math对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Date%E5%AF%B9%E8%B1%A1"><span class="toc-number">14.</span> <span class="toc-text">
-          Date对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0"><span class="toc-number">15.</span> <span class="toc-text">
-          数组常用函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0"><span class="toc-number">16.</span> <span class="toc-text">
+          算术运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">7.</span> <span class="toc-text">
+          常用类型转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AF"><span class="toc-number">8.</span> <span class="toc-text">
+          循环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E7%BB%84"><span class="toc-number">9.</span> <span class="toc-text">
+          数组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E6%96%B9%E5%BC%8F"><span class="toc-number">9.1.</span> <span class="toc-text">
+          创建方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BF%BB%E8%BD%AC%E6%95%B0%E7%BB%84"><span class="toc-number">9.2.</span> <span class="toc-text">
+          翻转数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F"><span class="toc-number">9.3.</span> <span class="toc-text">
+          冒泡排序</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#arguments%E4%BD%BF%E7%94%A8"><span class="toc-number">10.</span> <span class="toc-text">
+          arguments使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0"><span class="toc-number">11.</span> <span class="toc-text">
+          函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-number">12.</span> <span class="toc-text">
+          变量作用域</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1"><span class="toc-number">13.</span> <span class="toc-text">
+          创建对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Math%E5%AF%B9%E8%B1%A1"><span class="toc-number">14.</span> <span class="toc-text">
+          Math对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Date%E5%AF%B9%E8%B1%A1"><span class="toc-number">15.</span> <span class="toc-text">
+          Date对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0"><span class="toc-number">16.</span> <span class="toc-text">
+          数组常用函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0"><span class="toc-number">17.</span> <span class="toc-text">
           字符串常用函数</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/header.jpg" alt="avatar"></div><p class="sidebar-ov-author__text">LJY_BLOG</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">3</div><div class="sidebar-ov-state-item__name">Archives</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">2</div><div class="sidebar-ov-state-item__name">Tags</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1.0.1/dist/canvas-nest.min.js" color="0,0,0" opacity="0.6" count="99" zIndex="-1"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script><script type="text/javascript" src="/js/clicklove.js"></script>
 <script type="text/javascript" src="/js/snow.js"></script></body></html>
