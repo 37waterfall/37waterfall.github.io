@@ -1,12 +1,12 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/icon16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/favicon32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="开始">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/icon16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/favicon32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="Vue介绍">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vue学习笔记">
 <meta property="og:url" content="http://example.com/2021/03/09/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="LJY_BLOG">
-<meta property="og:description" content="开始">
+<meta property="og:description" content="Vue介绍">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-03-09T06:17:25.000Z">
-<meta property="article:modified_time" content="2021-03-10T03:13:13.714Z">
+<meta property="article:modified_time" content="2021-03-10T08:03:40.486Z">
 <meta property="article:author" content="LJY">
 <meta property="article:tag" content="学习笔记">
 <meta name="twitter:card" content="summary"><title>Vue学习笔记 | LJY_BLOG</title><link ref="canonical" href="http://example.com/2021/03/09/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
@@ -35,6 +35,153 @@ var CONFIG = {
 
 window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-</head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">主页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">档案</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/reading/"><span class="header-nav-menu-item__icon"><i class="fas fa-book"></i></span><span class="header-nav-menu-item__text">阅读</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">LJY_BLOG</div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><div class="sticky-top" data-popover="Sticky" data-popover-pos="up"><span class="sticky-top__icon"><i class="fas fa-thumbtack"></i></span></div><h1 class="post-title">Vue学习笔记</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2021-03-09</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2021-03-10</span></span></div></header><div class="post-body"><p>开始</p>
-</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="http://example.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="post-share"><div class="social-share" data-sites="qzone, qq, weibo, wechat, douban, linkedin, facebook, twitter, google">Share to: </div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2021/03/09/%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">常用算法</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2021/03/09/Js%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%A4%8D%E4%B9%A0/"><span class="paginator-prev__text">Js基础知识复习</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/header.jpg" alt="avatar"></div><p class="sidebar-ov-author__text">LJY_BLOG</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">8</div><div class="sidebar-ov-state-item__name">Archives</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">3</div><div class="sidebar-ov-state-item__name">Tags</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script><script type="text/javascript" src="/js/clicklove.js"></script>
-<script type="text/javascript" src="/js/snow.js"></script></body></html>
+</head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">主页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">档案</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/reading/"><span class="header-nav-menu-item__icon"><i class="fas fa-book"></i></span><span class="header-nav-menu-item__text">阅读</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">LJY_BLOG</div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><div class="sticky-top" data-popover="Sticky" data-popover-pos="up"><span class="sticky-top__icon"><i class="fas fa-thumbtack"></i></span></div><h1 class="post-title">Vue学习笔记</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2021-03-09</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2021-03-10</span></span></div></header><div class="post-body"><h1 id="Vue介绍">
+          <a href="#Vue介绍" class="heading-link"><i class="fas fa-link"></i></a><a href="#Vue介绍" class="headerlink" title="Vue介绍"></a>Vue介绍</h1>
+      <span id="more"></span>
+
+        <h2 id="Vue框架的特点">
+          <a href="#Vue框架的特点" class="heading-link"><i class="fas fa-link"></i></a><a href="#Vue框架的特点" class="headerlink" title="Vue框架的特点"></a>Vue框架的特点</h2>
+      <p>模板渲染：基于 html 的模板语法，学习成本低。<br>响应式的更新机制：数据改变之后，视图会自动刷新。【重要】<br>渐进式框架<br>组件化/模块化</p>
+
+        <h2 id="常见的插件">
+          <a href="#常见的插件" class="heading-link"><i class="fas fa-link"></i></a><a href="#常见的插件" class="headerlink" title="常见的插件"></a>常见的插件</h2>
+      <p>常见的插件<br>Webpack：代码模块化构建打包工具。<br>Gulp：基于流的自动化构建工具。<br>Babel：使用最新的 规范来编写 js。<br>Vue：构建数据驱动的Web界面的渐进式框架<br>Express：基于 Node.js 平台，快速、开放、极简的 Web 开发框架。</p>
+<p>以上这些包，都可以通过 NPM 这个包管理工具来安装。</p>
+
+        <h2 id="引用方式">
+          <a href="#引用方式" class="heading-link"><i class="fas fa-link"></i></a><a href="#引用方式" class="headerlink" title="引用方式"></a>引用方式</h2>
+      <ol>
+<li>方式一：（CDN的方式进行引用）</li>
+<li>方式二：（下载 vue.js 文件）</li>
+<li>方式三：（NPM的方式安装vue）</li>
+<li>利用 vue-cli 新建一个空的项目</li>
+<li><blockquote>
+<p>Vue 提供一个官方命令行工具，可用于快速搭建大型单页应用。</p>
+</blockquote>
+</li>
+<li>该工具为现代化的前端开发工作流提供了开箱即用的构建配置。</li>
+<li>只需几分钟即可创建并启动一个带热重载、保存时静态检查以及可用于生产环境的构建配置的项目。</li>
+</ol>
+
+        <h2 id="Vue项目结构分析">
+          <a href="#Vue项目结构分析" class="heading-link"><i class="fas fa-link"></i></a><a href="#Vue项目结构分析" class="headerlink" title="Vue项目结构分析"></a>Vue项目结构分析</h2>
+      <p>buid：打包配置的文件夹<br>config：webpack对应的配置<br>src：开发项目的源码<br>App.vue：入口组件。.vue文件都是组件。<br>main.js：项目入口文件。<br>static：存放静态资源<br>.babelrc：解析ES6的配置文件<br>.editorcofnig：编辑器的配置<br>.postcssrc.js：html添加前缀的配置<br>index.html：单页面的入口。通过 webpack打包后，会把 src 源码进行编译，插入到这个 html 里面来。<br>package.json：项目的基础配置，包含版本号、脚本命令、项目依赖库、开发依赖库、引擎等。</p>
+
+        <h1 id="Vue系统指令">
+          <a href="#Vue系统指令" class="heading-link"><i class="fas fa-link"></i></a><a href="#Vue系统指令" class="headerlink" title="Vue系统指令"></a>Vue系统指令</h1>
+      <p>插值表达式,两个大括号<br>可以填写变量，实时渲染<br>支持内容</p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">{{ number + 1 }}</span><br><span class="line">{{ ok ? 'YES' : 'NO' }}</span><br><span class="line">{{ name == 'smyhvae' ? 'true' : 'false' }}</span><br><span class="line">{{ message.split('').reverse().join('') }}</span><br></pre></td></tr></tbody></table></div></figure>
+
+<p>v-cloak</p>
+<blockquote>
+<p>v-cloak指令和CSS 规则一起用的时候，能够解决差值表达式闪烁的问题<br>（即：可以隐藏未编译的标签直到实例准备完毕）。</p>
+</blockquote>
+<p>v-text</p>
+<blockquote>
+<p>差值表达式和 v-text 的区别<br>区别1： v-text 没有闪烁的问题，因为它是放在属性里的。<br>区别2 :插值表达式只会替换自己的这个占位符，并不会把整个元素的内容清空。<br>v-text 会覆盖元素中原本的内容。初始状态还是里面的内容，<br>执行v-text后，覆盖原有数据</p>
+</blockquote>
+<p>v-html</p>
+<blockquote>
+<p>v-text是纯文本，而v-html会被解析成html元素。<br>使用v-html渲染数据可能会非常危险，因为它很容易导致 XSS（跨站脚本） 攻击</p>
+</blockquote>
+<p>v-bind</p>
+<blockquote>
+<p>动态绑定，值可以变化<br>主要绑定属性<br>如：<code>&lt;img v-bind:src="imageSrc +'smyhvaeString'"&gt;</code><br>v-bind的属性值里，可以写合法的 js 表达式。</p>
+</blockquote>
+<p>v-on</p>
+<blockquote>
+<p>绑定事件<br>v-on:click：点击事件<br>v-on:click<br>v-on:keydown<br>v-on:keyup<br>v-on:mousedown<br>v-on:mouseover<br>v-on:submit<br>简写：@click=””</p>
+</blockquote>
+
+        <h1 id="Vue事件修饰符">
+          <a href="#Vue事件修饰符" class="heading-link"><i class="fas fa-link"></i></a><a href="#Vue事件修饰符" class="headerlink" title="Vue事件修饰符"></a>Vue事件修饰符</h1>
+      <blockquote>
+<p>.stop 阻止冒泡。本质是调用 event.stopPropagation()。<br>.prevent 阻止默认事件（默认行为）。本质是调用 event.preventDefault()。<br>.capture 添加事件监听器时，使用捕获的方式（也就是说，事件采用捕获的方式，而不是采用冒泡的方式）。<br>.self 只有当事件在该元素本身（比如不是子元素）触发时，才会触发回调。<br>.once 事件只触发一次。<br>.native 监听组件根元素的原生事件。</p>
+</blockquote>
+
+        <h1 id="Vue系统指令2">
+          <a href="#Vue系统指令2" class="heading-link"><i class="fas fa-link"></i></a><a href="#Vue系统指令2" class="headerlink" title="Vue系统指令2"></a>Vue系统指令2</h1>
+      <p>v-model</p>
+<blockquote>
+<p>v-model：双向数据绑定<br>重点：双向数据绑定，只能用于表单元素，或者用于自定义组件。<br>v-bind 绑定的是属性，属性用来修饰元素的，数据只能单向绑定<br><code> &lt;input type="text" id="username" v-model="myAccount.username"&gt;</code><br><code> &lt;img v-bind:src="imageSrc +'smyhvaeString'"&gt;</code><br>注意v-model后面没有冒号</p>
+</blockquote>
+<p>v-for</p>
+<ul>
+<li>用于遍历数组、对象等<br>会复用同样元素，一般要加key，</li>
+</ul>
+<p>v-if</p>
+<ul>
+<li>真实操作dom，删除添加元素，<br>对性能有要求，少量操作可用</li>
+</ul>
+<p>v-show</p>
+<ul>
+<li>控制显示与隐藏属性，<br>控制属性，多数操作推荐使用</li>
+</ul>
+
+        <h1 id="自定义过滤器">
+          <a href="#自定义过滤器" class="heading-link"><i class="fas fa-link"></i></a><a href="#自定义过滤器" class="headerlink" title="自定义过滤器"></a>自定义过滤器</h1>
+      <p>相当于查找替换<br>一种用 管道符 | 实现过滤<br>一种用Vue.filer</p>
+
+        <h1 id="v-on的按键修饰符">
+          <a href="#v-on的按键修饰符" class="heading-link"><i class="fas fa-link"></i></a><a href="#v-on的按键修饰符" class="headerlink" title="v-on的按键修饰符"></a>v-on的按键修饰符</h1>
+      <p>可自定义按键<br>Vue内置的按键修饰符：<br>    .enter<br>    .tab<br>    .delete (捕获 “删除” 和 “退格” 键)<br>    .esc<br>    .space<br>    .up<br>    .down<br>    .left<br>    .right<br>@keyup.enter=”addData”表示：按住enter键后，执行addData()方法。全称是v-on:key.enter=”addData”。</p>
+
+        <h1 id="生命周期函数">
+          <a href="#生命周期函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#生命周期函数" class="headerlink" title="生命周期函数"></a>生命周期函数</h1>
+      <p>把握时机，<br>该什么时候干什么事</p>
+<p>这个阶段，看方法</p>
+<blockquote>
+<p>beforeMount：此时已经完成了模板的编译，但是还没有挂载到页面中<br>mounted：此时，已经将编译好的模板，挂载到了页面指定的容器中显示。（mounted之后，表示真实DOM渲染完了，可以操作DOM了）</p>
+</blockquote>
+<p>这个阶段，看Dom元素</p>
+<blockquote>
+<p>在 beforeMount 执行的时候，页面中的元素，还没有被真正替换过来，只是之前写的一些模板字符串<br>mounted 是 实例创建期间的最后一个生命周期函数，当执行完 mounted 就表示，实例已经被完全创建好了</p>
+</blockquote>
+<hr>
+<p>这个阶段，看数据</p>
+<blockquote>
+<p>beforeUpdate：状态更新之前执行此函数， 此时 data 中的状态值是最新的，<br>但是界面上显示的 数据还是旧的，因为此时还没有开始重新渲染DOM节点<br>updated：实例更新完毕之后调用此函数，此时 data 中的状态值 和 界面上显示的数据，<br>都已经完成了更新，界面已经被重新渲染好了。<br>PS：数据发生变化时，会触发这两个方法。不过，我们一般用watch来做。</p>
+</blockquote>
+<hr>
+<p>看看有那些资源要清除，还有可用的</p>
+<blockquote>
+<p>beforeDestroy：实例销毁之前调用。在这一步，实例仍然完全可用。<br>destoried：</p>
+</blockquote>
+
+        <h1 id="Vue中的Ajax请求">
+          <a href="#Vue中的Ajax请求" class="heading-link"><i class="fas fa-link"></i></a><a href="#Vue中的Ajax请求" class="headerlink" title="Vue中的Ajax请求"></a>Vue中的Ajax请求</h1>
+      <p>vue-resource的介绍</p>
+<blockquote>
+<p>vue.js文件向Windows对象暴露了Vue这个关键词；<br>vue-resource.js向Vue身上挂载了this.$http这个属性。<br>于是，我们可以直接写this.$http.get或者this.$http.post或者this.$http.jsonp来调用。</p>
+</blockquote>
+<p>像事件一样思考：<br>事件，事件源，事件方法<br>用什么方法请求<br>去哪里请求<br>请求成功，失败</p>
+<p>get和post的区别：<br>传入内容不一样<br>安全性不一样<br>传递次数不一样</p>
+
+        <h1 id="JSONP原理">
+          <a href="#JSONP原理" class="heading-link"><i class="fas fa-link"></i></a><a href="#JSONP原理" class="headerlink" title="JSONP原理"></a>JSONP原理</h1>
+      
+        <h1 id="Vue动画">
+          <a href="#Vue动画" class="heading-link"><i class="fas fa-link"></i></a><a href="#Vue动画" class="headerlink" title="Vue动画"></a>Vue动画</h1>
+      
+        <h1 id="Vue组件">
+          <a href="#Vue组件" class="heading-link"><i class="fas fa-link"></i></a><a href="#Vue组件" class="headerlink" title="Vue组件"></a>Vue组件</h1>
+      
+        <h1 id="Vue-router路由">
+          <a href="#Vue-router路由" class="heading-link"><i class="fas fa-link"></i></a><a href="#Vue-router路由" class="headerlink" title="Vue-router路由"></a>Vue-router路由</h1>
+      </div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="http://example.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="post-share"><div class="social-share" data-sites="qzone, qq, weibo, wechat, douban, linkedin, facebook, twitter, google">Share to: </div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2021/03/09/%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">常用算法</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2021/03/09/Js%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%A4%8D%E4%B9%A0/"><span class="paginator-prev__text">Js基础知识复习</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Vue%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">
+          Vue介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Vue%E6%A1%86%E6%9E%B6%E7%9A%84%E7%89%B9%E7%82%B9"><span class="toc-number">1.1.</span> <span class="toc-text">
+          Vue框架的特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E6%8F%92%E4%BB%B6"><span class="toc-number">1.2.</span> <span class="toc-text">
+          常见的插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="toc-number">1.3.</span> <span class="toc-text">
+          引用方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vue%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84%E5%88%86%E6%9E%90"><span class="toc-number">1.4.</span> <span class="toc-text">
+          Vue项目结构分析</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Vue%E7%B3%BB%E7%BB%9F%E6%8C%87%E4%BB%A4"><span class="toc-number">2.</span> <span class="toc-text">
+          Vue系统指令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Vue%E4%BA%8B%E4%BB%B6%E4%BF%AE%E9%A5%B0%E7%AC%A6"><span class="toc-number">3.</span> <span class="toc-text">
+          Vue事件修饰符</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Vue%E7%B3%BB%E7%BB%9F%E6%8C%87%E4%BB%A42"><span class="toc-number">4.</span> <span class="toc-text">
+          Vue系统指令2</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E8%BF%87%E6%BB%A4%E5%99%A8"><span class="toc-number">5.</span> <span class="toc-text">
+          自定义过滤器</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#v-on%E7%9A%84%E6%8C%89%E9%94%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6"><span class="toc-number">6.</span> <span class="toc-text">
+          v-on的按键修饰符</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%87%BD%E6%95%B0"><span class="toc-number">7.</span> <span class="toc-text">
+          生命周期函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Vue%E4%B8%AD%E7%9A%84Ajax%E8%AF%B7%E6%B1%82"><span class="toc-number">8.</span> <span class="toc-text">
+          Vue中的Ajax请求</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JSONP%E5%8E%9F%E7%90%86"><span class="toc-number">9.</span> <span class="toc-text">
+          JSONP原理</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Vue%E5%8A%A8%E7%94%BB"><span class="toc-number">10.</span> <span class="toc-text">
+          Vue动画</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Vue%E7%BB%84%E4%BB%B6"><span class="toc-number">11.</span> <span class="toc-text">
+          Vue组件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Vue-router%E8%B7%AF%E7%94%B1"><span class="toc-number">12.</span> <span class="toc-text">
+          Vue-router路由</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/header.jpg" alt="avatar"></div><p class="sidebar-ov-author__text">LJY_BLOG</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">8</div><div class="sidebar-ov-state-item__name">Archives</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">3</div><div class="sidebar-ov-state-item__name">Tags</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script></body></html>
