@@ -1,0 +1,380 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/icon16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/favicon32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="主要复习了Js的基础知识，变量，内部的方法等。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Js基础知识复习">
+<meta property="og:url" content="http://example.com/2021/03/09/Js%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%A4%8D%E4%B9%A0/index.html">
+<meta property="og:site_name" content="LJY_BLOG">
+<meta property="og:description" content="主要复习了Js的基础知识，变量，内部的方法等。">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-03-09T02:44:41.000Z">
+<meta property="article:modified_time" content="2021-03-11T09:20:51.055Z">
+<meta property="article:author" content="LJY">
+<meta property="article:tag" content="学习笔记">
+<meta name="twitter:card" content="summary"><title>Js基础知识复习 | LJY_BLOG</title><link ref="canonical" href="http://example.com/2021/03/09/Js%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%A4%8D%E4%B9%A0/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"Copy","copySuccess":"Copy Success","copyError":"Copy Error"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">主页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">档案</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/reading/"><span class="header-nav-menu-item__icon"><i class="fas fa-book"></i></span><span class="header-nav-menu-item__text">阅读</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">LJY_BLOG</div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">Js基础知识复习</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">创建</span><span class="post-meta-item__value">2021-03-09</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新</span><span class="post-meta-item__value">2021-03-11</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon"><i class="far fa-clock"></i></span><span class="post-meta-item__info">阅读时间</span><span class="post-meta-item__value">29m</span></span><span class="post-meta-item post-meta-item--visitors"><span class="post-meta-item__icon"><i class="fas fa-eye"></i></span><span class="post-meta-item__info">Visited</span><span class="post-meta-item__value" id="busuanzi_value_page_pv"></span></span></div></header><div class="post-body"><p>主要复习了Js的基础知识，变量，内部的方法等。</p>
+<span id="more"></span>
+<p>敲一遍Markdown😎😎😎</p>
+
+        <h2 id="JS输入输出语句">
+          <a href="#JS输入输出语句" class="heading-link"><i class="fas fa-link"></i></a><a href="#JS输入输出语句" class="headerlink" title="JS输入输出语句"></a>JS输入输出语句</h2>
+      <figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 这是一个输入框</span><br><span class="line">prompt('请输入您的年龄');</span><br><span class="line">// alert 弹出警示框 输出的 展示给用户的</span><br><span class="line">alert('计算的结果是');</span><br><span class="line">// console 控制台输出 给程序员测试用的  </span><br><span class="line">console.log('我是程序员能看到的');</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h2 id="变量">
+          <a href="#变量" class="heading-link"><i class="fas fa-link"></i></a><a href="#变量" class="headerlink" title="变量"></a>变量</h2>
+      <p>变量声明var, let, const</p>
+<ul>
+<li><blockquote>
+<p>用 var 定义的全部变量，有时候会污染整个 js 的作用域。我们在如今的实战中，基本都是用的 ES6 语法，所以请尽量避免使用 var 定义变量。</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>用 let 声明的变量，只在局部（块级作用域内）起作用。</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>const：定义常量在程序开发中，有些变量是希望声明后，在业务层就不再发生变化，此时可以用 const 来定义常量。常量就是值（内存地址）不能变化的量。</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>let 和 const 的特点【重要】<br>不存在变量提升<br>禁止重复声明<br>支持块级作用域<br>暂时性死区</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>暂时性死区 DTC: ES6 规定：使用 let/const 声明的变量，会使区块形成封闭的作用域。若在声明之前使用变量，就会报错。</p>
+</blockquote>
+</li>
+</ul>
+
+        <h2 id="变量类型">
+          <a href="#变量类型" class="heading-link"><i class="fas fa-link"></i></a><a href="#变量类型" class="headerlink" title="变量类型"></a>变量类型</h2>
+      <ul>
+<li><blockquote>
+<p>JS中一共有六种数据类型<br>基本数据类型（值类型）：String 字符串、Number 数值、Boolean 布尔值、Null 空值、Undefined 未定义。</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>引用数据类型（引用类型）：Object 对象。</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>数据类型之间最大的区别：<br>基本数据类型：参数赋值的时候，传数值。<br>引用数据类型：参数赋值的时候，传地址（修改的同一片内存空间）。</p>
+</blockquote>
+</li>
+</ul>
+
+        <h2 id="字符串">
+          <a href="#字符串" class="heading-link"><i class="fas fa-link"></i></a><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2>
+      <ul>
+<li><blockquote>
+<p>语法<br>字符串型可以是引号中的任意文本，其语法为：双引号 “” 或者单引号 ‘’,<br>只能成对使用，且双引号里不能放双引号，交替使用。</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>var f = haha; // 没使用引号，到这里会直接报错。因为会被认为是js代码，但是之前并没有定义 haha。</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>转义字符<br>在字符串中我们可以使用\作为转义字符，当表示一些特殊符号时可以使用\进行转义。</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>拼接语法：<br>字符串 + 任意数据类型 = 拼接之后的新字符串;</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>ES6中引入了模板字符串，让我们省去了字符串拼接的烦恼。</p>
+</blockquote>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var name = 'baidu';</span><br><span class="line">var age = '26';</span><br><span class="line">console.log('我是' + name + ',age:' + age); //传统写法</span><br><span class="line">console.log(`我是${name},age:${age}`); //ES6 写法。注意语法格式</span><br></pre></td></tr></tbody></table></div></figure></li>
+<li><blockquote>
+<p>模板字符串中可以调用函数</p>
+</blockquote>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function getName() {</span><br><span class="line">	return 'baidu';</span><br><span class="line">}</span><br><span class="line">console.log(`www.${getName()}.com`); // 打印结果：www.baidu.com</span><br></pre></td></tr></tbody></table></div></figure></li>
+</ul>
+
+        <h2 id="布尔型">
+          <a href="#布尔型" class="heading-link"><i class="fas fa-link"></i></a><a href="#布尔型" class="headerlink" title="布尔型"></a>布尔型</h2>
+      <ul>
+<li><blockquote>
+<p>布尔值：Boolean<br>布尔型有两个值：true 和 false。主要用来做逻辑判断： true 表示真，false 表示假。</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>布尔型和数字型相加时， true 按 1 来算 ，false 按 0 来算。</p>
+</blockquote>
+</li>
+</ul>
+
+        <h2 id="算术运算符">
+          <a href="#算术运算符" class="heading-link"><i class="fas fa-link"></i></a><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h2>
+      <ul>
+<li><p>Js 里面用二进制进行运算,不推荐用小数运算,不精确</p>
+</li>
+<li><blockquote>
+<p>隐式转换<br>我们知道，”2”+1得到的结果其实是字符串21，但是”2”-1得到的结果却是数值1，这是因为计算机自动帮我们进行了“隐式转换”。<br>也就是说，-、*、/、%这几个符号会自动进行隐式转换。例如：</p>
+</blockquote>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var a = "4" + 3 - 6;</span><br><span class="line">console.log(a);</span><br><span class="line">输出结果：37</span><br></pre></td></tr></tbody></table></div></figure></li>
+<li><blockquote>
+<p>10 + null 结果为 10。<br>10 + undefined 结果为 NaN。<br>任何数据类型和 undefined 运算都是 NaN;<br>任何值和 null 运算，null 可看做 0 运算。</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p> 逻辑与 &amp;&amp;  and 两侧都为true  结果才是 true  只要有一侧为false  结果就为false<br>逻辑或 || or  两侧都为false  结果才是假 false  只要有一侧为true  结果就是true<br>&amp;&amp;比|| 的优先级高,分不清,用括号<br>结果是true or false</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>关系运算符：&lt;、&gt; &lt;= &gt;=等。关系运算符，得到的运算结果都是布尔值：要么是true，要么是false。</p>
+</blockquote>
+</li>
+</ul>
+
+        <h2 id="常用类型转换">
+          <a href="#常用类型转换" class="heading-link"><i class="fas fa-link"></i></a><a href="#常用类型转换" class="headerlink" title="常用类型转换"></a>常用类型转换</h2>
+      <ul>
+<li><blockquote>
+<p>显示类型转换<br>toString()<br>String()<br>Number()<br>parseInt(string)<br>parseFloat(string)<br>Boolean()</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>隐式类型转换<br>isNaN ()<br>自增/自减运算符：++、—-<br>正号/负号：+a、-a<br>加号：+<br>运算符：-、*、/</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>隐式类型转换（特殊）<br>逻辑运算符：&amp;&amp;、||、！ 。非布尔值进行与或运算时，会先将其转换为布尔值，<br>然后再运算，但运算结果是原值。</p>
+</blockquote>
+</li>
+</ul>
+
+        <h2 id="循环">
+          <a href="#循环" class="heading-link"><i class="fas fa-link"></i></a><a href="#循环" class="headerlink" title="循环"></a>循环</h2>
+      <p>循环的目的：可以重复执行某些代码</p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// 打印倒三角形案例</span><br><span class="line">var str = '';</span><br><span class="line">for (var i = 1; i &lt;= 10; i++) { // 外层循环控制行数</span><br><span class="line">    for (var j = i; j &lt;= 10; j++) { // 里层循环打印的个数不一样  j = i</span><br><span class="line">        str = str + '★';</span><br><span class="line">    }</span><br><span class="line">    str += '\n';</span><br><span class="line">}</span><br><span class="line">console.log(str);</span><br></pre></td></tr></tbody></table></div></figure>
+<hr>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// break 退出整个循环</span><br><span class="line">for (var i = 1; i &lt;= 5; i++) {</span><br><span class="line">    if (i == 3) {</span><br><span class="line">        break;</span><br><span class="line">    }</span><br><span class="line">    console.log('我正在吃第' + i + '个包子');</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h2 id="数组">
+          <a href="#数组" class="heading-link"><i class="fas fa-link"></i></a><a href="#数组" class="headerlink" title="数组"></a>数组</h2>
+      
+        <h3 id="创建方式">
+          <a href="#创建方式" class="heading-link"><i class="fas fa-link"></i></a><a href="#创建方式" class="headerlink" title="创建方式"></a>创建方式</h3>
+      <figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var arr = new Array(); // 创建了一个空的数组</span><br><span class="line">var arr = []; // 创建了一个空的数组</span><br><span class="line">var arr1 = [1, 2, 'pink老师', true];</span><br></pre></td></tr></tbody></table></div></figure>
+<p>数组遍历,添加长度,都可以用length方法</p>
+
+        <h3 id="翻转数组">
+          <a href="#翻转数组" class="heading-link"><i class="fas fa-link"></i></a><a href="#翻转数组" class="headerlink" title="翻转数组"></a>翻转数组</h3>
+      <p>从后往前,赋值给新数组</p>
+
+        <h3 id="冒泡排序">
+          <a href="#冒泡排序" class="heading-link"><i class="fas fa-link"></i></a><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3>
+      <figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">//var arr = [5, 4, 3, 2, 1];</span><br><span class="line">  var arr = [4, 1, 2, 3, 5];</span><br><span class="line">  for (var i = 0; i &lt;= arr.length - 1; i++) { // 外层循环管趟数 </span><br><span class="line">   for (var j = 0; j &lt;= arr.length - i - 1; j++) { </span><br><span class="line">  // 里面的循环管 每一趟的交换次数</span><br><span class="line">  // 内部交换2个变量的值 前一个和后面一个数组元素相比较</span><br><span class="line">     if (arr[j] &lt; arr[j + 1]) {</span><br><span class="line">       var temp = arr[j];</span><br><span class="line">       arr[j] = arr[j + 1];</span><br><span class="line">       arr[j + 1] = temp;</span><br><span class="line">      } </span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">  console.log(arr);</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+
+        <h2 id="函数">
+          <a href="#函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#函数" class="headerlink" title="函数"></a>函数</h2>
+      <p>函数就是封装了一段可以被重复执行调用的代码块 目的： 就是让大量代码重复使用</p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function getSum(num1, num2) {</span><br><span class="line">          var sum = 0;</span><br><span class="line">          for (var i = num1; i &lt;= num2; i++) {</span><br><span class="line">              sum += i;</span><br><span class="line">          }</span><br><span class="line">          console.log(sum);</span><br><span class="line">      }</span><br><span class="line">getSum(1, 100);</span><br><span class="line">getSum(10, 50);</span><br><span class="line">getSum(1, 1000);</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h2 id="auguments使用">
+          <a href="#auguments使用" class="heading-link"><i class="fas fa-link"></i></a><a href="#auguments使用" class="headerlink" title="auguments使用"></a>auguments使用</h2>
+      <p>只有函数才有 arguments对象  而且是每个函数都内置好了这个arguments</p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">function fn() {</span><br><span class="line">           // 里面存储了所有传递过来的实参  arguments = [1,2,3]</span><br><span class="line">           // console.log(arguments); </span><br><span class="line">           // console.log(arguments.length);</span><br><span class="line">           // console.log(arguments[2]);</span><br><span class="line">           // 我们可以按照数组的方式遍历arguments</span><br><span class="line">           for (var i = 0; i &lt; arguments.length; i++) {</span><br><span class="line">               console.log(arguments[i]);</span><br><span class="line">           }</span><br><span class="line">       }</span><br><span class="line">       fn(1, 2, 3);</span><br><span class="line">       fn(1, 2, 3, 4, 5);</span><br><span class="line">       // 伪数组 并不是真正意义上的数组</span><br><span class="line">       // 1. 具有数组的 length 属性</span><br><span class="line">       // 2. 按照索引的方式进行存储的</span><br><span class="line">       // 3. 它没有真正数组的一些方法 pop()  push() 等等</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h2 id="变量作用域">
+          <a href="#变量作用域" class="heading-link"><i class="fas fa-link"></i></a><a href="#变量作用域" class="headerlink" title="变量作用域"></a>变量作用域</h2>
+      <p>js的作用域（es6）之前 ： 全局作用域   局部作用域<br>es6之后: 块级作用域<br>块级作用域 {}   if {}  for {}</p>
+
+        <h2 id="闭包">
+          <a href="#闭包" class="heading-link"><i class="fas fa-link"></i></a><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2>
+      <p>变量的空间没有消失,提高效率</p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">// 作用域链  ： 内部函数访问外部函数的变量，</span><br><span class="line">采取的是链式查找的方式来决定取那个值 </span><br><span class="line">这种结构我们称为作用域链   就近原则</span><br><span class="line">var num = 10;</span><br><span class="line">function fn() { // 外部函数</span><br><span class="line">	var num = 20;</span><br><span class="line">	function fun() { // 内部函数</span><br><span class="line">		num++;</span><br><span class="line">		console.log(num);</span><br><span class="line">	}</span><br><span class="line">	fun();</span><br><span class="line">	fun();</span><br><span class="line">	fun();</span><br><span class="line">}</span><br><span class="line">fn();</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+
+        <h2 id="创建对象">
+          <a href="#创建对象" class="heading-link"><i class="fas fa-link"></i></a><a href="#创建对象" class="headerlink" title="创建对象"></a>创建对象</h2>
+      
+        <h3 id="对象字面量创建对象">
+          <a href="#对象字面量创建对象" class="heading-link"><i class="fas fa-link"></i></a><a href="#对象字面量创建对象" class="headerlink" title="对象字面量创建对象"></a>对象字面量创建对象</h3>
+      <p>var obj = {};  // 创建了一个空的对象 </p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var obj = {</span><br><span class="line">                uname: '张三疯',</span><br><span class="line">                age: 18,</span><br><span class="line">                sex: '男',</span><br><span class="line">                sayHi: function() {</span><br><span class="line">                    console.log('hi~');</span><br><span class="line">                }</span><br><span class="line">            }</span><br></pre></td></tr></tbody></table></div></figure>
+<blockquote>
+<p>(1) 里面的属性或者方法我们采取键值对的形式  键 属性名 ： 值  属性值<br>    (2) 多个属性或者方法中间用逗号隔开的<br>    (3) 方法冒号后面跟的是一个匿名函数</p>
+</blockquote>
+<blockquote>
+<p>// 2. 使用对象<br>   // (1). 调用对象的属性 我们采取 对象名.属性名 . 我们理解为 的<br>   console.log(obj.uname);<br>   // (2). 调用属性还有一种方法 对象名[‘属性名’]<br>   console.log(obj[‘age’]);<br>   // (3) 调用对象的方法 sayHi   对象名.方法名() 千万别忘记添加小括号<br>   obj.sayHi();</p>
+</blockquote>
+
+        <h3 id="构造函数">
+          <a href="#构造函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h3>
+      <p>构造函数可以批量创建函数<br>要new一个对象,开辟新空间</p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// new 构造函数名();</span><br><span class="line">    function Star(uname, age, sex) {</span><br><span class="line">        this.name = uname;</span><br><span class="line">        this.age = age;</span><br><span class="line">        this.sex = sex;</span><br><span class="line">        this.sing = function(sang) {</span><br><span class="line">            console.log(sang);</span><br><span class="line"></span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    var ldh = new Star('刘德华', 18, '男'); // 调用函数返回的是一个对象</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h3 id="new关键字执行过程">
+          <a href="#new关键字执行过程" class="heading-link"><i class="fas fa-link"></i></a><a href="#new关键字执行过程" class="headerlink" title="new关键字执行过程"></a>new关键字执行过程</h3>
+      <blockquote>
+<p>  // 1. new 构造函数可以在内存中创建了一个空的对象<br>  // 2. this 就会指向刚才创建的空对象<br>  // 3. 执行构造函数里面的代码 给这个空对象添加属性和方法<br>  // 4. 返回这个对象</p>
+</blockquote>
+
+        <h2 id="Math对象">
+          <a href="#Math对象" class="heading-link"><i class="fas fa-link"></i></a><a href="#Math对象" class="headerlink" title="Math对象"></a>Math对象</h2>
+      <p>Math数学对象 不是一个构造函数 ，<br>所以我们不需要new 来调用 而是直接使用里面的属性和方法即可</p>
+<ul>
+<li><p>绝对值方法</p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">console.log(Math.abs(1)); // 1</span><br><span class="line">console.log(Math.abs(-1)); // 1</span><br><span class="line">console.log(Math.abs('-1')); // 隐式转换 会把字符串型 -1 转换为数字型</span><br><span class="line">console.log(Math.abs('pink')); // NaN </span><br></pre></td></tr></tbody></table></div></figure></li>
+<li><p>三个取整方法</p>
+<blockquote>
+<p>(1) Math.floor()   地板 向下取整  往最小了取值<br>(2) Math.ceil()   ceil 天花板 向上取整  往最大了取值<br>(3) Math.round()   四舍五入  其他数字都是四舍五入，但是 .5 特殊 它往大了取  </p>
+</blockquote>
+</li>
+<li><p>Math对象随机数方法<br>random() 返回一个随机的小数  0 =&lt; x &lt; 1</p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// 4. 我们想要得到两个数之间的随机整数 并且 包含这2个整数</span><br><span class="line">// Math.floor(Math.random() * (max - min + 1)) + min;</span><br><span class="line">function getRandom(min, max) {</span><br><span class="line">    return Math.floor(Math.random() * (max - min + 1)) + min;</span><br><span class="line">}</span><br><span class="line">console.log(getRandom(1, 10));</span><br><span class="line">// 5. 随机点名  </span><br><span class="line">var arr = ['张三', '张三丰', '张三疯子', '李四', '李思思', 'pink老师'];</span><br><span class="line">// console.log(arr[0]);</span><br><span class="line">console.log(arr[getRandom(0, arr.length - 1)]);</span><br></pre></td></tr></tbody></table></div></figure></li>
+</ul>
+
+        <h2 id="Date对象">
+          <a href="#Date对象" class="heading-link"><i class="fas fa-link"></i></a><a href="#Date对象" class="headerlink" title="Date对象"></a>Date对象</h2>
+      
+        <h3 id="Date-日期对象">
+          <a href="#Date-日期对象" class="heading-link"><i class="fas fa-link"></i></a><a href="#Date-日期对象" class="headerlink" title="Date() 日期对象"></a>Date() 日期对象</h3>
+      <p>是一个构造函数 必须使用new 来调用创建我们的日期对象</p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var arr = new Array(); // 创建一个数组对象</span><br><span class="line">var obj = new Object(); // 创建了一个对象实例</span><br><span class="line">// 1. 使用Date  如果没有参数 返回当前系统的当前时间</span><br><span class="line">var date = new Date();</span><br><span class="line">console.log(date);</span><br><span class="line"></span><br><span class="line">// 2. 参数常用的写法  数字型  2019, 10, 01 </span><br><span class="line">或者是 字符串型 '2019-10-1 8:8:8'</span><br><span class="line">var date1 = new Date(2019, 10, 1);</span><br><span class="line">console.log(date1); // 返回的是 11月 不是 10月 </span><br><span class="line">var date2 = new Date('2019-10-1 8:8:8');</span><br><span class="line">console.log(date2);</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h3 id="格式化日期">
+          <a href="#格式化日期" class="heading-link"><i class="fas fa-link"></i></a><a href="#格式化日期" class="headerlink" title="格式化日期"></a>格式化日期</h3>
+      <figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// 格式化日期 年月日 </span><br><span class="line"> var date = new Date();</span><br><span class="line"> console.log(date.getFullYear()); // 返回当前日期的年  2019</span><br><span class="line"> console.log(date.getMonth() + 1); // 月份 返回的月份小1个月   记得月份+1 呦</span><br><span class="line"> console.log(date.getDate()); // 返回的是 几号</span><br><span class="line"> console.log(date.getDay()); // 3  周一返回的是 1 周六返回的是 6 但是 周日返回的是 0</span><br><span class="line"> // 我们写一个 2019年 5月 1日 星期三</span><br><span class="line"> var year = date.getFullYear();</span><br><span class="line"> var month = date.getMonth() + 1;</span><br><span class="line"> var dates = date.getDate();</span><br><span class="line"> var arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];</span><br><span class="line"> var day = date.getDay();</span><br><span class="line"> console.log('今天是：' + year + '年' + month + '月' + dates + '日 ' + arr[day]);</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h3 id="Date总的毫秒数">
+          <a href="#Date总的毫秒数" class="heading-link"><i class="fas fa-link"></i></a><a href="#Date总的毫秒数" class="headerlink" title="Date总的毫秒数"></a>Date总的毫秒数</h3>
+      <figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// 1. 通过 valueOf()  getTime()</span><br><span class="line">var date = new Date();</span><br><span class="line">console.log(date.valueOf()); // 就是 我们现在时间 距离1970.1.1 总的毫秒数</span><br><span class="line">console.log(date.getTime());</span><br><span class="line">// 2. 简单的写法 (最常用的写法)</span><br><span class="line">var date1 = +new Date(); // +new Date()  返回的就是总的毫秒数</span><br><span class="line">console.log(date1);</span><br><span class="line">// 3. H5 新增的 获得总的毫秒数</span><br><span class="line">console.log(Date.now());</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h3 id="倒计时">
+          <a href="#倒计时" class="heading-link"><i class="fas fa-link"></i></a><a href="#倒计时" class="headerlink" title="倒计时"></a>倒计时</h3>
+      <figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">// 倒计时效果</span><br><span class="line">// 1.核心算法：输入的时间减去现在的时间就是剩余的时间，即倒计时 ，但是不能拿着时分秒相减，比如 05 分减去25分，结果会是负数的。</span><br><span class="line">// 2.用时间戳来做。用户输入时间总的毫秒数减去现在时间的总的毫秒数，得到的就是剩余时间的毫秒数。</span><br><span class="line">// 3.把剩余时间总的毫秒数转换为天、时、分、秒 （时间戳转换为时分秒）</span><br><span class="line">// 转换公式如下： </span><br><span class="line">//  d = parseInt(总秒数/ 60/60 /24);    //  计算天数</span><br><span class="line">//  h = parseInt(总秒数/ 60/60 %24)   //   计算小时</span><br><span class="line">//  m = parseInt(总秒数 /60 %60 );     //   计算分数</span><br><span class="line">//  s = parseInt(总秒数%60);            //   计算当前秒数</span><br><span class="line">function countDown(time) {</span><br><span class="line">    var nowTime = +new Date(); // 返回的是当前时间总的毫秒数</span><br><span class="line">    var inputTime = +new Date(time); // 返回的是用户输入时间总的毫秒数</span><br><span class="line">    var times = (inputTime - nowTime) / 1000; // times是剩余时间总的秒数 </span><br><span class="line">    var d = parseInt(times / 60 / 60 / 24); // 天</span><br><span class="line">    d = d &lt; 10 ? '0' + d : d;</span><br><span class="line">    var h = parseInt(times / 60 / 60 % 24); //时</span><br><span class="line">    h = h &lt; 10 ? '0' + h : h;</span><br><span class="line">    var m = parseInt(times / 60 % 60); // 分</span><br><span class="line">    m = m &lt; 10 ? '0' + m : m;</span><br><span class="line">    var s = parseInt(times % 60); // 当前的秒</span><br><span class="line">    s = s &lt; 10 ? '0' + s : s;</span><br><span class="line">    return d + '天' + h + '时' + m + '分' + s + '秒';</span><br><span class="line">}</span><br><span class="line">console.log(countDown('2021-2-21 18:00:00'));</span><br><span class="line">setInterval(function(){</span><br><span class="line">       console.log(countDown('2021-2-21 18:00:00'));</span><br><span class="line">   },1000);</span><br><span class="line">var date = new Date();</span><br><span class="line">console.log(date);</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h2 id="数组常用方法">
+          <a href="#数组常用方法" class="heading-link"><i class="fas fa-link"></i></a><a href="#数组常用方法" class="headerlink" title="数组常用方法"></a>数组常用方法</h2>
+      
+        <h3 id="创建数组">
+          <a href="#创建数组" class="heading-link"><i class="fas fa-link"></i></a><a href="#创建数组" class="headerlink" title="创建数组"></a>创建数组</h3>
+      <figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">// 创建数组的两种方式</span><br><span class="line">// 1. 利用数组字面量</span><br><span class="line">var arr = [1, 2, 3];</span><br><span class="line">console.log(arr[0]);</span><br><span class="line"></span><br><span class="line">// 2. 利用new Array()</span><br><span class="line">// var arr1 = new Array();  // 创建了一个空的数组</span><br><span class="line"></span><br><span class="line">// var arr1 = new Array(2);  </span><br><span class="line">// 这个2 表示 数组的长度为 2  里面有2个空的数组元素 </span><br><span class="line"></span><br><span class="line">var arr1 = new Array(2, 3); </span><br><span class="line">// 等价于 [2,3]  这样写表示 里面有2个数组元素 是 2和3</span><br><span class="line">console.log(arr1);</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h3 id="检测是否是数组">
+          <a href="#检测是否是数组" class="heading-link"><i class="fas fa-link"></i></a><a href="#检测是否是数组" class="headerlink" title="检测是否是数组"></a>检测是否是数组</h3>
+      <figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 检测是否为数组</span><br><span class="line">// (1) instanceof  运算符 它可以用来检测是否为数组</span><br><span class="line">console.log(arr instanceof Array);</span><br><span class="line">// (2) Array.isArray(参数);  H5新增的方法  ie9以上版本支持</span><br><span class="line">console.log(Array.isArray(arr));</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h3 id="添加删除方法">
+          <a href="#添加删除方法" class="heading-link"><i class="fas fa-link"></i></a><a href="#添加删除方法" class="headerlink" title="添加删除方法"></a>添加删除方法</h3>
+      <p>可以栈操作</p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">1. push() 在我们数组的末尾 添加一个或者多个数组元素</span><br><span class="line"> // (1) push 是可以给数组追加新的元素</span><br><span class="line"> // (2) push() 参数直接写 数组元素就可以了</span><br><span class="line"> // (3) push完毕之后，返回的结果是 新数组的长度 </span><br><span class="line"> // (4) 原数组也会发生变化*******************************</span><br><span class="line"></span><br><span class="line">2. unshift 在我们数组的开头 添加一个或者多个数组元素</span><br><span class="line"> // (1) unshift是可以给数组前面追加新的元素</span><br><span class="line"> // (2) unshift() 参数直接写 数组元素就可以了</span><br><span class="line"> // (3) unshift完毕之后，返回的结果是 新数组的长度 </span><br><span class="line"> // (4) 原数组也会发生变化*******************************</span><br><span class="line"> </span><br><span class="line">3. pop() 它可以删除数组的最后一个元素 </span><br><span class="line"> // (1) pop是可以删除数组的最后一个元素 记住一次只能删除一个元素</span><br><span class="line"> // (2) pop() 没有参数</span><br><span class="line"> // (3) pop完毕之后，返回的结果是 删除的那个元素 </span><br><span class="line"> // (4) 原数组也会发生变化*******************************</span><br><span class="line"></span><br><span class="line">4. shift() 它可以删除数组的第一个元素  </span><br><span class="line"> //(1) shift是可以删除数组的第一个元素 记住一次只能删除一个元素</span><br><span class="line"> //(2) shift() 没有参数</span><br><span class="line"> //(3) shift完毕之后，返回的结果是 删除的那个元素 </span><br><span class="line"> //(4) 原数组也会发生变化*******************************</span><br><span class="line"> </span><br><span class="line"> </span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h3 id="筛选数组">
+          <a href="#筛选数组" class="heading-link"><i class="fas fa-link"></i></a><a href="#筛选数组" class="headerlink" title="筛选数组"></a>筛选数组</h3>
+      <p>创建新数组,符合条件添加</p>
+
+        <h3 id="数组排序">
+          <a href="#数组排序" class="heading-link"><i class="fas fa-link"></i></a><a href="#数组排序" class="headerlink" title="数组排序"></a>数组排序</h3>
+      <figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 2. 数组排序（冒泡排序）</span><br><span class="line"> var arr1 = [13, 4, 77, 1, 7];</span><br><span class="line"> arr1.sort(function(a, b) {</span><br><span class="line">     //  return a - b; 升序的顺序排列</span><br><span class="line">     return b - a; // 降序的顺序排列</span><br><span class="line"> });</span><br><span class="line"> console.log(arr1);</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h3 id="获取数组索引">
+          <a href="#获取数组索引" class="heading-link"><i class="fas fa-link"></i></a><a href="#获取数组索引" class="headerlink" title="获取数组索引"></a>获取数组索引</h3>
+      <figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">返回数组元素索引号方法  indexOf(数组元素)  </span><br><span class="line">// 作用就是返回该数组元素的索引号 从前面开始查找</span><br><span class="line">// 它只返回第一个满足条件的索引号 </span><br><span class="line">// 它如果在该数组里面找不到元素，则返回的是 -1  </span><br><span class="line"></span><br><span class="line">// 返回数组元素索引号方法  lastIndexOf(数组元素)</span><br><span class="line">// 作用就是返回该数组元素的索引号 从后面开始查找</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h3 id="数组转字符串">
+          <a href="#数组转字符串" class="heading-link"><i class="fas fa-link"></i></a><a href="#数组转字符串" class="headerlink" title="数组转字符串"></a>数组转字符串</h3>
+      <figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// 数组转换为字符串 </span><br><span class="line">// 1. toString() 将我们的数组转换为字符串</span><br><span class="line">var arr = [1, 2, 3];</span><br><span class="line">console.log(arr.toString()); // 1,2,3</span><br><span class="line">// 2. join(分隔符) </span><br><span class="line">var arr1 = ['green', 'blue', 'pink'];</span><br><span class="line">console.log(arr1.join()); // green,blue,pink</span><br><span class="line">console.log(arr1.join('-')); // green-blue-pink</span><br><span class="line">console.log(arr1.join('&amp;')); // green&amp;blue&amp;pink</span><br></pre></td></tr></tbody></table></div></figure>
+
+        <h2 id="字符串常用方法">
+          <a href="#字符串常用方法" class="heading-link"><i class="fas fa-link"></i></a><a href="#字符串常用方法" class="headerlink" title="字符串常用方法"></a>字符串常用方法</h2>
+      
+        <h3 id="字符串不可变">
+          <a href="#字符串不可变" class="heading-link"><i class="fas fa-link"></i></a><a href="#字符串不可变" class="headerlink" title="字符串不可变"></a>字符串不可变</h3>
+      <p>字符串的不可变性,不要大量的拼接字符串</p>
+
+        <h3 id="查找">
+          <a href="#查找" class="heading-link"><i class="fas fa-link"></i></a><a href="#查找" class="headerlink" title="查找"></a>查找</h3>
+      <p>根据字符返回位置  str.indexOf(‘要查找的字符’, [起始的位置])<br>可以看出字符串可以用下标查找</p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var str = '改革春风吹满地，春天来了';</span><br><span class="line">console.log(str.indexOf('春'));</span><br><span class="line">console.log(str.indexOf('春', 3)); // 从索引号是 3的位置开始往后查找</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h3 id="查找出现最多次数">
+          <a href="#查找出现最多次数" class="heading-link"><i class="fas fa-link"></i></a><a href="#查找出现最多次数" class="headerlink" title="查找出现最多次数"></a>查找出现最多次数</h3>
+      <figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">//  判断一个字符串 'abcoefoxyozzopp' 中出现次数最多的字符，并统计其次数。</span><br><span class="line"> // o.a = 1</span><br><span class="line"> // o.b = 1</span><br><span class="line"> // o.c = 1</span><br><span class="line"> // o.o = 4</span><br><span class="line"> // 核心算法：利用 charAt(） 遍历这个字符串</span><br><span class="line"> // 把每个字符都存储给对象， 如果对象没有该属性，就为1，如果存在了就 +1</span><br><span class="line"> // 遍历对象，得到最大值和该字符</span><br><span class="line"> var str = 'abcoefoxyozzopp';</span><br><span class="line"> var o = {};//空对象</span><br><span class="line"> for (var i = 0; i &lt; str.length; i++) {</span><br><span class="line">     var chars = str.charAt(i); // chars 是 字符串的每一个字符</span><br><span class="line">     if (o[chars]) { // o[chars] 得到的是属性值</span><br><span class="line">         o[chars]++;</span><br><span class="line">     } else {</span><br><span class="line">         o[chars] = 1;</span><br><span class="line">     }</span><br><span class="line"> }</span><br><span class="line"> console.log(o);</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h3 id="其他操作方法">
+          <a href="#其他操作方法" class="heading-link"><i class="fas fa-link"></i></a><a href="#其他操作方法" class="headerlink" title="其他操作方法"></a>其他操作方法</h3>
+      <figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">// 字符串操作方法</span><br><span class="line">// 1. concat('字符串1','字符串2'....)</span><br><span class="line">var str = 'andy';</span><br><span class="line">console.log(str.concat('red'));</span><br><span class="line"></span><br><span class="line">// 2. substr('截取的起始位置', '截取几个字符');</span><br><span class="line">var str1 = '改革春风吹满地';</span><br><span class="line">console.log(str1.substr(2, 2)); </span><br><span class="line">// 第一个2 是索引号的2 从第几个开始  第二个2 是取几个字符</span><br><span class="line"></span><br><span class="line">// 3. 替换字符 replace('被替换的字符', '替换为的字符')  它只会替换第一个字符</span><br><span class="line">var str = 'andyandy';</span><br><span class="line">console.log(str.replace('a', 'b'));</span><br><span class="line">// 有一个字符串 'abcoefoxyozzopp'  要求把里面所有的 o 替换为 *</span><br><span class="line">var str1 = 'abcoefoxyozzopp';</span><br><span class="line">while (str1.indexOf('o') !== -1) {</span><br><span class="line">str1 = str1.replace('o', '*');</span><br><span class="line">}</span><br><span class="line">console.log(str1);</span><br><span class="line"></span><br><span class="line">// 4. 字符转换为数组 split('分隔符')    前面我们学过 join 把数组转换为字符串</span><br><span class="line">var str2 = 'red, pink, blue';</span><br><span class="line">console.log(str2.split(','));</span><br><span class="line">var str3 = 'red&amp;pink&amp;blue';</span><br><span class="line">console.log(str3.split('&amp;'));</span><br><span class="line"></span><br></pre></td></tr></tbody></table></div></figure></div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="http://example.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="post-share"><div class="social-share" data-sites="qzone, qq, weibo, wechat, douban, linkedin, facebook, twitter, google">Share to: </div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2021/03/09/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">Vue学习笔记</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2021/03/09/Markdown%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><span class="paginator-prev__text">Markdown学习笔记</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#JS%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.</span> <span class="toc-text">
+          JS输入输出语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%98%E9%87%8F"><span class="toc-number">2.</span> <span class="toc-text">
+          变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E7%B1%BB%E5%9E%8B"><span class="toc-number">3.</span> <span class="toc-text">
+          变量类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">4.</span> <span class="toc-text">
+          字符串</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%83%E5%B0%94%E5%9E%8B"><span class="toc-number">5.</span> <span class="toc-text">
+          布尔型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">6.</span> <span class="toc-text">
+          算术运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">7.</span> <span class="toc-text">
+          常用类型转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AF"><span class="toc-number">8.</span> <span class="toc-text">
+          循环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E7%BB%84"><span class="toc-number">9.</span> <span class="toc-text">
+          数组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E6%96%B9%E5%BC%8F"><span class="toc-number">9.1.</span> <span class="toc-text">
+          创建方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BF%BB%E8%BD%AC%E6%95%B0%E7%BB%84"><span class="toc-number">9.2.</span> <span class="toc-text">
+          翻转数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F"><span class="toc-number">9.3.</span> <span class="toc-text">
+          冒泡排序</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0"><span class="toc-number">10.</span> <span class="toc-text">
+          函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#auguments%E4%BD%BF%E7%94%A8"><span class="toc-number">11.</span> <span class="toc-text">
+          auguments使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-number">12.</span> <span class="toc-text">
+          变量作用域</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AD%E5%8C%85"><span class="toc-number">13.</span> <span class="toc-text">
+          闭包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1"><span class="toc-number">14.</span> <span class="toc-text">
+          创建对象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E5%AD%97%E9%9D%A2%E9%87%8F%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1"><span class="toc-number">14.1.</span> <span class="toc-text">
+          对象字面量创建对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="toc-number">14.2.</span> <span class="toc-text">
+          构造函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#new%E5%85%B3%E9%94%AE%E5%AD%97%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B"><span class="toc-number">14.3.</span> <span class="toc-text">
+          new关键字执行过程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Math%E5%AF%B9%E8%B1%A1"><span class="toc-number">15.</span> <span class="toc-text">
+          Math对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Date%E5%AF%B9%E8%B1%A1"><span class="toc-number">16.</span> <span class="toc-text">
+          Date对象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Date-%E6%97%A5%E6%9C%9F%E5%AF%B9%E8%B1%A1"><span class="toc-number">16.1.</span> <span class="toc-text">
+          Date() 日期对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%97%A5%E6%9C%9F"><span class="toc-number">16.2.</span> <span class="toc-text">
+          格式化日期</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Date%E6%80%BB%E7%9A%84%E6%AF%AB%E7%A7%92%E6%95%B0"><span class="toc-number">16.3.</span> <span class="toc-text">
+          Date总的毫秒数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%80%92%E8%AE%A1%E6%97%B6"><span class="toc-number">16.4.</span> <span class="toc-text">
+          倒计时</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-number">17.</span> <span class="toc-text">
+          数组常用方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E6%95%B0%E7%BB%84"><span class="toc-number">17.1.</span> <span class="toc-text">
+          创建数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A3%80%E6%B5%8B%E6%98%AF%E5%90%A6%E6%98%AF%E6%95%B0%E7%BB%84"><span class="toc-number">17.2.</span> <span class="toc-text">
+          检测是否是数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E5%88%A0%E9%99%A4%E6%96%B9%E6%B3%95"><span class="toc-number">17.3.</span> <span class="toc-text">
+          添加删除方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AD%9B%E9%80%89%E6%95%B0%E7%BB%84"><span class="toc-number">17.4.</span> <span class="toc-text">
+          筛选数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E6%8E%92%E5%BA%8F"><span class="toc-number">17.5.</span> <span class="toc-text">
+          数组排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E6%95%B0%E7%BB%84%E7%B4%A2%E5%BC%95"><span class="toc-number">17.6.</span> <span class="toc-text">
+          获取数组索引</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">17.7.</span> <span class="toc-text">
+          数组转字符串</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-number">18.</span> <span class="toc-text">
+          字符串常用方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8D%E5%8F%AF%E5%8F%98"><span class="toc-number">18.1.</span> <span class="toc-text">
+          字符串不可变</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E6%89%BE"><span class="toc-number">18.2.</span> <span class="toc-text">
+          查找</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E6%89%BE%E5%87%BA%E7%8E%B0%E6%9C%80%E5%A4%9A%E6%AC%A1%E6%95%B0"><span class="toc-number">18.3.</span> <span class="toc-text">
+          查找出现最多次数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E6%93%8D%E4%BD%9C%E6%96%B9%E6%B3%95"><span class="toc-number">18.4.</span> <span class="toc-text">
+          其他操作方法</span></a></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/header.jpg" alt="avatar"></div><p class="sidebar-ov-author__text">LJY_BLOG</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">9</div><div class="sidebar-ov-state-item__name">Archives</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">3</div><div class="sidebar-ov-state-item__name">Tags</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script src="https://cdn.jsdelivr.net/gh/sukkaw/busuanzi@latest/bsz.pure.mini.js" async></script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script></body></html>
