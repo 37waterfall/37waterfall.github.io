@@ -1,12 +1,12 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/icon16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/favicon32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="学习看文档，主要了解下，UI组件里有什么，定义了哪些样式，实现了哪些功能。">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/icon16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/favicon32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="学习看文档，主要了解下，UI组件里有什么，定义了哪些样式，实现了哪些功能。看源码的时候看看用到了哪些功能">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Element-UI学习笔记">
 <meta property="og:url" content="http://example.com/2021/03/09/Element-UI%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="LJY_BLOG">
-<meta property="og:description" content="学习看文档，主要了解下，UI组件里有什么，定义了哪些样式，实现了哪些功能。">
+<meta property="og:description" content="学习看文档，主要了解下，UI组件里有什么，定义了哪些样式，实现了哪些功能。看源码的时候看看用到了哪些功能">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-03-09T06:24:11.000Z">
-<meta property="article:modified_time" content="2021-03-11T03:37:29.127Z">
+<meta property="article:modified_time" content="2021-03-11T09:16:55.484Z">
 <meta property="article:author" content="LJY">
 <meta property="article:tag" content="学习笔记">
 <meta name="twitter:card" content="summary"><title>Element-UI学习笔记 | LJY_BLOG</title><link ref="canonical" href="http://example.com/2021/03/09/Element-UI%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
@@ -35,7 +35,7 @@ var CONFIG = {
 
 window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-</head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">主页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">档案</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/reading/"><span class="header-nav-menu-item__icon"><i class="fas fa-book"></i></span><span class="header-nav-menu-item__text">阅读</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">LJY_BLOG</div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><div class="sticky-top" data-popover="Sticky" data-popover-pos="up"><span class="sticky-top__icon"><i class="fas fa-thumbtack"></i></span></div><h1 class="post-title">Element-UI学习笔记</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">创建</span><span class="post-meta-item__value">2021-03-09</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新</span><span class="post-meta-item__value">2021-03-11</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon"><i class="far fa-clock"></i></span><span class="post-meta-item__info">阅读时间</span><span class="post-meta-item__value">3m</span></span></div></header><div class="post-body"><p>学习看文档，主要了解下，UI组件里有什么，定义了哪些样式，实现了哪些功能。</p>
+</head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">主页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">档案</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/reading/"><span class="header-nav-menu-item__icon"><i class="fas fa-book"></i></span><span class="header-nav-menu-item__text">阅读</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">LJY_BLOG</div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><div class="sticky-top" data-popover="Sticky" data-popover-pos="up"><span class="sticky-top__icon"><i class="fas fa-thumbtack"></i></span></div><h1 class="post-title">Element-UI学习笔记</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">创建</span><span class="post-meta-item__value">2021-03-09</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新</span><span class="post-meta-item__value">2021-03-11</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon"><i class="far fa-clock"></i></span><span class="post-meta-item__info">阅读时间</span><span class="post-meta-item__value">21m</span></span></div></header><div class="post-body"><p>学习看文档，主要了解下，UI组件里有什么，定义了哪些样式，实现了哪些功能。看源码的时候看看用到了哪些功能</p>
 <span id="more"></span>
 
         <h1 id="开始">
@@ -104,184 +104,376 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0">
 <p>结合flex布局<br>给row即父元素设置<br><code>&lt;el-row type="flex" class="row-bg" justify="center"&gt;</code></p>
 </blockquote>
 </li>
-<li><p>响应式布局<br>参照Bootstrap，设计了五个相应尺寸<br>xs,sm,md,lg,xld</p>
+<li><p>响应式布局</p>
+<blockquote>
+<p>参照Bootstrap，设计了五个相应尺寸<br>xs,sm,md,lg,xld</p>
+</blockquote>
 </li>
 </ol>
 
         <h2 id="Container布局容器">
           <a href="#Container布局容器" class="heading-link"><i class="fas fa-link"></i></a><a href="#Container布局容器" class="headerlink" title="Container布局容器"></a>Container布局容器</h2>
-      
-        <h2 id="Color色彩">
-          <a href="#Color色彩" class="heading-link"><i class="fas fa-link"></i></a><a href="#Color色彩" class="headerlink" title="Color色彩"></a>Color色彩</h2>
-      
-        <h2 id="Border边框">
-          <a href="#Border边框" class="heading-link"><i class="fas fa-link"></i></a><a href="#Border边框" class="headerlink" title="Border边框"></a>Border边框</h2>
-      
+      <p>布局容器组件，快速搭建页面基本结构<br>el-container，为最外层的结构，包裹其他容器<br>不同的布局，指的的结构不同<br>用的是flex布局</p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-header&gt;：顶栏容器。</span><br><span class="line">&lt;el-aside&gt;：侧边栏容器。</span><br><span class="line">&lt;el-main&gt;：主要区域容器。</span><br><span class="line">&lt;el-footer&gt;：底栏容器。</span><br></pre></td></tr></tbody></table></div></figure>
+
+
         <h2 id="Icon图标">
           <a href="#Icon图标" class="heading-link"><i class="fas fa-link"></i></a><a href="#Icon图标" class="headerlink" title="Icon图标"></a>Icon图标</h2>
-      
+      <p>直接通过设置类名为 el-icon-iconName 来使用即可<br><code>&lt;i class="el-icon-edit"&gt;&lt;/i&gt;</code></p>
+
         <h2 id="Button按钮">
           <a href="#Button按钮" class="heading-link"><i class="fas fa-link"></i></a><a href="#Button按钮" class="headerlink" title="Button按钮"></a>Button按钮</h2>
-      
+      <p>使用type、plain、round和circle属性来定义 Button 的样式。</p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-row&gt;</span><br><span class="line">  &lt;el-button&gt;默认按钮&lt;/el-button&gt;</span><br><span class="line">  &lt;el-button type="primary"&gt;主要按钮&lt;/el-button&gt;</span><br><span class="line">  &lt;el-button type="success"&gt;成功按钮&lt;/el-button&gt;</span><br><span class="line">  &lt;el-button type="info"&gt;信息按钮&lt;/el-button&gt;</span><br><span class="line">  &lt;el-button type="warning"&gt;警告按钮&lt;/el-button&gt;</span><br><span class="line">  &lt;el-button type="danger"&gt;危险按钮&lt;/el-button&gt;</span><br><span class="line">&lt;/el-row&gt;</span><br></pre></td></tr></tbody></table></div></figure>
+
+<ul>
+<li>可设置禁用状态<br>文字按钮<br>图标按钮<br>加载中<br>不同尺寸<br>按钮组<br><code>使用&lt;el-button-group&gt;标签来嵌套你的按钮。</code></li>
+</ul>
+
         <h2 id="Link文字链接">
           <a href="#Link文字链接" class="heading-link"><i class="fas fa-link"></i></a><a href="#Link文字链接" class="headerlink" title="Link文字链接"></a>Link文字链接</h2>
-      
+      <p>设置超链接的文字<br>可设置禁用状态<br>下划线<br>图标<br><code> &lt;el-link href="https://element.eleme.io" target="_blank"&gt;默认链接&lt;/el-link&gt;</code></p>
+
         <h1 id="Form">
           <a href="#Form" class="heading-link"><i class="fas fa-link"></i></a><a href="#Form" class="headerlink" title="Form"></a>Form</h1>
       
         <h2 id="Radio单选框">
           <a href="#Radio单选框" class="heading-link"><i class="fas fa-link"></i></a><a href="#Radio单选框" class="headerlink" title="Radio单选框"></a>Radio单选框</h2>
-      
+      <p>要设置v-model绑定变量（双向绑定），选中的变量的值为Radio对应的label值<br>label可以是String、Number或Boolean。</p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;el-radio v-model="radio" label="1"&gt;备选项&lt;/el-radio&gt;</span><br><span class="line">  &lt;el-radio v-model="radio" label="2"&gt;备选项&lt;/el-radio&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">  export default {</span><br><span class="line">    data () {</span><br><span class="line">      return {</span><br><span class="line">        radio: '1'</span><br><span class="line">      };</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></tbody></table></div></figure>
+<ul>
+<li>可以设置禁用状态<br>单选框组<br>按钮样式<br>带有边框</li>
+</ul>
+
         <h2 id="Checkbox多选框">
           <a href="#Checkbox多选框" class="heading-link"><i class="fas fa-link"></i></a><a href="#Checkbox多选框" class="headerlink" title="Checkbox多选框"></a>Checkbox多选框</h2>
-      
+      <p>在v-model绑定，默认绑定变量的值为Boolean，选中为true</p>
+<ul>
+<li>禁用<br>多选框组<br>可选项目的数量的限制-用min和max属性<br>按钮样式<br>带有边框</li>
+</ul>
+
         <h2 id="Input输入框">
           <a href="#Input输入框" class="heading-link"><i class="fas fa-link"></i></a><a href="#Input输入框" class="headerlink" title="Input输入框"></a>Input输入框</h2>
-      
-        <h2 id="InputNumber计数器">
-          <a href="#InputNumber计数器" class="heading-link"><i class="fas fa-link"></i></a><a href="#InputNumber计数器" class="headerlink" title="InputNumber计数器"></a>InputNumber计数器</h2>
-      
+      <p>和v-model绑定<br>禁用状态<br>可清空-添加clearable属性<br>密码框-show-password</p>
+<ul>
+<li><p>带icon的输入框<br>文本域-type=”textarea”<br>可自适应文本高度的文本域</p>
+</li>
+<li><p>复合型输入框<br>可通过 slot 来指定在 input 中前置或者后置内容。</p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">  &lt;el-input placeholder="请输入内容" v-model="input1"&gt;</span><br><span class="line">    &lt;template slot="prepend"&gt;Http://&lt;/template&gt;</span><br><span class="line">  &lt;/el-input&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></tbody></table></div></figure></li>
+</ul>
+<p>设置尺寸</p>
+<ul>
+<li>带输入建议-输入内容有提示<br>自定义模板<br>远程搜索-从服务端搜索数据<br>输入长度限制-maxlength=”10”</li>
+</ul>
+
         <h2 id="Select选择器">
           <a href="#Select选择器" class="heading-link"><i class="fas fa-link"></i></a><a href="#Select选择器" class="headerlink" title="Select选择器"></a>Select选择器</h2>
-      
+      <p>v-model的值为当前被选中的el-option的 value 属性值<br>主要通过v-for来实现，渲染已创建好的数据[{},{}]</p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-select v-model="value" placeholder="请选择"&gt;</span><br><span class="line">   &lt;el-option</span><br><span class="line">     v-for="item in options"</span><br><span class="line">     :key="item.value"</span><br><span class="line">     :label="item.label"</span><br><span class="line">     :value="item.value"&gt;</span><br><span class="line">   &lt;/el-option&gt;</span><br><span class="line"> &lt;/el-select&gt;</span><br></pre></td></tr></tbody></table></div></figure>
+
+<ul>
+<li><p>有禁用选项<br>禁用状态<br>可清空单选-为el-select设置clearable属性</p>
+</li>
+<li><p>基础多选-多个选择<br>分组-使用el-option-group对备选项进行分组，它的label属性为分组名</p>
+</li>
+<li><p>可搜索<br>远程搜索<br>创建条目-创建选项中不存在的条目。</p>
+</li>
+</ul>
+
         <h2 id="Cascader级联选择器">
           <a href="#Cascader级联选择器" class="heading-link"><i class="fas fa-link"></i></a><a href="#Cascader级联选择器" class="headerlink" title="Cascader级联选择器"></a>Cascader级联选择器</h2>
-      
+      <p>点击触发子菜单-多个层级结构<br>v-model为选定值<br>options为创建的层级<br>@为触发事件</p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  &lt;el-cascader</span><br><span class="line">    v-model="value"</span><br><span class="line">    :options="options"</span><br><span class="line">    @change="handleChange"&gt;&lt;/el-cascader&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></tbody></table></div></figure>
+
+<p>禁用选项<br>可清空</p>
+<p>仅显示最后一级-:show-all-levels=”false”<br>指的是选中后，只显示最后一个层级的内容</p>
+<ul>
+<li>多选<br>选择任意一级选项<br>动态加载<br>可搜索<br>级联面板-和级联选择器一样<br>感觉更实用。。。。</li>
+</ul>
+
         <h2 id="Switch开关">
           <a href="#Switch开关" class="heading-link"><i class="fas fa-link"></i></a><a href="#Switch开关" class="headerlink" title="Switch开关"></a>Switch开关</h2>
-      
+      <p>v-model绑定一个boolean的变量<br>使用active-color属性与inactive-color属性来设置开关的背景色。</p>
+<p>文字描述<br>禁用状态</p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-switch</span><br><span class="line">  v-model="value"</span><br><span class="line">  active-color="#13ce66"</span><br><span class="line">  inactive-color="#ff4949"&gt;</span><br><span class="line">&lt;/el-switch&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">  export default {</span><br><span class="line">    data() {</span><br><span class="line">      return {</span><br><span class="line">        value: true</span><br><span class="line">      }</span><br><span class="line">    }</span><br><span class="line">  };</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></tbody></table></div></figure>
+
+
         <h2 id="Slider滑块">
           <a href="#Slider滑块" class="heading-link"><i class="fas fa-link"></i></a><a href="#Slider滑块" class="headerlink" title="Slider滑块"></a>Slider滑块</h2>
-      
+      <p>在拖动滑块时，显示当前值</p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class="block"&gt;</span><br><span class="line">    &lt;span class="demonstration"&gt;默认&lt;/span&gt;</span><br><span class="line">    &lt;el-slider v-model="value1"&gt;&lt;/el-slider&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></tbody></table></div></figure>
+
+<ul>
+<li><p>离散值-滑块数据离散<br>带有输入框<br>范围选择-两个滑动点</p>
+</li>
+<li><p>竖向模式<br>展示标记-有几个标记点</p>
+</li>
+</ul>
+
         <h2 id="TimePicker时间选择器">
           <a href="#TimePicker时间选择器" class="heading-link"><i class="fas fa-link"></i></a><a href="#TimePicker时间选择器" class="headerlink" title="TimePicker时间选择器"></a>TimePicker时间选择器</h2>
-      
-        <h2 id="DatePicker选择器">
-          <a href="#DatePicker选择器" class="heading-link"><i class="fas fa-link"></i></a><a href="#DatePicker选择器" class="headerlink" title="DatePicker选择器"></a>DatePicker选择器</h2>
-      
-        <h2 id="DateTimePicker">
-          <a href="#DateTimePicker" class="heading-link"><i class="fas fa-link"></i></a><a href="#DateTimePicker" class="headerlink" title="DateTimePicker"></a>DateTimePicker</h2>
-      
+      <p>提供几个固定的时间点供用户选择<br>使用 el-time-select 标签，分别通过start、end和step指定可选的起始时间、结束时间和步长</p>
+
+        <h2 id="DatePicker日期选择器">
+          <a href="#DatePicker日期选择器" class="heading-link"><i class="fas fa-link"></i></a><a href="#DatePicker日期选择器" class="headerlink" title="DatePicker日期选择器"></a>DatePicker日期选择器</h2>
+      <p>以「日」为基本单位，基础的日期选择控件</p>
+
+        <h2 id="DateTimePicker日期时间选择器">
+          <a href="#DateTimePicker日期时间选择器" class="heading-link"><i class="fas fa-link"></i></a><a href="#DateTimePicker日期时间选择器" class="headerlink" title="DateTimePicker日期时间选择器"></a>DateTimePicker日期时间选择器</h2>
+      <p>在同一个选择器里选择日期和时间</p>
+
         <h2 id="Upload上传">
           <a href="#Upload上传" class="heading-link"><i class="fas fa-link"></i></a><a href="#Upload上传" class="headerlink" title="Upload上传"></a>Upload上传</h2>
-      
+      <p>很有用的功能<br>el-upload<br>可以限制上传个数，和大小</p>
+<ul>
+<li>用户头像上传<br>照片墙<br>文件缩略图<br>图片列表缩略图<br>上传文件列表控制<br>拖拽上传<br>手动上传</li>
+</ul>
+
         <h2 id="Rate评分">
           <a href="#Rate评分" class="heading-link"><i class="fas fa-link"></i></a><a href="#Rate评分" class="headerlink" title="Rate评分"></a>Rate评分</h2>
-      
+      <ul>
+<li>用星星打分<br>辅助文字，满意<br>其他样式icon<br>只读</li>
+</ul>
+
         <h2 id="ColorPicker颜色选择器">
           <a href="#ColorPicker颜色选择器" class="heading-link"><i class="fas fa-link"></i></a><a href="#ColorPicker颜色选择器" class="headerlink" title="ColorPicker颜色选择器"></a>ColorPicker颜色选择器</h2>
-      
+      <p>颜色面板，可以选择颜色<br>配合颜色变量一起使用</p>
+<ul>
+<li>选择透明度<br>预定义颜色<br>不同尺寸</li>
+</ul>
+
         <h2 id="Transfer穿梭框">
           <a href="#Transfer穿梭框" class="heading-link"><i class="fas fa-link"></i></a><a href="#Transfer穿梭框" class="headerlink" title="Transfer穿梭框"></a>Transfer穿梭框</h2>
-      
+      <p>选择数据可以传递到另一个列表</p>
+<p>可搜索</p>
+
         <h2 id="Form表单">
           <a href="#Form表单" class="heading-link"><i class="fas fa-link"></i></a><a href="#Form表单" class="headerlink" title="Form表单"></a>Form表单</h2>
-      
+      <p>重点！！！<br>由输入框、选择器、单选框、多选框等控件组成，用以收集、校验、提交数据<br>综合Form</p>
+<ul>
+<li>行内表单<br>对齐方式<br>表单验证<br>自定义校验规则<br>动态增减表单项<br>数字类型验证<br>尺寸控制</li>
+</ul>
+
         <h1 id="Data">
           <a href="#Data" class="heading-link"><i class="fas fa-link"></i></a><a href="#Data" class="headerlink" title="Data"></a>Data</h1>
       
         <h2 id="Table表格">
           <a href="#Table表格" class="heading-link"><i class="fas fa-link"></i></a><a href="#Table表格" class="headerlink" title="Table表格"></a>Table表格</h2>
-      
+      <p>用于展示多条结构类似的数据，可对数据进行排序、筛选、对比或其他自定义操作。</p>
+<ul>
+<li><p>斑马纹表格<br>带边框表格<br>带状态表格<br>固定表头<br>固定列<br>固定列和表头<br>多级表头</p>
+</li>
+<li><p>单选-选中色块变化<br>多选<br>排序<br>筛选<br>自定义模板</p>
+</li>
+<li><p>展开行-点击展开<br>树形结构与懒加载–行的分支</p>
+</li>
+<li><p>自定义表头<br>表尾合计行<br>合并行或列<br>自定义索引</p>
+</li>
+</ul>
+
         <h2 id="Tag标签">
           <a href="#Tag标签" class="heading-link"><i class="fas fa-link"></i></a><a href="#Tag标签" class="headerlink" title="Tag标签"></a>Tag标签</h2>
-      
+      <p>像按钮，，，<br>用于标记和选择。<br>由type属性来选择tag的类型，也可以通过color属性来自定义背景色。</p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-tag&gt;标签一&lt;/el-tag&gt;</span><br><span class="line">&lt;el-tag type="success"&gt;标签二&lt;/el-tag&gt;</span><br><span class="line">&lt;el-tag type="info"&gt;标签三&lt;/el-tag&gt;</span><br><span class="line">&lt;el-tag type="warning"&gt;标签四&lt;/el-tag&gt;</span><br><span class="line">&lt;el-tag type="danger"&gt;标签五&lt;/el-tag&gt;</span><br></pre></td></tr></tbody></table></div></figure>
+
+<ul>
+<li>可移出标签<br>动态编辑标签<br>不同尺寸<br>不同主题</li>
+</ul>
+
         <h2 id="Progress进度条">
           <a href="#Progress进度条" class="heading-link"><i class="fas fa-link"></i></a><a href="#Progress进度条" class="headerlink" title="Progress进度条"></a>Progress进度条</h2>
-      
+      <p>可以用于展示技能条<br>用于展示操作进度，告知用户当前状态和预期。</p>
+<ul>
+<li>线形进度条<br>百分比<br>自定义颜色<br>环形进度条-像车速<br>仪表盘进度条</li>
+</ul>
+
         <h2 id="Tree树形控件">
           <a href="#Tree树形控件" class="heading-link"><i class="fas fa-link"></i></a><a href="#Tree树形控件" class="headerlink" title="Tree树形控件"></a>Tree树形控件</h2>
-      
+      <p>展示结构信息<br>定义好数据，渲染</p>
+<ul>
+<li>可选择<br>懒加载自定义叶子节点</li>
+</ul>
+
         <h2 id="Pagination分页">
           <a href="#Pagination分页" class="heading-link"><i class="fas fa-link"></i></a><a href="#Pagination分页" class="headerlink" title="Pagination分页"></a>Pagination分页</h2>
-      
+      <p>当数据量过多时，使用分页分解数据。</p>
+
         <h2 id="Badge标记">
           <a href="#Badge标记" class="heading-link"><i class="fas fa-link"></i></a><a href="#Badge标记" class="headerlink" title="Badge标记"></a>Badge标记</h2>
-      
+      <p>出现在按钮、图标旁的数字或状态标记。</p>
+<ul>
+<li>提示状态<br>最大值<br>自定义内容<br>小红点</li>
+</ul>
+
         <h2 id="Avatar头像">
           <a href="#Avatar头像" class="heading-link"><i class="fas fa-link"></i></a><a href="#Avatar头像" class="headerlink" title="Avatar头像"></a>Avatar头像</h2>
-      
+      <p>用图标、图片或者字符的形式展示用户或事物信息。<br>好像上网课的样子</p>
+<ul>
+<li>展示类型-图标、图片和字符<br>图片加载失败的 fallback 行为<br>图片如何适应容器框-使用 fit 属性</li>
+</ul>
+
         <h1 id="Notice">
           <a href="#Notice" class="heading-link"><i class="fas fa-link"></i></a><a href="#Notice" class="headerlink" title="Notice"></a>Notice</h1>
       
         <h2 id="Alert警告">
           <a href="#Alert警告" class="heading-link"><i class="fas fa-link"></i></a><a href="#Alert警告" class="headerlink" title="Alert警告"></a>Alert警告</h2>
-      
+      <p>用于页面中展示重要的提示信息。<br>页面中的非浮层元素，不会自动消失。–干嘛的？？？</p>
+<ul>
+<li>Alert 组件提供了两个不同的主题：light和dark。<br>自定义关闭按钮<br>带有 icon<br>文字居中<br>带有辅助性文字介绍<br>带有 icon 和辅助性文字介绍</li>
+</ul>
+
         <h2 id="Loading加载">
           <a href="#Loading加载" class="heading-link"><i class="fas fa-link"></i></a><a href="#Loading加载" class="headerlink" title="Loading加载"></a>Loading加载</h2>
-      
+      <p>加载数据时显示动效。</p>
+<ul>
+<li>区域加载<br>自定义<br>整页加载</li>
+</ul>
+
         <h2 id="Message消息提示">
           <a href="#Message消息提示" class="heading-link"><i class="fas fa-link"></i></a><a href="#Message消息提示" class="headerlink" title="Message消息提示"></a>Message消息提示</h2>
-      
+      <p>常用于主动操作后的反馈提示。与 Notification 的区别是后者更多用于系统级通知的被动提醒。</p>
+<ul>
+<li>从顶部出现，3 秒后自动消失。<br>用来显示「成功、警告、消息、错误」类的操作反馈。<br>可以添加关闭按钮。<br>使用 center 属性让文字水平居中。<br>message 属性支持传入 HTML 片段<br>可按需引入</li>
+</ul>
+
         <h2 id="MessageBox弹框">
           <a href="#MessageBox弹框" class="heading-link"><i class="fas fa-link"></i></a><a href="#MessageBox弹框" class="headerlink" title="MessageBox弹框"></a>MessageBox弹框</h2>
-      
+      <p>模态框</p>
+<ul>
+<li>模拟系统的消息提示框而实现的一套模态对话框组件，<br>用于消息提示、确认消息和提交内容。</li>
+</ul>
+
         <h2 id="Notification通知">
           <a href="#Notification通知" class="heading-link"><i class="fas fa-link"></i></a><a href="#Notification通知" class="headerlink" title="Notification通知"></a>Notification通知</h2>
-      
+      <p>悬浮出现在页面角落，显示全局的通知提醒消息。</p>
+<ul>
+<li>带有 icon<br>可以让 Notification 从屏幕四角中的任意一角弹出<br>让 Notification 偏移一些位置</li>
+</ul>
+
         <h1 id="Navigation">
           <a href="#Navigation" class="heading-link"><i class="fas fa-link"></i></a><a href="#Navigation" class="headerlink" title="Navigation"></a>Navigation</h1>
       
         <h2 id="NavMenu导航菜单">
           <a href="#NavMenu导航菜单" class="heading-link"><i class="fas fa-link"></i></a><a href="#NavMenu导航菜单" class="headerlink" title="NavMenu导航菜单"></a>NavMenu导航菜单</h2>
-      
+      <p>重点！！！<br>为网站提供导航功能的菜单。</p>
+<ul>
+<li>顶栏<br>侧栏-垂直菜单，可内嵌子菜单。<br>折叠-展开收起</li>
+</ul>
+
         <h2 id="Tabs标签页">
           <a href="#Tabs标签页" class="heading-link"><i class="fas fa-link"></i></a><a href="#Tabs标签页" class="headerlink" title="Tabs标签页"></a>Tabs标签页</h2>
-      
+      <p>点击切换<br>分隔内容上有关联但属于不同类别的数据集合。</p>
+<ul>
+<li>选项卡样式<br>卡片化<br>可以通过 tab-position 设置标签的位置<br>自定义标签页<br>动态增减标签页<br>自定义增加标签页触发器</li>
+</ul>
+
         <h2 id="Breadcrumb面包屑">
           <a href="#Breadcrumb面包屑" class="heading-link"><i class="fas fa-link"></i></a><a href="#Breadcrumb面包屑" class="headerlink" title="Breadcrumb面包屑"></a>Breadcrumb面包屑</h2>
-      
+      <ul>
+<li>显示路径<br>显示当前页面的路径，快速返回之前的任意页面。<br>图标分隔符</li>
+</ul>
+
         <h2 id="PageHeader页头">
           <a href="#PageHeader页头" class="heading-link"><i class="fas fa-link"></i></a><a href="#PageHeader页头" class="headerlink" title="PageHeader页头"></a>PageHeader页头</h2>
-      
+      <p>一个返回，一个标题<br>如果页面的路径比较简单，推荐使用页头组件而非面包屑组件。</p>
+
         <h2 id="Dropdown下拉菜单">
           <a href="#Dropdown下拉菜单" class="heading-link"><i class="fas fa-link"></i></a><a href="#Dropdown下拉菜单" class="headerlink" title="Dropdown下拉菜单"></a>Dropdown下拉菜单</h2>
-      
+      <p>将动作或菜单折叠到下拉菜单中。</p>
+<ul>
+<li>移动到下拉菜单上，展开更多操作。<br>可使用按钮触发下拉菜单<br>可以配置 click 激活或者 hover 激活。<br>指令事件-点击菜单触发事件<br>不同尺寸</li>
+</ul>
+
         <h2 id="Steps步骤条">
           <a href="#Steps步骤条" class="heading-link"><i class="fas fa-link"></i></a><a href="#Steps步骤条" class="headerlink" title="Steps步骤条"></a>Steps步骤条</h2>
-      
+      <p>点击下一步。。。<br>引导用户按照流程完成任务的分步导航条，可根据实际应用场景设定步骤，步骤不得少于 2 步。</p>
+<ul>
+<li>含状态步骤条<br>有描述的步骤条<br>居中的步骤条-样式<br>带图标的步骤条<br>竖式步骤条<br>简洁风格的步骤条</li>
+</ul>
+
         <h1 id="Others">
           <a href="#Others" class="heading-link"><i class="fas fa-link"></i></a><a href="#Others" class="headerlink" title="Others"></a>Others</h1>
       
         <h2 id="Dialog对话框">
           <a href="#Dialog对话框" class="heading-link"><i class="fas fa-link"></i></a><a href="#Dialog对话框" class="headerlink" title="Dialog对话框"></a>Dialog对话框</h2>
-      
+      <ul>
+<li>Dialog 弹出一个对话框，适合需要定制性更大的场景。<br>Dialog 组件的内容可以是任意的，甚至可以是表格或表单<br>如果需要在一个 Dialog 内部嵌套另一个 Dialog</li>
+</ul>
+
         <h2 id="Tooltip文字提示">
           <a href="#Tooltip文字提示" class="heading-link"><i class="fas fa-link"></i></a><a href="#Tooltip文字提示" class="headerlink" title="Tooltip文字提示"></a>Tooltip文字提示</h2>
-      
+      <p>常用于展示鼠标 hover 时的提示信息。</p>
+<ul>
+<li>方向很多<br>Tooltip 组件提供了两个不同的主题：dark和light。</li>
+</ul>
+
         <h2 id="Popover弹出框">
           <a href="#Popover弹出框" class="heading-link"><i class="fas fa-link"></i></a><a href="#Popover弹出框" class="headerlink" title="Popover弹出框"></a>Popover弹出框</h2>
-      
+      <p>Popover 的属性与 Tooltip 很类似</p>
+
         <h2 id="Card卡片">
           <a href="#Card卡片" class="heading-link"><i class="fas fa-link"></i></a><a href="#Card卡片" class="headerlink" title="Card卡片"></a>Card卡片</h2>
-      
+      <p>实用-展示信息<br>将信息聚合在卡片容器中展示。</p>
+<ul>
+<li>包含标题，内容和操作。<br>卡片可以只有内容区域。<br>带图片<br>卡片阴影</li>
+</ul>
+
         <h2 id="Carousel走马灯">
           <a href="#Carousel走马灯" class="heading-link"><i class="fas fa-link"></i></a><a href="#Carousel走马灯" class="headerlink" title="Carousel走马灯"></a>Carousel走马灯</h2>
-      
+      <p>轮播图<br>在有限空间内，循环播放同一类型的图片、文字等内容</p>
+<ul>
+<li>指示器<br>切换箭头<br>卡片化<br>方向-滑动方向</li>
+</ul>
+
         <h2 id="Collapse折叠面板">
           <a href="#Collapse折叠面板" class="heading-link"><i class="fas fa-link"></i></a><a href="#Collapse折叠面板" class="headerlink" title="Collapse折叠面板"></a>Collapse折叠面板</h2>
-      
+      <ul>
+<li>通过折叠面板收纳内容区域<br>手风琴效果-每次只能展开一个面板<br>自定义面板标题</li>
+</ul>
+
         <h2 id="Timeline时间线">
           <a href="#Timeline时间线" class="heading-link"><i class="fas fa-link"></i></a><a href="#Timeline时间线" class="headerlink" title="Timeline时间线"></a>Timeline时间线</h2>
-      
+      <p>实用-博客里用到了<br>可视化地呈现时间流信息。</p>
+<blockquote>
+<p>Timeline 可拆分成多个按照时间戳正序或倒序排列的 activity，时间戳是其区分于其他控件的重要特征，使⽤时注意与 Steps 步骤条等区分。</p>
+</blockquote>
+<ul>
+<li>⾃定义节点样式<br>⾃定义时间戳</li>
+</ul>
+
         <h2 id="Divider分割线">
           <a href="#Divider分割线" class="heading-link"><i class="fas fa-link"></i></a><a href="#Divider分割线" class="headerlink" title="Divider分割线"></a>Divider分割线</h2>
-      
+      <p>区隔内容的分割线。</p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-divider&gt;&lt;/el-divider&gt;</span><br><span class="line">&lt;el-divider content-position="left"&gt;少年包青天&lt;/el-divider&gt;</span><br></pre></td></tr></tbody></table></div></figure>
+
+<p>垂直分割<br><code>&lt;el-divider direction="vertical"&gt;&lt;/el-divider&gt;</code></p>
+
         <h2 id="Calendar日历">
           <a href="#Calendar日历" class="heading-link"><i class="fas fa-link"></i></a><a href="#Calendar日历" class="headerlink" title="Calendar日历"></a>Calendar日历</h2>
-      
+      <ul>
+<li>显示日期<br>自定义内容<br>自定义范围</li>
+</ul>
+
         <h2 id="Image图片">
           <a href="#Image图片" class="heading-link"><i class="fas fa-link"></i></a><a href="#Image图片" class="headerlink" title="Image图片"></a>Image图片</h2>
-      
+      <p>图片容器，在保留原生img的特性下，支持懒加载，自定义占位、加载失败等</p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-image</span><br><span class="line">   style="width: 100px; height: 100px"</span><br><span class="line">   :src="url"</span><br><span class="line">   :fit="fit"&gt;&lt;/el-image&gt;</span><br></pre></td></tr></tbody></table></div></figure>
+
+<ul>
+<li>占位内容<br>加载失败<br>懒加载<br>大图预览-点击大图</li>
+</ul>
+
         <h2 id="Backtop回到顶部">
           <a href="#Backtop回到顶部" class="heading-link"><i class="fas fa-link"></i></a><a href="#Backtop回到顶部" class="headerlink" title="Backtop回到顶部"></a>Backtop回到顶部</h2>
-      
-        <h2 id="InfiniteScroll无限滚动">
-          <a href="#InfiniteScroll无限滚动" class="heading-link"><i class="fas fa-link"></i></a><a href="#InfiniteScroll无限滚动" class="headerlink" title="InfiniteScroll无限滚动"></a>InfiniteScroll无限滚动</h2>
-      
+      <p>返回页面顶部的操作按钮<br><code>&lt;el-backtop target=".page-component__scroll .el-scrollbar__wrap"&gt;&lt;/el-backtop&gt;</code></p>
+
         <h2 id="Drawer抽屉">
           <a href="#Drawer抽屉" class="heading-link"><i class="fas fa-link"></i></a><a href="#Drawer抽屉" class="headerlink" title="Drawer抽屉"></a>Drawer抽屉</h2>
-      </div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="http://example.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="post-share"><div class="social-share" data-sites="qzone, qq, weibo, wechat, douban, linkedin, facebook, twitter, google">Share to: </div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2021/03/09/Echarts%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">Echarts学习笔记</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2021/03/09/Js%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD/"><span class="paginator-prev__text">Js常用功能</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B"><span class="toc-number">1.</span> <span class="toc-text">
+      <p>类似Dialog，<br>Drawer 拥有和 Dialog 几乎相同的 API, 在 UI 上带来不一样的体验.</p>
+<ul>
+<li>呼出一个临时的侧边栏, 可以从多个方向呼出<br>不添加 Title<br>自定义内容<br>多层嵌套</li>
+</ul>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="http://example.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="post-share"><div class="social-share" data-sites="qzone, qq, weibo, wechat, douban, linkedin, facebook, twitter, google">Share to: </div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2021/03/09/Echarts%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">Echarts学习笔记</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2021/03/09/Js%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD/"><span class="paginator-prev__text">Js常用功能</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B"><span class="toc-number">1.</span> <span class="toc-text">
           开始</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">1.1.</span> <span class="toc-text">
           安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F"><span class="toc-number">1.2.</span> <span class="toc-text">
           快速</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SCSS"><span class="toc-number">1.3.</span> <span class="toc-text">
@@ -290,28 +482,25 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0">
           组件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Basic"><span class="toc-number">3.</span> <span class="toc-text">
           Basic</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Layout%E5%B8%83%E5%B1%80"><span class="toc-number">3.1.</span> <span class="toc-text">
           Layout布局</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Container%E5%B8%83%E5%B1%80%E5%AE%B9%E5%99%A8"><span class="toc-number">3.2.</span> <span class="toc-text">
-          Container布局容器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Color%E8%89%B2%E5%BD%A9"><span class="toc-number">3.3.</span> <span class="toc-text">
-          Color色彩</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Border%E8%BE%B9%E6%A1%86"><span class="toc-number">3.4.</span> <span class="toc-text">
-          Border边框</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Icon%E5%9B%BE%E6%A0%87"><span class="toc-number">3.5.</span> <span class="toc-text">
-          Icon图标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Button%E6%8C%89%E9%92%AE"><span class="toc-number">3.6.</span> <span class="toc-text">
-          Button按钮</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Link%E6%96%87%E5%AD%97%E9%93%BE%E6%8E%A5"><span class="toc-number">3.7.</span> <span class="toc-text">
+          Container布局容器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Icon%E5%9B%BE%E6%A0%87"><span class="toc-number">3.3.</span> <span class="toc-text">
+          Icon图标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Button%E6%8C%89%E9%92%AE"><span class="toc-number">3.4.</span> <span class="toc-text">
+          Button按钮</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Link%E6%96%87%E5%AD%97%E9%93%BE%E6%8E%A5"><span class="toc-number">3.5.</span> <span class="toc-text">
           Link文字链接</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Form"><span class="toc-number">4.</span> <span class="toc-text">
           Form</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Radio%E5%8D%95%E9%80%89%E6%A1%86"><span class="toc-number">4.1.</span> <span class="toc-text">
           Radio单选框</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Checkbox%E5%A4%9A%E9%80%89%E6%A1%86"><span class="toc-number">4.2.</span> <span class="toc-text">
           Checkbox多选框</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Input%E8%BE%93%E5%85%A5%E6%A1%86"><span class="toc-number">4.3.</span> <span class="toc-text">
-          Input输入框</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#InputNumber%E8%AE%A1%E6%95%B0%E5%99%A8"><span class="toc-number">4.4.</span> <span class="toc-text">
-          InputNumber计数器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Select%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">4.5.</span> <span class="toc-text">
-          Select选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Cascader%E7%BA%A7%E8%81%94%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">4.6.</span> <span class="toc-text">
-          Cascader级联选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Switch%E5%BC%80%E5%85%B3"><span class="toc-number">4.7.</span> <span class="toc-text">
-          Switch开关</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Slider%E6%BB%91%E5%9D%97"><span class="toc-number">4.8.</span> <span class="toc-text">
-          Slider滑块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TimePicker%E6%97%B6%E9%97%B4%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">4.9.</span> <span class="toc-text">
-          TimePicker时间选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DatePicker%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">4.10.</span> <span class="toc-text">
-          DatePicker选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DateTimePicker"><span class="toc-number">4.11.</span> <span class="toc-text">
-          DateTimePicker</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Upload%E4%B8%8A%E4%BC%A0"><span class="toc-number">4.12.</span> <span class="toc-text">
-          Upload上传</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Rate%E8%AF%84%E5%88%86"><span class="toc-number">4.13.</span> <span class="toc-text">
-          Rate评分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ColorPicker%E9%A2%9C%E8%89%B2%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">4.14.</span> <span class="toc-text">
-          ColorPicker颜色选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Transfer%E7%A9%BF%E6%A2%AD%E6%A1%86"><span class="toc-number">4.15.</span> <span class="toc-text">
-          Transfer穿梭框</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Form%E8%A1%A8%E5%8D%95"><span class="toc-number">4.16.</span> <span class="toc-text">
+          Input输入框</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Select%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">4.4.</span> <span class="toc-text">
+          Select选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Cascader%E7%BA%A7%E8%81%94%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">4.5.</span> <span class="toc-text">
+          Cascader级联选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Switch%E5%BC%80%E5%85%B3"><span class="toc-number">4.6.</span> <span class="toc-text">
+          Switch开关</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Slider%E6%BB%91%E5%9D%97"><span class="toc-number">4.7.</span> <span class="toc-text">
+          Slider滑块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TimePicker%E6%97%B6%E9%97%B4%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">4.8.</span> <span class="toc-text">
+          TimePicker时间选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DatePicker%E6%97%A5%E6%9C%9F%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">4.9.</span> <span class="toc-text">
+          DatePicker日期选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DateTimePicker%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">4.10.</span> <span class="toc-text">
+          DateTimePicker日期时间选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Upload%E4%B8%8A%E4%BC%A0"><span class="toc-number">4.11.</span> <span class="toc-text">
+          Upload上传</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Rate%E8%AF%84%E5%88%86"><span class="toc-number">4.12.</span> <span class="toc-text">
+          Rate评分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ColorPicker%E9%A2%9C%E8%89%B2%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">4.13.</span> <span class="toc-text">
+          ColorPicker颜色选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Transfer%E7%A9%BF%E6%A2%AD%E6%A1%86"><span class="toc-number">4.14.</span> <span class="toc-text">
+          Transfer穿梭框</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Form%E8%A1%A8%E5%8D%95"><span class="toc-number">4.15.</span> <span class="toc-text">
           Form表单</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Data"><span class="toc-number">5.</span> <span class="toc-text">
           Data</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Table%E8%A1%A8%E6%A0%BC"><span class="toc-number">5.1.</span> <span class="toc-text">
           Table表格</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tag%E6%A0%87%E7%AD%BE"><span class="toc-number">5.2.</span> <span class="toc-text">
@@ -345,6 +534,5 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0">
           Divider分割线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Calendar%E6%97%A5%E5%8E%86"><span class="toc-number">8.9.</span> <span class="toc-text">
           Calendar日历</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Image%E5%9B%BE%E7%89%87"><span class="toc-number">8.10.</span> <span class="toc-text">
           Image图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Backtop%E5%9B%9E%E5%88%B0%E9%A1%B6%E9%83%A8"><span class="toc-number">8.11.</span> <span class="toc-text">
-          Backtop回到顶部</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#InfiniteScroll%E6%97%A0%E9%99%90%E6%BB%9A%E5%8A%A8"><span class="toc-number">8.12.</span> <span class="toc-text">
-          InfiniteScroll无限滚动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Drawer%E6%8A%BD%E5%B1%89"><span class="toc-number">8.13.</span> <span class="toc-text">
+          Backtop回到顶部</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Drawer%E6%8A%BD%E5%B1%89"><span class="toc-number">8.12.</span> <span class="toc-text">
           Drawer抽屉</span></a></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/header.jpg" alt="avatar"></div><p class="sidebar-ov-author__text">LJY_BLOG</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">8</div><div class="sidebar-ov-state-item__name">Archives</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">3</div><div class="sidebar-ov-state-item__name">Tags</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script></body></html>
