@@ -6,7 +6,7 @@
 <meta property="og:description" content="学习看文档，主要了解下，UI组件里有什么，定义了哪些样式，实现了哪些功能。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-03-09T06:24:11.000Z">
-<meta property="article:modified_time" content="2021-03-11T00:42:29.216Z">
+<meta property="article:modified_time" content="2021-03-11T03:37:29.127Z">
 <meta property="article:author" content="LJY">
 <meta property="article:tag" content="学习笔记">
 <meta name="twitter:card" content="summary"><title>Element-UI学习笔记 | LJY_BLOG</title><link ref="canonical" href="http://example.com/2021/03/09/Element-UI%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
@@ -35,38 +35,316 @@ var CONFIG = {
 
 window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-</head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">主页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">档案</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/reading/"><span class="header-nav-menu-item__icon"><i class="fas fa-book"></i></span><span class="header-nav-menu-item__text">阅读</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">LJY_BLOG</div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><div class="sticky-top" data-popover="Sticky" data-popover-pos="up"><span class="sticky-top__icon"><i class="fas fa-thumbtack"></i></span></div><h1 class="post-title">Element-UI学习笔记</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">创建</span><span class="post-meta-item__value">2021-03-09</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新</span><span class="post-meta-item__value">2021-03-11</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon"><i class="far fa-clock"></i></span><span class="post-meta-item__info">阅读时间</span><span class="post-meta-item__value">1m</span></span></div></header><div class="post-body"><p>学习看文档，主要了解下，UI组件里有什么，定义了哪些样式，实现了哪些功能。</p>
+</head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">主页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">档案</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/reading/"><span class="header-nav-menu-item__icon"><i class="fas fa-book"></i></span><span class="header-nav-menu-item__text">阅读</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">LJY_BLOG</div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><div class="sticky-top" data-popover="Sticky" data-popover-pos="up"><span class="sticky-top__icon"><i class="fas fa-thumbtack"></i></span></div><h1 class="post-title">Element-UI学习笔记</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">创建</span><span class="post-meta-item__value">2021-03-09</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新</span><span class="post-meta-item__value">2021-03-11</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon"><i class="far fa-clock"></i></span><span class="post-meta-item__info">阅读时间</span><span class="post-meta-item__value">3m</span></span></div></header><div class="post-body"><p>学习看文档，主要了解下，UI组件里有什么，定义了哪些样式，实现了哪些功能。</p>
 <span id="more"></span>
 
         <h1 id="开始">
           <a href="#开始" class="heading-link"><i class="fas fa-link"></i></a><a href="#开始" class="headerlink" title="开始"></a>开始</h1>
       
+        <h2 id="安装">
+          <a href="#安装" class="heading-link"><i class="fas fa-link"></i></a><a href="#安装" class="headerlink" title="安装"></a>安装</h2>
+      <p>安装方式 npm / cdn</p>
+
+        <h2 id="快速">
+          <a href="#快速" class="heading-link"><i class="fas fa-link"></i></a><a href="#快速" class="headerlink" title="快速"></a>快速</h2>
+      <p>在vue-cli中用npm的方式引入<br>按需导入，可以节省资源消耗</p>
+
+        <h2 id="SCSS">
+          <a href="#SCSS" class="heading-link"><i class="fas fa-link"></i></a><a href="#SCSS" class="headerlink" title="SCSS"></a>SCSS</h2>
+      <p>element的theme-chalk用SCSS编写<br>其他文件也可以</p>
+
+        <h2 id="内置过渡动画">
+          <a href="#内置过渡动画" class="heading-link"><i class="fas fa-link"></i></a><a href="#内置过渡动画" class="headerlink" title="内置过渡动画"></a>内置过渡动画</h2>
+      <p>用transition包裹，name赋值即可<br>可按需导入</p>
+<ol>
+<li>fade淡入淡出</li>
+<li>zoom缩放</li>
+<li>collapse展开折叠</li>
+</ol>
+
         <h1 id="组件">
           <a href="#组件" class="heading-link"><i class="fas fa-link"></i></a><a href="#组件" class="headerlink" title="组件"></a>组件</h1>
-      
+      <ul>
+<li>Basic</li>
+<li>Form</li>
+<li>Data</li>
+<li>Notice</li>
+<li>Navigation</li>
+<li>Others</li>
+</ul>
+
         <h1 id="Basic">
           <a href="#Basic" class="heading-link"><i class="fas fa-link"></i></a><a href="#Basic" class="headerlink" title="Basic"></a>Basic</h1>
+      
+        <h2 id="Layout布局">
+          <a href="#Layout布局" class="heading-link"><i class="fas fa-link"></i></a><a href="#Layout布局" class="headerlink" title="Layout布局"></a>Layout布局</h2>
+      <ol>
+<li><p>基础布局</p>
+<blockquote>
+<p>通过row和col组件，，这是层级关系<br>并通过col组件的span属性，这里指的是跨度<br>element-ui每一行共分为24的跨度</p>
+</blockquote>
+</li>
+<li><p>分栏间隔</p>
+<blockquote>
+<p>指的是每个col组件之间的距离<br>用gutter属性来定义，默认0<br>跨度依旧是24</p>
+</blockquote>
+</li>
+<li><p>混合布局</p>
+<blockquote>
+<p>跨度分为12/6/6<br>8/4/4/8等</p>
+</blockquote>
+</li>
+<li><p>分栏偏移</p>
+<blockquote>
+<p>指的是空出一段距离，<br>按span的跨度来空距离</p>
+</blockquote>
+</li>
+<li><p>对齐方式</p>
+<blockquote>
+<p>结合flex布局<br>给row即父元素设置<br><code>&lt;el-row type="flex" class="row-bg" justify="center"&gt;</code></p>
+</blockquote>
+</li>
+<li><p>响应式布局<br>参照Bootstrap，设计了五个相应尺寸<br>xs,sm,md,lg,xld</p>
+</li>
+</ol>
+
+        <h2 id="Container布局容器">
+          <a href="#Container布局容器" class="heading-link"><i class="fas fa-link"></i></a><a href="#Container布局容器" class="headerlink" title="Container布局容器"></a>Container布局容器</h2>
+      
+        <h2 id="Color色彩">
+          <a href="#Color色彩" class="heading-link"><i class="fas fa-link"></i></a><a href="#Color色彩" class="headerlink" title="Color色彩"></a>Color色彩</h2>
+      
+        <h2 id="Border边框">
+          <a href="#Border边框" class="heading-link"><i class="fas fa-link"></i></a><a href="#Border边框" class="headerlink" title="Border边框"></a>Border边框</h2>
+      
+        <h2 id="Icon图标">
+          <a href="#Icon图标" class="heading-link"><i class="fas fa-link"></i></a><a href="#Icon图标" class="headerlink" title="Icon图标"></a>Icon图标</h2>
+      
+        <h2 id="Button按钮">
+          <a href="#Button按钮" class="heading-link"><i class="fas fa-link"></i></a><a href="#Button按钮" class="headerlink" title="Button按钮"></a>Button按钮</h2>
+      
+        <h2 id="Link文字链接">
+          <a href="#Link文字链接" class="heading-link"><i class="fas fa-link"></i></a><a href="#Link文字链接" class="headerlink" title="Link文字链接"></a>Link文字链接</h2>
       
         <h1 id="Form">
           <a href="#Form" class="heading-link"><i class="fas fa-link"></i></a><a href="#Form" class="headerlink" title="Form"></a>Form</h1>
       
+        <h2 id="Radio单选框">
+          <a href="#Radio单选框" class="heading-link"><i class="fas fa-link"></i></a><a href="#Radio单选框" class="headerlink" title="Radio单选框"></a>Radio单选框</h2>
+      
+        <h2 id="Checkbox多选框">
+          <a href="#Checkbox多选框" class="heading-link"><i class="fas fa-link"></i></a><a href="#Checkbox多选框" class="headerlink" title="Checkbox多选框"></a>Checkbox多选框</h2>
+      
+        <h2 id="Input输入框">
+          <a href="#Input输入框" class="heading-link"><i class="fas fa-link"></i></a><a href="#Input输入框" class="headerlink" title="Input输入框"></a>Input输入框</h2>
+      
+        <h2 id="InputNumber计数器">
+          <a href="#InputNumber计数器" class="heading-link"><i class="fas fa-link"></i></a><a href="#InputNumber计数器" class="headerlink" title="InputNumber计数器"></a>InputNumber计数器</h2>
+      
+        <h2 id="Select选择器">
+          <a href="#Select选择器" class="heading-link"><i class="fas fa-link"></i></a><a href="#Select选择器" class="headerlink" title="Select选择器"></a>Select选择器</h2>
+      
+        <h2 id="Cascader级联选择器">
+          <a href="#Cascader级联选择器" class="heading-link"><i class="fas fa-link"></i></a><a href="#Cascader级联选择器" class="headerlink" title="Cascader级联选择器"></a>Cascader级联选择器</h2>
+      
+        <h2 id="Switch开关">
+          <a href="#Switch开关" class="heading-link"><i class="fas fa-link"></i></a><a href="#Switch开关" class="headerlink" title="Switch开关"></a>Switch开关</h2>
+      
+        <h2 id="Slider滑块">
+          <a href="#Slider滑块" class="heading-link"><i class="fas fa-link"></i></a><a href="#Slider滑块" class="headerlink" title="Slider滑块"></a>Slider滑块</h2>
+      
+        <h2 id="TimePicker时间选择器">
+          <a href="#TimePicker时间选择器" class="heading-link"><i class="fas fa-link"></i></a><a href="#TimePicker时间选择器" class="headerlink" title="TimePicker时间选择器"></a>TimePicker时间选择器</h2>
+      
+        <h2 id="DatePicker选择器">
+          <a href="#DatePicker选择器" class="heading-link"><i class="fas fa-link"></i></a><a href="#DatePicker选择器" class="headerlink" title="DatePicker选择器"></a>DatePicker选择器</h2>
+      
+        <h2 id="DateTimePicker">
+          <a href="#DateTimePicker" class="heading-link"><i class="fas fa-link"></i></a><a href="#DateTimePicker" class="headerlink" title="DateTimePicker"></a>DateTimePicker</h2>
+      
+        <h2 id="Upload上传">
+          <a href="#Upload上传" class="heading-link"><i class="fas fa-link"></i></a><a href="#Upload上传" class="headerlink" title="Upload上传"></a>Upload上传</h2>
+      
+        <h2 id="Rate评分">
+          <a href="#Rate评分" class="heading-link"><i class="fas fa-link"></i></a><a href="#Rate评分" class="headerlink" title="Rate评分"></a>Rate评分</h2>
+      
+        <h2 id="ColorPicker颜色选择器">
+          <a href="#ColorPicker颜色选择器" class="heading-link"><i class="fas fa-link"></i></a><a href="#ColorPicker颜色选择器" class="headerlink" title="ColorPicker颜色选择器"></a>ColorPicker颜色选择器</h2>
+      
+        <h2 id="Transfer穿梭框">
+          <a href="#Transfer穿梭框" class="heading-link"><i class="fas fa-link"></i></a><a href="#Transfer穿梭框" class="headerlink" title="Transfer穿梭框"></a>Transfer穿梭框</h2>
+      
+        <h2 id="Form表单">
+          <a href="#Form表单" class="heading-link"><i class="fas fa-link"></i></a><a href="#Form表单" class="headerlink" title="Form表单"></a>Form表单</h2>
+      
         <h1 id="Data">
           <a href="#Data" class="heading-link"><i class="fas fa-link"></i></a><a href="#Data" class="headerlink" title="Data"></a>Data</h1>
+      
+        <h2 id="Table表格">
+          <a href="#Table表格" class="heading-link"><i class="fas fa-link"></i></a><a href="#Table表格" class="headerlink" title="Table表格"></a>Table表格</h2>
+      
+        <h2 id="Tag标签">
+          <a href="#Tag标签" class="heading-link"><i class="fas fa-link"></i></a><a href="#Tag标签" class="headerlink" title="Tag标签"></a>Tag标签</h2>
+      
+        <h2 id="Progress进度条">
+          <a href="#Progress进度条" class="heading-link"><i class="fas fa-link"></i></a><a href="#Progress进度条" class="headerlink" title="Progress进度条"></a>Progress进度条</h2>
+      
+        <h2 id="Tree树形控件">
+          <a href="#Tree树形控件" class="heading-link"><i class="fas fa-link"></i></a><a href="#Tree树形控件" class="headerlink" title="Tree树形控件"></a>Tree树形控件</h2>
+      
+        <h2 id="Pagination分页">
+          <a href="#Pagination分页" class="heading-link"><i class="fas fa-link"></i></a><a href="#Pagination分页" class="headerlink" title="Pagination分页"></a>Pagination分页</h2>
+      
+        <h2 id="Badge标记">
+          <a href="#Badge标记" class="heading-link"><i class="fas fa-link"></i></a><a href="#Badge标记" class="headerlink" title="Badge标记"></a>Badge标记</h2>
+      
+        <h2 id="Avatar头像">
+          <a href="#Avatar头像" class="heading-link"><i class="fas fa-link"></i></a><a href="#Avatar头像" class="headerlink" title="Avatar头像"></a>Avatar头像</h2>
       
         <h1 id="Notice">
           <a href="#Notice" class="heading-link"><i class="fas fa-link"></i></a><a href="#Notice" class="headerlink" title="Notice"></a>Notice</h1>
       
+        <h2 id="Alert警告">
+          <a href="#Alert警告" class="heading-link"><i class="fas fa-link"></i></a><a href="#Alert警告" class="headerlink" title="Alert警告"></a>Alert警告</h2>
+      
+        <h2 id="Loading加载">
+          <a href="#Loading加载" class="heading-link"><i class="fas fa-link"></i></a><a href="#Loading加载" class="headerlink" title="Loading加载"></a>Loading加载</h2>
+      
+        <h2 id="Message消息提示">
+          <a href="#Message消息提示" class="heading-link"><i class="fas fa-link"></i></a><a href="#Message消息提示" class="headerlink" title="Message消息提示"></a>Message消息提示</h2>
+      
+        <h2 id="MessageBox弹框">
+          <a href="#MessageBox弹框" class="heading-link"><i class="fas fa-link"></i></a><a href="#MessageBox弹框" class="headerlink" title="MessageBox弹框"></a>MessageBox弹框</h2>
+      
+        <h2 id="Notification通知">
+          <a href="#Notification通知" class="heading-link"><i class="fas fa-link"></i></a><a href="#Notification通知" class="headerlink" title="Notification通知"></a>Notification通知</h2>
+      
         <h1 id="Navigation">
           <a href="#Navigation" class="heading-link"><i class="fas fa-link"></i></a><a href="#Navigation" class="headerlink" title="Navigation"></a>Navigation</h1>
       
+        <h2 id="NavMenu导航菜单">
+          <a href="#NavMenu导航菜单" class="heading-link"><i class="fas fa-link"></i></a><a href="#NavMenu导航菜单" class="headerlink" title="NavMenu导航菜单"></a>NavMenu导航菜单</h2>
+      
+        <h2 id="Tabs标签页">
+          <a href="#Tabs标签页" class="heading-link"><i class="fas fa-link"></i></a><a href="#Tabs标签页" class="headerlink" title="Tabs标签页"></a>Tabs标签页</h2>
+      
+        <h2 id="Breadcrumb面包屑">
+          <a href="#Breadcrumb面包屑" class="heading-link"><i class="fas fa-link"></i></a><a href="#Breadcrumb面包屑" class="headerlink" title="Breadcrumb面包屑"></a>Breadcrumb面包屑</h2>
+      
+        <h2 id="PageHeader页头">
+          <a href="#PageHeader页头" class="heading-link"><i class="fas fa-link"></i></a><a href="#PageHeader页头" class="headerlink" title="PageHeader页头"></a>PageHeader页头</h2>
+      
+        <h2 id="Dropdown下拉菜单">
+          <a href="#Dropdown下拉菜单" class="heading-link"><i class="fas fa-link"></i></a><a href="#Dropdown下拉菜单" class="headerlink" title="Dropdown下拉菜单"></a>Dropdown下拉菜单</h2>
+      
+        <h2 id="Steps步骤条">
+          <a href="#Steps步骤条" class="heading-link"><i class="fas fa-link"></i></a><a href="#Steps步骤条" class="headerlink" title="Steps步骤条"></a>Steps步骤条</h2>
+      
         <h1 id="Others">
           <a href="#Others" class="heading-link"><i class="fas fa-link"></i></a><a href="#Others" class="headerlink" title="Others"></a>Others</h1>
+      
+        <h2 id="Dialog对话框">
+          <a href="#Dialog对话框" class="heading-link"><i class="fas fa-link"></i></a><a href="#Dialog对话框" class="headerlink" title="Dialog对话框"></a>Dialog对话框</h2>
+      
+        <h2 id="Tooltip文字提示">
+          <a href="#Tooltip文字提示" class="heading-link"><i class="fas fa-link"></i></a><a href="#Tooltip文字提示" class="headerlink" title="Tooltip文字提示"></a>Tooltip文字提示</h2>
+      
+        <h2 id="Popover弹出框">
+          <a href="#Popover弹出框" class="heading-link"><i class="fas fa-link"></i></a><a href="#Popover弹出框" class="headerlink" title="Popover弹出框"></a>Popover弹出框</h2>
+      
+        <h2 id="Card卡片">
+          <a href="#Card卡片" class="heading-link"><i class="fas fa-link"></i></a><a href="#Card卡片" class="headerlink" title="Card卡片"></a>Card卡片</h2>
+      
+        <h2 id="Carousel走马灯">
+          <a href="#Carousel走马灯" class="heading-link"><i class="fas fa-link"></i></a><a href="#Carousel走马灯" class="headerlink" title="Carousel走马灯"></a>Carousel走马灯</h2>
+      
+        <h2 id="Collapse折叠面板">
+          <a href="#Collapse折叠面板" class="heading-link"><i class="fas fa-link"></i></a><a href="#Collapse折叠面板" class="headerlink" title="Collapse折叠面板"></a>Collapse折叠面板</h2>
+      
+        <h2 id="Timeline时间线">
+          <a href="#Timeline时间线" class="heading-link"><i class="fas fa-link"></i></a><a href="#Timeline时间线" class="headerlink" title="Timeline时间线"></a>Timeline时间线</h2>
+      
+        <h2 id="Divider分割线">
+          <a href="#Divider分割线" class="heading-link"><i class="fas fa-link"></i></a><a href="#Divider分割线" class="headerlink" title="Divider分割线"></a>Divider分割线</h2>
+      
+        <h2 id="Calendar日历">
+          <a href="#Calendar日历" class="heading-link"><i class="fas fa-link"></i></a><a href="#Calendar日历" class="headerlink" title="Calendar日历"></a>Calendar日历</h2>
+      
+        <h2 id="Image图片">
+          <a href="#Image图片" class="heading-link"><i class="fas fa-link"></i></a><a href="#Image图片" class="headerlink" title="Image图片"></a>Image图片</h2>
+      
+        <h2 id="Backtop回到顶部">
+          <a href="#Backtop回到顶部" class="heading-link"><i class="fas fa-link"></i></a><a href="#Backtop回到顶部" class="headerlink" title="Backtop回到顶部"></a>Backtop回到顶部</h2>
+      
+        <h2 id="InfiniteScroll无限滚动">
+          <a href="#InfiniteScroll无限滚动" class="heading-link"><i class="fas fa-link"></i></a><a href="#InfiniteScroll无限滚动" class="headerlink" title="InfiniteScroll无限滚动"></a>InfiniteScroll无限滚动</h2>
+      
+        <h2 id="Drawer抽屉">
+          <a href="#Drawer抽屉" class="heading-link"><i class="fas fa-link"></i></a><a href="#Drawer抽屉" class="headerlink" title="Drawer抽屉"></a>Drawer抽屉</h2>
       </div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="http://example.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="post-share"><div class="social-share" data-sites="qzone, qq, weibo, wechat, douban, linkedin, facebook, twitter, google">Share to: </div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2021/03/09/Echarts%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">Echarts学习笔记</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2021/03/09/Js%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD/"><span class="paginator-prev__text">Js常用功能</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B"><span class="toc-number">1.</span> <span class="toc-text">
-          开始</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%84%E4%BB%B6"><span class="toc-number">2.</span> <span class="toc-text">
+          开始</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">1.1.</span> <span class="toc-text">
+          安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F"><span class="toc-number">1.2.</span> <span class="toc-text">
+          快速</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SCSS"><span class="toc-number">1.3.</span> <span class="toc-text">
+          SCSS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%85%E7%BD%AE%E8%BF%87%E6%B8%A1%E5%8A%A8%E7%94%BB"><span class="toc-number">1.4.</span> <span class="toc-text">
+          内置过渡动画</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%84%E4%BB%B6"><span class="toc-number">2.</span> <span class="toc-text">
           组件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Basic"><span class="toc-number">3.</span> <span class="toc-text">
-          Basic</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Form"><span class="toc-number">4.</span> <span class="toc-text">
-          Form</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Data"><span class="toc-number">5.</span> <span class="toc-text">
-          Data</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Notice"><span class="toc-number">6.</span> <span class="toc-text">
-          Notice</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Navigation"><span class="toc-number">7.</span> <span class="toc-text">
-          Navigation</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Others"><span class="toc-number">8.</span> <span class="toc-text">
-          Others</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/header.jpg" alt="avatar"></div><p class="sidebar-ov-author__text">LJY_BLOG</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">8</div><div class="sidebar-ov-state-item__name">Archives</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">3</div><div class="sidebar-ov-state-item__name">Tags</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script></body></html>
+          Basic</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Layout%E5%B8%83%E5%B1%80"><span class="toc-number">3.1.</span> <span class="toc-text">
+          Layout布局</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Container%E5%B8%83%E5%B1%80%E5%AE%B9%E5%99%A8"><span class="toc-number">3.2.</span> <span class="toc-text">
+          Container布局容器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Color%E8%89%B2%E5%BD%A9"><span class="toc-number">3.3.</span> <span class="toc-text">
+          Color色彩</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Border%E8%BE%B9%E6%A1%86"><span class="toc-number">3.4.</span> <span class="toc-text">
+          Border边框</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Icon%E5%9B%BE%E6%A0%87"><span class="toc-number">3.5.</span> <span class="toc-text">
+          Icon图标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Button%E6%8C%89%E9%92%AE"><span class="toc-number">3.6.</span> <span class="toc-text">
+          Button按钮</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Link%E6%96%87%E5%AD%97%E9%93%BE%E6%8E%A5"><span class="toc-number">3.7.</span> <span class="toc-text">
+          Link文字链接</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Form"><span class="toc-number">4.</span> <span class="toc-text">
+          Form</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Radio%E5%8D%95%E9%80%89%E6%A1%86"><span class="toc-number">4.1.</span> <span class="toc-text">
+          Radio单选框</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Checkbox%E5%A4%9A%E9%80%89%E6%A1%86"><span class="toc-number">4.2.</span> <span class="toc-text">
+          Checkbox多选框</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Input%E8%BE%93%E5%85%A5%E6%A1%86"><span class="toc-number">4.3.</span> <span class="toc-text">
+          Input输入框</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#InputNumber%E8%AE%A1%E6%95%B0%E5%99%A8"><span class="toc-number">4.4.</span> <span class="toc-text">
+          InputNumber计数器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Select%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">4.5.</span> <span class="toc-text">
+          Select选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Cascader%E7%BA%A7%E8%81%94%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">4.6.</span> <span class="toc-text">
+          Cascader级联选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Switch%E5%BC%80%E5%85%B3"><span class="toc-number">4.7.</span> <span class="toc-text">
+          Switch开关</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Slider%E6%BB%91%E5%9D%97"><span class="toc-number">4.8.</span> <span class="toc-text">
+          Slider滑块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TimePicker%E6%97%B6%E9%97%B4%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">4.9.</span> <span class="toc-text">
+          TimePicker时间选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DatePicker%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">4.10.</span> <span class="toc-text">
+          DatePicker选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DateTimePicker"><span class="toc-number">4.11.</span> <span class="toc-text">
+          DateTimePicker</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Upload%E4%B8%8A%E4%BC%A0"><span class="toc-number">4.12.</span> <span class="toc-text">
+          Upload上传</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Rate%E8%AF%84%E5%88%86"><span class="toc-number">4.13.</span> <span class="toc-text">
+          Rate评分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ColorPicker%E9%A2%9C%E8%89%B2%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">4.14.</span> <span class="toc-text">
+          ColorPicker颜色选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Transfer%E7%A9%BF%E6%A2%AD%E6%A1%86"><span class="toc-number">4.15.</span> <span class="toc-text">
+          Transfer穿梭框</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Form%E8%A1%A8%E5%8D%95"><span class="toc-number">4.16.</span> <span class="toc-text">
+          Form表单</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Data"><span class="toc-number">5.</span> <span class="toc-text">
+          Data</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Table%E8%A1%A8%E6%A0%BC"><span class="toc-number">5.1.</span> <span class="toc-text">
+          Table表格</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tag%E6%A0%87%E7%AD%BE"><span class="toc-number">5.2.</span> <span class="toc-text">
+          Tag标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Progress%E8%BF%9B%E5%BA%A6%E6%9D%A1"><span class="toc-number">5.3.</span> <span class="toc-text">
+          Progress进度条</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tree%E6%A0%91%E5%BD%A2%E6%8E%A7%E4%BB%B6"><span class="toc-number">5.4.</span> <span class="toc-text">
+          Tree树形控件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Pagination%E5%88%86%E9%A1%B5"><span class="toc-number">5.5.</span> <span class="toc-text">
+          Pagination分页</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Badge%E6%A0%87%E8%AE%B0"><span class="toc-number">5.6.</span> <span class="toc-text">
+          Badge标记</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Avatar%E5%A4%B4%E5%83%8F"><span class="toc-number">5.7.</span> <span class="toc-text">
+          Avatar头像</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Notice"><span class="toc-number">6.</span> <span class="toc-text">
+          Notice</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Alert%E8%AD%A6%E5%91%8A"><span class="toc-number">6.1.</span> <span class="toc-text">
+          Alert警告</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Loading%E5%8A%A0%E8%BD%BD"><span class="toc-number">6.2.</span> <span class="toc-text">
+          Loading加载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Message%E6%B6%88%E6%81%AF%E6%8F%90%E7%A4%BA"><span class="toc-number">6.3.</span> <span class="toc-text">
+          Message消息提示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MessageBox%E5%BC%B9%E6%A1%86"><span class="toc-number">6.4.</span> <span class="toc-text">
+          MessageBox弹框</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Notification%E9%80%9A%E7%9F%A5"><span class="toc-number">6.5.</span> <span class="toc-text">
+          Notification通知</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Navigation"><span class="toc-number">7.</span> <span class="toc-text">
+          Navigation</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#NavMenu%E5%AF%BC%E8%88%AA%E8%8F%9C%E5%8D%95"><span class="toc-number">7.1.</span> <span class="toc-text">
+          NavMenu导航菜单</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tabs%E6%A0%87%E7%AD%BE%E9%A1%B5"><span class="toc-number">7.2.</span> <span class="toc-text">
+          Tabs标签页</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Breadcrumb%E9%9D%A2%E5%8C%85%E5%B1%91"><span class="toc-number">7.3.</span> <span class="toc-text">
+          Breadcrumb面包屑</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PageHeader%E9%A1%B5%E5%A4%B4"><span class="toc-number">7.4.</span> <span class="toc-text">
+          PageHeader页头</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Dropdown%E4%B8%8B%E6%8B%89%E8%8F%9C%E5%8D%95"><span class="toc-number">7.5.</span> <span class="toc-text">
+          Dropdown下拉菜单</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Steps%E6%AD%A5%E9%AA%A4%E6%9D%A1"><span class="toc-number">7.6.</span> <span class="toc-text">
+          Steps步骤条</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Others"><span class="toc-number">8.</span> <span class="toc-text">
+          Others</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Dialog%E5%AF%B9%E8%AF%9D%E6%A1%86"><span class="toc-number">8.1.</span> <span class="toc-text">
+          Dialog对话框</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tooltip%E6%96%87%E5%AD%97%E6%8F%90%E7%A4%BA"><span class="toc-number">8.2.</span> <span class="toc-text">
+          Tooltip文字提示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Popover%E5%BC%B9%E5%87%BA%E6%A1%86"><span class="toc-number">8.3.</span> <span class="toc-text">
+          Popover弹出框</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Card%E5%8D%A1%E7%89%87"><span class="toc-number">8.4.</span> <span class="toc-text">
+          Card卡片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Carousel%E8%B5%B0%E9%A9%AC%E7%81%AF"><span class="toc-number">8.5.</span> <span class="toc-text">
+          Carousel走马灯</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Collapse%E6%8A%98%E5%8F%A0%E9%9D%A2%E6%9D%BF"><span class="toc-number">8.6.</span> <span class="toc-text">
+          Collapse折叠面板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Timeline%E6%97%B6%E9%97%B4%E7%BA%BF"><span class="toc-number">8.7.</span> <span class="toc-text">
+          Timeline时间线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Divider%E5%88%86%E5%89%B2%E7%BA%BF"><span class="toc-number">8.8.</span> <span class="toc-text">
+          Divider分割线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Calendar%E6%97%A5%E5%8E%86"><span class="toc-number">8.9.</span> <span class="toc-text">
+          Calendar日历</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Image%E5%9B%BE%E7%89%87"><span class="toc-number">8.10.</span> <span class="toc-text">
+          Image图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Backtop%E5%9B%9E%E5%88%B0%E9%A1%B6%E9%83%A8"><span class="toc-number">8.11.</span> <span class="toc-text">
+          Backtop回到顶部</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#InfiniteScroll%E6%97%A0%E9%99%90%E6%BB%9A%E5%8A%A8"><span class="toc-number">8.12.</span> <span class="toc-text">
+          InfiniteScroll无限滚动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Drawer%E6%8A%BD%E5%B1%89"><span class="toc-number">8.13.</span> <span class="toc-text">
+          Drawer抽屉</span></a></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/header.jpg" alt="avatar"></div><p class="sidebar-ov-author__text">LJY_BLOG</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">8</div><div class="sidebar-ov-state-item__name">Archives</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">3</div><div class="sidebar-ov-state-item__name">Tags</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script></body></html>
