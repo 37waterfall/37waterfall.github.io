@@ -6,7 +6,7 @@
 <meta property="og:description" content="开始vue项目笔记目标：快速构建，明确需求，整理实用组件和工具库">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-03-11T15:16:14.000Z">
-<meta property="article:modified_time" content="2021-03-12T14:17:08.576Z">
+<meta property="article:modified_time" content="2021-03-13T12:41:06.363Z">
 <meta property="article:author" content="LJY">
 <meta property="article:tag" content="项目笔记">
 <meta name="twitter:card" content="summary"><title>Vue-后台管理笔记 | LJY_BLOG</title><link ref="canonical" href="http://example.com/2021/03/11/Vue-%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
@@ -35,7 +35,7 @@ var CONFIG = {
 
 window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-</head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">主页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">档案</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/reading/"><span class="header-nav-menu-item__icon"><i class="fas fa-book"></i></span><span class="header-nav-menu-item__text">阅读</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">LJY_BLOG</div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><div class="sticky-top" data-popover="Sticky" data-popover-pos="up"><span class="sticky-top__icon"><i class="fas fa-thumbtack"></i></span></div><h1 class="post-title">Vue-后台管理笔记</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">创建</span><span class="post-meta-item__value">2021-03-11</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新</span><span class="post-meta-item__value">2021-03-12</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon"><i class="far fa-clock"></i></span><span class="post-meta-item__info">阅读时间</span><span class="post-meta-item__value">1m</span></span></div></header><div class="post-body"><p>开始vue项目笔记<br>目标：快速构建，明确需求，整理实用组件和工具库</p>
+</head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">主页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">档案</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/reading/"><span class="header-nav-menu-item__icon"><i class="fas fa-book"></i></span><span class="header-nav-menu-item__text">阅读</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">LJY_BLOG</div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><div class="sticky-top" data-popover="Sticky" data-popover-pos="up"><span class="sticky-top__icon"><i class="fas fa-thumbtack"></i></span></div><h1 class="post-title">Vue-后台管理笔记</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">创建</span><span class="post-meta-item__value">2021-03-11</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新</span><span class="post-meta-item__value">2021-03-13</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon"><i class="far fa-clock"></i></span><span class="post-meta-item__info">阅读时间</span><span class="post-meta-item__value">9m</span></span></div></header><div class="post-body"><p>开始vue项目笔记<br>目标：快速构建，明确需求，整理实用组件和工具库</p>
 <span id="more"></span>
 
         <h1 id="学习链接">
@@ -44,6 +44,154 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0">
 
         <h1 id="文档总结">
           <a href="#文档总结" class="heading-link"><i class="fas fa-link"></i></a><a href="#文档总结" class="headerlink" title="文档总结"></a>文档总结</h1>
+      <p>跟着大佬的思路来写总结！</p>
+<blockquote>
+<p>介绍<br>布局<br>路由和侧边栏<br>权限验证<br>快捷导航<br>新增页面<br>样式<br>服务端交互<br>Mock Data<br>引入外部模块<br>构建发布</p>
+</blockquote>
+
+        <h1 id="介绍">
+          <a href="#介绍" class="heading-link"><i class="fas fa-link"></i></a><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1>
+      <p>这里内容是集成的后台管理系统，内容很多，按需获取。</p>
+<ol>
+<li><p>功能<br>登录/ 注销</p>
+</li>
+<li><p>权限验证<br>页面权限/指令权限/权限配置/二步登录</p>
+</li>
+<li><p>全局功能<br>国际化多语言/动态换肤/动态侧边栏/动态面包屑/标签页/svg sprite图标<br>mock数据/Screenfull全屏/自适应收缩侧边栏</p>
+</li>
+<li><p>编辑器<br>富文本/Markdown/Json等</p>
+</li>
+<li><p>Excel<br>导出excel/导入excel/前端可视化excel/导出zip</p>
+</li>
+<li><p>错误页面<br>401/404</p>
+</li>
+</ol>
+
+        <h1 id="布局">
+          <a href="#布局" class="heading-link"><i class="fas fa-link"></i></a><a href="#布局" class="headerlink" title="布局"></a>布局</h1>
+      <ol>
+<li><p>项目结构，了解项目内容<br>build-构建相关<br>mock-模拟数据<br>plop-templates-基本模板<br>public-静态资源-favicon图标，html模板<br>src——核心<br>api-所有请求<br>assets-主题，字体等静态资源<br>components-全局公用组件<br>directive-全局指令<br>filters-全局filter<br>icons-项目svg icons<br>lang-国际化language<br>layout-全局layout<br>router-路由表<br>store-全局store管理<br>utils-全局公用方法<br>vendor-公用vendor<br>views-核心页面<br>App.vue-入口页面<br>main.js-入口文件、加载组件、初始化<br>permission.js -权限管理<br>tests<br>.env.xxx<br>.eslintrc.js<br>.babelrc<br>.travis.yml-自动化CI配置<br>vue.ocnfig.js<br>postcss.config.js<br>package.json</p>
+</li>
+<li><p>Layout<br>包含导航、侧边栏、面包屑、标签页及内容<br>路由渲染的时候，内容写入一级路由就可以，子路由也会带上。</p>
+</li>
+<li><p>app-main<br>外部包裹了一层keep-alive，为了缓存router-view，配合tabs-view使用的</p>
+</li>
+<li><p>router-view<br>默认情况下这两个页面切换时并不会触发 vue 的 created 或者 mounted 钩子<br>可以简单的在 router-view 上加上一个唯一的 key，来保证路由切换时都会重新渲染触发钩子了。</p>
+</li>
+</ol>
+
+        <h1 id="路由和侧边栏">
+          <a href="#路由和侧边栏" class="heading-link"><i class="fas fa-link"></i></a><a href="#路由和侧边栏" class="headerlink" title="路由和侧边栏"></a>路由和侧边栏</h1>
+      <p>关键核心部分<br>在侧边栏动态生成路由<br>根据路由里面的配置项来生成<br>meta<br> roles-路由权限设置<br> title-设置路由在侧边栏和面包屑中的名字<br> icon-设置该路由的图标<br> noCache-是否被缓存<br> breadcrumb-是否在面包屑中显示<br> affix-固定<br> activeMenu-点击高亮</p>
+<p>路由：<br> constantRoutes-默认设置的路由<br> asyncRoutes-需要动态判断的路由-利用addRoutes动态加载</p>
+<p>侧边栏：<br> 基于el-menu、submenu和el-menu-item</p>
+
+        <h1 id="权限验证">
+          <a href="#权限验证" class="heading-link"><i class="fas fa-link"></i></a><a href="#权限验证" class="headerlink" title="权限验证"></a>权限验证</h1>
+      <p>获取用户的权限，比对路由表<br>通过router.addRoutes动态挂载到router上</p>
+<p>前端格局roles去向后端请求可访问的路由表</p>
+<p>逻辑修改的地方在permissio.js中</p>
+<p>用v-permission来实现按钮级别的权限判断-通过按钮改变权限</p>
+
+        <h1 id="快捷导航">
+          <a href="#快捷导航" class="heading-link"><i class="fas fa-link"></i></a><a href="#快捷导航" class="headerlink" title="快捷导航"></a>快捷导航</h1>
+      <p>运用keep-alive和router-view结合</p>
+<p>来说router-link，点击跳转</p>
+<p>监听路由$route的变化，判断当前页面是否需要重新加载或以被缓存</p>
+<p>这样的是有问题的，两者的name一定要一样，才能关联，这不符合要求<br>可利用localStorage来进行缓存处理</p>
+
+        <h1 id="新增页面">
+          <a href="#新增页面" class="heading-link"><i class="fas fa-link"></i></a><a href="#新增页面" class="headerlink" title="新增页面"></a>新增页面</h1>
+      <p>需要先添加路由</p>
+<p>需要二级路由才会有内容，不然只有layout组件</p>
+<p>如果只有一个路由，就没有下拉箭头，这是可以判断的</p>
+<p>如果有多级路由，一定要在二级路由的根文件下添加router-view，用来渲染</p>
+<p>新增路由，要在views文件夹下创建对应的文件夹，可在里面创建自己的utils或components文件<br>自己维护自己，私有/公有</p>
+<p>最后在api文件下创建本模块对应的api服务</p>
+<p>！！！拆分组件的最大好处不是公用而是可维护性，学的人也能看得懂</p>
+<p>也可以在自己文件夹设置样式，请加上scoped</p>
+
+        <h1 id="样式">
+          <a href="#样式" class="heading-link"><i class="fas fa-link"></i></a><a href="#样式" class="headerlink" title="样式"></a>样式</h1>
+      <p>所有的全局样式都写在styles目录下面，每个页面自己对应的样式都写在自己的文件中<br>添加scoped</p>
+<p>自定义element-ui样式<br>添加命名空间</p>
+<p>想修改添加了scoped的子组件<br><code>&gt;&gt;&gt;</code> 或sass的/deep/</p>
+
+        <h1 id="服务端交互">
+          <a href="#服务端交互" class="heading-link"><i class="fas fa-link"></i></a><a href="#服务端交互" class="headerlink" title="服务端交互"></a>服务端交互</h1>
+      <p>一个完整的前端UI交互到服务器处理流程</p>
+<ol>
+<li>UI 组件交互操作；</li>
+<li>调用统一管理的 api service 请求函数；</li>
+<li>使用封装的 request.js 发送请求；</li>
+<li>获取服务端返回；</li>
+<li>更新 data；</li>
+</ol>
+<p>统一把请求放在api文件夹中</p>
+<p>request.js是放在公共工具中的<br>基于axios的封装，统一处理get、post请求<br>封装了全局request拦截器、response拦截器、统一的错误处理、统一超时设置、baseURL设置</p>
+<p>设置多个baseURL<br>通过环境变量来设置，从而请求不同的api地址</p>
+<p>从mock直接切换到服务器请求</p>
+
+        <h1 id="Mock-Data">
+          <a href="#Mock-Data" class="heading-link"><i class="fas fa-link"></i></a><a href="#Mock-Data" class="headerlink" title="Mock Data"></a>Mock Data</h1>
+      <p>Mock数据是前端必不可少的，是前后分离的关键，模拟服务器连接的接口，模拟请求数据甚至逻辑</p>
+<p>swagger，一个rest apis文档生成工具</p>
+<p>在本地启动mock-server来模拟数据，我们的 mock 是完全基于webpack-dev-serve来实现的，<br>所以在你启动前端服务的同时，mock-server就会自动启动</p>
+<p>如果你不想使用mock-server的话只要在vue.config.js中移除webpack-dev-server中proxy和after这个Middleware就可以了。</p>
+<p>如果想添加 mock 数据，只要在根目录下找到mock文件，<br>添加对应的路由，对其进行拦截和模拟数据即可。</p>
+<p>待后端完成接口后，逐步替换掉原先 mock 的接口。<br>只要在mock/role/index.js找到对应的路由，之后将它删除即可。</p>
+<p>现在在mock/index.js也封装了一个纯前端 mock 的方法，你只需要在src/main.js中：</p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import { mockXHR } from '../mock'</span><br><span class="line">mockXHR()</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h1 id="引入外部模块">
+          <a href="#引入外部模块" class="heading-link"><i class="fas fa-link"></i></a><a href="#引入外部模块" class="headerlink" title="引入外部模块"></a>引入外部模块</h1>
+      
+        <h1 id="构建发布">
+          <a href="#构建发布" class="heading-link"><i class="fas fa-link"></i></a><a href="#构建发布" class="headerlink" title="构建发布"></a>构建发布</h1>
+      <hr>
+
+        <h1 id="进阶">
+          <a href="#进阶" class="heading-link"><i class="fas fa-link"></i></a><a href="#进阶" class="headerlink" title="进阶"></a>进阶</h1>
+      
+        <h1 id="跨域问题">
+          <a href="#跨域问题" class="heading-link"><i class="fas fa-link"></i></a><a href="#跨域问题" class="headerlink" title="跨域问题"></a>跨域问题</h1>
+      
+        <h1 id="Eslint">
+          <a href="#Eslint" class="heading-link"><i class="fas fa-link"></i></a><a href="#Eslint" class="headerlink" title="Eslint"></a>Eslint</h1>
+      
+        <h1 id="Git-Hooks">
+          <a href="#Git-Hooks" class="heading-link"><i class="fas fa-link"></i></a><a href="#Git-Hooks" class="headerlink" title="Git Hooks"></a>Git Hooks</h1>
+      
+        <h1 id="风格指南">
+          <a href="#风格指南" class="heading-link"><i class="fas fa-link"></i></a><a href="#风格指南" class="headerlink" title="风格指南"></a>风格指南</h1>
+      
+        <h1 id="路由懒加载">
+          <a href="#路由懒加载" class="heading-link"><i class="fas fa-link"></i></a><a href="#路由懒加载" class="headerlink" title="路由懒加载"></a>路由懒加载</h1>
+      
+        <h1 id="图标">
+          <a href="#图标" class="heading-link"><i class="fas fa-link"></i></a><a href="#图标" class="headerlink" title="图标"></a>图标</h1>
+      
+        <h1 id="图标-1">
+          <a href="#图标-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#图标-1" class="headerlink" title="图标"></a>图标</h1>
+      
+        <h1 id="CDN">
+          <a href="#CDN" class="heading-link"><i class="fas fa-link"></i></a><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h1>
+      
+        <h1 id="更换主题">
+          <a href="#更换主题" class="heading-link"><i class="fas fa-link"></i></a><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h1>
+      
+        <h1 id="国际化">
+          <a href="#国际化" class="heading-link"><i class="fas fa-link"></i></a><a href="#国际化" class="headerlink" title="国际化"></a>国际化</h1>
+      
+        <h1 id="错误处理">
+          <a href="#错误处理" class="heading-link"><i class="fas fa-link"></i></a><a href="#错误处理" class="headerlink" title="错误处理"></a>错误处理</h1>
+      
+        <h1 id="Webpack指南">
+          <a href="#Webpack指南" class="heading-link"><i class="fas fa-link"></i></a><a href="#Webpack指南" class="headerlink" title="Webpack指南"></a>Webpack指南</h1>
+      
+        <h1 id="Node-Sass-to-Dart-Sass">
+          <a href="#Node-Sass-to-Dart-Sass" class="heading-link"><i class="fas fa-link"></i></a><a href="#Node-Sass-to-Dart-Sass" class="headerlink" title="Node Sass to Dart Sass"></a>Node Sass to Dart Sass</h1>
       
         <h1 id="个人收获">
           <a href="#个人收获" class="heading-link"><i class="fas fa-link"></i></a><a href="#个人收获" class="headerlink" title="个人收获"></a>个人收获</h1>
@@ -53,9 +201,34 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0">
       
         <h1 id="问题总结">
           <a href="#问题总结" class="heading-link"><i class="fas fa-link"></i></a><a href="#问题总结" class="headerlink" title="问题总结"></a>问题总结</h1>
-      </div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="http://example.com/tags/%E9%A1%B9%E7%9B%AE%E7%AC%94%E8%AE%B0/">项目笔记</a></span></div><div class="post-share"><div class="social-share" data-sites="qzone, qq, weibo, wechat, douban, linkedin, facebook, twitter, google">Share to: </div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2021/03/12/%E7%90%86%E8%AE%BA%E7%AC%94%E8%AE%B0/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">理论笔记</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2021/03/11/Bootstrap%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><span class="paginator-prev__text">Bootstrap学习笔记</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E9%93%BE%E6%8E%A5"><span class="toc-number">1.</span> <span class="toc-text">
+      </div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="http://example.com/tags/%E9%A1%B9%E7%9B%AE%E7%AC%94%E8%AE%B0/">项目笔记</a></span></div><div class="post-share"><div class="social-share" data-sites="qzone, qq, weibo, wechat, douban, linkedin, facebook, twitter, google">Share to: </div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2021/03/12/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">文献阅读</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2021/03/11/Bootstrap%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><span class="paginator-prev__text">Bootstrap学习笔记</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E9%93%BE%E6%8E%A5"><span class="toc-number">1.</span> <span class="toc-text">
           学习链接</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%87%E6%A1%A3%E6%80%BB%E7%BB%93"><span class="toc-number">2.</span> <span class="toc-text">
-          文档总结</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%AA%E4%BA%BA%E6%94%B6%E8%8E%B7"><span class="toc-number">3.</span> <span class="toc-text">
-          个人收获</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%AA%E4%BA%BA%E5%AE%9E%E8%B7%B5"><span class="toc-number">4.</span> <span class="toc-text">
-          个人实践</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93"><span class="toc-number">5.</span> <span class="toc-text">
+          文档总结</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-number">3.</span> <span class="toc-text">
+          介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B8%83%E5%B1%80"><span class="toc-number">4.</span> <span class="toc-text">
+          布局</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%B7%AF%E7%94%B1%E5%92%8C%E4%BE%A7%E8%BE%B9%E6%A0%8F"><span class="toc-number">5.</span> <span class="toc-text">
+          路由和侧边栏</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9D%83%E9%99%90%E9%AA%8C%E8%AF%81"><span class="toc-number">6.</span> <span class="toc-text">
+          权限验证</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BF%AB%E6%8D%B7%E5%AF%BC%E8%88%AA"><span class="toc-number">7.</span> <span class="toc-text">
+          快捷导航</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%B0%E5%A2%9E%E9%A1%B5%E9%9D%A2"><span class="toc-number">8.</span> <span class="toc-text">
+          新增页面</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A0%B7%E5%BC%8F"><span class="toc-number">9.</span> <span class="toc-text">
+          样式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF%E4%BA%A4%E4%BA%92"><span class="toc-number">10.</span> <span class="toc-text">
+          服务端交互</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Mock-Data"><span class="toc-number">11.</span> <span class="toc-text">
+          Mock Data</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BC%95%E5%85%A5%E5%A4%96%E9%83%A8%E6%A8%A1%E5%9D%97"><span class="toc-number">12.</span> <span class="toc-text">
+          引入外部模块</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9E%84%E5%BB%BA%E5%8F%91%E5%B8%83"><span class="toc-number">13.</span> <span class="toc-text">
+          构建发布</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%9B%E9%98%B6"><span class="toc-number">14.</span> <span class="toc-text">
+          进阶</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98"><span class="toc-number">15.</span> <span class="toc-text">
+          跨域问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Eslint"><span class="toc-number">16.</span> <span class="toc-text">
+          Eslint</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Git-Hooks"><span class="toc-number">17.</span> <span class="toc-text">
+          Git Hooks</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A3%8E%E6%A0%BC%E6%8C%87%E5%8D%97"><span class="toc-number">18.</span> <span class="toc-text">
+          风格指南</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%B7%AF%E7%94%B1%E6%87%92%E5%8A%A0%E8%BD%BD"><span class="toc-number">19.</span> <span class="toc-text">
+          路由懒加载</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%BE%E6%A0%87"><span class="toc-number">20.</span> <span class="toc-text">
+          图标</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%BE%E6%A0%87-1"><span class="toc-number">21.</span> <span class="toc-text">
+          图标</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CDN"><span class="toc-number">22.</span> <span class="toc-text">
+          CDN</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98"><span class="toc-number">23.</span> <span class="toc-text">
+          更换主题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%BD%E9%99%85%E5%8C%96"><span class="toc-number">24.</span> <span class="toc-text">
+          国际化</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86"><span class="toc-number">25.</span> <span class="toc-text">
+          错误处理</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Webpack%E6%8C%87%E5%8D%97"><span class="toc-number">26.</span> <span class="toc-text">
+          Webpack指南</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Node-Sass-to-Dart-Sass"><span class="toc-number">27.</span> <span class="toc-text">
+          Node Sass to Dart Sass</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%AA%E4%BA%BA%E6%94%B6%E8%8E%B7"><span class="toc-number">28.</span> <span class="toc-text">
+          个人收获</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%AA%E4%BA%BA%E5%AE%9E%E8%B7%B5"><span class="toc-number">29.</span> <span class="toc-text">
+          个人实践</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93"><span class="toc-number">30.</span> <span class="toc-text">
           问题总结</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/header.jpg" alt="avatar"></div><p class="sidebar-ov-author__text">LJY_BLOG</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">12</div><div class="sidebar-ov-state-item__name">Archives</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">3</div><div class="sidebar-ov-state-item__name">Tags</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script></body></html>
