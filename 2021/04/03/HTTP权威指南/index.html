@@ -1,0 +1,310 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/icon16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/favicon32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="阅读《 HTTP权威指南 》记录一下要点和收获">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTTP权威指南">
+<meta property="og:url" content="http://example.com/2021/04/03/HTTP%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/index.html">
+<meta property="og:site_name" content="LJY_BLOG">
+<meta property="og:description" content="阅读《 HTTP权威指南 》记录一下要点和收获">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-04-03T08:10:42.000Z">
+<meta property="article:modified_time" content="2021-04-03T14:22:26.176Z">
+<meta property="article:author" content="LJY">
+<meta property="article:tag" content="读书笔记">
+<meta name="twitter:card" content="summary"><title>HTTP权威指南 | LJY_BLOG</title><link ref="canonical" href="http://example.com/2021/04/03/HTTP%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"Copy","copySuccess":"Copy Success","copyError":"Copy Error"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">主页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">档案</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/reading/"><span class="header-nav-menu-item__icon"><i class="fas fa-book"></i></span><span class="header-nav-menu-item__text">阅读</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">LJY_BLOG</div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">HTTP权威指南</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">创建</span><span class="post-meta-item__value">2021-04-03</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新</span><span class="post-meta-item__value">2021-04-03</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon"><i class="far fa-clock"></i></span><span class="post-meta-item__info">阅读时间</span><span class="post-meta-item__value">6m</span></span></div></header><div class="post-body"><p>阅读《 HTTP权威指南 》<br>记录一下要点和收获</p>
+<span id="more"></span>
+
+
+        <h1 id="介绍：">
+          <a href="#介绍：" class="heading-link"><i class="fas fa-link"></i></a><a href="#介绍：" class="headerlink" title="介绍："></a>介绍：</h1>
+      <p>HTTP</p>
+<ul>
+<li>Hypertext Transfer Protocol</li>
+<li>超文本传输协议</li>
+</ul>
+<p>软硬件工程师</p>
+<ul>
+<li>HTTP及相关Web技术参考书使用</li>
+</ul>
+<p>系统架构师、网络管理员</p>
+<ul>
+<li>了解如何设计、实现并管理复杂的网络架构</li>
+</ul>
+<p>性能工程师、分析人员</p>
+<ul>
+<li>缓存和性能优化</li>
+</ul>
+<p>市场营销、咨询专家</p>
+<ul>
+<li>更好了解Web技术前景</li>
+</ul>
+<hr>
+
+        <h1 id="HTTP-Web的基础">
+          <a href="#HTTP-Web的基础" class="heading-link"><i class="fas fa-link"></i></a><a href="#HTTP-Web的基础" class="headerlink" title="HTTP: Web的基础"></a>HTTP: Web的基础</h1>
+      
+        <h2 id="HTTP概述">
+          <a href="#HTTP概述" class="heading-link"><i class="fas fa-link"></i></a><a href="#HTTP概述" class="headerlink" title="HTTP概述"></a>HTTP概述</h2>
+      <p>Web内容（资源）</p>
+<ul>
+<li>存储在Web服务器上</li>
+</ul>
+<p>Web服务器</p>
+<ul>
+<li>使用HTTP协议</li>
+<li>也被称为HTTP服务器</li>
+</ul>
+<p>万维网基本组件</p>
+<ul>
+<li>HTTP客户端-发送请求</li>
+<li>HTTP服务器-提供数据</li>
+</ul>
+<p>HTTP客户端</p>
+<ul>
+<li>最常见的就是Web浏览器<blockquote>
+<p>如：微软的Internet Explorer<br>网景Navigator</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<p>简易过程：</p>
+<ul>
+<li>浏览网页-浏览器向服务器发送一条HTTP请求</li>
+<li>服务器寻找所期望的对象</li>
+<li>成功就将对象、对象类型、对象长度、及其他信息</li>
+<li>放在HTTP响应中发送给客户端</li>
+</ul>
+<p>Web资源：<br>客户端-因特网-（服务器-资源）</p>
+<p>媒体类型<br>HTTP为每种要通过Web传输的对象都打上了MIME类型的数据格式标签<br>(Multipurpose Internet Mail Extension,多用途因特网邮件扩展)</p>
+<ul>
+<li>解决在不同电子邮件系统间 搬移报文存在的问题</li>
+<li>当Web浏览器从服务器取回一个对象</li>
+<li>会去查看相关的MIME类型，然后处理对象-数百种常见对象类型</li>
+</ul>
+<p>MIME类型</p>
+<ul>
+<li>HTML格式的文本文档由text/html类型来标记</li>
+<li>普通的ASCII文本由text/plain类型来标记</li>
+<li>JPEG格式的图片 image/jpeg类型</li>
+<li>GIF格式 image/gif类型</li>
+<li>Apple的QuickTime电影为 video/quicktime类型</li>
+<li>微软的PowerPoint演示文件为 application/vnd.ms-powerpoint类型</li>
+</ul>
+<hr>
+<p>URI<br>每一个Web服务器资源都有一个名字</p>
+<ul>
+<li>服务器资源</li>
+<li>被称为-统一资源标识符(Uniform Resource Identifier, URI)</li>
+<li>在世界范围内，唯一标识并定位信息资源</li>
+</ul>
+<p>URI两种形式</p>
+<ul>
+<li>URL和URN</li>
+</ul>
+<p>URL<br>哇。。。这么回事。。。<br>URL说明了协议、服务器、本地资源</p>
+<ul>
+<li>统一资源定位符</li>
+<li>描述了一台特定服务器上某资源的特定位置</li>
+<li><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="http://www.joes-hardware.com/specials/saw-blade.gif">http://www.joes-hardware.com/specials/saw-blade.gif</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+<li>1.使用HTTP协议 2.进入<span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="http://www.joes-hardware.com/">www.joes-hardware.com</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> 3. 获取名为/specials/saw-blade.gif的资源</li>
+</ul>
+<p>URL三部分</p>
+<ol>
+<li>访问资源使用的协议类型-一般HTTP协议</li>
+<li>指定服务器的因特网地址-<span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="http://www.joes-hardware.com/">www.joes-hardware.com</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+<li>服务器上的某个资源-/specials/saw-blade.gif</li>
+<li>几乎所有的URI都是URL</li>
+</ol>
+<p>URN</p>
+<ul>
+<li>URI第二种形式</li>
+<li>统一资源名</li>
+<li>作为特定内容的唯一名称使用</li>
+<li>与位置无关-可以将资源四处搬移</li>
+<li>可以通过多种网络协议来访问资源</li>
+<li>尚未大范围使用</li>
+</ul>
+<hr>
+<p>事务：<br>一个HTTP事务</p>
+<ul>
+<li>由一条请求命令-从客户端发往服务器</li>
+<li>响应结果-从服务器发回客户端</li>
+<li>通过HTTP报文进行-格式话数据块</li>
+</ul>
+<p>方法：<br>HTTP支持几种不同的请求命令</p>
+<ul>
+<li>称为HTTP方法</li>
+<li><strong>每条HTTP请求报文</strong>都包含一个方法</li>
+<li>告诉服务器执行什么动作-CRUD</li>
+<li>常见五种方法</li>
+<li>GET-    服务器向客户端发送-命名资源</li>
+<li>PUT-    客户端向服务器发送-来自客户端的数据存储到服务器中</li>
+<li>DELETE- 服务器删除命名资源</li>
+<li>POST-   客户端向服务器发送-发送到服务器网关应用程序？？？</li>
+<li>HEAD-   仅发送命名资源响应中的HTTP首部</li>
+</ul>
+<p>状态码：<br><strong>每条HTTP响应报文</strong>返回时都会携带一个状态码</p>
+
+        <h2 id="URL与资源">
+          <a href="#URL与资源" class="heading-link"><i class="fas fa-link"></i></a><a href="#URL与资源" class="headerlink" title="URL与资源"></a>URL与资源</h2>
+      
+        <h2 id="HTTP报文">
+          <a href="#HTTP报文" class="heading-link"><i class="fas fa-link"></i></a><a href="#HTTP报文" class="headerlink" title="HTTP报文"></a>HTTP报文</h2>
+      
+        <h2 id="连接管理">
+          <a href="#连接管理" class="heading-link"><i class="fas fa-link"></i></a><a href="#连接管理" class="headerlink" title="连接管理"></a>连接管理</h2>
+      <hr>
+
+        <h1 id="HTTP结构">
+          <a href="#HTTP结构" class="heading-link"><i class="fas fa-link"></i></a><a href="#HTTP结构" class="headerlink" title="HTTP结构"></a>HTTP结构</h1>
+      
+        <h2 id="Web服务器">
+          <a href="#Web服务器" class="heading-link"><i class="fas fa-link"></i></a><a href="#Web服务器" class="headerlink" title="Web服务器"></a>Web服务器</h2>
+      
+        <h2 id="代理">
+          <a href="#代理" class="heading-link"><i class="fas fa-link"></i></a><a href="#代理" class="headerlink" title="代理"></a>代理</h2>
+      
+        <h2 id="缓存">
+          <a href="#缓存" class="heading-link"><i class="fas fa-link"></i></a><a href="#缓存" class="headerlink" title="缓存"></a>缓存</h2>
+      
+        <h2 id="集成点：网关、隧道及中继">
+          <a href="#集成点：网关、隧道及中继" class="heading-link"><i class="fas fa-link"></i></a><a href="#集成点：网关、隧道及中继" class="headerlink" title="集成点：网关、隧道及中继"></a>集成点：网关、隧道及中继</h2>
+      
+        <h2 id="Web机器人">
+          <a href="#Web机器人" class="heading-link"><i class="fas fa-link"></i></a><a href="#Web机器人" class="headerlink" title="Web机器人"></a>Web机器人</h2>
+      
+        <h2 id="HTTP-NG">
+          <a href="#HTTP-NG" class="heading-link"><i class="fas fa-link"></i></a><a href="#HTTP-NG" class="headerlink" title="HTTP-NG"></a>HTTP-NG</h2>
+      <hr>
+
+        <h1 id="识别、认证与安全">
+          <a href="#识别、认证与安全" class="heading-link"><i class="fas fa-link"></i></a><a href="#识别、认证与安全" class="headerlink" title="识别、认证与安全"></a>识别、认证与安全</h1>
+      
+        <h2 id="客户端识别与cookie机制">
+          <a href="#客户端识别与cookie机制" class="heading-link"><i class="fas fa-link"></i></a><a href="#客户端识别与cookie机制" class="headerlink" title="客户端识别与cookie机制"></a>客户端识别与cookie机制</h2>
+      
+        <h2 id="基本认证机制">
+          <a href="#基本认证机制" class="heading-link"><i class="fas fa-link"></i></a><a href="#基本认证机制" class="headerlink" title="基本认证机制"></a>基本认证机制</h2>
+      
+        <h2 id="摘要认证">
+          <a href="#摘要认证" class="heading-link"><i class="fas fa-link"></i></a><a href="#摘要认证" class="headerlink" title="摘要认证"></a>摘要认证</h2>
+      
+        <h2 id="安全HTTP">
+          <a href="#安全HTTP" class="heading-link"><i class="fas fa-link"></i></a><a href="#安全HTTP" class="headerlink" title="安全HTTP"></a>安全HTTP</h2>
+      <hr>
+
+        <h1 id="实体、编码和国际化">
+          <a href="#实体、编码和国际化" class="heading-link"><i class="fas fa-link"></i></a><a href="#实体、编码和国际化" class="headerlink" title="实体、编码和国际化"></a>实体、编码和国际化</h1>
+      
+        <h2 id="实体和编码">
+          <a href="#实体和编码" class="heading-link"><i class="fas fa-link"></i></a><a href="#实体和编码" class="headerlink" title="实体和编码"></a>实体和编码</h2>
+      
+        <h2 id="国际化">
+          <a href="#国际化" class="heading-link"><i class="fas fa-link"></i></a><a href="#国际化" class="headerlink" title="国际化"></a>国际化</h2>
+      
+        <h2 id="内容协商与转码">
+          <a href="#内容协商与转码" class="heading-link"><i class="fas fa-link"></i></a><a href="#内容协商与转码" class="headerlink" title="内容协商与转码"></a>内容协商与转码</h2>
+      <hr>
+
+        <h1 id="内容发布与分发">
+          <a href="#内容发布与分发" class="heading-link"><i class="fas fa-link"></i></a><a href="#内容发布与分发" class="headerlink" title="内容发布与分发"></a>内容发布与分发</h1>
+      
+        <h2 id="Web主机托管">
+          <a href="#Web主机托管" class="heading-link"><i class="fas fa-link"></i></a><a href="#Web主机托管" class="headerlink" title="Web主机托管"></a>Web主机托管</h2>
+      
+        <h2 id="发布系统">
+          <a href="#发布系统" class="heading-link"><i class="fas fa-link"></i></a><a href="#发布系统" class="headerlink" title="发布系统"></a>发布系统</h2>
+      
+        <h2 id="重定向与负载均衡">
+          <a href="#重定向与负载均衡" class="heading-link"><i class="fas fa-link"></i></a><a href="#重定向与负载均衡" class="headerlink" title="重定向与负载均衡"></a>重定向与负载均衡</h2>
+      
+        <h2 id="日志记录与使用情况跟踪">
+          <a href="#日志记录与使用情况跟踪" class="heading-link"><i class="fas fa-link"></i></a><a href="#日志记录与使用情况跟踪" class="headerlink" title="日志记录与使用情况跟踪"></a>日志记录与使用情况跟踪</h2>
+      
+        <h1 id="附录">
+          <a href="#附录" class="heading-link"><i class="fas fa-link"></i></a><a href="#附录" class="headerlink" title="附录"></a>附录</h1>
+      
+        <h2 id="URI方案">
+          <a href="#URI方案" class="heading-link"><i class="fas fa-link"></i></a><a href="#URI方案" class="headerlink" title="URI方案"></a>URI方案</h2>
+      
+        <h2 id="HTTP状态码">
+          <a href="#HTTP状态码" class="heading-link"><i class="fas fa-link"></i></a><a href="#HTTP状态码" class="headerlink" title="HTTP状态码"></a>HTTP状态码</h2>
+      
+        <h2 id="HTTP首部参考">
+          <a href="#HTTP首部参考" class="heading-link"><i class="fas fa-link"></i></a><a href="#HTTP首部参考" class="headerlink" title="HTTP首部参考"></a>HTTP首部参考</h2>
+      
+        <h2 id="MIME类型">
+          <a href="#MIME类型" class="heading-link"><i class="fas fa-link"></i></a><a href="#MIME类型" class="headerlink" title="MIME类型"></a>MIME类型</h2>
+      
+        <h2 id="Base-64编码">
+          <a href="#Base-64编码" class="heading-link"><i class="fas fa-link"></i></a><a href="#Base-64编码" class="headerlink" title="Base-64编码"></a>Base-64编码</h2>
+      
+        <h2 id="摘要认证-1">
+          <a href="#摘要认证-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#摘要认证-1" class="headerlink" title="摘要认证"></a>摘要认证</h2>
+      
+        <h2 id="语言标记">
+          <a href="#语言标记" class="heading-link"><i class="fas fa-link"></i></a><a href="#语言标记" class="headerlink" title="语言标记"></a>语言标记</h2>
+      
+        <h2 id="MIME字符集注册表">
+          <a href="#MIME字符集注册表" class="heading-link"><i class="fas fa-link"></i></a><a href="#MIME字符集注册表" class="headerlink" title="MIME字符集注册表"></a>MIME字符集注册表</h2>
+      </div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="http://example.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a></span></div><div class="post-share"><div class="social-share" data-sites="qzone, qq, weibo, wechat, douban, linkedin, facebook, twitter, google">Share to: </div></div><nav class="post-paginator paginator"><div class="paginator-next"><a class="paginator-next__link" href="/2021/04/03/Codepan%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><span class="paginator-prev__text">Codepan学习笔记</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D%EF%BC%9A"><span class="toc-number">1.</span> <span class="toc-text">
+          介绍：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#HTTP-Web%E7%9A%84%E5%9F%BA%E7%A1%80"><span class="toc-number">2.</span> <span class="toc-text">
+          HTTP: Web的基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP%E6%A6%82%E8%BF%B0"><span class="toc-number">2.1.</span> <span class="toc-text">
+          HTTP概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#URL%E4%B8%8E%E8%B5%84%E6%BA%90"><span class="toc-number">2.2.</span> <span class="toc-text">
+          URL与资源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP%E6%8A%A5%E6%96%87"><span class="toc-number">2.3.</span> <span class="toc-text">
+          HTTP报文</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9E%E6%8E%A5%E7%AE%A1%E7%90%86"><span class="toc-number">2.4.</span> <span class="toc-text">
+          连接管理</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#HTTP%E7%BB%93%E6%9E%84"><span class="toc-number">3.</span> <span class="toc-text">
+          HTTP结构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Web%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-number">3.1.</span> <span class="toc-text">
+          Web服务器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%90%86"><span class="toc-number">3.2.</span> <span class="toc-text">
+          代理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%93%E5%AD%98"><span class="toc-number">3.3.</span> <span class="toc-text">
+          缓存</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9B%86%E6%88%90%E7%82%B9%EF%BC%9A%E7%BD%91%E5%85%B3%E3%80%81%E9%9A%A7%E9%81%93%E5%8F%8A%E4%B8%AD%E7%BB%A7"><span class="toc-number">3.4.</span> <span class="toc-text">
+          集成点：网关、隧道及中继</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Web%E6%9C%BA%E5%99%A8%E4%BA%BA"><span class="toc-number">3.5.</span> <span class="toc-text">
+          Web机器人</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP-NG"><span class="toc-number">3.6.</span> <span class="toc-text">
+          HTTP-NG</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AF%86%E5%88%AB%E3%80%81%E8%AE%A4%E8%AF%81%E4%B8%8E%E5%AE%89%E5%85%A8"><span class="toc-number">4.</span> <span class="toc-text">
+          识别、认证与安全</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%AF%86%E5%88%AB%E4%B8%8Ecookie%E6%9C%BA%E5%88%B6"><span class="toc-number">4.1.</span> <span class="toc-text">
+          客户端识别与cookie机制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E8%AE%A4%E8%AF%81%E6%9C%BA%E5%88%B6"><span class="toc-number">4.2.</span> <span class="toc-text">
+          基本认证机制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%91%98%E8%A6%81%E8%AE%A4%E8%AF%81"><span class="toc-number">4.3.</span> <span class="toc-text">
+          摘要认证</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E5%85%A8HTTP"><span class="toc-number">4.4.</span> <span class="toc-text">
+          安全HTTP</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9E%E4%BD%93%E3%80%81%E7%BC%96%E7%A0%81%E5%92%8C%E5%9B%BD%E9%99%85%E5%8C%96"><span class="toc-number">5.</span> <span class="toc-text">
+          实体、编码和国际化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E4%BD%93%E5%92%8C%E7%BC%96%E7%A0%81"><span class="toc-number">5.1.</span> <span class="toc-text">
+          实体和编码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BD%E9%99%85%E5%8C%96"><span class="toc-number">5.2.</span> <span class="toc-text">
+          国际化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%85%E5%AE%B9%E5%8D%8F%E5%95%86%E4%B8%8E%E8%BD%AC%E7%A0%81"><span class="toc-number">5.3.</span> <span class="toc-text">
+          内容协商与转码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%86%85%E5%AE%B9%E5%8F%91%E5%B8%83%E4%B8%8E%E5%88%86%E5%8F%91"><span class="toc-number">6.</span> <span class="toc-text">
+          内容发布与分发</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Web%E4%B8%BB%E6%9C%BA%E6%89%98%E7%AE%A1"><span class="toc-number">6.1.</span> <span class="toc-text">
+          Web主机托管</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%91%E5%B8%83%E7%B3%BB%E7%BB%9F"><span class="toc-number">6.2.</span> <span class="toc-text">
+          发布系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E5%AE%9A%E5%90%91%E4%B8%8E%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1"><span class="toc-number">6.3.</span> <span class="toc-text">
+          重定向与负载均衡</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A5%E5%BF%97%E8%AE%B0%E5%BD%95%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%83%85%E5%86%B5%E8%B7%9F%E8%B8%AA"><span class="toc-number">6.4.</span> <span class="toc-text">
+          日志记录与使用情况跟踪</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%99%84%E5%BD%95"><span class="toc-number">7.</span> <span class="toc-text">
+          附录</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#URI%E6%96%B9%E6%A1%88"><span class="toc-number">7.1.</span> <span class="toc-text">
+          URI方案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP%E7%8A%B6%E6%80%81%E7%A0%81"><span class="toc-number">7.2.</span> <span class="toc-text">
+          HTTP状态码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP%E9%A6%96%E9%83%A8%E5%8F%82%E8%80%83"><span class="toc-number">7.3.</span> <span class="toc-text">
+          HTTP首部参考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MIME%E7%B1%BB%E5%9E%8B"><span class="toc-number">7.4.</span> <span class="toc-text">
+          MIME类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Base-64%E7%BC%96%E7%A0%81"><span class="toc-number">7.5.</span> <span class="toc-text">
+          Base-64编码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%91%98%E8%A6%81%E8%AE%A4%E8%AF%81-1"><span class="toc-number">7.6.</span> <span class="toc-text">
+          摘要认证</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%AD%E8%A8%80%E6%A0%87%E8%AE%B0"><span class="toc-number">7.7.</span> <span class="toc-text">
+          语言标记</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MIME%E5%AD%97%E7%AC%A6%E9%9B%86%E6%B3%A8%E5%86%8C%E8%A1%A8"><span class="toc-number">7.8.</span> <span class="toc-text">
+          MIME字符集注册表</span></a></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/header.jpg" alt="avatar"></div><p class="sidebar-ov-author__text">LJY_BLOG</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">16</div><div class="sidebar-ov-state-item__name">Archives</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">3</div><div class="sidebar-ov-state-item__name">Tags</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script></body></html>
