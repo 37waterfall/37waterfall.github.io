@@ -1,0 +1,319 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/icon16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/favicon32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="Gitee上的项目，Vue搭建的，学习里面的思路！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="小米商城项目学习笔记">
+<meta property="og:url" content="http://example.com/2021/04/13/%E5%B0%8F%E7%B1%B3%E5%95%86%E5%9F%8E%E9%A1%B9%E7%9B%AE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="LJY_BLOG">
+<meta property="og:description" content="Gitee上的项目，Vue搭建的，学习里面的思路！">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-04-13T12:46:44.000Z">
+<meta property="article:modified_time" content="2021-04-13T14:01:53.039Z">
+<meta property="article:author" content="LJY">
+<meta property="article:tag" content="学习笔记">
+<meta name="twitter:card" content="summary"><title>小米商城项目学习笔记 | LJY_BLOG</title><link ref="canonical" href="http://example.com/2021/04/13/%E5%B0%8F%E7%B1%B3%E5%95%86%E5%9F%8E%E9%A1%B9%E7%9B%AE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"Copy","copySuccess":"Copy Success","copyError":"Copy Error"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">主页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">档案</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/reading/"><span class="header-nav-menu-item__icon"><i class="fas fa-book"></i></span><span class="header-nav-menu-item__text">阅读</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">LJY_BLOG</div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><div class="sticky-top" data-popover="Sticky" data-popover-pos="up"><span class="sticky-top__icon"><i class="fas fa-thumbtack"></i></span></div><h1 class="post-title">小米商城项目学习笔记</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">创建</span><span class="post-meta-item__value">2021-04-13</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新</span><span class="post-meta-item__value">2021-04-13</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon"><i class="far fa-clock"></i></span><span class="post-meta-item__info">阅读时间</span><span class="post-meta-item__value">3m</span></span></div></header><div class="post-body"><p>Gitee上的项目，Vue搭建的，学习里面的思路！</p>
+<span id="more"></span>
+
+
+        <h1 id="前言">
+          <a href="#前言" class="heading-link"><i class="fas fa-link"></i></a><a href="#前言" class="headerlink" title="前言"></a>前言</h1>
+      <p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://gitee.com/hai-27/vue-store?_from=gitee_search">学习项目链接</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p>看了好几次，终于有点眉目了，在实习中，也经常来这里找经验，有时间就完整的看一下项目内容。<br>这是前后分离的项目，刚刚看了一下后端内容，Mysql+koa，有机会在研究！！！</p>
+
+        <h1 id="整体框架">
+          <a href="#整体框架" class="heading-link"><i class="fas fa-link"></i></a><a href="#整体框架" class="headerlink" title="整体框架"></a>整体框架</h1>
+      
+        <h2 id="技术栈">
+          <a href="#技术栈" class="heading-link"><i class="fas fa-link"></i></a><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h2>
+      <ul>
+<li>前：Vue+Vue-router+Vuex+Element-ui+Axios</li>
+<li>后：Node+Koa</li>
+<li>数据库：Mysql</li>
+</ul>
+
+        <h2 id="功能模块">
+          <a href="#功能模块" class="heading-link"><i class="fas fa-link"></i></a><a href="#功能模块" class="headerlink" title="功能模块"></a>功能模块</h2>
+      
+        <h3 id="登录">
+          <a href="#登录" class="heading-link"><i class="fas fa-link"></i></a><a href="#登录" class="headerlink" title="登录"></a>登录</h3>
+      <p>使用：</p>
+<ul>
+<li>Element-ui的Dialog</li>
+<li>登录按钮-Vuex-showLogin状态控制登录框</li>
+<li>输入数据-Element-ui表单验证</li>
+</ul>
+
+        <h3 id="注册">
+          <a href="#注册" class="heading-link"><i class="fas fa-link"></i></a><a href="#注册" class="headerlink" title="注册"></a>注册</h3>
+      <p>使用：</p>
+<ul>
+<li>Element-ui的Dialog</li>
+<li>注册按钮-App.vue根组件-父传子显示与否</li>
+<li>输入数据-Element-ui表单验证</li>
+</ul>
+
+        <h3 id="首页">
+          <a href="#首页" class="heading-link"><i class="fas fa-link"></i></a><a href="#首页" class="headerlink" title="首页"></a>首页</h3>
+      <p>功能：</p>
+<ul>
+<li>轮播图</li>
+<li>分类</li>
+</ul>
+
+        <h3 id="全部商品">
+          <a href="#全部商品" class="heading-link"><i class="fas fa-link"></i></a><a href="#全部商品" class="headerlink" title="全部商品"></a>全部商品</h3>
+      <p>功能：</p>
+<ul>
+<li>全部商品</li>
+<li>商品分类查询</li>
+<li>关键字搜索查询</li>
+</ul>
+
+        <h3 id="商品详情页">
+          <a href="#商品详情页" class="heading-link"><i class="fas fa-link"></i></a><a href="#商品详情页" class="headerlink" title="商品详情页"></a>商品详情页</h3>
+      <p>功能：</p>
+<ul>
+<li>某个产品的详细信息展示</li>
+<li>可加入购物车</li>
+</ul>
+
+        <h3 id="我的购物车">
+          <a href="#我的购物车" class="heading-link"><i class="fas fa-link"></i></a><a href="#我的购物车" class="headerlink" title="我的购物车"></a>我的购物车</h3>
+      <p>功能：</p>
+<ul>
+<li>Vuex实现-增删改查</li>
+<li><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://juejin.cn/post/6844904085494185991">基于Vuex实现小米商城购物车</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+</ul>
+
+        <h3 id="订单结算">
+          <a href="#订单结算" class="heading-link"><i class="fas fa-link"></i></a><a href="#订单结算" class="headerlink" title="订单结算"></a>订单结算</h3>
+      <p>功能：</p>
+<ul>
+<li>在购物车页面</li>
+<li>点击-去结算按钮</li>
+<li>跳转</li>
+<li>填写用户信息-收获地址等</li>
+</ul>
+
+        <h3 id="我的收藏">
+          <a href="#我的收藏" class="heading-link"><i class="fas fa-link"></i></a><a href="#我的收藏" class="headerlink" title="我的收藏"></a>我的收藏</h3>
+      <p>功能：</p>
+<ul>
+<li>点击喜欢按钮</li>
+<li>把喜欢的商品加入到收藏列表</li>
+</ul>
+
+        <h3 id="我的订单">
+          <a href="#我的订单" class="heading-link"><i class="fas fa-link"></i></a><a href="#我的订单" class="headerlink" title="我的订单"></a>我的订单</h3>
+      <p>功能：</p>
+<ul>
+<li>对用户的订单展示</li>
+</ul>
+
+        <h1 id="主体文件">
+          <a href="#主体文件" class="heading-link"><i class="fas fa-link"></i></a><a href="#主体文件" class="headerlink" title="主体文件"></a>主体文件</h1>
+      
+        <h2 id="components">
+          <a href="#components" class="heading-link"><i class="fas fa-link"></i></a><a href="#components" class="headerlink" title="components"></a>components</h2>
+      <ul>
+<li>可复用的组件，保持功能单一！！！</li>
+<li>组件只是组件，业务不要放在这里！
+        <h3 id="Error-vue">
+          <a href="#Error-vue" class="heading-link"><i class="fas fa-link"></i></a><a href="#Error-vue" class="headerlink" title="Error.vue"></a>Error.vue</h3>
+      
+        <h3 id="MyList-vue">
+          <a href="#MyList-vue" class="heading-link"><i class="fas fa-link"></i></a><a href="#MyList-vue" class="headerlink" title="MyList.vue"></a>MyList.vue</h3>
+      
+        <h3 id="MyLogin-vue">
+          <a href="#MyLogin-vue" class="heading-link"><i class="fas fa-link"></i></a><a href="#MyLogin-vue" class="headerlink" title="MyLogin.vue"></a>MyLogin.vue</h3>
+      
+        <h3 id="MyMarkdown-vue">
+          <a href="#MyMarkdown-vue" class="heading-link"><i class="fas fa-link"></i></a><a href="#MyMarkdown-vue" class="headerlink" title="MyMarkdown.vue"></a>MyMarkdown.vue</h3>
+      
+        <h3 id="MyMenu-vue">
+          <a href="#MyMenu-vue" class="heading-link"><i class="fas fa-link"></i></a><a href="#MyMenu-vue" class="headerlink" title="MyMenu.vue"></a>MyMenu.vue</h3>
+      
+        <h3 id="MyRegister-vue">
+          <a href="#MyRegister-vue" class="heading-link"><i class="fas fa-link"></i></a><a href="#MyRegister-vue" class="headerlink" title="MyRegister.vue"></a>MyRegister.vue</h3>
+      </li>
+</ul>
+<hr>
+
+        <h2 id="router">
+          <a href="#router" class="heading-link"><i class="fas fa-link"></i></a><a href="#router" class="headerlink" title="router"></a>router</h2>
+      <ul>
+<li>路由跳转，可对路由进行操作！
+        <h3 id="index-js">
+          <a href="#index-js" class="heading-link"><i class="fas fa-link"></i></a><a href="#index-js" class="headerlink" title="index.js"></a>index.js</h3>
+      </li>
+</ul>
+
+        <h2 id="store">
+          <a href="#store" class="heading-link"><i class="fas fa-link"></i></a><a href="#store" class="headerlink" title="store"></a>store</h2>
+      <ul>
+<li>状态管理，数据传递
+        <h3 id="modules">
+          <a href="#modules" class="heading-link"><i class="fas fa-link"></i></a><a href="#modules" class="headerlink" title="modules"></a>modules</h3>
+      
+        <h3 id="index-js-1">
+          <a href="#index-js-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#index-js-1" class="headerlink" title="index.js"></a>index.js</h3>
+      </li>
+</ul>
+<hr>
+
+        <h2 id="views">
+          <a href="#views" class="heading-link"><i class="fas fa-link"></i></a><a href="#views" class="headerlink" title="views"></a>views</h2>
+      <ul>
+<li>主要显示页面，对应路由，调用components组件
+        <h3 id="About-vue">
+          <a href="#About-vue" class="heading-link"><i class="fas fa-link"></i></a><a href="#About-vue" class="headerlink" title="About.vue"></a>About.vue</h3>
+      
+        <h3 id="Collect-vue">
+          <a href="#Collect-vue" class="heading-link"><i class="fas fa-link"></i></a><a href="#Collect-vue" class="headerlink" title="Collect.vue"></a>Collect.vue</h3>
+      
+        <h3 id="ConfirmOrder-vue">
+          <a href="#ConfirmOrder-vue" class="heading-link"><i class="fas fa-link"></i></a><a href="#ConfirmOrder-vue" class="headerlink" title="ConfirmOrder.vue"></a>ConfirmOrder.vue</h3>
+      
+        <h3 id="Details-vue">
+          <a href="#Details-vue" class="heading-link"><i class="fas fa-link"></i></a><a href="#Details-vue" class="headerlink" title="Details.vue"></a>Details.vue</h3>
+      
+        <h3 id="Goods-vue">
+          <a href="#Goods-vue" class="heading-link"><i class="fas fa-link"></i></a><a href="#Goods-vue" class="headerlink" title="Goods.vue"></a>Goods.vue</h3>
+      
+        <h3 id="Home-vue">
+          <a href="#Home-vue" class="heading-link"><i class="fas fa-link"></i></a><a href="#Home-vue" class="headerlink" title="Home.vue"></a>Home.vue</h3>
+      
+        <h3 id="Order-vue">
+          <a href="#Order-vue" class="heading-link"><i class="fas fa-link"></i></a><a href="#Order-vue" class="headerlink" title="Order.vue"></a>Order.vue</h3>
+      
+        <h3 id="ShoppingCart-vue">
+          <a href="#ShoppingCart-vue" class="heading-link"><i class="fas fa-link"></i></a><a href="#ShoppingCart-vue" class="headerlink" title="ShoppingCart.vue"></a>ShoppingCart.vue</h3>
+      </li>
+</ul>
+
+        <h2 id="App-vue">
+          <a href="#App-vue" class="heading-link"><i class="fas fa-link"></i></a><a href="#App-vue" class="headerlink" title="App.vue"></a>App.vue</h2>
+      <ul>
+<li>全局的页面渲染
+        <h3 id="存放内容">
+          <a href="#存放内容" class="heading-link"><i class="fas fa-link"></i></a><a href="#存放内容" class="headerlink" title="存放内容"></a>存放内容</h3>
+      </li>
+</ul>
+<ul>
+<li>顶部导航栏</li>
+<li>顶栏容器</li>
+<li>登录模块-组件</li>
+<li>注册模块-组件</li>
+<li>主要区域容器-keep-alive包裹-组件</li>
+<li>底栏容器</li>
+</ul>
+
+        <h3 id="功能实现">
+          <a href="#功能实现" class="heading-link"><i class="fas fa-link"></i></a><a href="#功能实现" class="headerlink" title="功能实现"></a>功能实现</h3>
+      <ul>
+<li>引入mapActions、mapGetters</li>
+<li>beforeUpdate - $route - 头部导航栏选中的标签</li>
+<li>data - 定义数据 - 要使用的</li>
+<li>created - 获取浏览器localStorage，判断用户是否已经登录</li>
+<li>computed - 接收数据 - …mapGetters([“getUser”, “getNum”])</li>
+<li>watch - 实时检测状态 - getUser - 获取或为空</li>
+<li>methods <ul>
+<li>定义方法 </li>
+<li>调用mapActions里面的方法 </li>
+<li>使用UI组件的Api响应</li>
+</ul>
+</li>
+</ul>
+
+        <h2 id="Global-js">
+          <a href="#Global-js" class="heading-link"><i class="fas fa-link"></i></a><a href="#Global-js" class="headerlink" title="Global.js"></a>Global.js</h2>
+      
+        <h2 id="main-js">
+          <a href="#main-js" class="heading-link"><i class="fas fa-link"></i></a><a href="#main-js" class="headerlink" title="main.js"></a>main.js</h2>
+      <ul>
+<li>全局的功能使用</li>
+</ul>
+<hr>
+
+        <h1 id="配置文件">
+          <a href="#配置文件" class="heading-link"><i class="fas fa-link"></i></a><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h1>
+      
+        <h2 id="package-json">
+          <a href="#package-json" class="heading-link"><i class="fas fa-link"></i></a><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h2>
+      <ul>
+<li>可以查看使用了哪些工具</li>
+</ul>
+
+        <h2 id="vue-config-js">
+          <a href="#vue-config-js" class="heading-link"><i class="fas fa-link"></i></a><a href="#vue-config-js" class="headerlink" title="vue.config.js"></a>vue.config.js</h2>
+      <ul>
+<li>配置全局参数</li>
+</ul>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="http://example.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="post-share"><div class="social-share" data-sites="qzone, qq, weibo, wechat, douban, linkedin, facebook, twitter, google">Share to: </div></div><nav class="post-paginator paginator"><div class="paginator-next"><a class="paginator-next__link" href="/2021/04/10/%E7%9A%AE%E5%BD%B1%E6%88%8F/"><span class="paginator-prev__text">皮影戏</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">
+          前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B4%E4%BD%93%E6%A1%86%E6%9E%B6"><span class="toc-number">2.</span> <span class="toc-text">
+          整体框架</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%80%E6%9C%AF%E6%A0%88"><span class="toc-number">2.1.</span> <span class="toc-text">
+          技术栈</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%9F%E8%83%BD%E6%A8%A1%E5%9D%97"><span class="toc-number">2.2.</span> <span class="toc-text">
+          功能模块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%99%BB%E5%BD%95"><span class="toc-number">2.2.1.</span> <span class="toc-text">
+          登录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E5%86%8C"><span class="toc-number">2.2.2.</span> <span class="toc-text">
+          注册</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A6%96%E9%A1%B5"><span class="toc-number">2.2.3.</span> <span class="toc-text">
+          首页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%A8%E9%83%A8%E5%95%86%E5%93%81"><span class="toc-number">2.2.4.</span> <span class="toc-text">
+          全部商品</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%95%86%E5%93%81%E8%AF%A6%E6%83%85%E9%A1%B5"><span class="toc-number">2.2.5.</span> <span class="toc-text">
+          商品详情页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%91%E7%9A%84%E8%B4%AD%E7%89%A9%E8%BD%A6"><span class="toc-number">2.2.6.</span> <span class="toc-text">
+          我的购物车</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A2%E5%8D%95%E7%BB%93%E7%AE%97"><span class="toc-number">2.2.7.</span> <span class="toc-text">
+          订单结算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%91%E7%9A%84%E6%94%B6%E8%97%8F"><span class="toc-number">2.2.8.</span> <span class="toc-text">
+          我的收藏</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%91%E7%9A%84%E8%AE%A2%E5%8D%95"><span class="toc-number">2.2.9.</span> <span class="toc-text">
+          我的订单</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%BB%E4%BD%93%E6%96%87%E4%BB%B6"><span class="toc-number">3.</span> <span class="toc-text">
+          主体文件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#components"><span class="toc-number">3.1.</span> <span class="toc-text">
+          components</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Error-vue"><span class="toc-number">3.1.1.</span> <span class="toc-text">
+          Error.vue</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MyList-vue"><span class="toc-number">3.1.2.</span> <span class="toc-text">
+          MyList.vue</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MyLogin-vue"><span class="toc-number">3.1.3.</span> <span class="toc-text">
+          MyLogin.vue</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MyMarkdown-vue"><span class="toc-number">3.1.4.</span> <span class="toc-text">
+          MyMarkdown.vue</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MyMenu-vue"><span class="toc-number">3.1.5.</span> <span class="toc-text">
+          MyMenu.vue</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MyRegister-vue"><span class="toc-number">3.1.6.</span> <span class="toc-text">
+          MyRegister.vue</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#router"><span class="toc-number">3.2.</span> <span class="toc-text">
+          router</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#index-js"><span class="toc-number">3.2.1.</span> <span class="toc-text">
+          index.js</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#store"><span class="toc-number">3.3.</span> <span class="toc-text">
+          store</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#modules"><span class="toc-number">3.3.1.</span> <span class="toc-text">
+          modules</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#index-js-1"><span class="toc-number">3.3.2.</span> <span class="toc-text">
+          index.js</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#views"><span class="toc-number">3.4.</span> <span class="toc-text">
+          views</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#About-vue"><span class="toc-number">3.4.1.</span> <span class="toc-text">
+          About.vue</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Collect-vue"><span class="toc-number">3.4.2.</span> <span class="toc-text">
+          Collect.vue</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ConfirmOrder-vue"><span class="toc-number">3.4.3.</span> <span class="toc-text">
+          ConfirmOrder.vue</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Details-vue"><span class="toc-number">3.4.4.</span> <span class="toc-text">
+          Details.vue</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Goods-vue"><span class="toc-number">3.4.5.</span> <span class="toc-text">
+          Goods.vue</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Home-vue"><span class="toc-number">3.4.6.</span> <span class="toc-text">
+          Home.vue</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Order-vue"><span class="toc-number">3.4.7.</span> <span class="toc-text">
+          Order.vue</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ShoppingCart-vue"><span class="toc-number">3.4.8.</span> <span class="toc-text">
+          ShoppingCart.vue</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#App-vue"><span class="toc-number">3.5.</span> <span class="toc-text">
+          App.vue</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%98%E6%94%BE%E5%86%85%E5%AE%B9"><span class="toc-number">3.5.1.</span> <span class="toc-text">
+          存放内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0"><span class="toc-number">3.5.2.</span> <span class="toc-text">
+          功能实现</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Global-js"><span class="toc-number">3.6.</span> <span class="toc-text">
+          Global.js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#main-js"><span class="toc-number">3.7.</span> <span class="toc-text">
+          main.js</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">4.</span> <span class="toc-text">
+          配置文件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#package-json"><span class="toc-number">4.1.</span> <span class="toc-text">
+          package.json</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#vue-config-js"><span class="toc-number">4.2.</span> <span class="toc-text">
+          vue.config.js</span></a></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/header.jpg" alt="avatar"></div><p class="sidebar-ov-author__text">LJY_BLOG</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">19</div><div class="sidebar-ov-state-item__name">Archives</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">Tags</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script></body></html>
