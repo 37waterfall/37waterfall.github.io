@@ -1,0 +1,333 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/icon16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/favicon32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="内容来源 - github  GitHub地址">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端知识点汇总">
+<meta property="og:url" content="http://example.com/2021/09/02/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/index.html">
+<meta property="og:site_name" content="LJY_BLOG">
+<meta property="og:description" content="内容来源 - github  GitHub地址">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://img.smyhvae.com/20180124_1700.png">
+<meta property="article:published_time" content="2021-09-02T02:12:01.000Z">
+<meta property="article:modified_time" content="2021-09-02T03:18:36.859Z">
+<meta property="article:author" content="LJY">
+<meta property="article:tag" content="学习笔记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://img.smyhvae.com/20180124_1700.png"><title>前端知识点汇总 | LJY_BLOG</title><link ref="canonical" href="http://example.com/2021/09/02/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"Copy","copySuccess":"Copy Success","copyError":"Copy Error"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">主页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">档案</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/reading/"><span class="header-nav-menu-item__icon"><i class="fas fa-book"></i></span><span class="header-nav-menu-item__text">阅读</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">LJY_BLOG</div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><div class="sticky-top" data-popover="Sticky" data-popover-pos="up"><span class="sticky-top__icon"><i class="fas fa-thumbtack"></i></span></div><h1 class="post-title">前端知识点汇总</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">创建</span><span class="post-meta-item__value">2021-09-02</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新</span><span class="post-meta-item__value">2021-09-02</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon"><i class="far fa-clock"></i></span><span class="post-meta-item__info">阅读时间</span><span class="post-meta-item__value">6m</span></span></div></header><div class="post-body"><p>内容来源 - github</p>
+<ul>
+<li><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://github.com/qianguyihao/Web">GitHub地址</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+</ul>
+<span id="more"></span>
+
+<p>记录要点即可。。</p>
+
+        <h1 id="HTML">
+          <a href="#HTML" class="heading-link"><i class="fas fa-link"></i></a><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h1>
+      
+        <h2 id="基础知识点">
+          <a href="#基础知识点" class="heading-link"><i class="fas fa-link"></i></a><a href="#基础知识点" class="headerlink" title="基础知识点"></a>基础知识点</h2>
+      <ol>
+<li><p>Web<br>Web（World Wide Web）即全球广域网，也称为万维网。</p>
+</li>
+<li><p>W3C<br>World Wide Web Consortium，<br>万维网联盟组织，用来制定web标准的机构（组织）。</p>
+</li>
+<li><p>Web标准包括三个方面</p>
+<ul>
+<li>HTML（HyperText Markup Language）：超文本标记语言。从<strong>语义</strong>的角度描述页面的<strong>结构</strong>。</li>
+<li>CSS（Cascading Style Sheets）：层叠样式表。从<strong>审美</strong>的角度美化页面的<strong>样式</strong>。</li>
+<li>JS：JavaScript。从<strong>交互</strong>的角度描述页面的<strong>行为</strong>。</li>
+</ul>
+</li>
+<li><p>常见的浏览器<br>浏览器是网页运行的平台，<br>常见的浏览器有谷歌（Chrome）、Safari、火狐（Firefox）、IE、Edge、Opera等。</p>
+</li>
+<li><p>浏览器分成两部分：</p>
+<ul>
+<li>1、渲染引擎（即：浏览器内核）</li>
+<li>2、JS 引擎</li>
+<li><strong>渲染引擎是浏览器兼容性问题出现的根本原因。</strong></li>
+</ul>
+</li>
+<li><p>常见浏览器的内核</p>
+<div class="table-container"><table>
+<thead>
+<tr>
+<th align="center">浏览器</th>
+<th align="center">内核</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">chrome</td>
+<td align="center">Blink</td>
+</tr>
+<tr>
+<td align="center">欧鹏</td>
+<td align="center">Blink</td>
+</tr>
+<tr>
+<td align="center">360安全浏览器</td>
+<td align="center">Blink</td>
+</tr>
+<tr>
+<td align="center">360极速浏览器</td>
+<td align="center">Blink</td>
+</tr>
+<tr>
+<td align="center">Safari</td>
+<td align="center">Webkit</td>
+</tr>
+<tr>
+<td align="center">Firefox 火狐</td>
+<td align="center">Gecko</td>
+</tr>
+<tr>
+<td align="center">IE</td>
+<td align="center">Trident</td>
+</tr>
+</tbody></table></div>
+</li>
+<li><p>移动端浏览器内核</p>
+<div class="table-container"><table>
+<thead>
+<tr>
+<th align="center">移动端浏览器</th>
+<th align="center">内核</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Android</td>
+<td align="center">webkit</td>
+</tr>
+<tr>
+<td align="center">iOS</td>
+<td align="center">webkit</td>
+</tr>
+<tr>
+<td align="center">黑莓</td>
+<td align="center">webkit</td>
+</tr>
+<tr>
+<td align="center">Windows Phone</td>
+<td align="center">trident</td>
+</tr>
+</tbody></table></div>
+</li>
+<li><p>常见浏览器JS引擎</p>
+<div class="table-container"><table>
+<thead>
+<tr>
+<th align="center">浏览器</th>
+<th align="left">JS 引擎</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">chrome / 欧鹏</td>
+<td align="left">V8</td>
+</tr>
+<tr>
+<td align="center">Safari</td>
+<td align="left">Nitro</td>
+</tr>
+<tr>
+<td align="center">Firefox 火狐</td>
+<td align="left">SpiderMonkey（1.0-3.0）/ TraceMonkey（3.5-3.6）/ JaegerMonkey（4.0-）</td>
+</tr>
+<tr>
+<td align="center">Opera</td>
+<td align="left">Linear A（4.0-6.1）/ Linear B（7.0-9.2）/ Futhark（9.5-10.2）/ Carakan（10.5-）</td>
+</tr>
+<tr>
+<td align="center">IE</td>
+<td align="left">Trident</td>
+</tr>
+</tbody></table></div>
+<blockquote>
+<p>JS 引擎执行代码时会逐行解释每一句源码（转换为机器语言），<br>然后由计算机去执行。<br>所以 JavaScript 语言归为脚本语言，会逐行解释执行。</p>
+</blockquote>
+</li>
+<li><p>浏览器工作原理<br><img src="http://img.smyhvae.com/20180124_1700.png"><br>1113-1 - 记住图形位置。。</p>
+</li>
+</ol>
+<ul>
+<li>User Interface</li>
+<li>Browser engine</li>
+<li>Rendering enging</li>
+<li>Networking</li>
+<li>JavaScript Interpreter</li>
+<li>UI Backend</li>
+<li>Data Persistence - 数据存储 - cookie、sessionStorage。。</li>
+</ul>
+
+        <h2 id="HTML基础知识">
+          <a href="#HTML基础知识" class="heading-link"><i class="fas fa-link"></i></a><a href="#HTML基础知识" class="headerlink" title="HTML基础知识"></a>HTML基础知识</h2>
+      <ol>
+<li>html骨架</li>
+</ol>
+<div class="table-container"><table>
+<thead>
+<tr>
+<th>标签名</th>
+<th align="center">定义</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>&lt;html&gt;&lt;/html&gt;</code></td>
+<td align="center">HTML标签</td>
+<td align="left">页面中最大的标签，我们成为根标签</td>
+</tr>
+<tr>
+<td><code>&lt;head&gt;&lt;/head&gt;</code></td>
+<td align="center">文档的头部</td>
+<td align="left">注意在head标签中我们必须要设置的标签是title</td>
+</tr>
+<tr>
+<td><code>&lt;titile&gt;&lt;/title&gt;</code></td>
+<td align="center">文档的标题</td>
+<td align="left">让页面拥有一个属于自己的网页标题</td>
+</tr>
+<tr>
+<td><code>&lt;body&gt;&lt;/body&gt;</code></td>
+<td align="center">文档的主体</td>
+<td align="left">元素包含文档的所有内容，页面内容 基本都是放到body里面的</td>
+</tr>
+</tbody></table></div>
+<ol start="2">
+<li><p>文档声明头<br>任何一个标准的HTML页面，第一行一定是一个以<code>&lt;!DOCTYPE ……&gt;</code>开头的语句。<br>这一行，就是文档声明头，即 DocType Declaration，简称DTD。</p>
+</li>
+<li><p>head标签</p>
+</li>
+</ol>
+<ul>
+<li>问：网页的head标签里面，表示的是页面的配置，有什么配置？</li>
+<li>答：<strong>字符集、关键词、页面描述、页面标题、IE适配、视口、iPhone小图标</strong>等等。</li>
+<li>utf-8 \ description \ title \ viewport \ ico<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset="UTF-8"&gt;</span><br><span class="line">  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span><br><span class="line">	&lt;meta http-equiv="Content-Type" content="text/html;charset=UTF-8"&gt;</span><br><span class="line">	&lt;meta name="Author" content=""&gt;</span><br><span class="line">  &lt;meta name="Keywords" content="厉害很厉害" /&gt;</span><br><span class="line">  &lt;meta name="Description" content="网易是中国领先的互联网技术公司，为用户提供免费邮箱、游戏、搜索引擎服务，开设新闻、娱乐、体育等30多个内容频道，及博客、视频、论坛等互动交流，网聚人的力量。" /&gt;</span><br><span class="line">  &lt;title&gt;Document&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></tbody></table></div></figure></li>
+</ul>
+<ol start="4">
+<li>meta标签<blockquote>
+<p>meta表示“元”。“元”配置，就是表示基本的配置项目。</p>
+</blockquote>
+</li>
+</ol>
+<ul>
+<li>（1）字符集 charset：</li>
+<li>（2）视口 viewport：</li>
+<li>（3）定义“关键词”：</li>
+<li>（4）定义“页面描述”：</li>
+</ul>
+<ol start="5">
+<li>HTML基本语法特性</li>
+</ol>
+<ul>
+<li>（1）HTML对换行不敏感，对tab不敏感</li>
+<li>（2）空白折叠现象</li>
+<li>（3）标签要严格封闭</li>
+</ul>
+<ol start="6">
+<li>常用标签 - 语义</li>
+</ol>
+<ul>
+<li><code>&lt;h1&gt;</code></li>
+<li><code>&lt;p&gt;</code></li>
+<li> <code>&lt;hr /&gt;</code></li>
+<li><code>&lt;br /&gt;</code></li>
+<li><code>&lt;div&gt;</code></li>
+<li><code>&lt;span&gt;</code></li>
+<li><code>&lt;center&gt;</code></li>
+<li><code>&lt;pre&gt;</code></li>
+</ul>
+
+        <h1 id="CSS基础">
+          <a href="#CSS基础" class="heading-link"><i class="fas fa-link"></i></a><a href="#CSS基础" class="headerlink" title="CSS基础"></a>CSS基础</h1>
+      
+        <h1 id="CSS进阶">
+          <a href="#CSS进阶" class="heading-link"><i class="fas fa-link"></i></a><a href="#CSS进阶" class="headerlink" title="CSS进阶"></a>CSS进阶</h1>
+      
+        <h1 id="JS基础">
+          <a href="#JS基础" class="heading-link"><i class="fas fa-link"></i></a><a href="#JS基础" class="headerlink" title="JS基础"></a>JS基础</h1>
+      
+        <h1 id="JS-ES6">
+          <a href="#JS-ES6" class="heading-link"><i class="fas fa-link"></i></a><a href="#JS-ES6" class="headerlink" title="JS-ES6"></a>JS-ES6</h1>
+      
+        <h1 id="JS-异步">
+          <a href="#JS-异步" class="heading-link"><i class="fas fa-link"></i></a><a href="#JS-异步" class="headerlink" title="JS-异步"></a>JS-异步</h1>
+      
+        <h1 id="JS进阶">
+          <a href="#JS进阶" class="heading-link"><i class="fas fa-link"></i></a><a href="#JS进阶" class="headerlink" title="JS进阶"></a>JS进阶</h1>
+      
+        <h1 id="CSS-amp-DOM">
+          <a href="#CSS-amp-DOM" class="heading-link"><i class="fas fa-link"></i></a><a href="#CSS-amp-DOM" class="headerlink" title="CSS&amp;DOM"></a>CSS&amp;DOM</h1>
+      
+        <h1 id="移动Web">
+          <a href="#移动Web" class="heading-link"><i class="fas fa-link"></i></a><a href="#移动Web" class="headerlink" title="移动Web"></a>移动Web</h1>
+      
+        <h1 id="MySQL">
+          <a href="#MySQL" class="heading-link"><i class="fas fa-link"></i></a><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h1>
+      
+        <h1 id="Node-js">
+          <a href="#Node-js" class="heading-link"><i class="fas fa-link"></i></a><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h1>
+      
+        <h1 id="Vue基础">
+          <a href="#Vue基础" class="heading-link"><i class="fas fa-link"></i></a><a href="#Vue基础" class="headerlink" title="Vue基础"></a>Vue基础</h1>
+      
+        <h1 id="React基础">
+          <a href="#React基础" class="heading-link"><i class="fas fa-link"></i></a><a href="#React基础" class="headerlink" title="React基础"></a>React基础</h1>
+      
+        <h1 id="前端性能优化">
+          <a href="#前端性能优化" class="heading-link"><i class="fas fa-link"></i></a><a href="#前端性能优化" class="headerlink" title="前端性能优化"></a>前端性能优化</h1>
+      
+        <h1 id="前端面试">
+          <a href="#前端面试" class="heading-link"><i class="fas fa-link"></i></a><a href="#前端面试" class="headerlink" title="前端面试"></a>前端面试</h1>
+      
+        <h1 id="前端工程化">
+          <a href="#前端工程化" class="heading-link"><i class="fas fa-link"></i></a><a href="#前端工程化" class="headerlink" title="前端工程化"></a>前端工程化</h1>
+      
+        <h1 id="前端综合">
+          <a href="#前端综合" class="heading-link"><i class="fas fa-link"></i></a><a href="#前端综合" class="headerlink" title="前端综合"></a>前端综合</h1>
+      
+        <h1 id="推荐链接">
+          <a href="#推荐链接" class="heading-link"><i class="fas fa-link"></i></a><a href="#推荐链接" class="headerlink" title="推荐链接"></a>推荐链接</h1>
+      </div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="http://example.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="post-share"><div class="social-share" data-sites="qzone, qq, weibo, wechat, douban, linkedin, facebook, twitter, google">Share to: </div></div><nav class="post-paginator paginator"><div class="paginator-next"><a class="paginator-next__link" href="/2021/08/29/%E5%8D%9A%E5%AE%A2%E5%AD%A6%E4%B9%A0/"><span class="paginator-prev__text">博客学习</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#HTML"><span class="toc-number">1.</span> <span class="toc-text">
+          HTML</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-number">1.1.</span> <span class="toc-text">
+          基础知识点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">1.2.</span> <span class="toc-text">
+          HTML基础知识</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CSS%E5%9F%BA%E7%A1%80"><span class="toc-number">2.</span> <span class="toc-text">
+          CSS基础</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CSS%E8%BF%9B%E9%98%B6"><span class="toc-number">3.</span> <span class="toc-text">
+          CSS进阶</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JS%E5%9F%BA%E7%A1%80"><span class="toc-number">4.</span> <span class="toc-text">
+          JS基础</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JS-ES6"><span class="toc-number">5.</span> <span class="toc-text">
+          JS-ES6</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JS-%E5%BC%82%E6%AD%A5"><span class="toc-number">6.</span> <span class="toc-text">
+          JS-异步</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JS%E8%BF%9B%E9%98%B6"><span class="toc-number">7.</span> <span class="toc-text">
+          JS进阶</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CSS-amp-DOM"><span class="toc-number">8.</span> <span class="toc-text">
+          CSS&amp;DOM</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%A7%BB%E5%8A%A8Web"><span class="toc-number">9.</span> <span class="toc-text">
+          移动Web</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#MySQL"><span class="toc-number">10.</span> <span class="toc-text">
+          MySQL</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Node-js"><span class="toc-number">11.</span> <span class="toc-text">
+          Node.js</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Vue%E5%9F%BA%E7%A1%80"><span class="toc-number">12.</span> <span class="toc-text">
+          Vue基础</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#React%E5%9F%BA%E7%A1%80"><span class="toc-number">13.</span> <span class="toc-text">
+          React基础</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96"><span class="toc-number">14.</span> <span class="toc-text">
+          前端性能优化</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95"><span class="toc-number">15.</span> <span class="toc-text">
+          前端面试</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96"><span class="toc-number">16.</span> <span class="toc-text">
+          前端工程化</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E7%AB%AF%E7%BB%BC%E5%90%88"><span class="toc-number">17.</span> <span class="toc-text">
+          前端综合</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8E%A8%E8%8D%90%E9%93%BE%E6%8E%A5"><span class="toc-number">18.</span> <span class="toc-text">
+          推荐链接</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/header.jpg" alt="avatar"></div><p class="sidebar-ov-author__text">LJY_BLOG</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">15</div><div class="sidebar-ov-state-item__name">Archives</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">3</div><div class="sidebar-ov-state-item__name">Tags</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script></body></html>
