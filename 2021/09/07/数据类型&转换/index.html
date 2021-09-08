@@ -1,0 +1,564 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/icon16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/favicon32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="很重要的内容，总结一篇">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据类型&amp;转换">
+<meta property="og:url" content="http://example.com/2021/09/07/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B&%E8%BD%AC%E6%8D%A2/index.html">
+<meta property="og:site_name" content="LJY_BLOG">
+<meta property="og:description" content="很重要的内容，总结一篇">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-09-07T02:32:31.000Z">
+<meta property="article:modified_time" content="2021-09-07T08:34:35.524Z">
+<meta property="article:author" content="LJY">
+<meta property="article:tag" content="学习笔记">
+<meta name="twitter:card" content="summary"><title>数据类型&amp;转换 | LJY_BLOG</title><link ref="canonical" href="http://example.com/2021/09/07/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B&amp;%E8%BD%AC%E6%8D%A2/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"Copy","copySuccess":"Copy Success","copyError":"Copy Error"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">主页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">档案</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/reading/"><span class="header-nav-menu-item__icon"><i class="fas fa-book"></i></span><span class="header-nav-menu-item__text">阅读</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">LJY_BLOG</div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">数据类型&amp;转换</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">创建</span><span class="post-meta-item__value">2021-09-07</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新</span><span class="post-meta-item__value">2021-09-07</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon"><i class="far fa-clock"></i></span><span class="post-meta-item__info">阅读时间</span><span class="post-meta-item__value">31m</span></span></div></header><div class="post-body"><p>很重要的内容，总结一篇</p>
+<span id="more"></span>
+
+
+        <h1 id="参考链接">
+          <a href="#参考链接" class="heading-link"><i class="fas fa-link"></i></a><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1>
+      <p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://wangdoc.com/javascript/types/general.html">数据类型概述</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://wangdoc.com/javascript/features/conversion.html">数据类型的转换</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h1 id="数据类型">
+          <a href="#数据类型" class="heading-link"><i class="fas fa-link"></i></a><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1>
+      
+        <h2 id="简介">
+          <a href="#简介" class="heading-link"><i class="fas fa-link"></i></a><a href="#简介" class="headerlink" title="简介"></a>简介</h2>
+      <blockquote>
+<p>JavaScript 的数据类型，共有六种。（ES6 又新增了第七种 Symbol 类型的值）</p>
+</blockquote>
+<ul>
+<li>数值（number）：整数和小数（比如1和3.14）。</li>
+<li>字符串（string）：文本（比如Hello World）。</li>
+<li>布尔值（boolean）：表示真伪的两个特殊值，即true（真）和false（假）。</li>
+<li>undefined：表示“未定义”或不存在，即由于目前没有定义，所以此处暂时没有任何值。</li>
+<li>null：表示空值，即此处的值为空。</li>
+<li>对象（object）：各种值组成的集合。<ul>
+<li>狭义的对象（object）</li>
+<li>数组（array）</li>
+<li>函数（function）</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>JS确定数据类型的方法</p>
+</blockquote>
+<ul>
+<li>typeof运算符</li>
+<li>instanceof运算符</li>
+<li>Object.prototype.toString方法</li>
+</ul>
+<blockquote>
+<p>typeof运算符</p>
+</blockquote>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">typeof运算符可以返回一个值的数据类型。</span><br><span class="line"></span><br><span class="line">typeof 123 // "number"</span><br><span class="line">typeof '123' // "string"</span><br><span class="line">typeof false // "boolean"</span><br><span class="line"></span><br><span class="line">function f() {}</span><br><span class="line">typeof f</span><br><span class="line">// "function"</span><br><span class="line"></span><br><span class="line">typeof undefined</span><br><span class="line">// "undefined"</span><br><span class="line"></span><br><span class="line">v</span><br><span class="line">// ReferenceError: v is not defined</span><br><span class="line">利用这一点，typeof可以用来检查一个没有声明的变量，而不报错。</span><br><span class="line">//  这里可以多思考思考。。。🤔</span><br><span class="line">typeof v</span><br><span class="line">// "undefined"</span><br><span class="line"></span><br><span class="line">----------实际编程中</span><br><span class="line">// 错误的写法</span><br><span class="line">if (v) {</span><br><span class="line">  // ...</span><br><span class="line">}</span><br><span class="line">// ReferenceError: v is not defined</span><br><span class="line">// 正确的写法</span><br><span class="line">if (typeof v === "undefined") {🤔🤔🤔</span><br><span class="line">  // ...</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">typeof window // "object"</span><br><span class="line">typeof {} // "object"</span><br><span class="line">typeof [] // "object"</span><br><span class="line"></span><br><span class="line">可以用instanceof来区分数组和对象</span><br><span class="line">var o = {};</span><br><span class="line">var a = [];</span><br><span class="line">o instanceof Array // false</span><br><span class="line">a instanceof Array // true</span><br><span class="line"></span><br></pre></td></tr></tbody></table></div></figure>
+
+
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">typeof null // "object"</span><br></pre></td></tr></tbody></table></div></figure>
+<p>null的类型是object，这是由于历史原因造成的。1995年的 JavaScript 语言第一版，只设计了五种数据类型（对象、整数、浮点数、字符串和布尔值），没考虑null，只把它当作object的一种特殊值。后来null独立出来，作为一种单独的数据类型，为了兼容以前的代码，typeof null返回object就没法改变了。</p>
+<blockquote>
+<p>栈内存和堆内存</p>
+</blockquote>
+<p>参考链接<span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.cnblogs.com/shihaiying/p/11964721.html">JS栈内存与堆内存</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>JS中，所有的<strong>变量</strong>都是保存在<strong>栈内存</strong>中的。</p>
+<ul>
+<li>基本数据类型 - 直接保存在栈内存</li>
+<li>引用数据类型 - 堆内存 - 变量保存了对象的内存地址</li>
+</ul>
+<p>特点：</p>
+<ul>
+<li><strong>栈内存</strong></li>
+<li>变量已知大小或有范围上限</li>
+<li>存放基本类型</li>
+<li>在当前执行环境结束时销毁💥</li>
+<li><strong>堆内存</strong></li>
+<li>保存无序且唯一的引用类型值</li>
+<li>可以用栈中的键名获取</li>
+<li>存储大小一般未知 ❔</li>
+<li>不随执行环境结束而销毁💥 - 只有当所有引用它的变量不存在时才被垃圾回收机制回收</li>
+</ul>
+
+        <h2 id="null，undefined">
+          <a href="#null，undefined" class="heading-link"><i class="fas fa-link"></i></a><a href="#null，undefined" class="headerlink" title="null，undefined"></a>null，undefined</h2>
+      <blockquote>
+<p>null</p>
+</blockquote>
+<p>null 专门用来定义一个<strong>空对象</strong>（例如：<code>let a = null</code>）。<br>如果想定义一个变量用来保存引用类型，<br>但是还没想好放什么内容，这个时候，可以在初始化时将其设置为 null。</p>
+<ul>
+<li>  Null 类型的值只有一个，就是 null。比如 <code>let a = null</code>。</li>
+<li>  使用 typeof 检查一个 null 值时，会返回 object。</li>
+</ul>
+<blockquote>
+<p>undefined</p>
+</blockquote>
+<ul>
+<li>  Undefined 类型的值只有一个，就是 undefind。比如 <code>let a = undefined</code>。</li>
+<li>  使用 typeof 检查一个 undefined 值时，会返回 undefined。</li>
+</ul>
+<p>以下是出现undefined的实际情况<br>总结：</p>
+<ul>
+<li>定义未赋值 / 未定义</li>
+<li>调用没有返回 / 未传值</li>
+</ul>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">### case1：变量已声明，未赋值时</span><br><span class="line">```js</span><br><span class="line">let name;</span><br><span class="line">console.log(name); // 打印结果：undefined</span><br><span class="line">console.log(typeof name); // 打印结果：undefined</span><br><span class="line"></span><br><span class="line">### case2：变量未声明（未定义）时</span><br><span class="line">```js</span><br><span class="line">console.log(typeof a); // undefined</span><br><span class="line">console.log(a); // 打印结果：Uncaught ReferenceError: a is not defined</span><br><span class="line"></span><br><span class="line">### case3：函数无返回值时</span><br><span class="line">```js</span><br><span class="line">function foo() {}</span><br><span class="line">console.log(foo()); // 打印结果：undefined</span><br><span class="line"></span><br><span class="line">### case4：调用函数时，未传参</span><br><span class="line">function foo(name) {</span><br><span class="line">    console.log(name);</span><br><span class="line">}</span><br><span class="line">foo(); // 调用函数时，未传参。执行函数后的打印结果：undefined</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+<p>实际开发案例</p>
+<figure class="highlight js"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">如果调用函数时没有传参，我们可以给形参设置一个默认值：</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">name</span>) </span>{</span><br><span class="line">    name = name || <span class="string">'qianguyihao'</span>;</span><br><span class="line">}</span><br><span class="line">foo();</span><br><span class="line"></span><br><span class="line">es6</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">name = <span class="string">'qianguyihao'</span></span>) </span>{}</span><br><span class="line">foo();</span><br></pre></td></tr></tbody></table></div></figure>
+
+<blockquote>
+<p>null和undefined的区别</p>
+</blockquote>
+<p><strong>比较 / 运算</strong></p>
+<ul>
+<li><code>null == undefined</code> 的结果为 <code>true</code></li>
+<li><code>null === undefined</code> 的结果是 false</li>
+<li>10 + null 结果为 10。</li>
+<li>10 + undefined 结果为 NaN。</li>
+<li>任何数据类型和 undefined 运算都是 NaN;</li>
+<li>任何值和 null 运算，null 可看做 0 运算。</li>
+</ul>
+
+        <h2 id="数值">
+          <a href="#数值" class="heading-link"><i class="fas fa-link"></i></a><a href="#数值" class="headerlink" title="数值"></a>数值</h2>
+      <blockquote>
+<p>在JS中所有的数值都是 Number 类型，包括整数和浮点数（小数）。</p>
+</blockquote>
+<figure class="highlight javascript"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">100</span>; <span class="comment">// 定义一个变量 a，并且赋值整数100</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> a); <span class="comment">// 输出变量 a 的类型</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> b = <span class="number">12.3</span>; <span class="comment">// 定义一个变量 b，并且赋值浮点数 12.3</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> a);</span><br><span class="line"></span><br><span class="line">上方代码的输出结果为：</span><br><span class="line">number</span><br><span class="line">number</span><br></pre></td></tr></tbody></table></div></figure>
+
+<blockquote>
+<p>数值范围</p>
+</blockquote>
+<ul>
+<li>最大值：<code>Number.MAX_VALUE</code>，这个值为： 1.7976931348623157e+308</li>
+<li>最小值：<code>Number.MIN_VALUE</code>，这个值为： 5e-324</li>
+<li>如果使用 Number 表示的变量超过了最大值，则会返回Infinity。</li>
+<li>无穷大（正无穷）：Infinity</li>
+<li>无穷小（负无穷）：-Infinity</li>
+<li>注意：<code>typeof Infinity</code>的返回结果是number。</li>
+</ul>
+<blockquote>
+<p>NaN</p>
+</blockquote>
+<p><strong>NaN</strong>：是一个特殊的数字，表示Not a Number，非数值。比如：</p>
+<figure class="highlight javascript"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">  <span class="built_in">console</span>.log(<span class="string">"abc"</span> / <span class="number">18</span>);  <span class="comment">//结果是NaN</span></span><br><span class="line"><span class="comment">//按理说，字符串相乘是没有结果的，但如果你非要让JS去算，它就一定会给你一个结果。结果是NaN</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"abc"</span> * <span class="string">"abcd"</span>); </span><br><span class="line"></span><br><span class="line">注意：<span class="string">`typeof NaN`</span>的返回结果是 number。</span><br><span class="line"></span><br><span class="line">Undefined和任何数值**计算**的结果为 <span class="literal">NaN</span>。</span><br><span class="line"></span><br><span class="line"><span class="literal">NaN</span> 与**任何值**都不相等，包括 <span class="literal">NaN</span> 本身。❌</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+<blockquote>
+<p>隐式转换</p>
+</blockquote>
+<p><code>-</code>、<code>*</code>、<code>/</code>、<code>%</code>这几个符号会自动进行隐式转换。</p>
+<figure class="highlight javascript"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="string">"4"</span> + <span class="number">3</span> - <span class="number">6</span>;</span><br><span class="line"><span class="built_in">console</span>.log(a);</span><br><span class="line"></span><br><span class="line"><span class="number">37</span></span><br></pre></td></tr></tbody></table></div></figure>
+
+<blockquote>
+<p>浮点数运算</p>
+</blockquote>
+<figure class="highlight javascript"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">千万不要使用JS进行对精确度要求比较高的运算。</span><br><span class="line">   <span class="keyword">var</span> a = <span class="number">0.1</span> + <span class="number">0.2</span>;</span><br><span class="line">   <span class="built_in">console</span>.log(a);  <span class="comment">//打印结果：0.30000000000000004</span></span><br><span class="line">	</span><br><span class="line">这是因为，计算机在做运算时，所有的运算都要转换成二进制去计算。</span><br><span class="line">然而，有些数字转换成二进制之后，无法精确表示。</span><br><span class="line">比如说，<span class="number">0.1</span>和<span class="number">0.2</span>转换成二进制之后，是无穷的，</span><br><span class="line">因此存在浮点数的计算不精确的问题。</span><br><span class="line">	</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+
+        <h2 id="布尔值">
+          <a href="#布尔值" class="heading-link"><i class="fas fa-link"></i></a><a href="#布尔值" class="headerlink" title="布尔值"></a>布尔值</h2>
+      <p>布尔型有两个值：true 和 false。<br>主要用来做逻辑判断： true 表示真，false 表示假。</p>
+<p>以下运算会返回布尔值</p>
+<ul>
+<li>两元逻辑运算符： &amp;&amp; (And)，|| (Or)</li>
+<li>前置逻辑运算符： ! (Not)</li>
+<li>相等运算符：===，!==，==，!=</li>
+<li>比较运算符：&gt;，&gt;=，&lt;，&lt;=</li>
+</ul>
+<p>以下值会被转化为false 🌪<br><strong>UNN0F空</strong></p>
+<ul>
+<li>undefined</li>
+<li>null</li>
+<li>false</li>
+<li>0</li>
+<li>NaN</li>
+<li>“”或’’（空字符串）</li>
+</ul>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">if ('') {</span><br><span class="line">  console.log('true');</span><br><span class="line">}</span><br><span class="line">// 没有任何输出</span><br><span class="line"></span><br><span class="line">注意，空数组（[]）和空对象（{}）对应的布尔值，都是true。</span><br><span class="line">if ([]) {</span><br><span class="line">  console.log('true');</span><br><span class="line">}</span><br><span class="line">// true</span><br><span class="line"></span><br><span class="line">if ({}) {</span><br><span class="line">  console.log('true');</span><br><span class="line">}</span><br><span class="line">// true</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+
+
+        <h2 id="字符串">
+          <a href="#字符串" class="heading-link"><i class="fas fa-link"></i></a><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2>
+      <blockquote>
+<p>单引号&amp;双引号</p>
+</blockquote>
+<ul>
+<li>单引号和双引号都可以表示字符串类型</li>
+<li>但是不能混用 - 一个单一个双</li>
+<li>如果嵌套使用，一对单外面一对双</li>
+</ul>
+<blockquote>
+<p>转义字符<br>表示一些特殊符号时，可用<code>\</code>进行转义</p>
+</blockquote>
+<ul>
+<li><code>\"</code> 表示 <code>"</code> 双引号</li>
+<li><code>\'</code> 表示 <code>'</code> 单引号</li>
+<li><code>\\</code> 表示<code>\</code></li>
+<li><code>\r</code> 表示回车</li>
+<li><code>\n</code> 表示换行。n 的意思是 newline。</li>
+<li><code>\t</code> 表示缩进。t 的意思是 tab。</li>
+<li><code>\b</code> 表示空格。b 的意思是 blank。</li>
+</ul>
+<blockquote>
+<p>字符串的长度</p>
+</blockquote>
+<ul>
+<li>一个中文算一个字符，一个英文算一个字符</li>
+<li>一个标点符号（包括中文标点、英文标点）算一个字符</li>
+<li>一个空格算一个字符</li>
+</ul>
+<blockquote>
+<p>字符串拼接</p>
+</blockquote>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">字符串 + 任意数据类型 = 拼接之后的新字符串;</span><br></pre></td></tr></tbody></table></div></figure>
+
+<blockquote>
+<p>字符串不可变性</p>
+</blockquote>
+<p>字符串里面的值不可被改变。虽然看上去可以改变内容<br>，但其实是地址变了，内存中新开辟了一个内存空间。</p>
+<p>字符串重复赋值、字符串拼接都会引用新的地址空间来存放，<strong>增加内存</strong>消耗。</p>
+<figure class="highlight js"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">'hello'</span>;</span><br><span class="line">str = <span class="string">'qianguyihao'</span>;</span><br><span class="line"></span><br><span class="line">比如上面的代码，当重新给变量 str 赋值时，常量<span class="string">`hello`</span>不会被修改，</span><br><span class="line">依然保存在内存中；str 会改为指向<span class="string">`qianguyihao`</span>。</span><br></pre></td></tr></tbody></table></div></figure>
+
+<blockquote>
+<p>模板字符串</p>
+</blockquote>
+<p>ES6中引入了<strong>模板字符串</strong>，省去了字符串拼接的烦恼。🤗🤗🤗</p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">var name = 'qianguyihao';</span><br><span class="line">var age = '26';</span><br><span class="line">console.log(`我是${name},age:${age}`); //ES6 写法。注意语法格式</span><br><span class="line">`${变量名}`</span><br><span class="line"></span><br><span class="line">const a = 5;</span><br><span class="line">const b = 10;</span><br><span class="line">// 下面这行代码，故意做了换行。</span><br><span class="line">console.log(`this is ${a + b} and</span><br><span class="line">not ${2 * a + b}.`);</span><br><span class="line"></span><br><span class="line">this is 15 and</span><br><span class="line">not 20.</span><br><span class="line"></span><br><span class="line">// 模板中可以调用函数</span><br><span class="line">function getName() {</span><br><span class="line">	return 'qianguyihao';</span><br><span class="line">}</span><br><span class="line">console.log(`www.${getName()}.com`); // 打印结果：www.qianguyihao.com</span><br><span class="line"></span><br><span class="line">// 模板字符串支持嵌套使用</span><br><span class="line">// 创建 ul 标签 - 给innerHTML</span><br><span class="line">// 可以封装函数使用</span><br><span class="line">const nameList = ['千古壹号', '许嵩', '解忧少帅'];</span><br><span class="line">function myTemplate() {</span><br><span class="line">	// join('') 的意思是，把数组里的内容合并成一个字符串</span><br><span class="line">	return `&lt;ul&gt;</span><br><span class="line">	${nameList</span><br><span class="line">		.map((item) =&gt; `&lt;li&gt;${item}&lt;/li&gt;`)</span><br><span class="line">		.join('')}</span><br><span class="line">	&lt;/ul&gt;`;</span><br><span class="line">}</span><br><span class="line">document.body.innerHTML = myTemplate();</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+
+        <h2 id="对象">
+          <a href="#对象" class="heading-link"><i class="fas fa-link"></i></a><a href="#对象" class="headerlink" title="对象"></a>对象</h2>
+      <blockquote>
+<p>对象概念</p>
+</blockquote>
+<p>在 JavaScript 中，对象是一组<strong>无序</strong>的相关属性和方法的集合。</p>
+<p><strong>对象的作用是：封装信息</strong>。比如Student类里可以封装学生的姓名、年龄、成绩等。</p>
+<p>对象具有<strong>特征</strong>（属性）和<strong>行为</strong>（方法）。</p>
+<figure class="highlight javascript"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person = {};</span><br><span class="line"></span><br><span class="line">person.name = <span class="string">'王二'</span>;</span><br><span class="line">person.age = <span class="number">35</span>;</span><br><span class="line">person.sex = <span class="string">'男'</span>;</span><br><span class="line">person.height = <span class="string">'180'</span>;</span><br></pre></td></tr></tbody></table></div></figure>
+
+<p>由此可见，对象里面的属性均是<strong>键值对</strong>： - 遍历 for in</p>
+<ul>
+<li>键：相当于属性名。</li>
+<li>值：相当于属性值，可以是任意类型的值（数字类型、字符串类型、布尔类型，函数类型等）。</li>
+<li><strong>补充1</strong>：对象的属性值可以是任何的数据类型，也可以是个<strong>函数</strong>：（也称之为方法）</li>
+<li><strong>补充2</strong>：对象中的属性值，也可以是一个<strong>对象</strong>。</li>
+</ul>
+<figure class="highlight javascript"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">obj.sayName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'smyhvae'</span>);</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(obj.sayName);  <span class="comment">//没加括号，就是获取方法</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'-----------'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(obj.sayName());  <span class="comment">//加了括号，就是调用方法。即：执行函数内容，并执行函数体的内容</span></span><br><span class="line"></span><br></pre></td></tr></tbody></table></div></figure>
+
+<blockquote>
+<p>对象和数据类型的关系</p>
+</blockquote>
+<ul>
+<li>只要不是那五种基本数据类型，就全都是对象。</li>
+<li>基本数据类型的值直接保存在<strong>栈内存</strong>中，值与值之间是独立存在，修改一个变量不会影响其他的变量。</li>
+<li><strong>如果两个变量保存的是同一个对象引用，当一个通过一个变量修改属性时，另一个也会受到影响</strong>。</li>
+</ul>
+<figure class="highlight javascript"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj1 = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">obj1.name = <span class="string">"孙悟空"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> obj2 = obj1; <span class="comment">// 将 obj1 的地址赋值给 obj2。从此， obj1 和 obj2 指向了同一个堆内存空间</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//修改obj2的name属性</span></span><br><span class="line">obj2.name = <span class="string">"猪八戒"</span>; </span><br><span class="line"></span><br><span class="line"><span class="comment">//obj1 的 name 属性也会被修改。</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//把引用类型 A 的值赋值给 B，让A和B相互不受影响的话，可以通过 Object.assign() 来复制对象。</span></span><br><span class="line"><span class="keyword">var</span> obj1 = {<span class="attr">name</span>: <span class="string">'孙悟空'</span>};</span><br><span class="line"><span class="comment">// 复制对象：把 obj1 赋值给 obj3。两者之间互不影响</span></span><br><span class="line"><span class="keyword">var</span> obj3 = <span class="built_in">Object</span>.assign({}, obj1);</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+<blockquote>
+<p>对象的分类</p>
+</blockquote>
+<ol>
+<li>内置对象 <ul>
+<li>比如：Object、Math、Date、String、Array、Number、Boolean、Function等。</li>
+</ul>
+</li>
+<li>宿主对象<ul>
+<li> 比如 BOM DOM。比如<code>console</code>、<code>document</code>。</li>
+</ul>
+</li>
+<li>自定义对象<ul>
+<li>通过 new 关键字创建出来的对象实例，都是属于对象类型，比如Object、Array、Date等。</li>
+</ul>
+</li>
+</ol>
+<p>对象内容挺多的，再写一篇！！！🐝🐝🐝</p>
+
+        <h2 id="函数">
+          <a href="#函数" class="heading-link"><i class="fas fa-link"></i></a><a href="#函数" class="headerlink" title="函数"></a>函数</h2>
+      
+        <h2 id="数组">
+          <a href="#数组" class="heading-link"><i class="fas fa-link"></i></a><a href="#数组" class="headerlink" title="数组"></a>数组</h2>
+      
+        <h1 id="数据类型转换">
+          <a href="#数据类型转换" class="heading-link"><i class="fas fa-link"></i></a><a href="#数据类型转换" class="headerlink" title="数据类型转换"></a>数据类型转换</h1>
+      <p>通常有三种形式的类型转换：</p>
+<ul>
+<li>转换为字符串类型</li>
+<li>转换为数字型</li>
+<li>转换为布尔型</li>
+</ul>
+<p><code>typeof()</code>表示“<strong>获取变量的数据类型</strong>”</p>
+<div class="table-container"><table>
+<thead>
+<tr>
+<th align="left">typeof 的代码写法</th>
+<th align="center">返回结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">typeof 数字</td>
+<td align="center">number</td>
+</tr>
+<tr>
+<td align="left">typeof 字符串</td>
+<td align="center">string</td>
+</tr>
+<tr>
+<td align="left">typeof 布尔型</td>
+<td align="center">boolean</td>
+</tr>
+<tr>
+<td align="left">typeof 对象</td>
+<td align="center">object</td>
+</tr>
+<tr>
+<td align="left">typeof 方法</td>
+<td align="center">function</td>
+</tr>
+<tr>
+<td align="left">typeof null</td>
+<td align="center">object</td>
+</tr>
+<tr>
+<td align="left">typeof undefined</td>
+<td align="center">undefined</td>
+</tr>
+</tbody></table></div>
+<figure class="highlight javascript"><figcaption><span>这里要用instance区分</span></figcaption><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> []); <span class="comment">// 空数组的打印结果：object</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> {}); <span class="comment">// 空对象的打印结果：object</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log([] <span class="keyword">instanceof</span> <span class="built_in">Array</span>); <span class="comment">// 打印结果：true</span></span><br><span class="line"><span class="built_in">console</span>.log({} <span class="keyword">instanceof</span> <span class="built_in">Array</span>); <span class="comment">// 打印结果：false</span></span><br></pre></td></tr></tbody></table></div></figure>
+
+
+
+        <h2 id="显式转换">
+          <a href="#显式转换" class="heading-link"><i class="fas fa-link"></i></a><a href="#显式转换" class="headerlink" title="显式转换"></a>显式转换</h2>
+      <ul>
+<li>toString()</li>
+<li>String()</li>
+<li>Number()</li>
+<li>parseInt(string)</li>
+<li>parseFloat(string)</li>
+<li>Boolean()</li>
+</ul>
+
+        <h3 id="其他类型-gt-String">
+          <a href="#其他类型-gt-String" class="heading-link"><i class="fas fa-link"></i></a><a href="#其他类型-gt-String" class="headerlink" title="其他类型 ->String"></a>其他类型 -&gt;String</h3>
+      <p>方法一（隐式类型转换）：字符串拼接<br>格式：变量+”” 或者 变量+”abc”</p>
+<p>方法二：调用 toString()方法</p>
+<figure class="highlight javascript"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">变量.toString()</span><br><span class="line"></span><br><span class="line">【重要】该方法**不会影响到原变量**，它会将转换的结果返回。</span><br><span class="line">当然我们还可以直接写成<span class="string">`a = a.toString()`</span>，这样的话，就是直接修改原变量。</span><br><span class="line"></span><br><span class="line">注意：<span class="literal">null</span> 和 <span class="literal">undefined</span> 这两个值没有 toString()方法</span><br><span class="line">如果调用，会报错。</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> a = <span class="number">255</span>;</span><br><span class="line"><span class="comment">//对于Number调用toString()时可以在方法中传递一个整数作为参数</span></span><br><span class="line"><span class="comment">//此时它将会把数字转换为指定的进制,如果不指定则默认转换为10进制</span></span><br><span class="line">a = a.toString(<span class="number">2</span>); <span class="comment">// 转换为二进制</span></span><br><span class="line"></span><br></pre></td></tr></tbody></table></div></figure>
+
+
+<p>方法三（强制转换）：使用 String()函数</p>
+<figure class="highlight javascript"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">String</span>(变量)</span><br><span class="line"></span><br><span class="line">- 对于 <span class="built_in">Number</span> 和 <span class="built_in">Boolean</span> 而言，本质上就是调用 toString()方法。</span><br><span class="line"></span><br><span class="line">- 但是对于 <span class="literal">null</span> 和 <span class="literal">undefined</span>，则不会调用 toString()方法。它会将 <span class="literal">null</span> 直接转换为 <span class="string">"null"</span>。</span><br><span class="line">- 将 <span class="literal">undefined</span> 直接转换为 <span class="string">"undefined"</span>。</span><br><span class="line"></span><br></pre></td></tr></tbody></table></div></figure>
+
+
+
+        <h3 id="其他类型-gt-Number">
+          <a href="#其他类型-gt-Number" class="heading-link"><i class="fas fa-link"></i></a><a href="#其他类型-gt-Number" class="headerlink" title="其他类型 -> Number"></a>其他类型 -&gt; Number</h3>
+      <blockquote>
+<p>使用 Number() 函数</p>
+</blockquote>
+<p><strong>情况一：字符串 –&gt; 数字</strong></p>
+<ul>
+<li>1.如果字符串中是<strong>纯数字</strong>，则直接将其转换为数字。</li>
+<li>2.如果字符串是一个<strong>空串或者是一个全是空格的字符串</strong>，则转换为 0。</li>
+<li>3.只要字符串中<strong>包含了其他非数字</strong>    的内容（<code>小数点</code>按数字来算），则转换为 NaN。</li>
+</ul>
+<p><strong>情况二：布尔 –&gt; 数字</strong></p>
+<ul>
+<li>true 转成 1</li>
+<li>false 转成 0</li>
+</ul>
+<p><strong>情况三：null –&gt; 数字</strong></p>
+<ul>
+<li>结果为：0</li>
+</ul>
+<p><strong>情况四：undefined –&gt; 数字</strong></p>
+<ul>
+<li>结果为：NaN</li>
+</ul>
+<blockquote>
+<p>使用 parseInt()函数：字符串 -&gt; 整数</p>
+</blockquote>
+<p><strong>情况一：字符串 –&gt; 数字</strong></p>
+<ul>
+<li>1.<strong>只保留字符串最开头的数字</strong>，后面的中文自动消失。</li>
+<li>2.如果字符串不是以数字开头，则转换为 NaN。</li>
+<li>3.如果字符串是一个空串或者是一个全是空格的字符串，<strong>转换时会报错</strong>。</li>
+</ul>
+<p><strong>情况二：Boolean –&gt; 数字</strong></p>
+<ul>
+<li>结果为：NaN</li>
+</ul>
+<p><strong>情况三：Null –&gt; 数字</strong></p>
+<ul>
+<li>结果为：NaN</li>
+</ul>
+<p><strong>情况四：Undefined –&gt; 数字</strong></p>
+<ul>
+<li>结果为：NaN</li>
+</ul>
+<blockquote>
+<p>Number()🌹 函数和 parseInt()🐠 函数的区别：</p>
+</blockquote>
+<p>就拿<code>Number(true)</code> 和 <code>parseInt(true)/parseFloat(true)</code>来举例，二者在使用时，是有区别的：</p>
+<ul>
+<li>Number(true) ：千方百计地想转换为数字。🌹🌹🌹</li>
+<li>parseInt(true)/parseFloat(true) ：<strong>先转为字符串</strong>，再<strong>提取出最前面</strong>的数字部分；🐠没提取出来，那就返回 NaN。</li>
+</ul>
+<blockquote>
+<p>parseInt() 函数特性</p>
+</blockquote>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">（1）**只保留字符串最开头的数字**，后面的中文自动消失。例如：</span><br><span class="line">	console.log(parseInt("2017写了6篇文章")); //打印结果：2017</span><br><span class="line">	console.log(parseInt("2017.01写了6篇文章")); //打印结果仍是：2017   （说明只会取整数）</span><br><span class="line">	console.log(parseInt("aaa2017.01写了6篇文章")); //打印结果：NaN （因为不是以数字开头）</span><br><span class="line"></span><br><span class="line">（2）如果对**非 String**使用 parseInt()或 parseFloat()，它会**先将其转换为 String** 然后再操作。【重要】</span><br><span class="line">	var a = 168.23;</span><br><span class="line">	console.log(parseInt(a)); //打印结果：168  （因为是先将 a 转为字符串"168.23"，然后然后再操作）</span><br><span class="line">	</span><br><span class="line">	var b = true;🐠🐠🐠</span><br><span class="line">	console.log(parseInt(b)); //打印结果：NaN （因为是先将 b 转为字符串"true"，然后然后再操作）</span><br><span class="line">	</span><br><span class="line">	var c = null;🐠🐠🐠</span><br><span class="line">	console.log(parseInt(c)); //打印结果：NaN  （因为是先将 c 转为字符串"null"，然后然后再操作）</span><br><span class="line">	</span><br><span class="line">	var d = undefined;</span><br><span class="line">	console.log(parseInt(d)); //打印结果：NaN  （因为是先将 d 转为字符串"undefined"，然后然后再操作）</span><br><span class="line"></span><br><span class="line">（3）自动带有截断小数的功能：**取整，不四舍五入🐠🐠🐠**。</span><br><span class="line"></span><br><span class="line">	var a = parseInt(5.8) + parseInt(4.7);</span><br><span class="line">	console.log(a); // 9</span><br><span class="line">	</span><br><span class="line">	var a = parseInt(5.8 + 4.7);</span><br><span class="line">	console.log(a); // 10</span><br><span class="line"></span><br><span class="line">（4）带两个参数时，表示在转换时，包含了进制转换。</span><br><span class="line">	</span><br><span class="line">	var a = '110';</span><br><span class="line">	var num = parseInt(a, 16); // 【重要】将 a 当成 十六进制 来看待，转换成 十进制 的 num</span><br><span class="line">	console.log(num); // 272</span><br><span class="line">	无论 parseInt() 里面的进制参数是多少，最终的转换结果是十进制。</span><br><span class="line">	</span><br><span class="line">	var a = '5';</span><br><span class="line">	var num = parseInt(a, 2); // 将 a 当成 二进制 来看待，转换成 十进制 的 num</span><br><span class="line">	console.log(num); // 打印结果：NaN。因为 二进制中没有 5 这个数，转换失败。</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+<blockquote>
+<p>parseFloat()函数：字符串 –&gt; 浮点数（小数）</p>
+</blockquote>
+<p>parseFloat()和 parseInt()的作用类似，不同的是，parseFloat()可以获得有效的小数部分。</p>
+<figure class="highlight javascript"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="string">'123.456.789px'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">parseFloat</span>(a)); <span class="comment">// 打印结果：123.456🐠</span></span><br></pre></td></tr></tbody></table></div></figure>
+
+
+
+        <h3 id="其他类型-gt-Boolean">
+          <a href="#其他类型-gt-Boolean" class="heading-link"><i class="fas fa-link"></i></a><a href="#其他类型-gt-Boolean" class="headerlink" title="其他类型 -> Boolean"></a>其他类型 -&gt; Boolean</h3>
+      <ul>
+<li>情况一：数字 –&gt; 布尔。除了 0 和 NaN，其余的都是 true。也就是说，<code>Boolean(NaN)</code>的结果是 false。</li>
+<li>情况二：字符串 —&gt; 布尔。除了空串，其余的都是 true。全是空格的字符串，转换结果也是 true。字符串<code>'0'</code>的转换结果也是 true。</li>
+<li>情况三：null 和 undefined 都会转换为 false。</li>
+<li>情况四：<strong>引用数据类型</strong>会转换为 true。注意，空数组<code>[]</code>和空对象<code>{}</code>，<strong>转换结果也是 true</strong>，这一点，很多人都不知道。</li>
+</ul>
+<blockquote>
+<p>总结：其他类型转为Boolean为false的情况🐸🐸🐸</p>
+</blockquote>
+<ul>
+<li>0</li>
+<li>NaN</li>
+<li>‘’</li>
+<li>‘全是空格’</li>
+<li>null，undefined</li>
+</ul>
+<blockquote>
+<p>Boolean隐式转换</p>
+</blockquote>
+<figure class="highlight js"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">当**非 <span class="built_in">Boolean</span> 类型的数值**和 <span class="built_in">Boolean</span>类型的数值做**比较**时</span><br><span class="line">会先把前者进行隐式转换为 <span class="built_in">Boolean</span>类型，</span><br><span class="line"><span class="keyword">const</span> a = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(a == <span class="literal">true</span>); <span class="comment">// 打印结果：true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> a); <span class="comment">// 打印结果：number。可见，上面一行代码里，a 做了隐式类型转换，但是 a 的数据类型并没有发生变化，仍然是 Number 类型</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">0</span> == <span class="literal">true</span>); <span class="comment">// 打印结果：false</span></span><br></pre></td></tr></tbody></table></div></figure>
+
+
+<blockquote>
+<p>Boolean显式转换<br>方法1：使用 <code>!!</code>可以显式转换为 Boolean 类型。比如 <code>!!3</code>的结果是true。<br>方法2：使用 Boolean()函数可以显式转换为 Boolean 类型。</p>
+</blockquote>
+<p>Boolean的实际案例</p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">const result1 = '';</span><br><span class="line">const result2 = {a:'data1', b: 'data2'};</span><br><span class="line"></span><br><span class="line">if (result1) {</span><br><span class="line">    console.log('因为 result1的内容为空，所以代码进不了这里');</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">if (result2 &amp;&amp; result2.a) {</span><br><span class="line">    // 接口返回了 result2，且 result2.a 里面有值，前端才做进一步的事情</span><br><span class="line">    console.log('代码能进来，前端继续在这里干活儿');</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">&gt; 这里再次强调一下，空数组`[]`和空对象`{}`转换为 Boolean 值时，转换结果为 true。</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+
+        <h2 id="隐式转换">
+          <a href="#隐式转换" class="heading-link"><i class="fas fa-link"></i></a><a href="#隐式转换" class="headerlink" title="隐式转换"></a>隐式转换</h2>
+      <ul>
+<li>isNaN ()</li>
+<li>自增/自减运算符：<code>++</code>、<code>—-</code></li>
+<li>正号/负号：<code>+a</code>、<code>-a</code></li>
+<li>加号：<code>+</code></li>
+<li>运算符：<code>-</code>、<code>*</code>、<code>/</code>、<code>%</code></li>
+</ul>
+<blockquote>
+<p>isNaN()</p>
+</blockquote>
+<p><strong>任何不能被转换为数值的参数，都会让这个函数返回 true</strong>。</p>
+<p><strong>执行过程</strong>：</p>
+<ul>
+<li>（1）先调用<code>Number(参数)</code>🌹🌹🌹函数；</li>
+<li>（2）然后将<code>Number(参数)</code>🌹🌹🌹的返回结果和<code>NaN</code>进行比较。</li>
+</ul>
+<figure class="highlight javascript"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="built_in">isNaN</span>(<span class="string">'123'</span>)); <span class="comment">// 返回结果：false。</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">isNaN</span>(<span class="string">'abc'</span>)); <span class="comment">// 返回结果：true。因为 Number('abc') 的返回结果是 NaN</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">isNaN</span>(<span class="literal">null</span>)); <span class="comment">// 返回结果：false</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">isNaN</span>(<span class="literal">undefined</span>)); <span class="comment">// 返回结果：true</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">isNaN</span>(<span class="literal">NaN</span>)); <span class="comment">// 返回结果：true</span></span><br></pre></td></tr></tbody></table></div></figure>
+
+
+<blockquote>
+<p>++ –</p>
+</blockquote>
+<p>被++ 或 – 后就转换成 Number类型了</p>
+<figure class="highlight javascript"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">var</span> a = <span class="string">"666"</span>;</span><br><span class="line">a++;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> a); <span class="comment">// 打印结果： **number**</span></span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">// 打印结果：667</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> a = <span class="string">'abc'</span>;</span><br><span class="line">a++;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> a); <span class="comment">// 打印结果：**number**</span></span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">// 打印结果：NaN。因为 Number('abc')的结果为 NaN，再自增后，结果依然是 NaN</span></span><br></pre></td></tr></tbody></table></div></figure>
+
+<blockquote>
+<p>正号/负号：<code>+a</code>、<code>-a</code></p>
+</blockquote>
+<figure class="highlight javascript"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="string">'666'</span>;</span><br><span class="line"><span class="keyword">var</span> b = +a;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> a); <span class="comment">// 打印结果：string。说明 a 的数据类型保持不变。</span></span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">// 打印结果：666</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> b); <span class="comment">// 打印结果：number。说明 b 的数据类型发生了变化。</span></span><br><span class="line"><span class="built_in">console</span>.log(b); <span class="comment">// 打印结果：666</span></span><br></pre></td></tr></tbody></table></div></figure>
+
+
+<blockquote>
+<p>加号 +</p>
+</blockquote>
+<p><strong>情况一</strong>：字符串 + 数字</p>
+<ul>
+<li><strong>当加号的两边，只要有一个是字符串的时候</strong>，就会调用 String() 函数将数字转为字符串，</li>
+<li>然后再计算。导致最终的运算结果是字符串。</li>
+</ul>
+<p><strong>情况二</strong>：Boolean + 数字</p>
+<ul>
+<li>Boolean 型和数字型相加时， true 按 1 来算 ，false 按 0 来算。</li>
+<li>这里其实是先调 Number() 函数，将 Boolean 类型转换为 Number类型，然后再和 数字相加。</li>
+</ul>
+<p><strong>情况三</strong>： null + 数字</p>
+<ul>
+<li>等价于：0 + 数字</li>
+</ul>
+<p><strong>情况四</strong>： undefined + 数字</p>
+<ul>
+<li>计算结果：NaN</li>
+</ul>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> result1 = true + 1;  // 2 = 1+ 1 --------</span><br><span class="line"></span><br><span class="line"> result2 = true + false; // 1 = 1+ 0 -----------</span><br><span class="line"></span><br><span class="line"> result3 = 1 + null; // 1 = 1+ 0</span><br><span class="line"></span><br><span class="line"> result4 = 100 - '1' // 99</span><br><span class="line"></span><br><span class="line">result1 = 1 + 2 + '3'  // 33 ------------</span><br><span class="line"></span><br><span class="line">result2 = '1' + 2 + 3; // 123</span><br><span class="line"></span><br></pre></td></tr></tbody></table></div></figure>
+
+
+
+        <h2 id="隐式转换-特殊">
+          <a href="#隐式转换-特殊" class="heading-link"><i class="fas fa-link"></i></a><a href="#隐式转换-特殊" class="headerlink" title="隐式转换-特殊"></a>隐式转换-特殊</h2>
+      <blockquote>
+<p>未解<br>逻辑运算符：<code>&amp;&amp;</code>、<code>||</code>、<code>！</code> 。非布尔值进行<strong>与或</strong>运算时，会先将其转换为布尔值，<br>然后再运算，但运算结果是<strong>原值</strong>。</p>
+</blockquote>
+<p>关系运算符：<code>&lt;</code>、<code>&gt;</code> <code>&lt;=</code> <code>&gt;=</code>等。关系运算符，得到的运算结果都是布尔值：<br>要么是true，要么是false。</p>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="http://example.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="post-share"><div class="social-share" data-sites="qzone, qq, weibo, wechat, douban, linkedin, facebook, twitter, google">Share to: </div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2021/09/07/Webpack%E4%BD%BF%E7%94%A8/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">Webpack使用</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2021/09/02/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/"><span class="paginator-prev__text">前端知识点汇总</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5"><span class="toc-number">1.</span> <span class="toc-text">
+          参考链接</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.</span> <span class="toc-text">
+          数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">2.1.</span> <span class="toc-text">
+          简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null%EF%BC%8Cundefined"><span class="toc-number">2.2.</span> <span class="toc-text">
+          null，undefined</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E5%80%BC"><span class="toc-number">2.3.</span> <span class="toc-text">
+          数值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%83%E5%B0%94%E5%80%BC"><span class="toc-number">2.4.</span> <span class="toc-text">
+          布尔值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">2.5.</span> <span class="toc-text">
+          字符串</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1"><span class="toc-number">2.6.</span> <span class="toc-text">
+          对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0"><span class="toc-number">2.7.</span> <span class="toc-text">
+          函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E7%BB%84"><span class="toc-number">2.8.</span> <span class="toc-text">
+          数组</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">3.</span> <span class="toc-text">
+          数据类型转换</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%98%BE%E5%BC%8F%E8%BD%AC%E6%8D%A2"><span class="toc-number">3.1.</span> <span class="toc-text">
+          显式转换</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E7%B1%BB%E5%9E%8B-gt-String"><span class="toc-number">3.1.1.</span> <span class="toc-text">
+          其他类型 -&gt;String</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E7%B1%BB%E5%9E%8B-gt-Number"><span class="toc-number">3.1.2.</span> <span class="toc-text">
+          其他类型 -&gt; Number</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E7%B1%BB%E5%9E%8B-gt-Boolean"><span class="toc-number">3.1.3.</span> <span class="toc-text">
+          其他类型 -&gt; Boolean</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9A%90%E5%BC%8F%E8%BD%AC%E6%8D%A2"><span class="toc-number">3.2.</span> <span class="toc-text">
+          隐式转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9A%90%E5%BC%8F%E8%BD%AC%E6%8D%A2-%E7%89%B9%E6%AE%8A"><span class="toc-number">3.3.</span> <span class="toc-text">
+          隐式转换-特殊</span></a></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/header.jpg" alt="avatar"></div><p class="sidebar-ov-author__text">LJY_BLOG</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">19</div><div class="sidebar-ov-state-item__name">Archives</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">3</div><div class="sidebar-ov-state-item__name">Tags</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script></body></html>
