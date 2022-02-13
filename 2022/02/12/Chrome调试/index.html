@@ -1,0 +1,129 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/icon16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/favicon32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="课程来源 - bili链接">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Chrome调试">
+<meta property="og:url" content="http://example.com/2022/02/12/Chrome%E8%B0%83%E8%AF%95/index.html">
+<meta property="og:site_name" content="LJY_BLOG">
+<meta property="og:description" content="课程来源 - bili链接">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/02/ec56290bbaf18f25.jpg">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/02/8f9763ac9e013ea8.jpg">
+<meta property="article:published_time" content="2022-02-12T07:55:10.000Z">
+<meta property="article:modified_time" content="2022-02-13T02:00:13.914Z">
+<meta property="article:author" content="LJY">
+<meta property="article:tag" content="学习笔记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s3.bmp.ovh/imgs/2022/02/ec56290bbaf18f25.jpg"><title>Chrome调试 | LJY_BLOG</title><link ref="canonical" href="http://example.com/2022/02/12/Chrome%E8%B0%83%E8%AF%95/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"Copy","copySuccess":"Copy Success","copyError":"Copy Error"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">主页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">档案</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/reading/"><span class="header-nav-menu-item__icon"><i class="fas fa-book"></i></span><span class="header-nav-menu-item__text">阅读</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">LJY_BLOG</div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">Chrome调试</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">创建</span><span class="post-meta-item__value">2022-02-12</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新</span><span class="post-meta-item__value">2022-02-13</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon"><i class="far fa-clock"></i></span><span class="post-meta-item__info">阅读时间</span><span class="post-meta-item__value">3m</span></span></div></header><div class="post-body"><p>课程来源 - bili<br><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1KM4y1G7EF/?spm_id_from=333.788.recommend_more_video.0">链接</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<span id="more"></span>
+
+
+        <h1 id="快捷键">
+          <a href="#快捷键" class="heading-link"><i class="fas fa-link"></i></a><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h1>
+      <p>F12 打开命令台</p>
+<p>win - ctrl + shift + p - 输入指令<br>例如：<br>SCREENSHOT - 截图 - 可以局部 / 全部页面<br>// 还有那些？</p>
+
+        <h1 id="常用Tab">
+          <a href="#常用Tab" class="heading-link"><i class="fas fa-link"></i></a><a href="#常用Tab" class="headerlink" title="常用Tab"></a>常用Tab</h1>
+      <ul>
+<li>Element - css调试</li>
+<li>Console</li>
+<li>Source</li>
+<li>Network</li>
+<li>Application</li>
+</ul>
+
+        <h1 id="Element">
+          <a href="#Element" class="heading-link"><i class="fas fa-link"></i></a><a href="#Element" class="headerlink" title="Element"></a>Element</h1>
+      <p>查询Dom树</p>
+<ul>
+<li>文本查询 - ctrl + F - 输入类名</li>
+<li>css选择器查询</li>
+<li>Xpath - //div//p - 不指定位置，在div下面找p标签</li>
+</ul>
+<p>旁边的样式，可以直接复制！</p>
+<p>Styles - 修改样式 / 复制<br>computed - 可以定位样式</p>
+<ul>
+<li>Show all - 可以看到所有继承的样式</li>
+<li>Group - 样式 有功能上的区分</li>
+</ul>
+<p>Layout - 可以看到使用了Grid和Flexbox的布局！可以调整</p>
+<ul>
+<li>Grid</li>
+<li>Flexbox</li>
+</ul>
+<p>Event Listeners - 可以看到使用的事件！</p>
+<ul>
+<li>load</li>
+<li>focus</li>
+<li>click</li>
+<li>blur</li>
+<li>webxr</li>
+<li>error</li>
+<li>beforeunload</li>
+<li>….</li>
+</ul>
+<p>DOM Breakpoints - 学Console再看看。。</p>
+<p>Properties - 可以看到节点上的属性<br>原型链的形式显示。</p>
+
+        <h1 id="Console">
+          <a href="#Console" class="heading-link"><i class="fas fa-link"></i></a><a href="#Console" class="headerlink" title="Console"></a>Console</h1>
+      <p>快捷键 - ctrl + shift + j</p>
+<p>$_  返回上一次输入的结果<br>$0  选中标签 - 可返回选中的标签！<br>$1  返回的上一个结果</p>
+<p>console.log / time / group / </p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">console.time();</span><br><span class="line">for (i = 0; i &lt; 100000000; i++) {</span><br><span class="line">  // 代码部分</span><br><span class="line">}</span><br><span class="line">console.timeEnd();</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+<p>在代码中写入debugger，浏览器自动断点。</p>
+<p>也可以点击右侧蓝色图标</p>
+<p>可以watch变量值，</p>
+<p>在DOM Breakpoints右键，可以选择出现断点的方式，子节点被修改 / 属性被修改 / 被移出 - 出现断点。</p>
+<p>如果在vue中，不用调试vue，可以忽略它。</p>
+
+        <h1 id="Network">
+          <a href="#Network" class="heading-link"><i class="fas fa-link"></i></a><a href="#Network" class="headerlink" title="Network"></a>Network</h1>
+      <p>Preserve log - 保存上一次的请求<br>No throttling - 网速截流</p>
+<p><img src="https://s3.bmp.ovh/imgs/2022/02/ec56290bbaf18f25.jpg" alt="01"><br>More network conditions - 可以设置user agent 用户代理<br>可以修改 - 在请求资源中查看<br>user-agent: Mozilla/5.0 (BlackBerry; U; BlackBerry 9900; en-US) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.0.0.187 Mobile Safari/534.11+</p>
+<p><img src="https://s3.bmp.ovh/imgs/2022/02/8f9763ac9e013ea8.jpg" alt="02"><br>可以下载网络请求，如果出现问题，导入请求，可以测试哪里有问题！</p>
+
+        <h1 id="Application">
+          <a href="#Application" class="heading-link"><i class="fas fa-link"></i></a><a href="#Application" class="headerlink" title="Application"></a>Application</h1>
+      <p>可以设置<br>Local Storage<br>Session Storage<br>Cookies</p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">localStorage.setItem('name', 'jack')</span><br><span class="line">localStorage.getItem('name')</span><br><span class="line">localStorage.clear('name')</span><br><span class="line"></span><br><span class="line">document.cookie = 'username = john'</span><br><span class="line"></span><br></pre></td></tr></tbody></table></div></figure>
+
+
+        <h1 id="总结">
+          <a href="#总结" class="heading-link"><i class="fas fa-link"></i></a><a href="#总结" class="headerlink" title="总结"></a>总结</h1>
+      <p>发现有许多需要了解的。。。Chrome调试非常实用！</p>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="http://example.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="post-share"><div class="social-share" data-sites="qzone, qq, weibo, wechat, douban, linkedin, facebook, twitter, google">Share to: </div></div><nav class="post-paginator paginator"><div class="paginator-next"><a class="paginator-next__link" href="/2022/02/12/Js%E6%B8%B8%E6%88%8F01-Memory_Card/"><span class="paginator-prev__text">Js游戏01-Memory_Card</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-number">1.</span> <span class="toc-text">
+          快捷键</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8Tab"><span class="toc-number">2.</span> <span class="toc-text">
+          常用Tab</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Element"><span class="toc-number">3.</span> <span class="toc-text">
+          Element</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Console"><span class="toc-number">4.</span> <span class="toc-text">
+          Console</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Network"><span class="toc-number">5.</span> <span class="toc-text">
+          Network</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Application"><span class="toc-number">6.</span> <span class="toc-text">
+          Application</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">7.</span> <span class="toc-text">
+          总结</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/header.jpg" alt="avatar"></div><p class="sidebar-ov-author__text">LJY_BLOG</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">29</div><div class="sidebar-ov-state-item__name">Archives</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">Tags</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script></body></html>
