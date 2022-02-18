@@ -1,0 +1,225 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/icon16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/favicon32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="该项目将一个完整flash剧情动画还原成一个由JS+CSS3实现的前端动画。学习链接">
+<meta property="og:type" content="article">
+<meta property="og:title" content="腾讯管家前端动画">
+<meta property="og:url" content="http://example.com/2022/02/18/%E8%85%BE%E8%AE%AF%E7%AE%A1%E5%AE%B6%E5%89%8D%E7%AB%AF%E5%8A%A8%E7%94%BB/index.html">
+<meta property="og:site_name" content="LJY_BLOG">
+<meta property="og:description" content="该项目将一个完整flash剧情动画还原成一个由JS+CSS3实现的前端动画。学习链接">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/02/a0611a7af9681549.gif">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/02/dd325bf356594d9d.gif">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/02/a0611a7af9681549.gif">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/02/c4d90a62dd00bd86.gif">
+<meta property="article:published_time" content="2022-02-18T08:03:24.000Z">
+<meta property="article:modified_time" content="2022-02-18T14:11:10.522Z">
+<meta property="article:author" content="LJY">
+<meta property="article:tag" content="学习笔记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s3.bmp.ovh/imgs/2022/02/a0611a7af9681549.gif"><title>腾讯管家前端动画 | LJY_BLOG</title><link ref="canonical" href="http://example.com/2022/02/18/%E8%85%BE%E8%AE%AF%E7%AE%A1%E5%AE%B6%E5%89%8D%E7%AB%AF%E5%8A%A8%E7%94%BB/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"Copy","copySuccess":"Copy Success","copyError":"Copy Error"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">主页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">档案</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/reading/"><span class="header-nav-menu-item__icon"><i class="fas fa-book"></i></span><span class="header-nav-menu-item__text">阅读</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">LJY_BLOG</div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">腾讯管家前端动画</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">创建</span><span class="post-meta-item__value">2022-02-18</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新</span><span class="post-meta-item__value">2022-02-18</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon"><i class="far fa-clock"></i></span><span class="post-meta-item__info">阅读时间</span><span class="post-meta-item__value">20m</span></span></div></header><div class="post-body"><p>该项目将一个完整flash剧情动画还原成一个由JS+CSS3实现的前端动画。<br><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://dxb123456.github.io/tengxun/">学习链接</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><img src="https://s3.bmp.ovh/imgs/2022/02/a0611a7af9681549.gif" alt="01"></p>
+<span id="more"></span>
+
+
+        <h1 id="预备知识">
+          <a href="#预备知识" class="heading-link"><i class="fas fa-link"></i></a><a href="#预备知识" class="headerlink" title="预备知识"></a>预备知识</h1>
+      <p><code>$(".show601").css</code><br>设置css样式</p>
+<p><code>$(".smoke1 img").eq(0).css</code><br>匹配一个给定索引值的元素 - 选择器</p>
+<p><code>$("#list1").children().eq(3)[0]</code><br>取得一个包含匹配的元素集合中每一个元素的所有子元素的元素集合。 - 筛选</p>
+<p><code>$().click()</code><br>触发每一个匹配元素的click事件。</p>
+<p><code>$().index()</code><br>搜索匹配的元素，并<strong>返回相应元素的索引值</strong>，从0开始计数。</p>
+<p><code>$().attr()</code><br>获取匹配的元素集合中的第一个元素的属性的值 或 设置每一个匹配元素的一个或多个属性。</p>
+<p>和<code>$(".show601").css</code>的区别？？？</p>
+<ul>
+<li>attr()： 获取和修改的是元素的属性，如img的src属性和alt属性，a链接的href属性等等。</li>
+<li>css() ：获取和修改的是样式里面的属性，即是style里面的属性。</li>
+</ul>
+<p><code>"animation":".4s 0.4s penguin","animation-fill-mode":"both","-webkit-animation":".4s 0.4s penguin","-webkit-animation-fill-mode":"both"</code><br>animation<br>animation-fill-mode</p>
+<ul>
+<li>规定当动画不播放时（当动画完成时，或当动画有一个延迟未开始播放时），要应用到元素的样式。</li>
+<li>动画遵循 forwards 和 backwards 的规则。也就是说，动画会在两个方向上扩展动画属性。？？？？</li>
+</ul>
+<p>-webkit-animation - /* Safari 和 Chrome */<br>-webkit-animation-fill-mode</p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">每个主流浏览器都有自身的前缀，这些前缀放在css属性名的前面：</span><br><span class="line">-webkit-   Webkit / Safari / 旧版本的Chrome）</span><br><span class="line">-moz-      (Firefox浏览器)</span><br><span class="line">-ms-       Internet Explorer 浏览器）</span><br><span class="line">-o-        Opera浏览器）</span><br><span class="line">多数情况下一般只需要 -webkit- 前缀，但也并非所有的CSS属性都需要为浏览器准备的前缀。</span><br></pre></td></tr></tbody></table></div></figure>
+
+<p><code>cubic-bezier</code><br>cubic-bezier() 函数定义了一个贝塞尔曲线(Cubic Bezier)。<br>贝塞尔曲线曲线由四个点 P0，P1，P2 和 P3 定义。<br>P0 和 P3 是曲线的起点和终点。<br>P0是（0,0）并且表示初始时间和初始状态，P3是（1,1）并且表示最终时间和最终状态。<br><img src="https://s3.bmp.ovh/imgs/2022/02/dd325bf356594d9d.gif" alt="01"></p>
+<p><code>transform-origin</code><br>设置旋转元素的基点位置： - 依据元素自身 - 思考九宫格。<br><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Ua4y1x7ia?from=search&amp;seid=7838574110680573251&amp;spm_id_from=333.337.0.0">动画演示 CSS transform 属性轴心位置</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.cnblogs.com/mufc/p/11468742.html">animation 和 transition 的区别</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<ol>
+<li>transition 是过渡，是样式值的变化的过程，只有开始和结束；animation 其实也叫关键帧，通过和 keyframe 结合可以设置中间帧的一个状态；</li>
+<li>animation 配合 @keyframe 可以不触发时间就触发这个过程，而 transition 需要通过 hover 或者 js 事件来配合触发；</li>
+<li>animation 可以设置很多的属性，比如循环次数，动画结束的状态等等，transition 只能触发一次；</li>
+<li>animation 可以结合 keyframe 设置每一帧，但是 transition 只有两帧；</li>
+<li>在性能方面，使用 aniamtion，改变较多，页面的<strong>回流和重绘</strong>，transition ，常结合tansfrom ，不会触发回流</li>
+</ol>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">transform:</span><br><span class="line">	perspective(600px) </span><br><span class="line">	rotateY(-10deg) </span><br><span class="line">	rotateX(69deg) </span><br><span class="line">	rotateZ(36deg);</span><br><span class="line">	</span><br><span class="line">-webkit-transform-origin:right;</span><br><span class="line">-webkit-transform:</span><br></pre></td></tr></tbody></table></div></figure>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://c.runoob.com/codedemo/3391/">Css3 Transform 各种变形旋转 - 菜鸟教程案例</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p>perspective(600px)<br>为 3D 转换元素定义透视视图。</p>
+<p>rotateX(angle) - 定义沿着 X 轴的 3D 旋转。 - 上下<br>rotateY(angle) - 定义沿着 Y 轴的 3D 旋转。 - 左右<br>rotateZ(angle) - 定义沿着 Z 轴的 3D 旋转。</p>
+<!-- 可以用来嵌套codepen！ -->
+<iframe src="https://c.runoob.com/codedemo/3391/" width="100%" height="600px"></iframe>
+
+
+
+        <h1 id="页面构建">
+          <a href="#页面构建" class="heading-link"><i class="fas fa-link"></i></a><a href="#页面构建" class="headerlink" title="页面构建"></a>页面构建</h1>
+      <p>主要是通过页面中心部分来展示动画效果。</p>
+<p>头部的导航栏，设置文字信息<br>中间的按钮，用来展示每个页面的动画。</p>
+<p>主要是通过CSS3来处理动画，JS - Jquery来处理交互部分。</p>
+<p>结构：</p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">div.center</span><br><span class="line">	div.w1000.stage</span><br><span class="line">		div.center-top</span><br><span class="line">			ol#list1</span><br><span class="line">				li.list1_active</span><br><span class="line">				li*4 - 切换动画按钮</span><br><span class="line">			p</span><br><span class="line">				a*5 - 分享按钮</span><br><span class="line">		div.tab</span><br><span class="line">			div#div00</span><br><span class="line">				img*5 - 动画展示区域</span><br><span class="line">	div.an.w1000.stage</span><br><span class="line">	div.load.w1000.stage</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+
+        <h1 id="样式设置">
+          <a href="#样式设置" class="heading-link"><i class="fas fa-link"></i></a><a href="#样式设置" class="headerlink" title="样式设置"></a>样式设置</h1>
+      <figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">.w1000 {</span><br><span class="line">	width: 1000px; // 设置宽度</span><br><span class="line">	margin: 0 auto; // 水平居中</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">.stage {</span><br><span class="line">	height: 740px; // 设置高度</span><br><span class="line">	position: relative;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">// 设置分享按钮背景图片 - url()</span><br><span class="line">.center_top {</span><br><span class="line">	z-index: 10</span><br><span class="line">}</span><br><span class="line">.center_top p {</span><br><span class="line">	position: absolute;</span><br><span class="line">	top: 28px;</span><br><span class="line">	right: 17px;</span><br><span class="line">	width: 225px;</span><br><span class="line">	line-height: 16px;</span><br><span class="line">	font-size: 14px;</span><br><span class="line">	color: white;</span><br><span class="line">}</span><br><span class="line">.center_top a {</span><br><span class="line">	margin-right: 7px;</span><br><span class="line">	display: inline-block;</span><br><span class="line">	width: 18px;</span><br><span class="line">	height: 17px;</span><br><span class="line">	vertical-align: middle;</span><br><span class="line">	position: relative;</span><br><span class="line">	top: -1px;</span><br><span class="line">}</span><br><span class="line">.center_top a:nth-of-type(1) {</span><br><span class="line">	background: url("image/piclogo.png") no-repeat 0 0</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></div></figure>
+
+
+<p>css文件定义动画内容</p>
+<p>主要改变的是：<br>opacity - 显示与隐藏！<br>left - 依据定位<br>top<br>width - 元素大小<br>height<br>transform-origin + -webkit - 位置<br>transform + -webkit - 透视样式</p>
+<p>0%<br>8%<br>16%<br>24%<br>50% - 进度 - 有点贝塞尔曲线的感觉。<br>100% - 这里的顺序有影响！</p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@keyframes move1_1{0%{opacity:1;left:720px;top:325px;width:410px;height:399px;transform-origin:right;transform:perspective(600px) rotateY(-10deg) rotateX(69deg) rotateZ(36deg);-webkit-transform-origin:right;-webkit-transform:perspective(600px) rotateY(-10deg) rotateX(69deg) rotateZ(36deg)}</span><br><span class="line">8%{opacity:1;left:673px;top:205px;width:438px;height:442px;transform-origin:right;transform:perspective(600px) rotateY(-40deg) rotateX(50deg) rotateZ(8deg);-webkit-transform-origin:right;-webkit-transform:perspective(600px) rotateY(-40deg) rotateX(50deg) rotateZ(8deg)}</span><br><span class="line">16%{opacity:1;left:675px;top:173px;width:411px;height:449px;transform-origin:right;transform:perspective(600px) rotateY(-43deg) rotateX(42deg) rotateZ(5deg);-webkit-transform-origin:right;-webkit-transform:perspective(600px) rotateY(-43deg) rotateX(42deg) rotateZ(5deg)}</span><br><span class="line">24%{opacity:1;left:544px;top:109px;width:438px;height:481px;transform-origin:right;transform:perspective(600px) rotateY(-53deg) rotateX(10deg) rotateZ(0);-webkit-transform-origin:right;-webkit-transform:perspective(600px) rotateY(-53deg) rotateX(10deg) rotateZ(0)}</span><br><span class="line">100%,32%{opacity:1;left:507px;top:98px;width:440px;height:500px;transform-origin:right;transform:perspective(600px) rotateY(-55deg);-webkit-transform-origin:right;-webkit-transform:perspective(600px) rotateY(-55deg)}</span><br><span class="line">50%{opacity:1;left:496px;top:127px;width:437px;height:480px;transform-origin:right;transform:perspective(600px) rotateY(-55deg) rotateX(-6deg) rotateZ(2deg);-webkit-transform-origin:right;-webkit-transform:perspective(600px) rotateY(-55deg) rotateX(-6deg) rotateZ(2deg)}</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">// 兼容性 /*Safari 和 Chrome:*/</span><br><span class="line">@-webkit-keyframes move1_1{</span><br><span class="line">	</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+<!-- @keyframes
+
+测试页面！
+<iframe src="https://www.runoob.com/try/try.php?filename=trycss3_animation" width='100%' height='600px'></iframe>
+ -->
+
+        <h2 id="实现效果">
+          <a href="#实现效果" class="heading-link"><i class="fas fa-link"></i></a><a href="#实现效果" class="headerlink" title="实现效果"></a>实现效果</h2>
+      <p><img src="https://s3.bmp.ovh/imgs/2022/02/a0611a7af9681549.gif" alt="01"></p>
+<p>执行动画的细节 - 描述 + 代码<br>修改@keyframes即可展示内容。<br>所有都写两遍，兼容性。。-webkit</p>
+<p>所有内容，都是通过Jquery写入页面，实现动画效果。<br><code>$(".three_window").css({transition:"all 0.5s 0.2s",transform: "rotateX(0deg) skew(0deg)",'-webkit-transition':"all 0.5s 0.2s",'-webkit-transform': "rotateX(0deg) skew(0deg)"});</code></p>
+
+        <h2 id="界面1：">
+          <a href="#界面1：" class="heading-link"><i class="fas fa-link"></i></a><a href="#界面1：" class="headerlink" title="界面1："></a>界面1：</h2>
+      <p>效果：<br>文字出现<br>文字由无到有，由小到最大，到大，缓动动画。<br>文字出现顺序控制，一个一个出现，先出现重要信息，再出现点缀信息。</p>
+<p><strong>思路：</strong><br>先加载 img0_1类<br>所有图片都是absolute定位，透明度为0，宽度高度为0开始。<br>每个图片都由不同的定位。设置left 和 top的值。<br>设置相同的动画延续时间，但是延迟不同 - 先后之分<br>设置相同的cubic-bezier， 缓动动画。</p>
+<p>通过Js设置改变后的样式。<br>改变位置，这里可以设置位置的出现方式。从原先的位置，移动到现在的位置<br>改变宽高 - 实现图片从小到大<br>改变透明度 - 使图片可见！</p>
+
+        <h2 id="界面二：">
+          <a href="#界面二：" class="heading-link"><i class="fas fa-link"></i></a><a href="#界面二：" class="headerlink" title="界面二："></a>界面二：</h2>
+      <p><strong>这两个界面是怎么切换的？？？</strong><br>展示页面是空的，每次切换，写入不同内容！！（JS操作）</p>
+<p>效果：<br>图表 + 箭头动画<br>使用图表构建3D场景，然后出现人物图片，背后箭头执行动画效果。<br>然后文字滚动出现 - 统一文字出现效果。</p>
+<p>思路：<br><strong>通过CSS设置基本样式，JS添加类，增加动画效果！</strong><br>想出现，先消失 - opacity: 0<br>要移动，先有位置 - 距离left， top的位置。</p>
+<ul>
+<li>left 往右越来越大</li>
+<li>top 往下越来越大</li>
+</ul>
+<p>3D透视效果，主要是靠transform属性<br>在animation - 关键帧 - 设置transform透视变换动画。<br>transform还可以结合transform-origin控制变换的位置。</p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">transform:</span><br><span class="line">	perspective(600px) // 透视大小</span><br><span class="line">	rotateY(-10deg) // 绕 y 轴</span><br><span class="line">	rotateX(69deg)  // 绕 x 轴</span><br><span class="line">	rotateZ(36deg); // 绕 z 轴</span><br><span class="line"></span><br><span class="line">-webkit-transform</span><br><span class="line">-webkit-transform-origin</span><br></pre></td></tr></tbody></table></div></figure>
+
+<p>这里最复杂的是<strong>箭头动画</strong>：<br>箭头一直往右延申，可以上下抖动，路径动画？<br><img src="https://s3.bmp.ovh/imgs/2022/02/c4d90a62dd00bd86.gif"></p>
+<p>！<br>实现思路！<br>箭头是由方块<strong>拼起来</strong>的！然后加载动画，延迟显示</p>
+<p>箭头结构！</p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src="image/one/60.png" alt="" class="img60"&gt; \ 三角形</span><br><span class="line">&lt;div class="show601"&gt;&lt;/div&gt;\ 方块</span><br><span class="line">&lt;div class="show602"&gt;&lt;/div&gt; \</span><br><span class="line">&lt;div class="show603"&gt;&lt;/div&gt;\</span><br><span class="line">&lt;div class="show604"&gt;&lt;/div&gt; \</span><br><span class="line">&lt;div class="show605"&gt;&lt;/div&gt; \</span><br></pre></td></tr></tbody></table></div></figure>
+
+<p>箭头样式<br>不设置宽度 - 宽度交给动画 - 可实现箭头延申效果<br>设置箭头旋转角度 + 高度 （定位位置）<br>设置箭头阴影 - box-shadow - 增加显示效果！<br>设置透明度为0 - 添加动画显示出来！</p>
+<p>动画效果 - 设置动画内容 + 动画延迟 - 可以跑起来了，</p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@-webkit-keyframes move601{0%{width:0;opacity:1}</span><br><span class="line">100%{width:294px;opacity:1}</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">$(".show601").css({animation: "0.55s 1s move601",'animation-fill-mode': "both","-webkit-animation": "0.55s 1s move601",'-webkit-animation-fill-mode': "both"});</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+<p>文字出现：<br>透明度0<br>top位置修改。</p>
+
+        <h2 id="界面三：">
+          <a href="#界面三：" class="heading-link"><i class="fas fa-link"></i></a><a href="#界面三：" class="headerlink" title="界面三："></a>界面三：</h2>
+      <p>页面效果：<br>先出现山 - 从右到左<br>出现企鹅 - 从上到下<br>出现云雾 - 在企鹅的脚下 - 消失<br>出现门   - 从上到下<br>出现云雾 - 在门的脚下 - 消失<br>出现弓箭 - 射在门前 - 有透视效果<br>左右出现士兵 -<br>弓箭射向士兵的盾牌 -<br>士兵惊讶表情 - </p>
+<p>难点：</p>
+<ol>
+<li>出现云雾</li>
+<li>弓箭位置</li>
+</ol>
+<p>云雾结构 - 一张图片用三次 - 不同位置<br><code>$(".smoke1 img").eq(0).css</code> 结合Js设置动画</p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class="smoke1"&gt;\ // 最外层定位 - 总</span><br><span class="line">&lt;img src="image/two/smoke.png" alt=""&gt;\ - 根据最外层定位。</span><br><span class="line">&lt;img src="image/two/smoke.png" alt=""&gt;\</span><br><span class="line">&lt;img src="image/two/smoke.png" alt=""&gt;\</span><br><span class="line">&lt;/div&gt;\</span><br></pre></td></tr></tbody></table></div></figure>
+
+<p>云雾样式</p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">.smoke1{position:absolute;top:530px;left:420px;width:170px;height:113px;opacity:1}</span><br><span class="line">.smoke1 img:nth-of-type(1){position:absolute;top:0;left:0;width:73px;height:61px;opacity:0}</span><br><span class="line">.smoke1 img:nth-of-type(2){position:absolute;top:0;left:80px;width:73px;height:61px;opacity:0}</span><br><span class="line">.smoke1 img:nth-of-type(3){position:absolute;top:50px;left:35px;width:73px;height:61px;opacity:0}</span><br><span class="line"></span><br><span class="line">// 出现 到消失动画。</span><br><span class="line">@keyframes smoke1{0%{opacity:0;width:100px;left:430px} // 出现位置。</span><br><span class="line">50%{opacity:.8}</span><br><span class="line">100%{opacity:0;width:220px;left:400px} // 设置消失的方向。</span><br><span class="line">}</span><br><span class="line">@keyframes smoke1_1{0%{opacity:0;width:73px;left:0}</span><br><span class="line">50%{opacity:.8}</span><br><span class="line">100%{opacity:0;left:-30px;width:103px}</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></div></figure>
+
+<p>云雾逻辑 - 添加动画效果。<strong>添加/覆盖？？？</strong><br><strong>添加！</strong></p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(".smoke1 img").eq(0).css({animation:"0.8s 0.6s smoke1_1",'-webkit-animation':"0.8s 0.6s smoke1_1"});</span><br><span class="line">$(".smoke1 img").eq(1).css({animation:"0.8s 0.6s smoke1_2",'-webkit-animation':"0.8s 0.6s smoke1_2"});</span><br><span class="line">$(".smoke1 img").eq(2).css({animation:"0.8s 0.6s smoke1_3",'-webkit-animation':"0.8s 0.6s smoke1_3"});</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+<p>弓箭结构 - 同一个图片 * 7</p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class="arrow"&gt;\</span><br><span class="line">	&lt;img src="image/two/two_arrow.png" class="arrow1"&gt;\</span><br><span class="line">	&lt;img src="image/two/two_arrow.png" class="arrow2"&gt;\</span><br><span class="line">	&lt;img src="image/two/two_arrow.png" class="arrow3"&gt;\</span><br><span class="line">	&lt;img src="image/two/two_arrow.png" class="arrow4"&gt;\</span><br><span class="line">	&lt;img src="image/two/two_arrow.png" class="arrow5"&gt;\</span><br><span class="line">	&lt;img src="image/two/two_arrow.png" class="arrow6"&gt;\</span><br><span class="line">	&lt;img src="image/two/two_arrow.png" class="arrow7"&gt;\</span><br><span class="line">&lt;/div&gt;\</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <h1 id="逻辑处理">
+          <a href="#逻辑处理" class="heading-link"><i class="fas fa-link"></i></a><a href="#逻辑处理" class="headerlink" title="逻辑处理"></a>逻辑处理</h1>
+      
+        <h2 id="处理按钮点击：">
+          <a href="#处理按钮点击：" class="heading-link"><i class="fas fa-link"></i></a><a href="#处理按钮点击：" class="headerlink" title="处理按钮点击："></a>处理按钮点击：</h2>
+      <p>点击按钮切换动画，<br>点击按钮 - 找到对应的下标 - 调用对应的动画内容。</p>
+<p>除了点击按钮，设置自动切换，自动走到下一个按钮，播放对应内容。</p>
+
+        <h2 id="处理动画内容：">
+          <a href="#处理动画内容：" class="heading-link"><i class="fas fa-link"></i></a><a href="#处理动画内容：" class="headerlink" title="处理动画内容："></a>处理动画内容：</h2>
+      <p>每个按钮展现不同的动画！</p>
+<p>思考：<br>上一组动画去了哪里？<br>根据切换按钮，写入不同内容。</p>
+<p>$().css是添加还是覆盖还是修改？</p>
+
+        <h1 id="收获总结">
+          <a href="#收获总结" class="heading-link"><i class="fas fa-link"></i></a><a href="#收获总结" class="headerlink" title="收获总结"></a>收获总结</h1>
+      </div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="http://example.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="post-share"><div class="social-share" data-sites="qzone, qq, weibo, wechat, douban, linkedin, facebook, twitter, google">Share to: </div></div><nav class="post-paginator paginator"><div class="paginator-next"><a class="paginator-next__link" href="/2022/02/13/Bootstrap5%20&amp;%20Socket.io/"><span class="paginator-prev__text">Bootstrap5 &amp; Socket.io</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86"><span class="toc-number">1.</span> <span class="toc-text">
+          预备知识</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A1%B5%E9%9D%A2%E6%9E%84%E5%BB%BA"><span class="toc-number">2.</span> <span class="toc-text">
+          页面构建</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A0%B7%E5%BC%8F%E8%AE%BE%E7%BD%AE"><span class="toc-number">3.</span> <span class="toc-text">
+          样式设置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E6%95%88%E6%9E%9C"><span class="toc-number">3.1.</span> <span class="toc-text">
+          实现效果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%95%8C%E9%9D%A21%EF%BC%9A"><span class="toc-number">3.2.</span> <span class="toc-text">
+          界面1：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%95%8C%E9%9D%A2%E4%BA%8C%EF%BC%9A"><span class="toc-number">3.3.</span> <span class="toc-text">
+          界面二：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%95%8C%E9%9D%A2%E4%B8%89%EF%BC%9A"><span class="toc-number">3.4.</span> <span class="toc-text">
+          界面三：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E5%A4%84%E7%90%86"><span class="toc-number">4.</span> <span class="toc-text">
+          逻辑处理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%84%E7%90%86%E6%8C%89%E9%92%AE%E7%82%B9%E5%87%BB%EF%BC%9A"><span class="toc-number">4.1.</span> <span class="toc-text">
+          处理按钮点击：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%84%E7%90%86%E5%8A%A8%E7%94%BB%E5%86%85%E5%AE%B9%EF%BC%9A"><span class="toc-number">4.2.</span> <span class="toc-text">
+          处理动画内容：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%94%B6%E8%8E%B7%E6%80%BB%E7%BB%93"><span class="toc-number">5.</span> <span class="toc-text">
+          收获总结</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/header.jpg" alt="avatar"></div><p class="sidebar-ov-author__text">LJY_BLOG</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">32</div><div class="sidebar-ov-state-item__name">Archives</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">Tags</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script></body></html>
