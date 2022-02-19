@@ -1,15 +1,24 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/icon16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/favicon32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="学习链接：codepenFlex 布局教程：语法篇 - 阮一峰博客 实用技能，总结总结。">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/icon16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/favicon32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="学习链接：codepenFlex 布局教程：语法篇 - 阮一峰博客【前端面试】css flex 常见面试题Flex 布局语法教程 - 菜鸟教程 实用技能，总结总结。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Flex布局">
 <meta property="og:url" content="http://example.com/2022/02/11/Flex%E5%B8%83%E5%B1%80/index.html">
 <meta property="og:site_name" content="LJY_BLOG">
-<meta property="og:description" content="学习链接：codepenFlex 布局教程：语法篇 - 阮一峰博客 实用技能，总结总结。">
+<meta property="og:description" content="学习链接：codepenFlex 布局教程：语法篇 - 阮一峰博客【前端面试】css flex 常见面试题Flex 布局语法教程 - 菜鸟教程 实用技能，总结总结。">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://www.runoob.com/wp-content/uploads/2015/07/3791e575c48b3698be6a94ae1dbff79d.png">
+<meta property="og:image" content="https://www.runoob.com/wp-content/uploads/2015/07/2b0c39c7e7a80d5a784c8c2ca63cde17.png">
+<meta property="og:image" content="https://www.runoob.com/wp-content/uploads/2015/07/f10918ccb8a13247c9d47715a2bd2c33.png">
+<meta property="og:image" content="https://www.runoob.com/wp-content/uploads/2015/07/55b19171b8b6b9487d717bf2ecbba6de.png">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/02/653843f21d209cf9.jpg">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-d2999830b6b3e96245eec55e231a7c6d_720w.jpg">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-4d9144f65dbbc6f09863ecc9a3435062_720w.jpg">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-6327a89f20139cb514616b4b79d3f412_720w.jpg">
 <meta property="article:published_time" content="2022-02-11T13:21:07.000Z">
-<meta property="article:modified_time" content="2022-02-11T13:25:51.368Z">
+<meta property="article:modified_time" content="2022-02-19T03:07:51.121Z">
 <meta property="article:author" content="LJY">
 <meta property="article:tag" content="学习笔记">
-<meta name="twitter:card" content="summary"><title>Flex布局 | LJY_BLOG</title><link ref="canonical" href="http://example.com/2022/02/11/Flex%E5%B8%83%E5%B1%80/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.runoob.com/wp-content/uploads/2015/07/3791e575c48b3698be6a94ae1dbff79d.png"><title>Flex布局 | LJY_BLOG</title><link ref="canonical" href="http://example.com/2022/02/11/Flex%E5%B8%83%E5%B1%80/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
 var CONFIG = {
   root: '/',
   algolia: undefined,
@@ -35,20 +44,149 @@ var CONFIG = {
 
 window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-</head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">主页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">档案</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/reading/"><span class="header-nav-menu-item__icon"><i class="fas fa-book"></i></span><span class="header-nav-menu-item__text">阅读</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">LJY_BLOG</div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">Flex布局</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">创建</span><span class="post-meta-item__value">2022-02-11</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新</span><span class="post-meta-item__value">2022-02-11</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon"><i class="far fa-clock"></i></span><span class="post-meta-item__info">阅读时间</span><span class="post-meta-item__value">1m</span></span></div></header><div class="post-body"><p>学习链接：<br><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://codepen.io/enxaneta/pen/adLPwv">codepen</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">Flex 布局教程：语法篇 - 阮一峰博客</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+</head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">主页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">档案</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/reading/"><span class="header-nav-menu-item__icon"><i class="fas fa-book"></i></span><span class="header-nav-menu-item__text">阅读</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">LJY_BLOG</div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><div class="sticky-top" data-popover="Sticky" data-popover-pos="up"><span class="sticky-top__icon"><i class="fas fa-thumbtack"></i></span></div><h1 class="post-title">Flex布局</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">创建</span><span class="post-meta-item__value">2022-02-11</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新</span><span class="post-meta-item__value">2022-02-19</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon"><i class="far fa-clock"></i></span><span class="post-meta-item__info">阅读时间</span><span class="post-meta-item__value">12m</span></span></div></header><div class="post-body"><p>学习链接：<br><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://codepen.io/enxaneta/pen/adLPwv">codepen</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">Flex 布局教程：语法篇 - 阮一峰博客</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/269145615">【前端面试】css flex 常见面试题</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.runoob.com/w3cnote/flex-grammar.html">Flex 布局语法教程 - 菜鸟教程</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
 <p>实用技能，总结总结。</p>
 <span id="more"></span>
 
 
-        <h1 id="介绍">
-          <a href="#介绍" class="heading-link"><i class="fas fa-link"></i></a><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1>
-      
-        <h1 id="属性">
-          <a href="#属性" class="heading-link"><i class="fas fa-link"></i></a><a href="#属性" class="headerlink" title="属性"></a>属性</h1>
-      
-        <h1 id="实践">
-          <a href="#实践" class="heading-link"><i class="fas fa-link"></i></a><a href="#实践" class="headerlink" title="实践"></a>实践</h1>
-      </div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="http://example.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="post-share"><div class="social-share" data-sites="qzone, qq, weibo, wechat, douban, linkedin, facebook, twitter, google">Share to: </div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2022/02/12/Js%E6%B8%B8%E6%88%8F01-Memory_Card/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">Js游戏01-Memory_Card</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2022/02/11/Js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%AE%9E%E8%B7%B5/"><span class="paginator-prev__text">Js面向对象实践</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">
-          介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7"><span class="toc-number">2.</span> <span class="toc-text">
-          属性</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9E%E8%B7%B5"><span class="toc-number">3.</span> <span class="toc-text">
-          实践</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/header.jpg" alt="avatar"></div><p class="sidebar-ov-author__text">LJY_BLOG</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">32</div><div class="sidebar-ov-state-item__name">Archives</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">Tags</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script></body></html>
+        <h1 id="简介">
+          <a href="#简介" class="heading-link"><i class="fas fa-link"></i></a><a href="#简介" class="headerlink" title="简介"></a>简介</h1>
+      <p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.runoob.com/w3cnote/flex-grammar.html">内容来源</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p>布局的传统解决方案，基于盒状模型，依赖 display属性 + position属性 + float属性。<br>它对于那些特殊布局非常不方便，比如，垂直居中就不容易实现。</p>
+<p>2009年，W3C提出了一种新的方案—-Flex布局，可以简便、完整、响应式地实现各种页面布局。<br>目前，它已经得到了所有浏览器的支持，这意味着，现在就能很安全地使用这项功能。</p>
+<p>Flex布局将成为未来布局的首选方案。本文介绍Flex布局的语法。</p>
+<blockquote>
+<p>注意，设为 Flex 布局以后，子元素的float、clear和vertical-align属性将失效。</p>
+</blockquote>
+
+        <h2 id="一、Flex布局是什么？">
+          <a href="#一、Flex布局是什么？" class="heading-link"><i class="fas fa-link"></i></a><a href="#一、Flex布局是什么？" class="headerlink" title="一、Flex布局是什么？"></a>一、Flex布局是什么？</h2>
+      <p>Flex是Flexible Box的缩写，意为”弹性布局”，用来为盒状模型提供最大的灵活性。<br>任何一个容器都可以指定为Flex布局。</p>
+<p>行内元素也可以使用Flex布局。<code>display: inline-flex;</code></p>
+<p>Webkit内核的浏览器，必须加上-webkit前缀。<code>display: -webkit-flex; /* Safari */</code></p>
+
+        <h2 id="二、基本概念">
+          <a href="#二、基本概念" class="heading-link"><i class="fas fa-link"></i></a><a href="#二、基本概念" class="headerlink" title="二、基本概念"></a>二、基本概念</h2>
+      <p><img src="https://www.runoob.com/wp-content/uploads/2015/07/3791e575c48b3698be6a94ae1dbff79d.png" alt="01"><br>容器默认存在两根轴：水平的主轴（main axis）和垂直的交叉轴（cross axis）。 // 对应justify-content / align-items</p>
+<p>主轴的开始位置（与边框的交叉点）叫做main start，结束位置叫做main end；<br>交叉轴的开始位置叫做cross start，结束位置叫做cross end。</p>
+<p>项目默认沿主轴排列。单个项目占据的主轴空间叫做main size，占据的交叉轴空间叫做cross size。</p>
+
+        <h2 id="三、容器的属性">
+          <a href="#三、容器的属性" class="heading-link"><i class="fas fa-link"></i></a><a href="#三、容器的属性" class="headerlink" title="三、容器的属性"></a>三、容器的属性</h2>
+      <ul>
+<li><p>flex-direction // <strong>决定主轴的方向</strong>，它可能有4个值。</p>
+<ul>
+<li>row（默认值）：主轴为水平方向，起点在左端。</li>
+<li>row-reverse：主轴为水平方向，起点在右端。</li>
+<li>column：主轴为垂直方向，起点在上沿。</li>
+<li>column-reverse：主轴为垂直方向，起点在下沿。</li>
+</ul>
+</li>
+<li><p>flex-wrap // 是否<strong>换行</strong></p>
+<ul>
+<li>nowrap（默认）：不换行</li>
+<li>wrap：换行，第一行在上方。</li>
+<li>wrap-reverse：换行，第一行在下方。</li>
+</ul>
+</li>
+<li><p>flex-flow // <strong>复合属性</strong> 是flex-direction属性和flex-wrap属性的简写形式，<strong>默认值为row nowrap</strong>。</p>
+</li>
+</ul>
+<ul>
+<li>justify-content // 定义了项目在<strong>主轴</strong>上的对齐方式。<ul>
+<li>flex-start（默认值）：左对齐</li>
+<li>flex-end：右对齐</li>
+<li>center： 居中</li>
+<li>space-between：两端对齐，项目之间的间隔都相等。</li>
+<li>space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://www.runoob.com/wp-content/uploads/2015/07/2b0c39c7e7a80d5a784c8c2ca63cde17.png" alt="01"></p>
+<ul>
+<li>align-items // 定义项目在<strong>交叉轴</strong>上如何对齐。<ul>
+<li>flex-start：交叉轴的起点对齐。</li>
+<li>flex-end：交叉轴的终点对齐。</li>
+<li>center：交叉轴的中点对齐。</li>
+<li>baseline: 项目的<strong>第一行文字</strong>的基线对齐。</li>
+<li>stretch<strong>（默认值）</strong>：如果项目<strong>未设置高度或设为auto</strong>，将占满整个容器的高度。</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://www.runoob.com/wp-content/uploads/2015/07/f10918ccb8a13247c9d47715a2bd2c33.png" alt="01"></p>
+<ul>
+<li>align-content // 定义了<strong>多根轴线</strong>的对齐方式，如果项目只有一根轴线，该属性不起作用。<ul>
+<li>flex-start：与<strong>交叉轴的起点</strong>对齐。</li>
+<li>flex-end：与交叉轴的终点对齐。</li>
+<li>center：与交叉轴的中点对齐。</li>
+<li>space-between：与交叉轴两端对齐，轴线之间的间隔平均分布。</li>
+<li>space-around：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。</li>
+<li>stretch（默认值）：轴线占满整个交叉轴。</li>
+</ul>
+</li>
+</ul>
+
+        <h2 id="四、项目的属性">
+          <a href="#四、项目的属性" class="heading-link"><i class="fas fa-link"></i></a><a href="#四、项目的属性" class="headerlink" title="四、项目的属性"></a>四、项目的属性</h2>
+      <p>这是写在<strong>子元素</strong>还是父元素上面？？？</p>
+<ul>
+<li>order // order属性定义项目的排列顺序。<strong>数值越小，排列越靠前，默认为0</strong>。</li>
+<li>flex-grow // flex-grow属性定义项目的<strong>放大比例</strong>，默认为0，即如果存在剩余空间，也不放大。- flex-grow就是用来设置box怎样瓜分剩余空间</li>
+<li>flex-shrink // flex-shrink属性定义了项目的<strong>缩小比例</strong>，默认为1，即如果空间不足，该项目将缩小。</li>
+<li>flex-basis // flex-basis属性定义了在分配多余空间之前，项目<strong>占据的主轴空间</strong>（main size）</li>
+<li>flex // flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。</li>
+<li>align-self // align-self属性允许单个项目有与其他项目不一样的对齐方式, 可覆盖align-items属性</li>
+</ul>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.cnblogs.com/malong1992/p/12814243.html">flex布局中order 决定了flex item里面的排布顺序</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.cnblogs.com/unlockth/p/13535852.html">CSS：flex布局中的flex-grow详解</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.jianshu.com/p/e18484868a41">flex-grow和flex-shrink使用</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>flex-grow - 多了怎么分<br>flex-shrink - 少了怎么分。。</p>
+<p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://www.cnblogs.com/mujinxinian/p/5567671.html">Flexbox中align-self的基本使用</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>子元素 - <strong>单独设置对齐方式</strong></p>
+<p>align-self<br><img src="https://www.runoob.com/wp-content/uploads/2015/07/55b19171b8b6b9487d717bf2ecbba6de.png" alt="01"></p>
+
+        <h1 id="实践内容">
+          <a href="#实践内容" class="heading-link"><i class="fas fa-link"></i></a><a href="#实践内容" class="headerlink" title="实践内容"></a>实践内容</h1>
+      <p>参考：<br><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/269145615">【前端面试】css flex 常见面试题</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><strong>左右定宽，中间自适应</strong></p>
+<p>我们可以用 flex 简单的做到左右定宽，中间自适应。<br>一个口诀就可以搞定，中间 flex = 1, 宽用百分比，左右固定宽，父元素 display:flex。</p>
+<blockquote>
+<p>补充一下：其实我们也可以用 float 来达到同样的效果。<br>我们还是把关键点用一个口诀记住：中间加 margin，左右加 float，先加左右，后加中间。</p>
+</blockquote>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">结构：</span><br><span class="line">&lt;div class="container"&gt; // 父元素flex布局</span><br><span class="line">  &lt;div class="left"&gt;&lt;/div&gt;</span><br><span class="line">  &lt;div class="mid"&gt;&lt;/div&gt;</span><br><span class="line">  &lt;div class="right"&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">样式：</span><br><span class="line">.container {</span><br><span class="line">  display:flex;</span><br><span class="line">}</span><br><span class="line">.mid{</span><br><span class="line">  flex:1; // 剩余 - 子元素</span><br><span class="line">  width:100%;</span><br><span class="line">  height: 100px;</span><br><span class="line">  background: royalblue;</span><br><span class="line">}</span><br><span class="line">.left{</span><br><span class="line">  width:100px; // 固定宽度</span><br><span class="line">  height: 100px;</span><br><span class="line">  background: rosybrown;</span><br><span class="line">}</span><br><span class="line">.right{</span><br><span class="line">  width:100px; // 固定宽度</span><br><span class="line">  height: 100px;</span><br><span class="line">  background: cadetblue;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+<p><strong>等分布局</strong></p>
+<p>一句口诀记住，父元素 display:flex，子元素 flex:1</p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">结构</span><br><span class="line">&lt;div class="container"&gt; // 父元素 - flex</span><br><span class="line">  &lt;div class="left"&gt;&lt;/div&gt; // 子元素 - flex: 1</span><br><span class="line">  &lt;div class="right"&gt;&lt;/div&gt;</span><br><span class="line">  &lt;div class="mid"&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">样式</span><br><span class="line">.container {</span><br><span class="line">    display: flex; // flex</span><br><span class="line">}</span><br><span class="line">.mid{</span><br><span class="line">    flex:1; // 都占1份</span><br><span class="line">    height: 100px; // 统一高度</span><br><span class="line">    background: royalblue;</span><br><span class="line">}</span><br><span class="line">.left{</span><br><span class="line">    flex:1;</span><br><span class="line">    height: 100px;</span><br><span class="line">    background: rosybrown;</span><br><span class="line">}</span><br><span class="line">.right{</span><br><span class="line">    flex:1;</span><br><span class="line">    height: 100px;</span><br><span class="line">    background: cadetblue;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+<p><strong>三个小盒子在一个大盒子居中排列</strong><br><img src="https://s3.bmp.ovh/imgs/2022/02/653843f21d209cf9.jpg" alt="01"><br>在父 dom 里使用 display: flex 和 align-items: center // 垂直居中</p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">结构：</span><br><span class="line">&lt;div class="box"&gt; // 设置flex + align-items: center; // 垂直居中</span><br><span class="line">  &lt;span class="left"&gt;&lt;/span&gt;</span><br><span class="line">  &lt;span class="mid"&gt;&lt;/span&gt;</span><br><span class="line">  &lt;span class="right"&gt;&lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">样式：</span><br><span class="line">.box {</span><br><span class="line">  height: 300px;</span><br><span class="line">  width: 300px;</span><br><span class="line">  display: flex;</span><br><span class="line">  background: red;</span><br><span class="line">  align-items: center;</span><br><span class="line">}</span><br><span class="line">.left{</span><br><span class="line">  background: yellow;</span><br><span class="line">  height: 100px;</span><br><span class="line">  width: 50px;</span><br><span class="line">}</span><br><span class="line">.mid{</span><br><span class="line">  background: rebeccapurple;</span><br><span class="line">  height: 200px;</span><br><span class="line">  width: 50px;</span><br><span class="line">}</span><br><span class="line">.right{</span><br><span class="line">  background: green;</span><br><span class="line">  height: 70px;</span><br><span class="line">  width: 50px;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+<p><strong>三个小盒子在一个大盒子居中垂直排列</strong><br><img src="https://pic2.zhimg.com/80/v2-d2999830b6b3e96245eec55e231a7c6d_720w.jpg" alt="02"><br>html 完全相同，只需在父 dom 里加一个 flex-direction: column // 改变轴向。</p>
+<p><strong>一个小盒子在一个大盒子里居中</strong><br>flex + 水平 + 垂直居中</p>
+<p><img src="https://pic3.zhimg.com/80/v2-4d9144f65dbbc6f09863ecc9a3435062_720w.jpg" alt="01"></p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class="box"&gt;</span><br><span class="line">  &lt;span class="mid"&gt;&lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">.box {</span><br><span class="line">  height: 300px;</span><br><span class="line">  width: 300px;</span><br><span class="line">  background: red;</span><br><span class="line">	</span><br><span class="line">	display: flex;</span><br><span class="line">  align-items: center;</span><br><span class="line">  justify-content: center;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+<p>align-items 是交叉轴居中，而 justify-content 是主轴居中的意思。<br><img src="https://pic3.zhimg.com/80/v2-6327a89f20139cb514616b4b79d3f412_720w.jpg" alt="01"></p>
+
+        <h1 id="总结">
+          <a href="#总结" class="heading-link"><i class="fas fa-link"></i></a><a href="#总结" class="headerlink" title="总结"></a>总结</h1>
+      <p>flex布局核心 - 控制轴向 + 对齐方式。</p>
+<p>flex: 1 - 占剩余<br>flex-basis - 占主轴</p>
+<p>align-items - 交叉轴 - 常用<br>justify-content - 主轴</p>
+<p>常用对齐方式：</p>
+<ul>
+<li>flex-start：交叉轴的起点对齐。</li>
+<li>flex-end：交叉轴的终点对齐。</li>
+<li>center：交叉轴的中点对齐。</li>
+</ul>
+<p>align-self - 子元素对齐方式</p>
+<p>flex-grow - 多了怎么分 - 剩余空间。<br>flex-shrink - 少了怎么分 - 空间不足 - 超出缩小比例</p>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="http://example.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="post-share"><div class="social-share" data-sites="qzone, qq, weibo, wechat, douban, linkedin, facebook, twitter, google">Share to: </div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2022/02/12/Js%E6%B8%B8%E6%88%8F01-Memory_Card/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">Js游戏01-Memory_Card</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2022/02/11/Js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%AE%9E%E8%B7%B5/"><span class="paginator-prev__text">Js面向对象实践</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">
+          简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81Flex%E5%B8%83%E5%B1%80%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">1.1.</span> <span class="toc-text">
+          一、Flex布局是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">1.2.</span> <span class="toc-text">
+          二、基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%AE%B9%E5%99%A8%E7%9A%84%E5%B1%9E%E6%80%A7"><span class="toc-number">1.3.</span> <span class="toc-text">
+          三、容器的属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%B1%9E%E6%80%A7"><span class="toc-number">1.4.</span> <span class="toc-text">
+          四、项目的属性</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9E%E8%B7%B5%E5%86%85%E5%AE%B9"><span class="toc-number">2.</span> <span class="toc-text">
+          实践内容</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">3.</span> <span class="toc-text">
+          总结</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/header.jpg" alt="avatar"></div><p class="sidebar-ov-author__text">LJY_BLOG</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">32</div><div class="sidebar-ov-state-item__name">Archives</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">Tags</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script></body></html>
