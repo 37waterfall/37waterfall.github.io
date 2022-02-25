@@ -1,0 +1,214 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/icon16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/favicon32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="内容来源 - webpack中文文档总结一下，学了几次，记录一下！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Webpack5使用-基础">
+<meta property="og:url" content="http://example.com/2022/02/25/Webpack5%E4%BD%BF%E7%94%A8-%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:site_name" content="LJY_BLOG">
+<meta property="og:description" content="内容来源 - webpack中文文档总结一下，学了几次，记录一下！">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-02-25T01:12:26.000Z">
+<meta property="article:modified_time" content="2022-02-25T03:58:50.877Z">
+<meta property="article:author" content="LJY">
+<meta property="article:tag" content="学习笔记">
+<meta name="twitter:card" content="summary"><title>Webpack5使用-基础 | LJY_BLOG</title><link ref="canonical" href="http://example.com/2022/02/25/Webpack5%E4%BD%BF%E7%94%A8-%E5%9F%BA%E7%A1%80/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"Copy","copySuccess":"Copy Success","copyError":"Copy Error"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">主页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">档案</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/reading/"><span class="header-nav-menu-item__icon"><i class="fas fa-book"></i></span><span class="header-nav-menu-item__text">阅读</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">LJY_BLOG</div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">Webpack5使用-基础</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">创建</span><span class="post-meta-item__value">2022-02-25</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新</span><span class="post-meta-item__value">2022-02-25</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon"><i class="far fa-clock"></i></span><span class="post-meta-item__info">阅读时间</span><span class="post-meta-item__value">9m</span></span></div></header><div class="post-body"><p>内容来源 - <span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://webpack.docschina.org/guides/getting-started">webpack中文文档</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>总结一下，学了几次，记录一下！</p>
+<span id="more"></span>
+
+
+        <h1 id="问题区域">
+          <a href="#问题区域" class="heading-link"><i class="fas fa-link"></i></a><a href="#问题区域" class="headerlink" title="问题区域"></a>问题区域</h1>
+      <p>如何使用其他库，如threejs？</p>
+
+        <h1 id="基本安装">
+          <a href="#基本安装" class="heading-link"><i class="fas fa-link"></i></a><a href="#基本安装" class="headerlink" title="基本安装"></a>基本安装</h1>
+      
+        <h2 id="创建基本环境">
+          <a href="#创建基本环境" class="heading-link"><i class="fas fa-link"></i></a><a href="#创建基本环境" class="headerlink" title="创建基本环境"></a>创建基本环境</h2>
+      <ol>
+<li>首先我们创建一个目录，初始化 npm</li>
+<li>接着安装 webpack-cli（此工具用于在命令行中运行 webpack）<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mkdir webpack-demo</span><br><span class="line">cd webpack-demo</span><br><span class="line">npm init -y // package.json</span><br><span class="line">npm install webpack webpack-cli --save-dev // node_modules</span><br></pre></td></tr></tbody></table></div></figure></li>
+</ol>
+
+        <h2 id="创建文件">
+          <a href="#创建文件" class="heading-link"><i class="fas fa-link"></i></a><a href="#创建文件" class="headerlink" title="创建文件"></a>创建文件</h2>
+      <ul>
+<li>index.html // 写入内容 - 引入lodash + 引入index.js</li>
+<li>src<ul>
+<li>index.js // 添加一个div？？？</li>
+</ul>
+</li>
+</ul>
+
+        <h2 id="修改package-json">
+          <a href="#修改package-json" class="heading-link"><i class="fas fa-link"></i></a><a href="#修改package-json" class="headerlink" title="修改package.json"></a>修改package.json</h2>
+      <ol>
+<li>以便确保我们安装包是 private(私有的)</li>
+<li>并且移除 main 入口。这可以防止意外发布你的代码。</li>
+</ol>
+
+        <h2 id="创建一个bundle">
+          <a href="#创建一个bundle" class="heading-link"><i class="fas fa-link"></i></a><a href="#创建一个bundle" class="headerlink" title="创建一个bundle"></a>创建一个bundle</h2>
+      <p>目录结构</p>
+<ul>
+<li>dist<ul>
+<li>index.html // 这里应该自动生成</li>
+</ul>
+</li>
+<li>index.html</li>
+<li>src<ul>
+<li>index.js</li>
+</ul>
+</li>
+</ul>
+
+        <h2 id="添加lodash打包依赖">
+          <a href="#添加lodash打包依赖" class="heading-link"><i class="fas fa-link"></i></a><a href="#添加lodash打包依赖" class="headerlink" title="添加lodash打包依赖"></a>添加lodash打包依赖</h2>
+      <p><code>npm install --save lodash</code></p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">在安装一个 package，而此 package 要打包到生产环境 bundle 中时，你应该使用 npm install --save。</span><br><span class="line">如果你在安装一个用于开发环境的 package 时（例如，linter, 测试库等），</span><br><span class="line">你应该使用 npm install --save-dev。更多信息请查看 npm 文档。</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+
+        <h2 id="执行-npx-webpack">
+          <a href="#执行-npx-webpack" class="heading-link"><i class="fas fa-link"></i></a><a href="#执行-npx-webpack" class="headerlink" title="执行 npx webpack"></a>执行 npx webpack</h2>
+      <p>// 这之前还修改了dist - index.html文件 - 引入main.js<br>在dist里面输出了main.js</p>
+
+        <h2 id="使用一个配置文件">
+          <a href="#使用一个配置文件" class="heading-link"><i class="fas fa-link"></i></a><a href="#使用一个配置文件" class="headerlink" title="使用一个配置文件"></a>使用一个配置文件</h2>
+      <p>webpack.config.js - 创建 - 输入命令</p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">如果 webpack.config.js 存在，则 webpack 命令将默认选择使用它。</span><br><span class="line">我们在这里使用 --config 选项只是向你表明，可以传递任何名称的配置文件。这对于需要拆分成多个文件的复杂配置是非常有用的。</span><br></pre></td></tr></tbody></table></div></figure>
+
+
+
+        <h2 id="npm-scripts">
+          <a href="#npm-scripts" class="heading-link"><i class="fas fa-link"></i></a><a href="#npm-scripts" class="headerlink" title="npm scripts"></a>npm scripts</h2>
+      <p>“build”: “webpack”</p>
+<p>可以使用 npm run build 命令，来替代我们之前使用的 npx 命令。</p>
+<p>基本使用完成</p>
+<p>总结：<br>可以运行起来了🤣</p>
+<p>在dist文件里面的index.html 可以出现 hello webpack<br>以上使用了lodash，然后生成了dist文件</p>
+
+        <h1 id="管理资源">
+          <a href="#管理资源" class="heading-link"><i class="fas fa-link"></i></a><a href="#管理资源" class="headerlink" title="管理资源"></a>管理资源</h1>
+      <p><span class="exturl"><a class="exturl__link" target="_blank" rel="noopener" href="https://webpack.docschina.org/guides/asset-management/">管理资源 - 官方文档</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p>比如 images</p>
+
+        <h2 id="初始配置">
+          <a href="#初始配置" class="heading-link"><i class="fas fa-link"></i></a><a href="#初始配置" class="headerlink" title="初始配置"></a>初始配置</h2>
+      <p>修改</p>
+<ol>
+<li>dist/index.html // 引入bundle.js</li>
+<li>webpack.config.js // 输出文件名为 bundle.js</li>
+</ol>
+
+        <h2 id="加载-CSS">
+          <a href="#加载-CSS" class="heading-link"><i class="fas fa-link"></i></a><a href="#加载-CSS" class="headerlink" title="加载 CSS"></a>加载 CSS</h2>
+      <p><code>npm install --save-dev style-loader css-loader</code></p>
+<p>多了以下资源</p>
+<ul>
+<li>“css-loader”: “^6.6.0”,</li>
+<li>“style-loader”: “^3.3.1”,</li>
+</ul>
+<p>在webpack.config.js<br>配置modules，用来加载以上资源</p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">module: {</span><br><span class="line">		rules: [</span><br><span class="line">			{</span><br><span class="line">				test: /\.css$/i, // 所有以 .css 结尾的文件，都将被提供给 style-loader 和 css-loader。</span><br><span class="line">				use: ['style-loader', 'css-loader'],</span><br><span class="line">			}</span><br><span class="line">		]</span><br><span class="line">	}</span><br><span class="line"></span><br><span class="line">模块 loader 可以链式调用。链中的每个 loader 都将对资源进行转换。</span><br><span class="line">链会逆序执行。第一个 loader 将其结果（被转换后的资源）传递给下一个 loader，</span><br><span class="line">依此类推。最后，webpack 期望链中的最后的 loader 返回 JavaScript。</span><br><span class="line"></span><br><span class="line">应保证 loader 的先后顺序</span><br></pre></td></tr></tbody></table></div></figure>
+
+<p>在src文件下，添加style.css<br>在src文件下，index.js中引入style.css，并给元素添加样式</p>
+<p>运行文件 - <code>npm run build</code></p>
+<p>运行后 - 出现红色Hello webpack🌈</p>
+<p>可以在head里面查看到样式文件</p>
+<blockquote>
+<p>注意，在多数情况下，你也可以进行 压缩 CSS，以便在生产环境中节省加载时间。<br>最重要的是，现有的 loader 可以支持任何你可以想到的 CSS 风格 - postcss, sass 和 less 等。🎵🎵🎵</p>
+</blockquote>
+
+        <h2 id="加载-images-图像">
+          <a href="#加载-images-图像" class="heading-link"><i class="fas fa-link"></i></a><a href="#加载-images-图像" class="headerlink" title="加载 images 图像"></a>加载 images 图像</h2>
+      <p>现在我们正在下载 CSS，但是像 background 和 icon 这样的图像，要如何处理呢？<br>在 webpack 5 中，可以使用内置的 Asset Modules</p>
+<p>在webpack.config.js<br>配置module的rules</p>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">作用 - 替换路径</span><br><span class="line"></span><br><span class="line">在使用 css-loader 时，如前所示，会使用类似过程处理你的 CSS 中的 url('./my-image.png')。</span><br><span class="line">loader 会识别这是一个本地文件，并将 './my-image.png' 路径，</span><br><span class="line">替换为 output 目录中图像的最终路径。而 html-loader 以相同的方式处理 &lt;img src="./my-image.png" /&gt;。</span><br><span class="line">{</span><br><span class="line">	test: /\.(png|svg|jpg|jpeg|gif)$/i,</span><br><span class="line">	type: 'asset/resource',</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></figure>
+
+<p>在src文件下，放入图片<br>在src/index.js，引入图片<code>import Icon from './icon.png';</code> // img标签<br>通过js添加到 div中</p>
+<p>在src/style.css 添加<code>background: url('./icon.png');</code> // 属性背景</p>
+<p>重新构建</p>
+<p>可以看到图片，图片名字也被处理过了！✌</p>
+
+        <h2 id="加载-fonts-字体">
+          <a href="#加载-fonts-字体" class="heading-link"><i class="fas fa-link"></i></a><a href="#加载-fonts-字体" class="headerlink" title="加载 fonts 字体"></a>加载 fonts 字体</h2>
+      <p>字体来了！</p>
+<p>还是修改modelu里面的rules</p>
+<ul>
+<li><code>type: 'asset/resource'</code></li>
+<li>使用 Asset Modules 可以接收并加载任何文件，然后将其输出到构建目录。</li>
+<li>这就是说，我们可以将它们用于任何类型的文件，也包括字体。</li>
+</ul>
+<p>这样可行！<br><code>src: url('./PangMenZhengDaoXiXianTi-2.ttf') format('woff2');</code></p>
+<p>在css中通过@font-face 声明将其混合，本地的 url(…) 指令会被 webpack 获取处理<br>然后添加到样式里</p>
+<p>可以出现！</p>
+
+        <h2 id="加载数据">
+          <a href="#加载数据" class="heading-link"><i class="fas fa-link"></i></a><a href="#加载数据" class="headerlink" title="加载数据"></a>加载数据</h2>
+      <p>可以加载的有用资源还有数据，如 JSON 文件，CSV、TSV 和 XML。<br>JSON 支持实际上是内置的，也就是说 import Data from ‘./data.json’ 默认将正常运行。</p>
+<p>要导入 CSV、TSV 和 XML，你可以使用 csv-loader 和 xml-loader。、</p>
+<p><code>npm install --save-dev csv-loader xml-loader</code></p>
+<p>然后配置module的rules<br>使用use</p>
+<p>定义文件 - 到js中引入 + 使用</p>
+<p>可行！！！</p>
+
+        <h2 id="自定义-JSON-模块-parser">
+          <a href="#自定义-JSON-模块-parser" class="heading-link"><i class="fas fa-link"></i></a><a href="#自定义-JSON-模块-parser" class="headerlink" title="自定义 JSON 模块 parser"></a>自定义 JSON 模块 parser</h2>
+      <p>通过使用 自定义 parser 替代特定的 webpack loader，可以将任何 toml、yaml 或 json5 文件作为 JSON 模块导入。</p>
+<p><code>npm install toml yamljs json5 --save-dev</code></p>
+<p>定义文件 + module rules添加 + js中引入 + 打包</p>
+
+        <h2 id="全局资源">
+          <a href="#全局资源" class="heading-link"><i class="fas fa-link"></i></a><a href="#全局资源" class="headerlink" title="全局资源"></a>全局资源</h2>
+      <p>上述所有内容中最出色之处在于，以这种方式加载资源，你可以以更直观的方式将模块和资源组合在一起。<br>无需依赖于含有全部资源的 /assets 目录，而是将资源与代码组合在一起使用。</p>
+<p>这种配置方式会使你的代码更具备可移植性 - 原来如此！🍗🍗🍗</p>
+<p>假如你想在另一个项目中使用 /my-component，只需将其复制或移动到 /components 目录下。</p>
+<p>总结：<br>定义文件 + module rules添加 + js中引入 + 打包</p>
+
+        <h1 id="管理输出">
+          <a href="#管理输出" class="heading-link"><i class="fas fa-link"></i></a><a href="#管理输出" class="headerlink" title="管理输出"></a>管理输出</h1>
+      <p>待续！</p>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="http://example.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="post-share"><div class="social-share" data-sites="qzone, qq, weibo, wechat, douban, linkedin, facebook, twitter, google">Share to: </div></div><nav class="post-paginator paginator"><div class="paginator-next"><a class="paginator-next__link" href="/2022/02/24/HOT100-%E4%BC%AA%E4%BB%A3%E7%A0%81/"><span class="paginator-prev__text">HOT100-伪代码</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E5%8C%BA%E5%9F%9F"><span class="toc-number">1.</span> <span class="toc-text">
+          问题区域</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E5%AE%89%E8%A3%85"><span class="toc-number">2.</span> <span class="toc-text">
+          基本安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%9F%BA%E6%9C%AC%E7%8E%AF%E5%A2%83"><span class="toc-number">2.1.</span> <span class="toc-text">
+          创建基本环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E6%96%87%E4%BB%B6"><span class="toc-number">2.2.</span> <span class="toc-text">
+          创建文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9package-json"><span class="toc-number">2.3.</span> <span class="toc-text">
+          修改package.json</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AAbundle"><span class="toc-number">2.4.</span> <span class="toc-text">
+          创建一个bundle</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0lodash%E6%89%93%E5%8C%85%E4%BE%9D%E8%B5%96"><span class="toc-number">2.5.</span> <span class="toc-text">
+          添加lodash打包依赖</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C-npx-webpack"><span class="toc-number">2.6.</span> <span class="toc-text">
+          执行 npx webpack</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E4%B8%80%E4%B8%AA%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">2.7.</span> <span class="toc-text">
+          使用一个配置文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#npm-scripts"><span class="toc-number">2.8.</span> <span class="toc-text">
+          npm scripts</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%A1%E7%90%86%E8%B5%84%E6%BA%90"><span class="toc-number">3.</span> <span class="toc-text">
+          管理资源</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E9%85%8D%E7%BD%AE"><span class="toc-number">3.1.</span> <span class="toc-text">
+          初始配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A0%E8%BD%BD-CSS"><span class="toc-number">3.2.</span> <span class="toc-text">
+          加载 CSS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A0%E8%BD%BD-images-%E5%9B%BE%E5%83%8F"><span class="toc-number">3.3.</span> <span class="toc-text">
+          加载 images 图像</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A0%E8%BD%BD-fonts-%E5%AD%97%E4%BD%93"><span class="toc-number">3.4.</span> <span class="toc-text">
+          加载 fonts 字体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A0%E8%BD%BD%E6%95%B0%E6%8D%AE"><span class="toc-number">3.5.</span> <span class="toc-text">
+          加载数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89-JSON-%E6%A8%A1%E5%9D%97-parser"><span class="toc-number">3.6.</span> <span class="toc-text">
+          自定义 JSON 模块 parser</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%A8%E5%B1%80%E8%B5%84%E6%BA%90"><span class="toc-number">3.7.</span> <span class="toc-text">
+          全局资源</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%A1%E7%90%86%E8%BE%93%E5%87%BA"><span class="toc-number">4.</span> <span class="toc-text">
+          管理输出</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/header.jpg" alt="avatar"></div><p class="sidebar-ov-author__text">LJY_BLOG</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">36</div><div class="sidebar-ov-state-item__name">Archives</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">Tags</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script></body></html>
