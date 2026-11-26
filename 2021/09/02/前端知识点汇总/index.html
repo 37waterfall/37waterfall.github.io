@@ -1,0 +1,1165 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.8.0" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.8.0" type="image/png" sizes="32x32"><meta name="description" content="内容来源 - github🐝🐝🐝">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端知识点汇总">
+<meta property="og:url" content="https://37waterfall.github.io/2021/09/02/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/index.html">
+<meta property="og:site_name" content="LJY_BLOG">
+<meta property="og:description" content="内容来源 - github🐝🐝🐝">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://img.smyhvae.com/20180124_1700.png">
+<meta property="og:image" content="http://img.smyhvae.com/20180206_1540.png">
+<meta property="og:image" content="http://img.smyhvae.com/20180206_1545.png">
+<meta property="og:image" content="http://img.smyhvae.com/20180206_1541.png">
+<meta property="og:image" content="http://img.smyhvae.com/20180223_2130.gif">
+<meta property="og:image" content="http://img.smyhvae.com/20180224_2110.png">
+<meta property="article:published_time" content="2021-09-01T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-10-13T16:00:00.000Z">
+<meta property="article:author" content="37waterfall">
+<meta property="article:tag" content="学习笔记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://img.smyhvae.com/20180124_1700.png"><title>前端知识点汇总 | LJY_BLOG</title><link ref="canonical" href="https://37waterfall.github.io/2021/09/02/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.8.0"><link rel="stylesheet" href="css/custom.css"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 8.1.2"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">主页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">档案</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/reading/"><span class="header-nav-menu-item__icon"><i class="fas fa-book"></i></span><span class="header-nav-menu-item__text">阅读</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">LJY_BLOG</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">前端知识点汇总</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2021-09-02</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2021-10-14</span></span></div></header><div class="post-body">
+
+<p>内容来源 - github🐝🐝🐝</p>
+
+<span id="more"></span>
+
+<ul>
+<li><span class="exturl"><span class="exturl"><a class="exturl__link"  class="exturl__link" target="_blank" rel="noopener"  href="https://github.com/qianguyihao/Web" >GitHub地址</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+</ul>
+<span id="more"></span>
+
+<p>记录要点即可。。</p>
+
+        
+        <h1 id="HTML"   >
+          <a href="#HTML" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#HTML" class="heading-link"><i class="fas fa-link"></i></a><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h1>
+      
+      
+        
+        <h2 id="基础知识点"   >
+          <a href="#基础知识点" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#基础知识点" class="heading-link"><i class="fas fa-link"></i></a><a href="#基础知识点" class="headerlink" title="基础知识点"></a>基础知识点</h2>
+      
+      <ol>
+<li><p>Web<br>Web（World Wide Web）即全球广域网，也称为万维网。</p>
+</li>
+<li><p>W3C<br>World Wide Web Consortium，<br>万维网联盟组织，用来制定web标准的机构（组织）。</p>
+</li>
+<li><p>Web标准包括三个方面</p>
+<ul>
+<li>HTML（HyperText Markup Language）：超文本标记语言。从<strong>语义</strong>的角度描述页面的<strong>结构</strong>。</li>
+<li>CSS（Cascading Style Sheets）：层叠样式表。从<strong>审美</strong>的角度美化页面的<strong>样式</strong>。</li>
+<li>JS：JavaScript。从<strong>交互</strong>的角度描述页面的<strong>行为</strong>。</li>
+</ul>
+</li>
+<li><p>常见的浏览器<br>浏览器是网页运行的平台，<br>常见的浏览器有谷歌（Chrome）、Safari、火狐（Firefox）、IE、Edge、Opera等。</p>
+</li>
+<li><p>浏览器分成两部分：</p>
+<ul>
+<li>1、渲染引擎（即：浏览器内核）</li>
+<li>2、JS 引擎</li>
+<li><strong>渲染引擎是浏览器兼容性问题出现的根本原因。</strong></li>
+</ul>
+</li>
+<li><p>常见浏览器的内核</p>
+<div class="table-container"><div class="table-container"><table>
+<thead>
+<tr>
+<th align="center">浏览器</th>
+<th align="center">内核</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">chrome</td>
+<td align="center">Blink</td>
+</tr>
+<tr>
+<td align="center">欧鹏</td>
+<td align="center">Blink</td>
+</tr>
+<tr>
+<td align="center">360安全浏览器</td>
+<td align="center">Blink</td>
+</tr>
+<tr>
+<td align="center">360极速浏览器</td>
+<td align="center">Blink</td>
+</tr>
+<tr>
+<td align="center">Safari</td>
+<td align="center">Webkit</td>
+</tr>
+<tr>
+<td align="center">Firefox 火狐</td>
+<td align="center">Gecko</td>
+</tr>
+<tr>
+<td align="center">IE</td>
+<td align="center">Trident</td>
+</tr>
+</tbody></table></div></div>
+</li>
+<li><p>移动端浏览器内核</p>
+<div class="table-container"><div class="table-container"><table>
+<thead>
+<tr>
+<th align="center">移动端浏览器</th>
+<th align="center">内核</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Android</td>
+<td align="center">webkit</td>
+</tr>
+<tr>
+<td align="center">iOS</td>
+<td align="center">webkit</td>
+</tr>
+<tr>
+<td align="center">黑莓</td>
+<td align="center">webkit</td>
+</tr>
+<tr>
+<td align="center">Windows Phone</td>
+<td align="center">trident</td>
+</tr>
+</tbody></table></div></div>
+</li>
+<li><p>常见浏览器JS引擎</p>
+<div class="table-container"><div class="table-container"><table>
+<thead>
+<tr>
+<th align="center">浏览器</th>
+<th align="left">JS 引擎</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">chrome / 欧鹏</td>
+<td align="left">V8</td>
+</tr>
+<tr>
+<td align="center">Safari</td>
+<td align="left">Nitro</td>
+</tr>
+<tr>
+<td align="center">Firefox 火狐</td>
+<td align="left">SpiderMonkey（1.0-3.0）/ TraceMonkey（3.5-3.6）/ JaegerMonkey（4.0-）</td>
+</tr>
+<tr>
+<td align="center">Opera</td>
+<td align="left">Linear A（4.0-6.1）/ Linear B（7.0-9.2）/ Futhark（9.5-10.2）/ Carakan（10.5-）</td>
+</tr>
+<tr>
+<td align="center">IE</td>
+<td align="left">Trident</td>
+</tr>
+</tbody></table></div></div>
+<blockquote>
+<p>JS 引擎执行代码时会逐行解释每一句源码（转换为机器语言），<br>然后由计算机去执行。<br>所以 JavaScript 语言归为脚本语言，会逐行解释执行。</p>
+</blockquote>
+</li>
+<li><p>浏览器工作原理<br><img src="http://img.smyhvae.com/20180124_1700.png"><br>1113-1 - 记住图形位置。。</p>
+</li>
+</ol>
+<ul>
+<li>User Interface</li>
+<li>Browser engine</li>
+<li>Rendering enging</li>
+<li>Networking</li>
+<li>JavaScript Interpreter</li>
+<li>UI Backend</li>
+<li>Data Persistence - 数据存储 - cookie、sessionStorage。。</li>
+</ul>
+
+        
+        <h2 id="HTML基础知识"   >
+          <a href="#HTML基础知识" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#HTML基础知识" class="heading-link"><i class="fas fa-link"></i></a><a href="#HTML基础知识" class="headerlink" title="HTML基础知识"></a>HTML基础知识</h2>
+      
+      <ol>
+<li>html骨架</li>
+</ol>
+<div class="table-container"><div class="table-container"><table>
+<thead>
+<tr>
+<th>标签名</th>
+<th align="center">定义</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>&lt;html&gt;&lt;/html&gt;</code></td>
+<td align="center">HTML标签</td>
+<td align="left">页面中最大的标签，我们成为根标签</td>
+</tr>
+<tr>
+<td><code>&lt;head&gt;&lt;/head&gt;</code></td>
+<td align="center">文档的头部</td>
+<td align="left">注意在head标签中我们必须要设置的标签是title</td>
+</tr>
+<tr>
+<td><code>&lt;titile&gt;&lt;/title&gt;</code></td>
+<td align="center">文档的标题</td>
+<td align="left">让页面拥有一个属于自己的网页标题</td>
+</tr>
+<tr>
+<td><code>&lt;body&gt;&lt;/body&gt;</code></td>
+<td align="center">文档的主体</td>
+<td align="left">元素包含文档的所有内容，页面内容 基本都是放到body里面的</td>
+</tr>
+</tbody></table></div></div>
+<ol start="2">
+<li><p>文档声明头<br>任何一个标准的HTML页面，第一行一定是一个以<code>&lt;!DOCTYPE ……&gt;</code>开头的语句。<br>这一行，就是文档声明头，即 DocType Declaration，简称DTD。</p>
+</li>
+<li><p>head标签</p>
+</li>
+</ol>
+<ul>
+<li>问：网页的head标签里面，表示的是页面的配置，有什么配置？</li>
+<li>答：<strong>字符集、关键词、页面描述、页面标题、IE适配、视口、iPhone小图标</strong>等等。</li>
+<li>utf-8 \ description \ title \ viewport \ ico<figure class="highlight plain"><div class="table-container"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset="UTF-8"&gt;</span><br><span class="line">  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span><br><span class="line">	&lt;meta http-equiv="Content-Type" content="text/html;charset=UTF-8"&gt;</span><br><span class="line">	&lt;meta name="Author" content=""&gt;</span><br><span class="line">  &lt;meta name="Keywords" content="厉害很厉害" /&gt;</span><br><span class="line">  &lt;meta name="Description" content="网易是中国领先的互联网技术公司，为用户提供免费邮箱、游戏、搜索引擎服务，开设新闻、娱乐、体育等30多个内容频道，及博客、视频、论坛等互动交流，网聚人的力量。" /&gt;</span><br><span class="line">  &lt;title&gt;Document&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></tbody></table></div></div></figure></li>
+</ul>
+<ol start="4">
+<li>meta标签<blockquote>
+<p>meta表示“元”。“元”配置，就是表示基本的配置项目。</p>
+</blockquote>
+</li>
+</ol>
+<ul>
+<li>（1）字符集 charset：</li>
+<li>（2）视口 viewport：</li>
+<li>（3）定义“关键词”：</li>
+<li>（4）定义“页面描述”：</li>
+</ul>
+<ol start="5">
+<li>HTML基本语法特性</li>
+</ol>
+<ul>
+<li>（1）HTML对换行不敏感，对tab不敏感</li>
+<li>（2）空白折叠现象</li>
+<li>（3）标签要严格封闭</li>
+</ul>
+<ol start="6">
+<li>常用标签 - 语义</li>
+</ol>
+<ul>
+<li><code>&lt;h1&gt;</code> - 标题 - 语义</li>
+<li><code>&lt;p&gt;</code></li>
+<li> <code>&lt;hr /&gt;</code></li>
+<li><code>&lt;br /&gt;</code></li>
+<li><code>&lt;div&gt;</code></li>
+<li><code>&lt;span&gt;</code></li>
+</ul>
+<ol start="7">
+<li>特殊字符 - 转义字符</li>
+</ol>
+<ul>
+<li>今天看到 - 可以防止攻击XSS。<span class="exturl"><span class="exturl"><a class="exturl__link"  class="exturl__link" target="_blank" rel="noopener"  href="http://www.cyc2018.xyz/%E5%85%B6%E5%AE%83/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/%E6%94%BB%E5%87%BB%E6%8A%80%E6%9C%AF.html#%E5%8D%B1%E5%AE%B3" >链接</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+<li><code>&amp;nbsp;</code>：空格    （non-breaking spacing，不断打空格）</li>
+<li><code>&amp;lt;</code>：小于号（less than）</li>
+<li> <code>&amp;gt;</code>：大于号（greater than）</li>
+<li><code>&amp;amp;</code>：符号<code>&amp;</code></li>
+<li><code>&amp;quot;</code>：双引号</li>
+<li><code>&amp;apos;</code>：单引号</li>
+<li><code>&amp;copy;</code>：版权<code>©</code></li>
+<li><code>&amp;trade;</code>：商标<code>™</code></li>
+<li> <code>&amp;#32464;</code>：文字<code>绐</code>。其实，<code>#32464</code>是汉字<code>绐</code>的unicode编码。</li>
+</ul>
+<ol start="8">
+<li>超链接属性</li>
+</ol>
+<ul>
+<li><code>href</code>：目标URL</li>
+<li><code>title</code>：悬停文本。</li>
+<li><code>name</code>：主要用于设置一个锚点的名称。</li>
+<li><code>target</code>：告诉浏览器用什么方式来打开目标页面。<code>target</code>属性有以下几个值：</li>
+<li><code>_self</code>：在同一个网页中显示（默认值）</li>
+<li><code>_blank</code>：<strong>在新的窗口中打开</strong>。</li>
+<li><code>_parent</code>：在父窗口中显示</li>
+<li><code>_top</code>：在顶级窗口中显示</li>
+</ul>
+<ol start="9">
+<li>HTML5新增内容<br><img src="http://img.smyhvae.com/20180206_1540.png"></li>
+</ol>
+<p><img src="http://img.smyhvae.com/20180206_1545.png"></p>
+<p><img src="http://img.smyhvae.com/20180206_1541.png"></p>
+<ol start="10">
+<li><p>H5经典网页布局</p>
+<figure class="highlight html"><div class="table-container"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 头部 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">header</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"nav"</span>&gt;</span><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 主体部分 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"main"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 文章 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">article</span>&gt;</span><span class="tag">&lt;/<span class="name">article</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 侧边栏 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">aside</span>&gt;</span><span class="tag">&lt;/<span class="name">aside</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 底部 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">footer</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">footer</span>&gt;</span></span><br></pre></td></tr></tbody></table></div></div></figure></li>
+<li><p>H5新增语义标签</p>
+</li>
+</ol>
+<ul>
+<li><code>&lt;section&gt;</code> 表示区块</li>
+<li><code>&lt;article&gt;</code> 表示文章。如文章、评论、帖子、博客</li>
+<li><code>&lt;header&gt;</code> 表示页眉</li>
+<li><code>&lt;footer&gt;</code> 表示页脚</li>
+<li><code>&lt;nav&gt;</code> 表示导航</li>
+<li><code>&lt;aside&gt;</code> 表示侧边栏。如文章的侧栏</li>
+<li><code>&lt;figure&gt;</code> 表示媒介内容分组。</li>
+<li><code>&lt;mark&gt;</code> 表示标记 (用得少)</li>
+<li><code>&lt;progress&gt;</code> 表示进度 (用得少)</li>
+<li><code>&lt;time&gt;</code> 表示日期</li>
+</ul>
+<ol start="12">
+<li>H5新增表单类型</li>
+</ol>
+<ul>
+<li><code>email</code> 只能输入email格式。自动带有验证功能。</li>
+<li><code>tel</code> 手机号码。</li>
+<li><code>url</code> 只能输入url格式。</li>
+<li><code>number</code> 只能输入数字。</li>
+<li><code>search</code> 搜索框</li>
+<li><code>range</code> 滑动条</li>
+<li><code>color</code> 拾色器</li>
+<li><code>time</code>    时间</li>
+<li><code>date</code> 日期</li>
+<li><code>datetime</code> 时间日期</li>
+<li><code>month</code> 月份</li>
+<li><code>week</code> 星期</li>
+</ul>
+<ol start="13">
+<li>表单元素</li>
+</ol>
+<ul>
+<li>1、<code>&lt;datalist&gt;</code> 数据列表：</li>
+<li>2、<code>&lt;keygen&gt;</code>元素：</li>
+<li>3、<code>&lt;meter&gt;</code>元素：度量器</li>
+</ul>
+<ol start="14">
+<li>表单属性</li>
+</ol>
+<ul>
+<li><code>placeholder</code> 占位符（提示文字）</li>
+<li><code>autofocus</code> 自动获取焦点</li>
+<li><code>multiple</code> 文件上传多选或多个邮箱地址</li>
+<li><code>autocomplete</code> 自动完成（填充的）。on 开启（默认），off 取消。用于表单元素，也可用于表单自身(on/off)</li>
+<li><code>form</code> 指定表单项属于哪个form，处理复杂表单时会需要</li>
+<li><code>novalidate</code> 关闭默认的验证功能（只能加给form）</li>
+<li><code>required</code> 表示必填项</li>
+<li><code>pattern</code> 自定义正则，验证表单。例如</li>
+</ul>
+<ol start="15">
+<li>表单事件</li>
+</ol>
+<ul>
+<li><code>oninput()</code>：用户输入内容时触发，可用于输入字数统计。</li>
+<li><code>oninvalid()</code>：验证不通过时触发。比如，如果验证不通过时，想弹出一段提示文字，就可以用到它。</li>
+</ul>
+<ol start="16">
+<li>DOM操作</li>
+</ol>
+<ul>
+<li><strong>获取元素</strong></li>
+<li>document.querySelector(“selector”) 通过CSS选择器获取符合条件的第一个元素。</li>
+<li>document.querySelectorAll(“selector”)  通过CSS选择器获取符合条件的所有元素，以类数组形式存在。</li>
+<li><strong>类名操作</strong></li>
+<li>Node.classList.add(“class”) 添加class</li>
+<li>Node.classList.remove(“class”) 移除class</li>
+<li>Node.classList.toggle(“class”) 切换class，有则移除，无则添加</li>
+<li>Node.classList.contains(“class”) 检测是否存在class</li>
+</ul>
+<ol start="17">
+<li>自定义属性</li>
+</ol>
+<ul>
+<li>H5可以直接在标签里添加自定义属性，<strong>但必须以 <code>data-</code> 开头</strong>。</li>
+<li><span class="exturl"><span class="exturl"><a class="exturl__link"  class="exturl__link" target="_blank" rel="noopener"  href="https://www.w3school.com.cn/tags/att_global_data.asp" >HTML data-* 属性</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+</ul>
+<ol start="18">
+<li>拖拽<br><img src="http://img.smyhvae.com/20180223_2130.gif"></li>
+</ol>
+<ul>
+<li>设置了 <code>draggable="true"</code> 属性的元素。</li>
+<li><strong>拖拽元素的事件监听</strong> - 4个</li>
+<li><strong>拖拽目标元素的事件监听</strong> - 4个</li>
+</ul>
+<ol start="19">
+<li>地理位置<br><img src="http://img.smyhvae.com/20180224_2110.png"></li>
+</ol>
+<ol start="20">
+<li>Web存储</li>
+</ol>
+<ul>
+<li>只能存储字符串，可以将对象 JSON.stringify() 编码后存储。</li>
+<li><strong><code>window.sessionStorage</code> 会话存储：</strong></li>
+<li>关闭时销毁</li>
+<li>约5M</li>
+<li><strong><code>window.localStorage</code> 本地存储</strong>：</li>
+<li>永久生效 - 可自行删除</li>
+<li>约20M</li>
+</ul>
+<ol start="21">
+<li>Web存储API</li>
+</ol>
+<ul>
+<li>存储 - setItem(key, value);</li>
+<li>获取 - getItem(key);</li>
+<li>删除 - removeItem(key);</li>
+<li>清空 - clear();</li>
+<li>根据索引获取 - key(n);</li>
+</ul>
+<ol start="22">
+<li>应用缓存<br>。。。未解。。</li>
+</ol>
+<ol start="23">
+<li>语义化</li>
+</ol>
+<ul>
+<li>开发者容易理解，便于维护。</li>
+<li>机器（搜索引擎、读屏软件等）容易理解结构</li>
+<li>有助于 SEO</li>
+</ul>
+
+        
+        <h1 id="CSS基础"   >
+          <a href="#CSS基础" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#CSS基础" class="heading-link"><i class="fas fa-link"></i></a><a href="#CSS基础" class="headerlink" title="CSS基础"></a>CSS基础</h1>
+      
+      <ol>
+<li>单位</li>
+</ol>
+<ul>
+<li><strong>绝对单位</strong></li>
+<li><code>in</code>：英寸Inches (1 英寸 = 2.54 厘米)</li>
+<li><code>cm</code>：厘米Centimeters</li>
+<li><code>mm</code>：毫米Millimeters</li>
+<li><code>pt</code>：点Points，或者叫英镑 (1点 = 1/72英寸)</li>
+<li><code>pc</code>：皮卡Picas (1 皮卡 = 12 点)</li>
+<li><strong>相对单位</strong></li>
+<li><code>px</code>：像素 - 思考电脑尺寸不变，可以显示不同的分辨率</li>
+<li><code>em</code>：印刷单位相当于12个点</li>
+<li><code>%</code>：百分比，相对周围的文字的大小</li>
+</ul>
+<ol start="2">
+<li>常见文本属性</li>
+</ol>
+<ul>
+<li><code>letter-spacing: 0.5cm ;</code>  单个字母之间的间距</li>
+<li><code>word-spacing: 1cm;</code>   单词之间的间距</li>
+<li><code>text-decoration: none;</code> 字体修饰：none 去掉下划线、<strong>underline 下划线</strong>、line-through 中划线、overline 上划线</li>
+<li><code>text-transform: lowercase;</code>  单词字体大小写。uppercase大写、lowercase小写</li>
+<li><code>color:red;</code> 字体颜色</li>
+<li><code>text-align: center;</code> 在当前容器中的对齐方式。属性值可以是：left、right、center（<font color="#0000FF"><strong>在当前容器的中间</strong></font>）、justify</li>
+<li><code>text-transform: lowercase;</code> 单词的字体大小写。属性值可以是：<code>uppercase</code>（单词大写）、<code>lowercase</code>（单词小写）、<code>capitalize</code>（每个单词的首字母大写）</li>
+</ul>
+<ol start="3">
+<li>常见背景属性</li>
+</ol>
+<ul>
+<li><code>background-color:#ff99ff;</code>  设置元素的背景颜色。</li>
+<li><code>background-image:url(images/2.gif);</code> 将图像设置为背景。</li>
+<li><code>background-repeat: no-repeat;</code>  设置背景图片是否重复及如何重复，默认平铺满。（重要）<ul>
+<li><code>no-repeat</code>不要平铺；</li>
+<li><code>repeat-x</code>横向平铺；</li>
+<li><code>repeat-y</code>纵向平铺。</li>
+</ul>
+</li>
+<li><code>background-position:center top;</code> 设置背景图片在当前容器中的位置。</li>
+<li><code>background-attachment:scroll;</code> 设置背景图片是否跟着滚动条一起移动。</li>
+<li><code>background</code>，它的作用是：将上面的多个属性写在一个声明中。</li>
+<li><strong>CSS3</strong></li>
+<li>background-origin</li>
+<li>background-clip 背景裁切</li>
+<li>background-size 调整尺寸</li>
+</ul>
+<ol start="4">
+<li>超链接的四种状态</li>
+</ol>
+<ul>
+<li>a标签有4种伪类（即对应四种状态），要求背诵。如下：</li>
+<li><code>:link</code>      “链接”：超链接点击之前</li>
+<li><code>:visited</code> “访问过的”：链接被访问过之后</li>
+<li><code>:hover</code>    “悬停”：鼠标放到标签上的时候</li>
+<li><code>:active</code>    “激活”： 鼠标点击标签，但是不松手时。</li>
+</ul>
+<ol start="5">
+<li>CSS特性</li>
+</ol>
+<ul>
+<li>CSS继承性 - 文本</li>
+<li>CSS层叠性 - 就近原则 </li>
+<li>ID &gt; class &gt; 标签 </li>
+<li>都是类 - 行级样式 &gt; 内嵌样式表 &gt; 外部样式表</li>
+<li>外部样式表的ID选择器  &gt; 内嵌样式表的标签选择器</li>
+<li><strong>!important提升的是一个属性，而不是一个选择器</strong></li>
+<li><strong>!important无法提升继承的权重，该是0还是0</strong></li>
+<li><strong>!important不影响就近原则</strong></li>
+</ul>
+<ol start="6">
+<li>盒子模型</li>
+</ol>
+<ul>
+<li>标准盒子模型 - content</li>
+<li>IE盒子模型 - border + padding + content</li>
+</ul>
+<ol start="7">
+<li>标准文档流</li>
+</ol>
+<ul>
+<li>（1）空白折叠现象：</li>
+<li>（2）高矮不齐，底边对齐： - 高度不统一 - 底边</li>
+<li>（3）自动换行，一行写不满，换行写。</li>
+</ul>
+<ol start="8">
+<li>行内/块级</li>
+</ol>
+<ul>
+<li><strong>行内元素</strong></li>
+<li>与其他行内元素并排，不能设置宽、高，默认宽度 - 文字的宽度</li>
+<li><strong>块级元素</strong></li>
+<li>霸占一行，不与任何元素并列，可以设置宽高，不设置，默认，父亲100%</li>
+</ul>
+<ol start="9">
+<li>脱离标准流</li>
+</ol>
+<ul>
+<li>（1）浮动</li>
+<li>（2）绝对定位</li>
+<li>（3）固定定位</li>
+</ul>
+<ol start="10">
+<li>渐进增强/优雅降级</li>
+</ol>
+<ul>
+<li>开发方式不同 - 先/后</li>
+<li>目的不同 - 大量用户 - 内容/体验</li>
+<li><span class="exturl"><span class="exturl"><a class="exturl__link"  class="exturl__link" target="_blank" rel="noopener"  href="https://www.jianshu.com/p/d313f1108862" >渐进增强 VS 优雅降级 | 简书</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+</ul>
+<ol start="11">
+<li>CSS3选择器</li>
+</ol>
+<ul>
+<li>div 标签选择器</li>
+<li>.box 类名选择器</li>
+<li>#box　id选择器</li>
+<li>div p 后代选择器</li>
+<li>div.box 交集选择器</li>
+<li>div,p,span 并集选择器</li>
+<li>div&gt;p 子代选择器</li>
+<li><ul>
+<li>: 通配符</li>
+</ul>
+</li>
+<li>div+p: 选中div后面相邻的第一个p</li>
+<li>div~p: 选中的div后面所有的p</li>
+<li><strong>属性选择器</strong> - 好多。。。</li>
+<li><strong>伪类选择器</strong> - <code>E:first-child</code></li>
+<li>伪元素选择器 - ::before</li>
+</ul>
+<ol start="12">
+<li>处理兼容性问题：私有前缀<figure class="highlight html"><div class="table-container"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-webkit-: 谷歌 苹果</span><br><span class="line">-moz-:火狐</span><br><span class="line">-ms-：IE</span><br><span class="line">-o-：欧朋</span><br></pre></td></tr></tbody></table></div></div></figure>
+<figure class="highlight css"><div class="table-container"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background</span>: <span class="built_in">-webkit-linear-gradient</span>(left, green, yellow);</span><br><span class="line"><span class="attribute">background</span>: <span class="built_in">-moz-linear-gradient</span>(left, green, yellow);</span><br><span class="line"><span class="attribute">background</span>: <span class="built_in">-ms-linear-gradient</span>(left, green, yellow);</span><br><span class="line"><span class="attribute">background</span>: <span class="built_in">-o-linear-gradient</span>(left, green, yellow);</span><br><span class="line"><span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(left, green, yellow);</span><br></pre></td></tr></tbody></table></div></div></figure></li>
+</ol>
+<ol start="13">
+<li>动画🌱</li>
+</ol>
+<ul>
+<li>过渡：transition<ul>
+<li><code>transition-property: all;</code>  如果希望所有的属性都发生过渡，就使用all。</li>
+<li><code>transition-duration: 1s;</code> 过渡的持续时间。</li>
+<li><code>transition-timing-function: linear;</code>  运动曲线。属性值可以是：<ul>
+<li><code>linear</code> 线性</li>
+<li><code>ease</code>  减速</li>
+<li><code>ease-in</code> 加速</li>
+<li><code>ease-out</code> 减速</li>
+<li><code>ease-in-out</code>  先加速后减速</li>
+</ul>
+</li>
+<li><code>transition-delay: 1s;</code> 过渡延迟。多长时间后再执行这个过渡动画。</li>
+</ul>
+</li>
+<li>2D 转换 transform<ul>
+<li>可以实现元素的<strong>位移、旋转、变形、缩放</strong></li>
+<li>1、缩放：<code>scale</code></li>
+<li>2、位移：<code>translate</code></li>
+<li>3、旋转：<code>rotate</code> - 正值 顺时针；负值：逆时针。</li>
+</ul>
+</li>
+<li>动画：animation<ul>
+<li>（1）通过@keyframes定义动画；</li>
+<li>（2）将这段动画通过百分比，分割成多个节点；然后各节点中分别定义各属性；</li>
+<li>（3）在指定元素里，通过 <code>animation</code> 属性调用动画。<figure class="highlight javascript"><div class="table-container"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">定义动画：</span><br><span class="line">    @keyframes 动画名{</span><br><span class="line">        <span class="keyword">from</span>{ 初始状态 }</span><br><span class="line">        to{ 结束状态 }</span><br><span class="line">    }</span><br><span class="line">	</span><br><span class="line"> 调用：</span><br><span class="line">  animation: 动画名称 持续时间；</span><br></pre></td></tr></tbody></table></div></div></figure></li>
+</ul>
+</li>
+</ul>
+<ol start="14">
+<li>flex布局</li>
+</ol>
+<ul>
+<li>缺点 - 不支持低版本的IE浏览器</li>
+<li>主轴和侧轴 - 默认从左到右</li>
+<li>flex-wrap - 子元素溢出换行</li>
+<li>justify-content - 子元素在主轴排列方式<br>  -<code>flex-start</code> 从主轴的起点对齐（默认值）<ul>
+<li><code>flex-end</code> 从主轴的终点对齐</li>
+<li><code>center</code> 居中对齐</li>
+<li><code>space-around</code> 在父盒子里平分</li>
+<li><code>space-between</code> 两端对齐 平分</li>
+</ul>
+</li>
+<li>align-items - 子元素在<strong>侧轴</strong>上的对齐方式<ul>
+<li><code>flex-start</code> 从侧轴开始的方向对齐</li>
+<li><code>flex-end</code> 从侧轴结束的方向对齐</li>
+<li><code>baseline</code> 基线 默认同flex-start</li>
+<li><code>center</code> 中间对齐</li>
+<li><code>stretch</code> 拉伸</li>
+</ul>
+</li>
+<li><span class="exturl"><span class="exturl"><a class="exturl__link"  class="exturl__link" target="_blank" rel="noopener"  href="https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" >Flex 布局教程：语法篇</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+<li><span class="exturl"><span class="exturl"><a class="exturl__link"  class="exturl__link" target="_blank" rel="noopener"  href="https://www.ruanyifeng.com/blog/2015/07/flex-examples.html" >Flex 布局教程：实例篇</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+</ul>
+<ol start="15">
+<li>常见布局方式</li>
+</ol>
+<ul>
+<li>table</li>
+<li>float + margin - 兼容低版本IE</li>
+<li>inline-block</li>
+<li>flex - 唯一缺点 - 兼容性</li>
+<li>响应式布局 - 移动端</li>
+</ul>
+<ol start="16">
+<li>float的影响</li>
+</ol>
+<ul>
+<li>对自身的影响<ul>
+<li>形成BFC</li>
+<li>位置尽量靠上</li>
+<li>位置尽量靠左/右</li>
+</ul>
+</li>
+<li>对兄弟元素的影响<ul>
+<li>不影响其他块级元素的位置</li>
+<li>影响其他块级元素的<strong>内部文本</strong></li>
+</ul>
+</li>
+<li>对父级元素的影响<ul>
+<li>从父级的布局中消失 - 脱离文档流</li>
+<li>造成<strong>父级元素的高度塌陷</strong></li>
+</ul>
+</li>
+</ul>
+<ol start="17">
+<li>字体</li>
+</ol>
+<ul>
+<li>多字体fallback机制 - 如果当前字体不存在，往后找</li>
+<li>font-weight - 有的字体只支持400，700</li>
+<li>免费可商用字体<ul>
+<li>思源黑体（推荐）</li>
+<li>思源宋体</li>
+<li>站酷系列字体</li>
+<li>方正系列</li>
+<li>文泉驿系列字体</li>
+<li>郑庆科黄油体</li>
+<li>Font Space</li>
+<li>濑户字体</li>
+<li>Arual</li>
+</ul>
+</li>
+</ul>
+<ol start="18">
+<li>元素水平垂直居中</li>
+</ol>
+<ul>
+<li><strong>行内元素水平垂直居中</strong></li>
+<li><code>text-align: center</code> - 水平</li>
+<li><code>line-height: 20px</code> - 垂直</li>
+<li><strong>块级元素水平垂直居中</strong></li>
+<li><code>margin: auto</code> - 水平</li>
+<li><ol>
+<li>绝对定位 + margin - 不推荐</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>绝对定位 + translate - 推荐</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>flex布局 - 待改进 - 内部所有都水平垂直居中</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>flex + margin: auto - 推荐</li>
+</ol>
+<ul>
+<li>父容器设置 <code>display: flex</code>，</li>
+<li>子元素设置 <code>margin: auto</code></li>
+</ul>
+</li>
+</ul>
+<ol start="19">
+<li>弹窗标准代码</li>
+</ol>
+<ul>
+<li>还有要解决<strong>滚动穿透</strong>的问题<figure class="highlight plain"><div class="table-container"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang="en"&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;meta charset="UTF-8" /&gt;</span><br><span class="line">        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</span><br><span class="line">        &lt;title&gt;Document&lt;/title&gt;</span><br><span class="line">        &lt;style&gt;</span><br><span class="line">            /* 整个弹窗组件 */</span><br><span class="line">            .component_popup {</span><br><span class="line">                position: fixed;</span><br><span class="line">                top: 0;</span><br><span class="line">                bottom: 0;</span><br><span class="line">                left: 0;</span><br><span class="line">                right: 0;</span><br><span class="line">                z-index: 100;</span><br><span class="line">            }</span><br><span class="line"></span><br><span class="line">            /* 遮罩背景 */</span><br><span class="line">            .popup_mask {</span><br><span class="line">                position: fixed;</span><br><span class="line">                top: 0;</span><br><span class="line">                bottom: 0;</span><br><span class="line">                left: 0;</span><br><span class="line">                right: 0;</span><br><span class="line">                background: rgba(0, 0, 0, 0.7);</span><br><span class="line">            }</span><br><span class="line"></span><br><span class="line">            /* 弹窗区域（内容 + close）：严格居中 */</span><br><span class="line">            .popup_content {</span><br><span class="line">                position: absolute;</span><br><span class="line">                top: 50%;</span><br><span class="line">                left: 50%;</span><br><span class="line">                transform: translate(-50%, -50%);</span><br><span class="line">            }</span><br><span class="line"></span><br><span class="line">            /* 弹窗的内容部分 */</span><br><span class="line">            .content_box {</span><br><span class="line">                width: 15.45rem;</span><br><span class="line">                height: 19.32rem;</span><br><span class="line">                background: url(http://img.smyhvae.com/20191010_1500_red-packet.png) no-repeat;</span><br><span class="line">                background-size: 15.45rem 19.32rem;</span><br><span class="line">            }</span><br><span class="line"></span><br><span class="line">            /* 弹窗的close图标 */</span><br><span class="line">            .content_close {</span><br><span class="line">                width: 1.25em;</span><br><span class="line">                height: 1.25em;</span><br><span class="line">                background: url(http://img.smyhvae.com/20191010_1500_close.png) no-repeat;</span><br><span class="line">                background-size: 1.25rem 1.25rem;</span><br><span class="line">                margin: 0 auto;</span><br><span class="line">                margin-top: 0.5rem;</span><br><span class="line">            }</span><br><span class="line">        &lt;/style&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;div class="content"&gt;默认文档流中的页面主体&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">        &lt;div class="component_popup"&gt;</span><br><span class="line">            &lt;div class="popup_mask"&gt;&lt;/div&gt;</span><br><span class="line">            &lt;div class="popup_content"&gt;</span><br><span class="line">                &lt;div class="content_box"&gt;&lt;/div&gt;</span><br><span class="line">                &lt;div class="content_close"&gt;&lt;/div&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></tbody></table></div></div></figure></li>
+</ul>
+<ol start="20">
+<li>隐藏盒子</li>
+</ol>
+<ul>
+<li>overflow：hidden;   //隐藏盒子超出的部分</li>
+<li>display: none;      隐藏盒子，而且不占位置(用的最多)</li>
+<li>visibility: hidden;   //隐藏盒子，占位置。<ul>
+<li>visibility: visible;   //让盒子重新显示</li>
+</ul>
+</li>
+<li>opacity: 0;       //设置盒子的透明度（不建议，因为内容也会半透明），占位置</li>
+<li>Position/top/left/…-999px   //把盒子移得远远的，占位置。</li>
+</ul>
+<ol start="21">
+<li><p>超链接跳转</p>
+<figure class="highlight plain"><div class="table-container"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">href=""                    //刷新页面</span><br><span class="line">href="#"                   //跳转到当前页面的顶部（不会刷新）</span><br><span class="line">href="javascript:void(0)"  // 什么都不做</span><br><span class="line">href="javascript:;"        // 什么都不做</span><br></pre></td></tr></tbody></table></div></div></figure></li>
+<li><p>css实用代码</p>
+<figure class="highlight plain"><div class="table-container"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">// flex布局常用的三行代码</span><br><span class="line">  display: flex;</span><br><span class="line">  justify-content: center; // 子元素在横轴的对齐方式 （左右居中）</span><br><span class="line">  align-items: center;  // 子元素在竖轴的对齐方式（上下居中）</span><br><span class="line"></span><br><span class="line">// 让文字只显示一行，超出显示省略号</span><br><span class="line">overflow: hidden;</span><br><span class="line">white-space: nowrap;</span><br><span class="line">text-overflow: ellipsis;</span><br><span class="line"></span><br><span class="line">// 让文字最多只显示两行，超出后显示省略号</span><br><span class="line">overflow:hidden;</span><br><span class="line">text-overflow:ellipsis;</span><br><span class="line">display:-webkit-box;</span><br><span class="line">-webkit-box-orient:vertical;</span><br><span class="line">-webkit-line-clamp:2;</span><br><span class="line"></span><br><span class="line">// 去掉滚动条 </span><br><span class="line">&amp;::-webkit-scrollbar {</span><br><span class="line">	display: none;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">// 撑满屏幕</span><br><span class="line">width: 100vw;</span><br><span class="line">min-height: 100vh;</span><br><span class="line"></span><br><span class="line">// meta viewport</span><br><span class="line">&lt;meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"&gt;</span><br></pre></td></tr></tbody></table></div></div></figure></li>
+<li><p>CSS面试</p>
+</li>
+</ol>
+<ul>
+<li>你是如何理解 HTML 语义化的？</li>
+<li>举例， 好处</li>
+<li>canvas元素干什么的</li>
+<li><span class="exturl"><span class="exturl"><a class="exturl__link"  class="exturl__link" target="_blank" rel="noopener"  href="https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API" >canvas 入门手册</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>。</li>
+<li>如何清除浮动<ul>
+<li>overflow: hidden</li>
+<li>.clearfix 清除浮动写在父类身上 - clear: both;</li>
+</ul>
+</li>
+<li>伪类和伪元素的区别是什么？</li>
+<li>伪类 - 一种状态，实用单冒号</li>
+<li>伪元素 - 真的有元素，实用双冒号</li>
+</ul>
+
+        
+        <h1 id="JS基础"   >
+          <a href="#JS基础" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#JS基础" class="heading-link"><i class="fas fa-link"></i></a><a href="#JS基础" class="headerlink" title="JS基础"></a>JS基础</h1>
+      
+      
+        
+        <h2 id="JS简介"   >
+          <a href="#JS简介" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#JS简介" class="heading-link"><i class="fas fa-link"></i></a><a href="#JS简介" class="headerlink" title="JS简介"></a>JS简介</h2>
+      
+      <ol>
+<li><p>JS语法</p>
+<figure class="highlight javascript"><div class="table-container"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ES5 写法</span></span><br><span class="line"><span class="keyword">var</span> a;</span><br><span class="line"></span><br><span class="line"><span class="comment">// ES6 写法</span></span><br><span class="line"><span class="keyword">const</span> a;</span><br><span class="line"><span class="keyword">let</span> a;</span><br></pre></td></tr></tbody></table></div></div></figure></li>
+<li><p>JS特点</p>
+</li>
+</ol>
+<ul>
+<li>解释型语言 - 不需要事先被翻译为机器码</li>
+<li>单线程</li>
+<li>ECMAScript标准</li>
+</ul>
+
+        
+        <h2 id="变量"   >
+          <a href="#变量" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#变量" class="heading-link"><i class="fas fa-link"></i></a><a href="#变量" class="headerlink" title="变量"></a>变量</h2>
+      
+      <blockquote>
+<p><strong>变量</strong>：是用于存放数据的容器。我们通过「变量名」获取数据，甚至可以修改数据。<br><strong>本质</strong>：变量是程序在内存中申请的一块用来存放数据的空间。</p>
+</blockquote>
+<ol>
+<li>命名规范</li>
+</ol>
+<ul>
+<li>只能由字母(A-Z、a-z)、数字(0-9)、下划线(_)、美元符( $ )组成</li>
+<li>不能以数字开头</li>
+<li>不用使用 JS 语言中保留的「关键字」和「保留字」作为变量名。</li>
+<li>建议用驼峰命名规则，比如getElementById</li>
+</ul>
+
+        
+        <h2 id="变量数据类型"   >
+          <a href="#变量数据类型" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#变量数据类型" class="heading-link"><i class="fas fa-link"></i></a><a href="#变量数据类型" class="headerlink" title="变量数据类型"></a>变量数据类型</h2>
+      
+      <p>为什么需要数据类型？</p>
+<blockquote>
+<p>在计算机中，不同的数据所需占用的存储空间不同，<br>为了充分利用存储空间，于是定义了不同的数据类型。<br>而且，不同的数据类型，寓意也不同。</p>
+</blockquote>
+<ol>
+<li><p>JS是弱类型语言</p>
+<blockquote>
+<p>在程序运行过程中，类型会自动被确定。根据等号右边的值来确定的</p>
+</blockquote>
+<figure class="highlight javascript"><div class="table-container"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> name = <span class="string">'qianguyihao'</span>;</span><br><span class="line"></span><br><span class="line">name = <span class="number">123</span>; <span class="comment">// 强制将变量 name 修改为 数字类型</span></span><br></pre></td></tr></tbody></table></div></div></figure></li>
+<li><p>JS中一共有六种数据类型</p>
+</li>
+</ol>
+<ul>
+<li><strong>基本数据类型（值类型）</strong>：String 字符串、Number 数值、Boolean 布尔值、Null 空值、Undefined 未定义。</li>
+<li><strong>引用数据类型（引用类型）</strong>：Object 对象。</li>
+<li>注意：内置对象 Function、Array、Date、RegExp、Error等都是属于 Object 类型。也就是说，除了那五种基本数据类型之外，其他的，都称之为 Object类型。</li>
+</ul>
+<ol start="3">
+<li>数据类型之间最大的区别</li>
+</ol>
+<ul>
+<li>基本数据类型：参数赋值的时候，<strong>传数值</strong>。</li>
+<li>引用数据类型：参数赋值的时候，<strong>传地址</strong>（修改的同一片内存空间）。</li>
+</ul>
+<ol start="4">
+<li><p>栈内存和堆内存</p>
+<blockquote>
+<p>JS中，所有的<strong>变量</strong>都是保存在<strong>栈内存</strong>中的。</p>
+</blockquote>
+<blockquote>
+<p><strong>基本数据类型</strong>的值，直接保存在栈内存中。<br>值与值之间是独立存在</p>
+</blockquote>
+<blockquote>
+<p>对象是保存到<strong>堆内存</strong>中的。每创建一个新的对象，<br>就会在堆内存中开辟出一个新的空间；<br>而<strong>变量保存了对象的内存地址</strong>（对象的引用），<br>保存在栈内存当中。如果两个变量保存了同一个对象的引用，<br>当一个通过一个变量修改属性时，另一个也会受到影响。</p>
+</blockquote>
+</li>
+</ol>
+
+        
+        <h2 id="String"   >
+          <a href="#String" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#String" class="heading-link"><i class="fas fa-link"></i></a><a href="#String" class="headerlink" title="String"></a>String</h2>
+      
+      <figure class="highlight plain"><div class="table-container"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var a = "abcde";</span><br><span class="line">console.log(typeof a); //	string</span><br></pre></td></tr></tbody></table></div></div></figure>
+<p>在字符串中我们可以使用<code>\</code>作为转义字符，当表示一些特殊符号时可以使用<code>\</code>进行转义。</p>
+<ul>
+<li><code>\"</code> 表示 <code>"</code> 双引号</li>
+<li><code>\'</code> 表示 <code>'</code> 单引号</li>
+<li><code>\\</code> 表示<code>\</code></li>
+<li><code>\r</code> 表示回车</li>
+<li><code>\n</code> 表示换行。n 的意思是 newline。</li>
+<li><code>\t</code> 表示缩进。t 的意思是 tab。</li>
+<li><code>\b</code> 表示空格。b 的意思是 blank。</li>
+</ul>
+<blockquote>
+<p>字符串特点</p>
+</blockquote>
+<ul>
+<li>获取字符串的长度 - length</li>
+<li>字符串拼接 - 加号 <code>+</code></li>
+<li>字符串的不可变性 - 如果修改了值，其实是开辟了一个空间，改变引用</li>
+</ul>
+<blockquote>
+<p>模板字符串</p>
+</blockquote>
+<ul>
+<li>console.log(<code>我是$&#123;name&#125;,age:$&#123;age&#125;</code>); //ES6 写法。注意语法格式</li>
+<li>console.log(<code>www.$&#123;getName()&#125;.com</code>); // 打印结果：<span class="exturl"><span class="exturl"><a class="exturl__link"  class="exturl__link" target="_blank" rel="noopener"  href="http://www.qianguyihao.com/" >www.qianguyihao.com</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><figure class="highlight js"><div class="table-container"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> nameList = [<span class="string">'千古壹号'</span>, <span class="string">'许嵩'</span>, <span class="string">'解忧少帅'</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myTemplate</span>(<span class="params"></span>) </span>{</span><br><span class="line">	<span class="comment">// join('') 的意思是，把数组里的内容合并成一个字符串</span></span><br><span class="line">	<span class="keyword">return</span> <span class="string">`&lt;ul&gt;</span></span><br><span class="line"><span class="string">	<span class="subst">${nameList</span></span></span><br><span class="line"><span class="string"><span class="subst">		.map((item) =&gt; <span class="string">`&lt;li&gt;<span class="subst">${item}</span>&lt;/li&gt;`</span>)</span></span></span><br><span class="line"><span class="string"><span class="subst">		.join(<span class="string">''</span>)}</span></span></span><br><span class="line"><span class="string">	&lt;/ul&gt;`</span>;</span><br><span class="line">}</span><br><span class="line"><span class="built_in">document</span>.body.innerHTML = myTemplate();</span><br><span class="line"></span><br></pre></td></tr></tbody></table></div></div></figure>
+</li>
+</ul>
+
+        
+        <h2 id="Boolean"   >
+          <a href="#Boolean" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#Boolean" class="heading-link"><i class="fas fa-link"></i></a><a href="#Boolean" class="headerlink" title="Boolean"></a>Boolean</h2>
+      
+      <blockquote>
+<p>布尔型有两个值：true 和 false。主要用来做逻辑判断： true 表示真，false 表示假。<br>布尔型和数字型相加时， true 按 1 来算 ，false 按 0 来算。</p>
+</blockquote>
+<figure class="highlight javascript"><div class="table-container"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="literal">true</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> a);</span><br></pre></td></tr></tbody></table></div></div></figure>
+
+
+
+        
+        <h2 id="Number"   >
+          <a href="#Number" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#Number" class="heading-link"><i class="fas fa-link"></i></a><a href="#Number" class="headerlink" title="Number"></a>Number</h2>
+      
+      <blockquote>
+<p>在JS中所有的数值都是 Number 类型，包括整数和浮点数（小数）。</p>
+</blockquote>
+<figure class="highlight javascript"><div class="table-container"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">100</span>; <span class="comment">// 定义一个变量 a，并且赋值整数100</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> a); <span class="comment">// 输出变量 a 的类型</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> b = <span class="number">12.3</span>; <span class="comment">// 定义一个变量 b，并且赋值浮点数 12.3</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> a);</span><br></pre></td></tr></tbody></table></div></div></figure>
+
+<p>数值范围</p>
+<ul>
+<li>最大值：<code>Number.MAX_VALUE</code>，这个值为： 1.7976931348623157e+308</li>
+<li>最小值：<code>Number.MIN_VALUE</code>，这个值为： 5e-324</li>
+<li>如果使用 Number 表示的变量超过了最大值，则会返回Infinity。</li>
+<li>无穷大（正无穷）：Infinity</li>
+<li>无穷小（负无穷）：-Infinity<blockquote>
+<p>注意：<code>typeof Infinity</code>的返回结果是number。</p>
+</blockquote>
+</li>
+</ul>
+<p>NaN</p>
+<blockquote>
+<p><strong>NaN</strong>：是一个特殊的数字，表示Not a Number，非数值。比如：<br>注意：<code>typeof NaN</code>的返回结果是 number。<br>Undefined和任何数值计算的结果为 NaN。NaN 与任何值都不相等，包括 NaN 本身。</p>
+</blockquote>
+<figure class="highlight javascript"><div class="table-container"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">"abc"</span> / <span class="number">18</span>);  <span class="comment">//结果是NaN</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"abc"</span> * <span class="string">"abcd"</span>); <span class="comment">//按理说，字符串相乘是没有结果的，但如果你非要让JS去算，它就一定会给你一个结果。结果是NaN</span></span><br></pre></td></tr></tbody></table></div></div></figure>
+
+
+<p>隐式转换</p>
+<blockquote>
+<p><code>"2"+1</code>得到的结果其实是字符串，但是<code>"2"-1</code>得到的结果却是数值1，这是因为计算机自动帮我们进行了“<strong>隐式转换</strong>”。<br><code>-</code>、<code>*</code>、<code>/</code>、<code>%</code>这几个符号会自动进行隐式转换。例如：</p>
+</blockquote>
+<figure class="highlight javascript"><div class="table-container"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="string">"4"</span> + <span class="number">3</span> - <span class="number">6</span>;</span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">// 37</span></span><br></pre></td></tr></tbody></table></div></div></figure>
+
+
+
+
+        
+        <h2 id="Null"   >
+          <a href="#Null" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#Null" class="heading-link"><i class="fas fa-link"></i></a><a href="#Null" class="headerlink" title="Null"></a>Null</h2>
+      
+      <blockquote>
+<p>null 专门用来定义一个<strong>空对象</strong>（例如：<code>let a = null</code>）。<br>如果你想定义一个变量用来保存引用类型，但是还没想好放什么内容，这个时候，可以在初始化时将其设置为 null。</p>
+</blockquote>
+<figure class="highlight js"><div class="table-container"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> myObj = <span class="literal">null</span>;</span><br><span class="line">cosole.log(<span class="keyword">typeof</span> myObj); <span class="comment">// 打印结果：object</span></span><br></pre></td></tr></tbody></table></div></div></figure>
+
+
+        
+        <h2 id="undefined"   >
+          <a href="#undefined" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#undefined" class="heading-link"><i class="fas fa-link"></i></a><a href="#undefined" class="headerlink" title="undefined"></a>undefined</h2>
+      
+      <blockquote>
+<p><strong>声明</strong>了一个变量，但没有<strong>赋值</strong>，此时它的值就是 <code>undefined</code>。举例：<br>使用 typeof 检查一个 undefined 值时，会返回 undefined。<br>如果你从未声明一个变量，就去使用它，则会报错（这个大家都知道）；此时，如果用 <code>typeof</code> 检查这个变量时，会返回 <code>undefined</code>。举例：</p>
+</blockquote>
+<figure class="highlight js"><div class="table-container"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name;</span><br><span class="line"><span class="built_in">console</span>.log(name); <span class="comment">// 打印结果：undefined</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> name); <span class="comment">// 打印结果：undefined</span></span><br></pre></td></tr></tbody></table></div></div></figure>
+
+<blockquote>
+<p>如果一个函数没有返回值，那么，这个函数的返回值就是 undefined。</p>
+</blockquote>
+<figure class="highlight js"><div class="table-container"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>{}</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(foo()); <span class="comment">// 打印结果：undefined</span></span><br></pre></td></tr></tbody></table></div></div></figure>
+
+
+<blockquote>
+<p>调用函数时，未传参</p>
+</blockquote>
+<figure class="highlight js"><div class="table-container"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">name</span>) </span>{</span><br><span class="line">    <span class="built_in">console</span>.log(name);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">foo(); <span class="comment">// 调用函数时，未传参。执行函数后的打印结果：undefined</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">-----------</span><br><span class="line">实际开发中，如果调用函数时没有传参，我们可以给形参设置一个默认值：</span><br><span class="line"></span><br><span class="line">js</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">name</span>) </span>{</span><br><span class="line">    name = name || <span class="string">'qianguyihao'</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">foo();</span><br><span class="line"></span><br><span class="line">-----------</span><br><span class="line">等学习了 ES6 之后，上方代码也可以这样写：</span><br><span class="line">js</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">name = <span class="string">'qianguyihao'</span></span>) </span>{}</span><br><span class="line"></span><br><span class="line">foo();</span><br><span class="line"></span><br></pre></td></tr></tbody></table></div></div></figure>
+
+<p>null 和undefined的相似性<br>看看 <code>null == undefined</code> 的结果为 <code>true</code><br>但是 <code>null === undefined</code> 的结果是 false。它们虽然相似，但还是有区别的，其中一个区别是，和数字运算时：</p>
+<figure class="highlight js"><div class="table-container"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">- <span class="number">10</span> + <span class="literal">null</span> 结果为 <span class="number">10</span>。</span><br><span class="line">- <span class="number">10</span> + <span class="literal">undefined</span> 结果为 <span class="literal">NaN</span>。</span><br><span class="line"></span><br><span class="line">规律总结：</span><br><span class="line">- 任何数据类型和 <span class="literal">undefined</span> 运算都是 <span class="literal">NaN</span>;</span><br><span class="line">- 任何值和 <span class="literal">null</span> 运算，<span class="literal">null</span> 可看做 <span class="number">0</span> 运算。</span><br></pre></td></tr></tbody></table></div></div></figure>
+
+
+
+        
+        <h2 id="数据类型转换"   >
+          <a href="#数据类型转换" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#数据类型转换" class="heading-link"><i class="fas fa-link"></i></a><a href="#数据类型转换" class="headerlink" title="数据类型转换"></a>数据类型转换</h2>
+      
+      <p><code>typeof()</code>表示“<strong>获取变量的数据类型</strong>”，返回的是小写，语法为：（两种写法都可以）</p>
+<ul>
+<li>转换为字符串类型</li>
+<li>转换为数字型</li>
+<li>转换为布尔型</li>
+</ul>
+<div class="table-container"><div class="table-container"><table>
+<thead>
+<tr>
+<th align="left">typeof 的代码写法</th>
+<th align="center">返回结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">typeof 数字</td>
+<td align="center">number</td>
+</tr>
+<tr>
+<td align="left">typeof 字符串</td>
+<td align="center">string</td>
+</tr>
+<tr>
+<td align="left">typeof 布尔型</td>
+<td align="center">boolean</td>
+</tr>
+<tr>
+<td align="left">typeof 对象</td>
+<td align="center">object</td>
+</tr>
+<tr>
+<td align="left">typeof 方法</td>
+<td align="center">function</td>
+</tr>
+<tr>
+<td align="left">typeof null</td>
+<td align="center">object</td>
+</tr>
+<tr>
+<td align="left">typeof undefined</td>
+<td align="center">undefined</td>
+</tr>
+</tbody></table></div></div>
+<p>备注 1：为啥 <code>typeof null</code>的返回值也是 object 呢？因为 null 代表的是<strong>空对象</strong>。<br>备注 2：<code>typeof NaN</code>的返回值是 number，NaN 是一个特殊的数字。</p>
+<figure class="highlight javascript"><div class="table-container"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> []); <span class="comment">// 空数组的打印结果：object</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> {}); <span class="comment">// 空对象的打印结果：object</span></span><br><span class="line"></span><br><span class="line">代码解释：这里的空数组<span class="string">`[]`</span>、空对象<span class="string">`{}`</span> ，为啥他们在使用 <span class="keyword">typeof</span> 时，返回值也是 <span class="string">`object`</span>呢？</span><br><span class="line">因为这里的 返回结果<span class="string">`object`</span>指的是**引用数据类型**。</span><br><span class="line">空数组、空对象都是**引用数据类型 <span class="built_in">Object</span>**。</span><br></pre></td></tr></tbody></table></div></div></figure>
+
+<p>typeof 无法区分数组，但 instanceof 可以。比如：</p>
+<figure class="highlight js"><div class="table-container"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log([] <span class="keyword">instanceof</span> <span class="built_in">Array</span>); <span class="comment">// 打印结果：true</span></span><br><span class="line"><span class="built_in">console</span>.log({} <span class="keyword">instanceof</span> <span class="built_in">Array</span>); <span class="comment">// 打印结果：false</span></span><br></pre></td></tr></tbody></table></div></div></figure>
+
+
+<p>类型转换分为两种：显示类型转换、隐式类型转换。</p>
+<figure class="highlight plain"><div class="table-container"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">显示类型转换</span><br><span class="line">- toString()</span><br><span class="line">- String()</span><br><span class="line">- Number()</span><br><span class="line">- parseInt(string)</span><br><span class="line">- parseFloat(string)</span><br><span class="line">- Boolean()</span><br></pre></td></tr></tbody></table></div></div></figure>
+
+<figure class="highlight plain"><div class="table-container"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">隐式类型转换</span><br><span class="line">- isNaN ()</span><br><span class="line">- 自增/自减运算符：`++`、`—-`</span><br><span class="line">- 正号/负号：`+a`、`-a`</span><br><span class="line">- 加号：`+`</span><br><span class="line">- 运算符：`-`、`*`、`/`</span><br></pre></td></tr></tbody></table></div></div></figure>
+
+<figure class="highlight plain"><div class="table-container"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">隐式类型转换（特殊）</span><br><span class="line">- 逻辑运算符：`&amp;&amp;`、`||`、`！` 。非布尔值进行**与或**运算时，</span><br><span class="line">- 会先将其转换为布尔值，然后再运算，但运算结果是**原值**。</span><br><span class="line">- </span><br><span class="line">- 关系运算符：`&lt;`、`&gt;` `&lt;=` `&gt;=`等。关系运算符，得到的运算结果都是布尔值：</span><br><span class="line">- 要么是true，要么是false。具体可以看下一篇文章《运算符》。</span><br><span class="line"></span><br></pre></td></tr></tbody></table></div></div></figure>
+
+
+
+
+        
+        <h1 id="JS-ES6"   >
+          <a href="#JS-ES6" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#JS-ES6" class="heading-link"><i class="fas fa-link"></i></a><a href="#JS-ES6" class="headerlink" title="JS-ES6"></a>JS-ES6</h1>
+      
+      
+        
+        <h1 id="JS-异步"   >
+          <a href="#JS-异步" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#JS-异步" class="heading-link"><i class="fas fa-link"></i></a><a href="#JS-异步" class="headerlink" title="JS-异步"></a>JS-异步</h1>
+      
+      
+        
+        <h1 id="JS进阶"   >
+          <a href="#JS进阶" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#JS进阶" class="heading-link"><i class="fas fa-link"></i></a><a href="#JS进阶" class="headerlink" title="JS进阶"></a>JS进阶</h1>
+      
+      
+        
+        <h1 id="CSS-amp-DOM"   >
+          <a href="#CSS-amp-DOM" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#CSS-amp-DOM" class="heading-link"><i class="fas fa-link"></i></a><a href="#CSS-amp-DOM" class="headerlink" title="CSS&amp;DOM"></a>CSS&amp;DOM</h1>
+      
+      
+        
+        <h1 id="移动Web"   >
+          <a href="#移动Web" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#移动Web" class="heading-link"><i class="fas fa-link"></i></a><a href="#移动Web" class="headerlink" title="移动Web"></a>移动Web</h1>
+      
+      
+        
+        <h1 id="MySQL"   >
+          <a href="#MySQL" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#MySQL" class="heading-link"><i class="fas fa-link"></i></a><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h1>
+      
+      
+        
+        <h1 id="Node-js"   >
+          <a href="#Node-js" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#Node-js" class="heading-link"><i class="fas fa-link"></i></a><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h1>
+      
+      
+        
+        <h1 id="Vue基础"   >
+          <a href="#Vue基础" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#Vue基础" class="heading-link"><i class="fas fa-link"></i></a><a href="#Vue基础" class="headerlink" title="Vue基础"></a>Vue基础</h1>
+      
+      
+        
+        <h1 id="React基础"   >
+          <a href="#React基础" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#React基础" class="heading-link"><i class="fas fa-link"></i></a><a href="#React基础" class="headerlink" title="React基础"></a>React基础</h1>
+      
+      
+        
+        <h1 id="前端性能优化"   >
+          <a href="#前端性能优化" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#前端性能优化" class="heading-link"><i class="fas fa-link"></i></a><a href="#前端性能优化" class="headerlink" title="前端性能优化"></a>前端性能优化</h1>
+      
+      
+        
+        <h1 id="前端面试"   >
+          <a href="#前端面试" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#前端面试" class="heading-link"><i class="fas fa-link"></i></a><a href="#前端面试" class="headerlink" title="前端面试"></a>前端面试</h1>
+      
+      
+        
+        <h1 id="前端工程化"   >
+          <a href="#前端工程化" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#前端工程化" class="heading-link"><i class="fas fa-link"></i></a><a href="#前端工程化" class="headerlink" title="前端工程化"></a>前端工程化</h1>
+      
+      
+        
+        <h1 id="前端综合"   >
+          <a href="#前端综合" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#前端综合" class="heading-link"><i class="fas fa-link"></i></a><a href="#前端综合" class="headerlink" title="前端综合"></a>前端综合</h1>
+      
+      
+        
+        <h1 id="推荐链接"   >
+          <a href="#推荐链接" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#推荐链接" class="heading-link"><i class="fas fa-link"></i></a><a href="#推荐链接" class="headerlink" title="推荐链接"></a>推荐链接</h1>
+      
+
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="https://37waterfall.github.io">37waterfall</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="https://37waterfall.github.io/2021/09/02/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/">https://37waterfall.github.io/2021/09/02/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://37waterfall.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2021/09/07/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B&amp;%E8%BD%AC%E6%8D%A2/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">数据类型&amp;转换</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2021/08/29/%E5%8D%9A%E5%AE%A2%E5%AD%A6%E4%B9%A0/"><span class="paginator-prev__text">博客学习</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#HTML"><span class="toc-number">1.</span> <span class="toc-text">
+          
+          HTML</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-number">1.1.</span> <span class="toc-text">
+          
+          基础知识点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">1.2.</span> <span class="toc-text">
+          
+          HTML基础知识</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CSS%E5%9F%BA%E7%A1%80"><span class="toc-number">2.</span> <span class="toc-text">
+          
+          CSS基础</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JS%E5%9F%BA%E7%A1%80"><span class="toc-number">3.</span> <span class="toc-text">
+          
+          JS基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#JS%E7%AE%80%E4%BB%8B"><span class="toc-number">3.1.</span> <span class="toc-text">
+          
+          JS简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%98%E9%87%8F"><span class="toc-number">3.2.</span> <span class="toc-text">
+          
+          变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">3.3.</span> <span class="toc-text">
+          
+          变量数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#String"><span class="toc-number">3.4.</span> <span class="toc-text">
+          
+          String</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Boolean"><span class="toc-number">3.5.</span> <span class="toc-text">
+          
+          Boolean</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Number"><span class="toc-number">3.6.</span> <span class="toc-text">
+          
+          Number</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Null"><span class="toc-number">3.7.</span> <span class="toc-text">
+          
+          Null</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">3.8.</span> <span class="toc-text">
+          
+          undefined</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">3.9.</span> <span class="toc-text">
+          
+          数据类型转换</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JS-ES6"><span class="toc-number">4.</span> <span class="toc-text">
+          
+          JS-ES6</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JS-%E5%BC%82%E6%AD%A5"><span class="toc-number">5.</span> <span class="toc-text">
+          
+          JS-异步</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JS%E8%BF%9B%E9%98%B6"><span class="toc-number">6.</span> <span class="toc-text">
+          
+          JS进阶</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CSS-amp-DOM"><span class="toc-number">7.</span> <span class="toc-text">
+          
+          CSS&amp;DOM</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%A7%BB%E5%8A%A8Web"><span class="toc-number">8.</span> <span class="toc-text">
+          
+          移动Web</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#MySQL"><span class="toc-number">9.</span> <span class="toc-text">
+          
+          MySQL</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Node-js"><span class="toc-number">10.</span> <span class="toc-text">
+          
+          Node.js</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Vue%E5%9F%BA%E7%A1%80"><span class="toc-number">11.</span> <span class="toc-text">
+          
+          Vue基础</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#React%E5%9F%BA%E7%A1%80"><span class="toc-number">12.</span> <span class="toc-text">
+          
+          React基础</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96"><span class="toc-number">13.</span> <span class="toc-text">
+          
+          前端性能优化</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95"><span class="toc-number">14.</span> <span class="toc-text">
+          
+          前端面试</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96"><span class="toc-number">15.</span> <span class="toc-text">
+          
+          前端工程化</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E7%AB%AF%E7%BB%BC%E5%90%88"><span class="toc-number">16.</span> <span class="toc-text">
+          
+          前端综合</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8E%A8%E8%8D%90%E9%93%BE%E6%8E%A5"><span class="toc-number">17.</span> <span class="toc-text">
+          
+          推荐链接</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/icons/stun-logo.svg" alt="avatar"></div><p class="sidebar-ov-author__text">Hello Stun</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">41</div><div class="sidebar-ov-state-item__name">档案</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2026</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>37waterfall</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v8.1.2</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.8.0</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=2.8.0"></script><script src="/js/stun-boot.js?v=2.8.0"></script><script src="/js/scroll.js?v=2.8.0"></script><script src="/js/header.js?v=2.8.0"></script><script src="/js/sidebar.js?v=2.8.0"></script></body></html>

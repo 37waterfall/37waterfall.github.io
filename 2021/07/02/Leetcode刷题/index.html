@@ -1,0 +1,464 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.8.0" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.8.0" type="image/png" sizes="32x32"><meta name="description" content="js刷题，重点是思路。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Leetcode刷题">
+<meta property="og:url" content="https://37waterfall.github.io/2021/07/02/Leetcode%E5%88%B7%E9%A2%98/index.html">
+<meta property="og:site_name" content="LJY_BLOG">
+<meta property="og:description" content="js刷题，重点是思路。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cp-wiki.vercel.app/assets/img/segment-tree.8de86537.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210110174033215.png">
+<meta property="og:image" content="https://assets.leetcode.com/uploads/2020/11/04/robot1.jpg">
+<meta property="article:published_time" content="2021-07-01T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-06-03T16:00:00.000Z">
+<meta property="article:author" content="37waterfall">
+<meta property="article:tag" content="学习笔记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cp-wiki.vercel.app/assets/img/segment-tree.8de86537.png"><title>Leetcode刷题 | LJY_BLOG</title><link ref="canonical" href="https://37waterfall.github.io/2021/07/02/Leetcode%E5%88%B7%E9%A2%98/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.8.0"><link rel="stylesheet" href="css/custom.css"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 8.1.2"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">主页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">档案</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/reading/"><span class="header-nav-menu-item__icon"><i class="fas fa-book"></i></span><span class="header-nav-menu-item__text">阅读</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">LJY_BLOG</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">Leetcode刷题</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2021-07-02</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-06-04</span></span></div></header><div class="post-body">
+
+<p>js刷题，重点是思路。</p>
+
+<span id="more"></span>
+
+<p>分类汇总，收集知识点。👨‍🚀</p>
+<span id="more"></span>
+
+
+        
+        <h1 id="学习链接"   >
+          <a href="#学习链接" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#学习链接" class="heading-link"><i class="fas fa-link"></i></a><a href="#学习链接" class="headerlink" title="学习链接"></a>学习链接</h1>
+      
+      <p><span class="exturl"><span class="exturl"><a class="exturl__link"  class="exturl__link" target="_blank" rel="noopener"  href="https://cp-wiki.vercel.app/basic/enumerate/" >CP Wiki</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><span class="exturl"><a class="exturl__link"  class="exturl__link" target="_blank" rel="noopener"  href="https://github.com/SharingSource/LogicStack-LeetCode/wiki/%E6%A8%A1%E6%8B%9F" >三叶题库</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><span class="exturl"><a class="exturl__link"  class="exturl__link" target="_blank" rel="noopener"  href="https://programmercarl.com/%E6%95%B0%E7%BB%84%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80.html" >代码随想录</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><span class="exturl"><a class="exturl__link"  class="exturl__link" target="_blank" rel="noopener"  href="http://www.cyc2018.xyz/" >CS-Notes</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><span class="exturl"><a class="exturl__link"  class="exturl__link" target="_blank" rel="noopener"  href="https://leetcode-cn.com/leetbook/detail/illustration-of-algorithm/" >图解算法数据结构</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><span class="exturl"><a class="exturl__link"  class="exturl__link" target="_blank" rel="noopener"  href="https://xiaochen1024.com/courseware/60b4f11ab1aa91002eb53b18/61963bcdc1553b002e57bf13" >搞定大厂算法面试之leetcode精讲</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><span class="exturl"><a class="exturl__link"  class="exturl__link" target="_blank" rel="noopener"  href="https://codetop.cc/home" >CodeTop</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>题目会变动。。</p>
+<p><span class="exturl"><span class="exturl"><a class="exturl__link"  class="exturl__link" target="_blank" rel="noopener"  href="https://visualgo.net/en" >visualgo</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>可视化数据结构！</p>
+
+        
+        <h1 id="基础算法"   >
+          <a href="#基础算法" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#基础算法" class="heading-link"><i class="fas fa-link"></i></a><a href="#基础算法" class="headerlink" title="基础算法"></a>基础算法</h1>
+      
+      <p>这里的题选的都很好啊！<br>来自<span class="exturl"><span class="exturl"><a class="exturl__link"  class="exturl__link" target="_blank" rel="noopener"  href="https://cp-wiki.vercel.app/basic/enumerate/" >CP Wiki</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        
+        <h2 id="枚举"   >
+          <a href="#枚举" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#枚举" class="heading-link"><i class="fas fa-link"></i></a><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h2>
+      
+      <p>枚举就是指尝试所有可能的情况。<br>枚举的顺序可能影响程序的运行效率。<br>用二进制数表示状态的方法被称为状态压缩。</p>
+<p>枚举子集</p>
+<figure class="highlight plain"><div class="table-container"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">for (int i = 1; i &lt; (1 &lt;&lt; n); ++i) {</span><br><span class="line">    for (int j = i; j; j = (j - 1) &amp; i) {</span><br><span class="line">        // ...</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></div></figure>
+
+<p>折半搜索（Meet in the middle），是一种对暴力枚举的优化策略。</p>
+<p>练习题</p>
+
+        
+        <h3 id="LC46-全排列-opens-new-window"   >
+          <a href="#LC46-全排列-opens-new-window" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#LC46-全排列-opens-new-window" class="heading-link"><i class="fas fa-link"></i></a><a href="#LC46-全排列-opens-new-window" class="headerlink" title="LC46 - 全排列(opens new window)"></a>LC46 - 全排列(opens new window)</h3>
+      
+      <p>枚举<strong>不含重复</strong>元素数组的全排列。</p>
+<figure class="highlight plain"><div class="table-container"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">const res = [], path = [];</span><br><span class="line">backtracking([]);</span><br><span class="line">return res;</span><br><span class="line"></span><br><span class="line">function backtracking(used) { // 使用used进行标记。</span><br><span class="line">    if(path.length === nums.length) {</span><br><span class="line">        res.push(Array.from(path));</span><br><span class="line">        return;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    for(let i = 0; i &lt; nums.length; i++) {</span><br><span class="line">        if(used[i]) continue; //判断</span><br><span class="line"></span><br><span class="line">        path.push(nums[i]);</span><br><span class="line">        used[i] = true;</span><br><span class="line"></span><br><span class="line">        backtracking(used);</span><br><span class="line"></span><br><span class="line">        path.pop(); // 回溯</span><br><span class="line">        used[i] = false;</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></div></div></figure>
+
+
+        
+        <h3 id="LC47-全排列-II-opens-new-window"   >
+          <a href="#LC47-全排列-II-opens-new-window" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#LC47-全排列-II-opens-new-window" class="heading-link"><i class="fas fa-link"></i></a><a href="#LC47-全排列-II-opens-new-window" class="headerlink" title="LC47 - 全排列 II(opens new window)"></a>LC47 - 全排列 II(opens new window)</h3>
+      
+      <p>枚举<strong>含有重复</strong>元素数组的全排列。</p>
+<p>含有重复的重点，就是要去重，去重先要排序！！</p>
+<figure class="highlight plain"><div class="table-container"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">let res = [], path = [];</span><br><span class="line">nums.sort((a, b) =&gt; a - b) // 排序</span><br><span class="line">backtracking([]);</span><br><span class="line">return res;</span><br><span class="line">	</span><br><span class="line">function backtracking(used) {</span><br><span class="line">    if(path.length === nums.length) {</span><br><span class="line">        res.push(Array.from(path));</span><br><span class="line">        return;</span><br><span class="line">    }</span><br><span class="line">    for(let i = 0; i &lt; nums.length; i++) {</span><br><span class="line">		// 去重，used[i - 1] === false，在树层上去重</span><br><span class="line">        if(i &gt; 0 &amp;&amp; nums[i] === nums[i - 1] &amp;&amp; used[i - 1] === false) continue;</span><br><span class="line">			</span><br><span class="line">        if(!used[i]) {</span><br><span class="line">            path.push(nums[i]);</span><br><span class="line">            used[i] = true;</span><br><span class="line">					</span><br><span class="line">            backtracking(used);</span><br><span class="line">					</span><br><span class="line">            path.pop();</span><br><span class="line">            used[i] = false;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></div></figure>
+
+
+        
+        <h3 id="LC1494-并行课程-II-opens-new-window"   >
+          <a href="#LC1494-并行课程-II-opens-new-window" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#LC1494-并行课程-II-opens-new-window" class="heading-link"><i class="fas fa-link"></i></a><a href="#LC1494-并行课程-II-opens-new-window" class="headerlink" title="LC1494 - 并行课程 II(opens new window)"></a>LC1494 - 并行课程 II(opens new window)</h3>
+      
+      <p>枚举子集。</p>
+
+        
+        <h3 id="LC805-数组的均值分割-opens-new-window"   >
+          <a href="#LC805-数组的均值分割-opens-new-window" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#LC805-数组的均值分割-opens-new-window" class="heading-link"><i class="fas fa-link"></i></a><a href="#LC805-数组的均值分割-opens-new-window" class="headerlink" title="LC805 - 数组的均值分割(opens new window)"></a>LC805 - 数组的均值分割(opens new window)</h3>
+      
+      <p>折半搜索。</p>
+
+        
+        <h2 id="排序"   >
+          <a href="#排序" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#排序" class="heading-link"><i class="fas fa-link"></i></a><a href="#排序" class="headerlink" title="排序"></a>排序</h2>
+      
+      
+        
+        <h3 id="493-翻转对"   >
+          <a href="#493-翻转对" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#493-翻转对" class="heading-link"><i class="fas fa-link"></i></a><a href="#493-翻转对" class="headerlink" title="493. 翻转对"></a>493. 翻转对</h3>
+      
+      <p>归并排序</p>
+
+        
+        <h3 id="1665-完成所有任务的最少初始能量"   >
+          <a href="#1665-完成所有任务的最少初始能量" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#1665-完成所有任务的最少初始能量" class="heading-link"><i class="fas fa-link"></i></a><a href="#1665-完成所有任务的最少初始能量" class="headerlink" title="1665. 完成所有任务的最少初始能量"></a>1665. 完成所有任务的最少初始能量</h3>
+      
+      <blockquote>
+<p>按照剩余能量（要求减去实际消耗）降序排列，剩余能量多的先处理，剩余能量少的后处理。</p>
+</blockquote>
+<p>还要再理解理解。。</p>
+<figure class="highlight plain"><div class="table-container"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">tasks.sort((pre, next) =&gt; {</span><br><span class="line">       return (next[1] - next[0]) - (pre[1] - pre[0])</span><br><span class="line">   })</span><br><span class="line">   let result = 0, restNums = 0</span><br><span class="line">   for (let i = 0; i &lt; tasks.length; i++) {</span><br><span class="line">       result += ((tasks[i][1] - restNums &gt; 0) ? (tasks[i][1] - restNums) : 0)</span><br><span class="line">       tasks[i][1] - restNums &gt; 0 &amp;&amp; (restNums = tasks[i][1])</span><br><span class="line">			</span><br><span class="line">       restNums -= tasks[i][0]</span><br><span class="line">   }</span><br><span class="line">   return result</span><br></pre></td></tr></tbody></table></div></div></figure>
+
+
+        
+        <h2 id="二分查找"   >
+          <a href="#二分查找" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#二分查找" class="heading-link"><i class="fas fa-link"></i></a><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h2>
+      
+      <p>重点： 有序，找中点，缩小范围。<br>二分查找的复杂度是O(logN)。</p>
+
+        
+        <h3 id="1482-制作-m-束花所需的最少天数"   >
+          <a href="#1482-制作-m-束花所需的最少天数" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#1482-制作-m-束花所需的最少天数" class="heading-link"><i class="fas fa-link"></i></a><a href="#1482-制作-m-束花所需的最少天数" class="headerlink" title="1482. 制作 m 束花所需的最少天数"></a>1482. 制作 m 束花所需的最少天数</h3>
+      
+      <p>有点懂。</p>
+<figure class="highlight plain"><div class="table-container"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">var minDays = function(bloomDay, m, k) {</span><br><span class="line"></span><br><span class="line">    if(m &gt; bloomDay.length / k) { // 同 m * k &gt; bloomDay.length</span><br><span class="line">        return -1;</span><br><span class="line">    }</span><br><span class="line">    let low = Math.min.apply(null, bloomDay), high = Math.max.apply(null, bloomDay);</span><br><span class="line">    // console.log(low, high)</span><br><span class="line">    while(low &lt; high) {</span><br><span class="line">        const days = Math.floor((high - low) / 2) + low;</span><br><span class="line"></span><br><span class="line">        if(canMake(bloomDay, days, m, k)) {</span><br><span class="line">            high = days;</span><br><span class="line">        } else {</span><br><span class="line">            low = days + 1; // 边界。</span><br><span class="line">        }</span><br><span class="line">        console.log(low, high,'000', days);</span><br><span class="line">    }</span><br><span class="line">    return low;</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line">const canMake = (bloomDay, days, m, k) =&gt; {</span><br><span class="line">    let bouquets = 0;</span><br><span class="line">    let flowers = 0;</span><br><span class="line">    const length = bloomDay.length;</span><br><span class="line"></span><br><span class="line">    for(let i = 0; i &lt; length &amp;&amp; bouquets &lt; m; i++) {</span><br><span class="line">        if(bloomDay[i] &lt;= days) {</span><br><span class="line">            flowers++;</span><br><span class="line">            if(flowers === k) {</span><br><span class="line">                bouquets++; // 二分</span><br><span class="line">                flowers = 0;</span><br><span class="line">            }</span><br><span class="line">        } else {</span><br><span class="line">            flowers = 0;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    return bouquets &gt;= m; // 二分成立</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></div></figure>
+
+
+
+
+
+        
+        <h2 id="三分查找"   >
+          <a href="#三分查找" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#三分查找" class="heading-link"><i class="fas fa-link"></i></a><a href="#三分查找" class="headerlink" title="三分查找"></a>三分查找</h2>
+      
+      <blockquote>
+<p>二分查找要求数组或范围满足一定意义上的有序性，三分查找则是针对数组或范围满足单峰或单谷的特性，即可能是先递增后递减，或先递减后递增。</p>
+</blockquote>
+<blockquote>
+<p>针对高维空间，可以在固定前kk维的情况下对第k+1k+1维进行三分查找，这样一层层进行下去，也就是所谓的三分套三分。</p>
+</blockquote>
+
+        
+        <h3 id="1515-服务中心的最佳位置"   >
+          <a href="#1515-服务中心的最佳位置" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#1515-服务中心的最佳位置" class="heading-link"><i class="fas fa-link"></i></a><a href="#1515-服务中心的最佳位置" class="headerlink" title="1515. 服务中心的最佳位置"></a>1515. 服务中心的最佳位置</h3>
+      
+      
+        
+        <h1 id="数据结构"   >
+          <a href="#数据结构" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#数据结构" class="heading-link"><i class="fas fa-link"></i></a><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1>
+      
+      
+        
+        <h2 id="栈"   >
+          <a href="#栈" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#栈" class="heading-link"><i class="fas fa-link"></i></a><a href="#栈" class="headerlink" title="栈"></a>栈</h2>
+      
+      <blockquote>
+<p>栈（Stack）是一种具有后进先出特性的线性数据结构。</p>
+</blockquote>
+<blockquote>
+<p>单调栈（Monotonic Stack）在数据结构层面就是最普通的栈，但我们需要在新元素入栈时维护一个栈的单调性，使栈中的元素始终保持升序或降序。<br>在一类与区间有关的问题中，单调栈可以实现O(N)O(N)的复杂度，因为每个元素至多入栈和出栈一次。</p>
+</blockquote>
+
+        
+        <h3 id="42-接雨水"   >
+          <a href="#42-接雨水" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#42-接雨水" class="heading-link"><i class="fas fa-link"></i></a><a href="#42-接雨水" class="headerlink" title="42. 接雨水"></a>42. 接雨水</h3>
+      
+      <p>动态规划解法</p>
+<blockquote>
+<p>对于下标 i，下雨后水能到达的最大高度等于下标 i <strong>两边的最大高度的最小值</strong>，<br>下标 i 处能接的雨水量等于下标 i 处的水能到达的**最大高度减去 height[i]**。</p>
+</blockquote>
+<p>单调栈解法</p>
+
+        
+        <h3 id="84-柱状图中最大的矩形"   >
+          <a href="#84-柱状图中最大的矩形" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#84-柱状图中最大的矩形" class="heading-link"><i class="fas fa-link"></i></a><a href="#84-柱状图中最大的矩形" class="headerlink" title="84. 柱状图中最大的矩形"></a>84. 柱状图中最大的矩形</h3>
+      
+      
+        
+        <h2 id="队列"   >
+          <a href="#队列" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#队列" class="heading-link"><i class="fas fa-link"></i></a><a href="#队列" class="headerlink" title="队列"></a>队列</h2>
+      
+      
+        
+        <h3 id="862-和至少为-K-的最短子数组"   >
+          <a href="#862-和至少为-K-的最短子数组" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#862-和至少为-K-的最短子数组" class="heading-link"><i class="fas fa-link"></i></a><a href="#862-和至少为-K-的最短子数组" class="headerlink" title="862. 和至少为 K 的最短子数组"></a>862. 和至少为 K 的最短子数组</h3>
+      
+      <p>子数组 是数组中 连续 的一部分。</p>
+<p>前缀和 + 单调队列</p>
+
+        
+        <h2 id="进阶数据结构"   >
+          <a href="#进阶数据结构" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#进阶数据结构" class="heading-link"><i class="fas fa-link"></i></a><a href="#进阶数据结构" class="headerlink" title="进阶数据结构"></a>进阶数据结构</h2>
+      
+      <p>了解了解。。</p>
+
+        
+        <h3 id="平衡二叉搜索树"   >
+          <a href="#平衡二叉搜索树" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#平衡二叉搜索树" class="heading-link"><i class="fas fa-link"></i></a><a href="#平衡二叉搜索树" class="headerlink" title="平衡二叉搜索树"></a>平衡二叉搜索树</h3>
+      
+      <p>二叉搜索树是一类特殊的带权（点权）二叉树</p>
+<p>它的特点是，每个节点的权值总是大于其左子树中任何节点的权值，同时小于其右子树中任何节点的权值。</p>
+<p>在二叉搜索树中进行查找、插入、删除等操作的时间复杂度为O(h)，其中hh为树高。</p>
+<p>如果它的所有节点都只有左孩子，此时二叉搜索树退化为一条链表，查找、插入、删除等操作的时间复杂度为O(n)</p>
+
+        
+        <h3 id="并查集"   >
+          <a href="#并查集" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#并查集" class="heading-link"><i class="fas fa-link"></i></a><a href="#并查集" class="headerlink" title="并查集"></a>并查集</h3>
+      
+      
+        
+        <h3 id="线段树"   >
+          <a href="#线段树" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#线段树" class="heading-link"><i class="fas fa-link"></i></a><a href="#线段树" class="headerlink" title="线段树"></a>线段树</h3>
+      
+      <p>线段树（Segment Tree）是一种树型数据结构</p>
+<p>树中的每个节点代表一段[L,R]的区间<br>一个节点的左孩子和右孩子的区间不相交且其并恰好等于该节点对应的区间。<br>树的叶子节点对应的区间为[L,L]，也即单点。</p>
+<p><img src="https://cp-wiki.vercel.app/assets/img/segment-tree.8de86537.png"></p>
+<p>线段树常用于含修改的区间查询。</p>
+
+        
+        <h1 id="动态规划专题"   >
+          <a href="#动态规划专题" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#动态规划专题" class="heading-link"><i class="fas fa-link"></i></a><a href="#动态规划专题" class="headerlink" title="动态规划专题"></a>动态规划专题</h1>
+      
+      <p>靠数量取胜吧。。</p>
+<p>动态规划中每一个状态一定是由上一个状态推导出来的</p>
+<ul>
+<li>确定dp数组（dp table）以及下标的含义</li>
+<li>确定递推公式</li>
+<li>dp数组如何初始化</li>
+<li>确定遍历顺序</li>
+<li>举例推导dp数组</li>
+</ul>
+
+        
+        <h2 id="基础"   >
+          <a href="#基础" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#基础" class="heading-link"><i class="fas fa-link"></i></a><a href="#基础" class="headerlink" title="基础"></a>基础</h2>
+      
+      
+        
+        <h3 id="509-斐波那契数"   >
+          <a href="#509-斐波那契数" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#509-斐波那契数" class="heading-link"><i class="fas fa-link"></i></a><a href="#509-斐波那契数" class="headerlink" title="509. 斐波那契数"></a>509. 斐波那契数</h3>
+      
+      <figure class="highlight plain"><div class="table-container"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">if(n &lt;= 1) return n;</span><br><span class="line">let dp = [];</span><br><span class="line">dp[0] = 0;</span><br><span class="line">dp[1] = 1;</span><br><span class="line"></span><br><span class="line">for(let i = 2; i &lt;= n; i++) {</span><br><span class="line">    let sum = dp[0] + dp[1];</span><br><span class="line">    dp[0] = dp[1];</span><br><span class="line">    dp[1] = sum;</span><br><span class="line">}</span><br><span class="line">return dp[1];</span><br></pre></td></tr></tbody></table></div></div></figure>
+
+
+        
+        <h3 id="70-爬楼梯"   >
+          <a href="#70-爬楼梯" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#70-爬楼梯" class="heading-link"><i class="fas fa-link"></i></a><a href="#70-爬楼梯" class="headerlink" title="70. 爬楼梯"></a>70. 爬楼梯</h3>
+      
+      <p>当前位置，由前两个位置得出。</p>
+<figure class="highlight plain"><div class="table-container"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">if(n &lt;= 1) return n;</span><br><span class="line">let dp = new Array(n + 1).fill(0);</span><br><span class="line">dp[1] = 1;</span><br><span class="line">dp[2] = 1;</span><br><span class="line">for(let i = 3; i &lt;= n; i++) {</span><br><span class="line">    dp[i] = dp[i - 1] + dp[i - 2];</span><br><span class="line">}</span><br><span class="line">return dp[n]</span><br></pre></td></tr></tbody></table></div></div></figure>
+
+
+        
+        <h3 id="746-使用最小花费爬楼梯"   >
+          <a href="#746-使用最小花费爬楼梯" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#746-使用最小花费爬楼梯" class="heading-link"><i class="fas fa-link"></i></a><a href="#746-使用最小花费爬楼梯" class="headerlink" title="746. 使用最小花费爬楼梯"></a>746. 使用最小花费爬楼梯</h3>
+      
+      <p>找前两个的累加的最小值</p>
+<figure class="highlight plain"><div class="table-container"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">let n = cost.length;</span><br><span class="line">let pre = 0, cur = 0;</span><br><span class="line">for(let i = 2; i &lt;= n; i++) {</span><br><span class="line">    let next = Math.min(pre + cost[i - 2], cur + cost[i - 1]);</span><br><span class="line">    pre = cur;</span><br><span class="line">    cur = next;</span><br><span class="line">}</span><br><span class="line">return cur;</span><br></pre></td></tr></tbody></table></div></div></figure>
+
+
+        
+        <h3 id="62-不同路径"   >
+          <a href="#62-不同路径" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#62-不同路径" class="heading-link"><i class="fas fa-link"></i></a><a href="#62-不同路径" class="headerlink" title="62.不同路径"></a>62.不同路径</h3>
+      
+      <p>一个机器人位于一个 m x n 网格的左上角 （起始点在下图中标记为 “Start” ）。<br>机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为 “Finish” ）。<br>问总共有多少条不同的路径？</p>
+<p><img src="https://img-blog.csdnimg.cn/20210110174033215.png"></p>
+<p>二维dp，初始值，一行一列 1<br>从【1，1】开始，当前位置等于上一个，和前一个之和。</p>
+<figure class="highlight plain"><div class="table-container"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">let dp = new Array(m).fill(0).map(() =&gt; new Array(n).fill(0));</span><br><span class="line">for(let i = 0; i &lt; m; i++) {</span><br><span class="line">    dp[i][0] = 1;</span><br><span class="line">}</span><br><span class="line">for(let i = 0; i &lt; n; i++) {</span><br><span class="line">    dp[0][i] = 1;</span><br><span class="line">}</span><br><span class="line">for(let i = 1; i &lt; m; i++) {</span><br><span class="line">    for(let j = 1; j &lt; n; j++) {</span><br><span class="line">        dp[i][j] = dp[i - 1][j] + dp[i][j - 1];</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line">return dp[m - 1][n - 1];</span><br></pre></td></tr></tbody></table></div></div></figure>
+
+
+
+        
+        <h3 id="63-不同路径-II"   >
+          <a href="#63-不同路径-II" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#63-不同路径-II" class="heading-link"><i class="fas fa-link"></i></a><a href="#63-不同路径-II" class="headerlink" title="63. 不同路径 II"></a>63. 不同路径 II</h3>
+      
+      <p>网格中的障碍物和空位置分别用 1 和 0 来表示。<br><img src="https://assets.leetcode.com/uploads/2020/11/04/robot1.jpg"></p>
+<p>二维dp，同上，<br>需要处理的是1的部分。初始化的时候，有1，后面的路径就不设置了<br>累加部分，有1，当前位置就设置为 0 。</p>
+<figure class="highlight plain"><div class="table-container"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">let dp = new Array(obstacleGrid.length).fill(0).map(() =&gt; new Array(obstacleGrid[0].length).fill(0));</span><br><span class="line"></span><br><span class="line"> for(let i = 0; i &lt; obstacleGrid.length; i++) {</span><br><span class="line">     if(obstacleGrid[i][0] !== 1) {</span><br><span class="line">         dp[i][0] = 1;</span><br><span class="line">     } else {</span><br><span class="line">         break;</span><br><span class="line">     }</span><br><span class="line"> }</span><br><span class="line"> for(let i = 0; i &lt; obstacleGrid[0].length; i++) {</span><br><span class="line">     if(obstacleGrid[0][i] !== 1) {</span><br><span class="line">         dp[0][i] = 1;</span><br><span class="line">     } else {</span><br><span class="line">         break;</span><br><span class="line">     }</span><br><span class="line"> }</span><br><span class="line"></span><br><span class="line"> for(let i = 1; i &lt; obstacleGrid.length; i++) {</span><br><span class="line">     for(let j = 1; j &lt; obstacleGrid[0].length; j++) {</span><br><span class="line">         dp[i][j] = obstacleGrid[i][j] === 1 ? 0 : dp[i - 1][j] + dp[i][ j - 1];</span><br><span class="line">     }</span><br><span class="line"> }</span><br><span class="line"></span><br><span class="line"> return dp[obstacleGrid.length - 1][obstacleGrid[0].length - 1];</span><br></pre></td></tr></tbody></table></div></div></figure>
+
+
+
+        
+        <h3 id="343-整数拆分"   >
+          <a href="#343-整数拆分" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#343-整数拆分" class="heading-link"><i class="fas fa-link"></i></a><a href="#343-整数拆分" class="headerlink" title="343. 整数拆分"></a>343. 整数拆分</h3>
+      
+      <p>给定一个正整数 n ，将其拆分为 k 个 正整数 的和（ k &gt;= 2 ），并使这些整数的乘积最大化。<br>返回 你可以获得的最大乘积 。</p>
+<p>2 &lt;= n &lt;= 58</p>
+<p>j * (i - j) 是单纯的把整数拆分为两个数相乘，<br>而j * dp[i - j]是拆分成两个以及两个以上的个数相乘。</p>
+<figure class="highlight plain"><div class="table-container"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">let dp = new Array(n + 1).fill(0); // n + 1</span><br><span class="line">dp[2] = 1;</span><br><span class="line"></span><br><span class="line">for(let i = 2; i &lt;= n; i++) { // &lt;= n</span><br><span class="line">    for(let j = 1; j &lt; i; j++) {</span><br><span class="line">        dp[i] = Math.max(dp[i], dp[i - j] * j, (i - j) * j);</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line">return dp[n];</span><br></pre></td></tr></tbody></table></div></div></figure>
+
+
+
+        
+        <h3 id="96-不同的二叉搜索树"   >
+          <a href="#96-不同的二叉搜索树" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#96-不同的二叉搜索树" class="heading-link"><i class="fas fa-link"></i></a><a href="#96-不同的二叉搜索树" class="headerlink" title="96.不同的二叉搜索树"></a>96.不同的二叉搜索树</h3>
+      
+      <p>给定一个整数 n，求以 1 … n 为节点组成的二叉搜索树有多少种？</p>
+
+        
+        <h2 id="背包"   >
+          <a href="#背包" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#背包" class="heading-link"><i class="fas fa-link"></i></a><a href="#背包" class="headerlink" title="背包"></a>背包</h2>
+      
+      
+        
+        <h2 id="打家劫舍"   >
+          <a href="#打家劫舍" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#打家劫舍" class="heading-link"><i class="fas fa-link"></i></a><a href="#打家劫舍" class="headerlink" title="打家劫舍"></a>打家劫舍</h2>
+      
+      
+        
+        <h2 id="股票问题"   >
+          <a href="#股票问题" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#股票问题" class="heading-link"><i class="fas fa-link"></i></a><a href="#股票问题" class="headerlink" title="股票问题"></a>股票问题</h2>
+      
+      
+        
+        <h2 id="子序列问题"   >
+          <a href="#子序列问题" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#子序列问题" class="heading-link"><i class="fas fa-link"></i></a><a href="#子序列问题" class="headerlink" title="子序列问题"></a>子序列问题</h2>
+      
+      
+        
+        <h2 id="状态压缩动态规划"   >
+          <a href="#状态压缩动态规划" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#状态压缩动态规划" class="heading-link"><i class="fas fa-link"></i></a><a href="#状态压缩动态规划" class="headerlink" title="状态压缩动态规划"></a>状态压缩动态规划</h2>
+      
+      <p>状态压缩动态规划的一个明显标志是题目中某一参数的上限为一个很小的常数（通常不超过20）。<br>同时，题目中存在某种非此即彼的状态，比如工作是否完成，灯是否点亮，等式是否满足，数值的奇偶，等等。</p>
+
+        
+        <h1 id="高频题"   >
+          <a href="#高频题" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#高频题" class="heading-link"><i class="fas fa-link"></i></a><a href="#高频题" class="headerlink" title="高频题"></a>高频题</h1>
+      
+
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="https://37waterfall.github.io">37waterfall</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="https://37waterfall.github.io/2021/07/02/Leetcode%E5%88%B7%E9%A2%98/">https://37waterfall.github.io/2021/07/02/Leetcode%E5%88%B7%E9%A2%98/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://37waterfall.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2021/08/29/%E5%8D%9A%E5%AE%A2%E5%AD%A6%E4%B9%A0/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">博客学习</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2021/06/13/Three.js%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><span class="paginator-prev__text">Three.js学习笔记</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E9%93%BE%E6%8E%A5"><span class="toc-number">1.</span> <span class="toc-text">
+          
+          学习链接</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95"><span class="toc-number">2.</span> <span class="toc-text">
+          
+          基础算法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9E%9A%E4%B8%BE"><span class="toc-number">2.1.</span> <span class="toc-text">
+          
+          枚举</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#LC46-%E5%85%A8%E6%8E%92%E5%88%97-opens-new-window"><span class="toc-number">2.1.1.</span> <span class="toc-text">
+          
+          LC46 - 全排列(opens new window)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LC47-%E5%85%A8%E6%8E%92%E5%88%97-II-opens-new-window"><span class="toc-number">2.1.2.</span> <span class="toc-text">
+          
+          LC47 - 全排列 II(opens new window)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LC1494-%E5%B9%B6%E8%A1%8C%E8%AF%BE%E7%A8%8B-II-opens-new-window"><span class="toc-number">2.1.3.</span> <span class="toc-text">
+          
+          LC1494 - 并行课程 II(opens new window)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LC805-%E6%95%B0%E7%BB%84%E7%9A%84%E5%9D%87%E5%80%BC%E5%88%86%E5%89%B2-opens-new-window"><span class="toc-number">2.1.4.</span> <span class="toc-text">
+          
+          LC805 - 数组的均值分割(opens new window)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%92%E5%BA%8F"><span class="toc-number">2.2.</span> <span class="toc-text">
+          
+          排序</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#493-%E7%BF%BB%E8%BD%AC%E5%AF%B9"><span class="toc-number">2.2.1.</span> <span class="toc-text">
+          
+          493. 翻转对</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1665-%E5%AE%8C%E6%88%90%E6%89%80%E6%9C%89%E4%BB%BB%E5%8A%A1%E7%9A%84%E6%9C%80%E5%B0%91%E5%88%9D%E5%A7%8B%E8%83%BD%E9%87%8F"><span class="toc-number">2.2.2.</span> <span class="toc-text">
+          
+          1665. 完成所有任务的最少初始能量</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE"><span class="toc-number">2.3.</span> <span class="toc-text">
+          
+          二分查找</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1482-%E5%88%B6%E4%BD%9C-m-%E6%9D%9F%E8%8A%B1%E6%89%80%E9%9C%80%E7%9A%84%E6%9C%80%E5%B0%91%E5%A4%A9%E6%95%B0"><span class="toc-number">2.3.1.</span> <span class="toc-text">
+          
+          1482. 制作 m 束花所需的最少天数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E5%88%86%E6%9F%A5%E6%89%BE"><span class="toc-number">2.4.</span> <span class="toc-text">
+          
+          三分查找</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1515-%E6%9C%8D%E5%8A%A1%E4%B8%AD%E5%BF%83%E7%9A%84%E6%9C%80%E4%BD%B3%E4%BD%8D%E7%BD%AE"><span class="toc-number">2.4.1.</span> <span class="toc-text">
+          
+          1515. 服务中心的最佳位置</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-number">3.</span> <span class="toc-text">
+          
+          数据结构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%88"><span class="toc-number">3.1.</span> <span class="toc-text">
+          
+          栈</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#42-%E6%8E%A5%E9%9B%A8%E6%B0%B4"><span class="toc-number">3.1.1.</span> <span class="toc-text">
+          
+          42. 接雨水</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#84-%E6%9F%B1%E7%8A%B6%E5%9B%BE%E4%B8%AD%E6%9C%80%E5%A4%A7%E7%9A%84%E7%9F%A9%E5%BD%A2"><span class="toc-number">3.1.2.</span> <span class="toc-text">
+          
+          84. 柱状图中最大的矩形</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%98%9F%E5%88%97"><span class="toc-number">3.2.</span> <span class="toc-text">
+          
+          队列</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#862-%E5%92%8C%E8%87%B3%E5%B0%91%E4%B8%BA-K-%E7%9A%84%E6%9C%80%E7%9F%AD%E5%AD%90%E6%95%B0%E7%BB%84"><span class="toc-number">3.2.1.</span> <span class="toc-text">
+          
+          862. 和至少为 K 的最短子数组</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9B%E9%98%B6%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-number">3.3.</span> <span class="toc-text">
+          
+          进阶数据结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91"><span class="toc-number">3.3.1.</span> <span class="toc-text">
+          
+          平衡二叉搜索树</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%B6%E6%9F%A5%E9%9B%86"><span class="toc-number">3.3.2.</span> <span class="toc-text">
+          
+          并查集</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E6%AE%B5%E6%A0%91"><span class="toc-number">3.3.3.</span> <span class="toc-text">
+          
+          线段树</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E4%B8%93%E9%A2%98"><span class="toc-number">4.</span> <span class="toc-text">
+          
+          动态规划专题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80"><span class="toc-number">4.1.</span> <span class="toc-text">
+          
+          基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#509-%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0"><span class="toc-number">4.1.1.</span> <span class="toc-text">
+          
+          509. 斐波那契数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#70-%E7%88%AC%E6%A5%BC%E6%A2%AF"><span class="toc-number">4.1.2.</span> <span class="toc-text">
+          
+          70. 爬楼梯</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#746-%E4%BD%BF%E7%94%A8%E6%9C%80%E5%B0%8F%E8%8A%B1%E8%B4%B9%E7%88%AC%E6%A5%BC%E6%A2%AF"><span class="toc-number">4.1.3.</span> <span class="toc-text">
+          
+          746. 使用最小花费爬楼梯</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#62-%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84"><span class="toc-number">4.1.4.</span> <span class="toc-text">
+          
+          62.不同路径</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#63-%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84-II"><span class="toc-number">4.1.5.</span> <span class="toc-text">
+          
+          63. 不同路径 II</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#343-%E6%95%B4%E6%95%B0%E6%8B%86%E5%88%86"><span class="toc-number">4.1.6.</span> <span class="toc-text">
+          
+          343. 整数拆分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#96-%E4%B8%8D%E5%90%8C%E7%9A%84%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91"><span class="toc-number">4.1.7.</span> <span class="toc-text">
+          
+          96.不同的二叉搜索树</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%83%8C%E5%8C%85"><span class="toc-number">4.2.</span> <span class="toc-text">
+          
+          背包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8D"><span class="toc-number">4.3.</span> <span class="toc-text">
+          
+          打家劫舍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%82%A1%E7%A5%A8%E9%97%AE%E9%A2%98"><span class="toc-number">4.4.</span> <span class="toc-text">
+          
+          股票问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%90%E5%BA%8F%E5%88%97%E9%97%AE%E9%A2%98"><span class="toc-number">4.5.</span> <span class="toc-text">
+          
+          子序列问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92"><span class="toc-number">4.6.</span> <span class="toc-text">
+          
+          状态压缩动态规划</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%AB%98%E9%A2%91%E9%A2%98"><span class="toc-number">5.</span> <span class="toc-text">
+          
+          高频题</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/icons/stun-logo.svg" alt="avatar"></div><p class="sidebar-ov-author__text">Hello Stun</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">41</div><div class="sidebar-ov-state-item__name">档案</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2026</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>37waterfall</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v8.1.2</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.8.0</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=2.8.0"></script><script src="/js/stun-boot.js?v=2.8.0"></script><script src="/js/scroll.js?v=2.8.0"></script><script src="/js/header.js?v=2.8.0"></script><script src="/js/sidebar.js?v=2.8.0"></script></body></html>

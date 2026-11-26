@@ -1,0 +1,253 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.8.0" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.8.0" type="image/png" sizes="32x32"><meta name="description" content="可以通过照片生成模型，项目中需要使用雕塑模型，使用软件生成！Blender 2.9 3D扫描重建技术全解析bili链接">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Blender3D扫描重建技术">
+<meta property="og:url" content="https://37waterfall.github.io/2022/02/27/Blender3D%E6%89%AB%E6%8F%8F%E9%87%8D%E5%BB%BA%E6%8A%80%E6%9C%AF/index.html">
+<meta property="og:site_name" content="LJY_BLOG">
+<meta property="og:description" content="可以通过照片生成模型，项目中需要使用雕塑模型，使用软件生成！Blender 2.9 3D扫描重建技术全解析bili链接">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/02/7cda35338dd09401.jpg">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/02/418b10ebb3c85e67.jpg">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/02/95f99b788a2a99a7.jpg">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/02/5fc5d41ae692705a.jpg">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/02/f133cc724b3624c6.jpg">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/03/80164926e9f1edbb.jpg">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/03/620a96f3c9e226b0.jpg">
+<meta property="article:published_time" content="2022-02-26T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-02-28T16:00:00.000Z">
+<meta property="article:author" content="37waterfall">
+<meta property="article:tag" content="学习笔记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s3.bmp.ovh/imgs/2022/02/7cda35338dd09401.jpg"><title>Blender3D扫描重建技术 | LJY_BLOG</title><link ref="canonical" href="https://37waterfall.github.io/2022/02/27/Blender3D%E6%89%AB%E6%8F%8F%E9%87%8D%E5%BB%BA%E6%8A%80%E6%9C%AF/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.8.0"><link rel="stylesheet" href="css/custom.css"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 8.1.2"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">主页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">档案</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/reading/"><span class="header-nav-menu-item__icon"><i class="fas fa-book"></i></span><span class="header-nav-menu-item__text">阅读</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">LJY_BLOG</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">Blender3D扫描重建技术</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-02-27</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-03-01</span></span></div></header><div class="post-body">
+
+<p>可以通过照片生成模型，项目中需要使用雕塑模型，使用软件生成！<br><span class="exturl"><span class="exturl"><a class="exturl__link"  class="exturl__link" target="_blank" rel="noopener"  href="https://www.blendermagic.cn/#/article/496918f9-4279-11eb-95ed-0242ac110004" >Blender 2.9 3D扫描重建技术全解析</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br><span class="exturl"><span class="exturl"><a class="exturl__link"  class="exturl__link" target="_blank" rel="noopener"  href="https://www.bilibili.com/video/BV1yC4y1t7Fq?p=3" >bili链接</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+<span id="more"></span>
+
+<!-- 这里放个完成图片！ -->
+
+<span id="more"></span>
+
+
+        
+        <h1 id="简介"   >
+          <a href="#简介" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#简介" class="heading-link"><i class="fas fa-link"></i></a><a href="#简介" class="headerlink" title="简介"></a>简介</h1>
+      
+      <p>共介绍了三种工具，都可以使用Blender来处理！</p>
+<p>Meshroom - 照片生成模型 - 起点<br>Instant meshes - 模型减面 - 优化性能<br>Materialize - 模型贴图制作 - 漫反射/高光/法线/…</p>
+
+        
+        <h1 id="Meshroom"   >
+          <a href="#Meshroom" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#Meshroom" class="heading-link"><i class="fas fa-link"></i></a><a href="#Meshroom" class="headerlink" title="Meshroom"></a>Meshroom</h1>
+      
+      <blockquote>
+<p>注：不可存放在中文路径下！</p>
+</blockquote>
+<p><span class="exturl"><span class="exturl"><a class="exturl__link"  class="exturl__link" target="_blank" rel="noopener"  href="https://meshroom-manual.readthedocs.io/en/latest/first-steps/test/index.html" >Meshroom官方文档</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><span class="exturl"><span class="exturl"><a class="exturl__link"  class="exturl__link" target="_blank" rel="noopener"  href="https://zhidao.baidu.com/question/502155821310920244.html" >批处理命令修改文件扩展名</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>这里可以通过批处理命令修改 - 文件后缀 - 把jfif修改为 jpg<br><code>ren *.php* *.jpg</code></p>
+<p>拍摄有问题。。。</p>
+<p>真的可以有模型！</p>
+<p>拍摄需求 - <span class="exturl"><span class="exturl"><a class="exturl__link"  class="exturl__link" target="_blank" rel="noopener"  href="https://www.bilibili.com/video/av970250625?from=search&amp;seid=6478098442190928126&amp;spm_id_from=333.337.0.0" >内容来源</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<ol>
+<li>保证被拍摄物体光照充足均匀</li>
+<li>避免逆光拍摄（例如背景里有窗户等强光源会构成光照逆光条件）</li>
+<li>拍照片时候要围着要扫描的物体或者空间走动拍摄，不要原地转圈拍摄</li>
+<li>最理想的光照环境是室外，云层比较厚但光线正常的阴天</li>
+<li>关掉自动闪光，保持曝光度一致</li>
+<li>避免扫描高反光物体，植物等扫描效果不好</li>
+<li>避免各种虚焦点，如：景深虚焦</li>
+<li>保持对焦平均，避免焦外成像</li>
+<li>连续拍摄，保持元数据连贯性。</li>
+<li>照片数量并不是越多越好，一般100-200张比较好，当然也取决于计算机的运算能力。</li>
+<li>最后，保证拍照者能顺利围绕拍摄物体走一圈很重要。我演示的时候瞎拍照最常见困难是无法围着物体走一圈…被拍摄物体放在靠墙的桌子上导致一面去不了之类的情况。</li>
+</ol>
+
+        
+        <h2 id="测试"   >
+          <a href="#测试" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#测试" class="heading-link"><i class="fas fa-link"></i></a><a href="#测试" class="headerlink" title="测试"></a>测试</h2>
+      
+      <p><img src="https://s3.bmp.ovh/imgs/2022/02/7cda35338dd09401.jpg" alt="01"><br>官方案例测试</p>
+<ul>
+<li>查看如何拍摄 - 照片尺寸 - 光影 - 主体内容</li>
+</ul>
+<p><img src="https://s3.bmp.ovh/imgs/2022/02/418b10ebb3c85e67.jpg" alt="01"><br>下载内容</p>
+<ul>
+<li>41张图片 - 多角度</li>
+<li>6张图片</li>
+<li>3张图片</li>
+</ul>
+<p>图片分辨率 - 4032 * 3024<br>图片大小 - 2.9M<br>图片越多 - 时间越长 - 精度越高！</p>
+<p>拍摄的图片需要高清！</p>
+<p><strong>3张图片</strong>的测试实例<br>3张也可以有数据 - 很棒！<br><img src="https://s3.bmp.ovh/imgs/2022/02/95f99b788a2a99a7.jpg" alt="01"></p>
+<p>三角面 - 133384 - 需要减面！ - 可拓扑建模<br><img src="https://s3.bmp.ovh/imgs/2022/02/5fc5d41ae692705a.jpg" alt="02"></p>
+<p><strong>6张图片</strong>的测试实例<br>细节很棒了 - 有点吓人。。。<br>时间有点长。。。<br>三角面 - 331787 - 多了接近3倍！<br><img src="https://s3.bmp.ovh/imgs/2022/02/f133cc724b3624c6.jpg" alt="03"></p>
+<p><strong>41张图片</strong>测试实例</p>
+<p>看看要跑多久！CPU满了。。。。额。。</p>
+<p>跳过。。。去现场测试要注意数量。。</p>
+<p>拍摄总结！</p>
+<ol>
+<li>注意光照</li>
+<li>注意位置</li>
+<li>可拍摄局部</li>
+<li>注意图片尺寸</li>
+<li>导入程序 - 最好都是绿色标志！</li>
+</ol>
+
+        
+        <h1 id="Instant-meshes"   >
+          <a href="#Instant-meshes" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#Instant-meshes" class="heading-link"><i class="fas fa-link"></i></a><a href="#Instant-meshes" class="headerlink" title="Instant meshes"></a>Instant meshes</h1>
+      
+      <p>测试下载的模型 - 删面！</p>
+
+        
+        <h1 id="Materialize"   >
+          <a href="#Materialize" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#Materialize" class="heading-link"><i class="fas fa-link"></i></a><a href="#Materialize" class="headerlink" title="Materialize"></a>Materialize</h1>
+      
+      <p>生成贴图！也可用万物有灵！</p>
+
+        
+        <h1 id="其他软件"   >
+          <a href="#其他软件" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#其他软件" class="heading-link"><i class="fas fa-link"></i></a><a href="#其他软件" class="headerlink" title="其他软件"></a>其他软件</h1>
+      
+      <p><span class="exturl"><span class="exturl"><a class="exturl__link"  class="exturl__link" target="_blank" rel="noopener"  href="https://www.bilibili.com/video/BV11A41137DH?p=2" >照片扫描生成模型</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><br>RealityCapture BETA 1.0</p>
+
+        
+        <h1 id="其他资源"   >
+          <a href="#其他资源" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#其他资源" class="heading-link"><i class="fas fa-link"></i></a><a href="#其他资源" class="headerlink" title="其他资源"></a>其他资源</h1>
+      
+      <p>Blender学习资源！<br><span class="exturl"><span class="exturl"><a class="exturl__link"  class="exturl__link" target="_blank" rel="noopener"  href="https://www.bilibili.com/video/av372105463?from=search&amp;seid=14235041838972003180&amp;spm_id_from=333.337.0.0" >Blender环境场景合集</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><strong>需要的功能</strong><br>映射建模</p>
+<p>拓扑建模</p>
+<p>雕刻建模 - 看情况。。</p>
+<p>打光设置 - 用现有模型测试！</p>
+<p>烘焙低模</p>
+<p>烘焙贴图 - 纹理图 - 模型材质贴图</p>
+<p>关键帧动画</p>
+<p>镜头动画</p>
+
+        
+        <h1 id="建模学习"   >
+          <a href="#建模学习" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#建模学习" class="heading-link"><i class="fas fa-link"></i></a><a href="#建模学习" class="headerlink" title="建模学习"></a>建模学习</h1>
+      
+      <p>记录一下过程 + 注意点 + 完成图</p>
+
+        
+        <h2 id="骰子制作"   >
+          <a href="#骰子制作" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#骰子制作" class="heading-link"><i class="fas fa-link"></i></a><a href="#骰子制作" class="headerlink" title="骰子制作"></a>骰子制作</h2>
+      
+      <p><span class="exturl"><span class="exturl"><a class="exturl__link"  class="exturl__link" target="_blank" rel="noopener"  href="https://www.bilibili.com/video/av679182411?from=search&amp;seid=12476712297504263574&amp;spm_id_from=333.337.0.0" >Blender 3.0 Cycles 照片级场景渲染技巧</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p>收获：</p>
+<ol>
+<li>应用比例 - 如果比例缩小了，应用当前值为 1 - ctrl + a - scale</li>
+<li>查看物体 - 按~ 到 view selected - 如果物体很小，很实用！！！ - 可以借助视图导航移动视角！</li>
+<li>合并顶点 - At last、At center 有收获！</li>
+<li>骰子两面之和 - 为7！</li>
+<li>重复操作 - shfit + R - 如果刚才倒角了，可以在另一个顶点，继续同样的操作！</li>
+<li>圆形选区 - 右键 - LoopTools - 需要勾选 - Circle</li>
+<li>沿法线挤出 - Alt + E键调出挤出命令的菜单！</li>
+<li>edge cease - 如果细分后不圆 - 用这个调整 - 选中边！</li>
+<li>自动平滑 - 如果表面平滑有问题的话 - 在Object Data Properties - Normals 中选中！</li>
+<li>渲染设置 - Cycles - Denoise - Color Management - Filmic Log - Medium High - 这个Filmic好神奇！！</li>
+<li>灯光设置 - 环境光为0 - 灯光设置约束 - track to 物体</li>
+<li>相机设置 - 设置模糊 - Depth of Field</li>
+</ol>
+<p>Cycles渲染效果 - 未渲染 - 渲染模式下查看的效果。。<br><img src="https://s3.bmp.ovh/imgs/2022/03/80164926e9f1edbb.jpg" alt="01"></p>
+
+        
+        <h2 id="树木和落叶"   >
+          <a href="#树木和落叶" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#树木和落叶" class="heading-link"><i class="fas fa-link"></i></a><a href="#树木和落叶" class="headerlink" title="树木和落叶"></a>树木和落叶</h2>
+      
+      <p><span class="exturl"><span class="exturl"><a class="exturl__link"  class="exturl__link" target="_blank" rel="noopener"  href="https://www.bilibili.com/video/BV1b5411f7uW/?spm_id_from=333.788.recommend_more_video.15" >【教程】blender 制作树木和落叶教程</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p>开启Blender插件 - TreeGen<br>创建 - 曲线 - Tree Gen</p>
+<p>收获：</p>
+<ol>
+<li>使用Tree Gen生成的树，可以设置树干，树叶的参数</li>
+<li>上材质 - 可树干，树叶单独上</li>
+<li>渲染设置 - 开启辉光 - 关闭柔和阴影 - 阴影清晰显现出来了</li>
+<li>细分一个网格 - 随机顶点 - 这样平面就不平整了 - 上树叶的材质</li>
+<li>粒子 - 毛发 - 数量 - 物体当粒子 - <strong>编辑模式下进入物体</strong> 即可修改粒子的方向等！！</li>
+<li>粒子 - 高级 - 旋转 - 随机化阶段！</li>
+<li>权重绘制 - 在粒子里顶点组 - 密度中 - 设置该顶点组（绘制的权重！）</li>
+</ol>
+<p>完成图 - 渲染模式 - 截图<br><img src="https://s3.bmp.ovh/imgs/2022/03/620a96f3c9e226b0.jpg" alt="01"><br>该叶子还可以再多点 / 再大点！</p>
+<p>这个顶点组使用的有收获，还有树的创建，叶子贴图（透明！）</p>
+
+        
+        <h2 id="M-design练习"   >
+          <a href="#M-design练习" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#M-design练习" class="heading-link"><i class="fas fa-link"></i></a><a href="#M-design练习" class="headerlink" title="M-design练习"></a>M-design练习</h2>
+      
+      <p>youtube上的作者，跟着学习！- 有收获 - 简单实用！<br><span class="exturl"><span class="exturl"><a class="exturl__link"  class="exturl__link" target="_blank" rel="noopener"  href="https://www.youtube.com/watch?v=bO_NX6w0JUs&amp;list=PLyfLYmBsCF_3hxKD9yGBfS38HZm_yq2-i&amp;index=7" >[blender2.8 tutorial] Modeling in 5 minutes! Making Japanese Tanabata decoration</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p>收获：</p>
+<ol>
+<li>细分表面后 - 两端插入一个内插面 就可以到顶了！</li>
+<li>结合edge crease - 平滑表面出现硬边！</li>
+<li></li>
+</ol>
+
+        
+        <h1 id="总结"   >
+          <a href="#总结" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#总结" class="heading-link"><i class="fas fa-link"></i></a><a href="#总结" class="headerlink" title="总结"></a>总结</h1>
+      
+      <p>学习软件就是要边学边做，然后写总结！</p>
+<p>输入 - 输出 - 压缩 - 分而治之！</p>
+
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="https://37waterfall.github.io">37waterfall</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="https://37waterfall.github.io/2022/02/27/Blender3D%E6%89%AB%E6%8F%8F%E9%87%8D%E5%BB%BA%E6%8A%80%E6%9C%AF/">https://37waterfall.github.io/2022/02/27/Blender3D%E6%89%AB%E6%8F%8F%E9%87%8D%E5%BB%BA%E6%8A%80%E6%9C%AF/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://37waterfall.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2022/03/02/%E4%BA%A4%E4%BA%92%E8%AE%BE%E8%AE%A1%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">交互设计学习笔记</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2022/02/25/Webpack5%E4%BD%BF%E7%94%A8-%E5%9F%BA%E7%A1%80/"><span class="paginator-prev__text">Webpack5使用-基础</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">
+          
+          简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Meshroom"><span class="toc-number">2.</span> <span class="toc-text">
+          
+          Meshroom</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95"><span class="toc-number">2.1.</span> <span class="toc-text">
+          
+          测试</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Instant-meshes"><span class="toc-number">3.</span> <span class="toc-text">
+          
+          Instant meshes</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Materialize"><span class="toc-number">4.</span> <span class="toc-text">
+          
+          Materialize</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6"><span class="toc-number">5.</span> <span class="toc-text">
+          
+          其他软件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E8%B5%84%E6%BA%90"><span class="toc-number">6.</span> <span class="toc-text">
+          
+          其他资源</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BB%BA%E6%A8%A1%E5%AD%A6%E4%B9%A0"><span class="toc-number">7.</span> <span class="toc-text">
+          
+          建模学习</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AA%B0%E5%AD%90%E5%88%B6%E4%BD%9C"><span class="toc-number">7.1.</span> <span class="toc-text">
+          
+          骰子制作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%91%E6%9C%A8%E5%92%8C%E8%90%BD%E5%8F%B6"><span class="toc-number">7.2.</span> <span class="toc-text">
+          
+          树木和落叶</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#M-design%E7%BB%83%E4%B9%A0"><span class="toc-number">7.3.</span> <span class="toc-text">
+          
+          M-design练习</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">8.</span> <span class="toc-text">
+          
+          总结</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/icons/stun-logo.svg" alt="avatar"></div><p class="sidebar-ov-author__text">Hello Stun</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">41</div><div class="sidebar-ov-state-item__name">档案</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2026</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>37waterfall</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v8.1.2</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.8.0</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=2.8.0"></script><script src="/js/stun-boot.js?v=2.8.0"></script><script src="/js/scroll.js?v=2.8.0"></script><script src="/js/header.js?v=2.8.0"></script><script src="/js/sidebar.js?v=2.8.0"></script></body></html>

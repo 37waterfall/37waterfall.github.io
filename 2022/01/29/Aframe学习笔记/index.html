@@ -1,0 +1,161 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.8.0" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.8.0" type="image/png" sizes="32x32"><meta name="description" content="利用Aframe官网案例的数据，模仿了一下官方案例。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Aframe学习笔记">
+<meta property="og:url" content="https://37waterfall.github.io/2022/01/29/Aframe%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="LJY_BLOG">
+<meta property="og:description" content="利用Aframe官网案例的数据，模仿了一下官方案例。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s3.bmp.ovh/imgs/2022/02/08a29789475fc08a.gif">
+<meta property="article:published_time" content="2022-01-28T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-03-13T16:00:00.000Z">
+<meta property="article:author" content="37waterfall">
+<meta property="article:tag" content="学习笔记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s3.bmp.ovh/imgs/2022/02/08a29789475fc08a.gif"><title>Aframe学习笔记 | LJY_BLOG</title><link ref="canonical" href="https://37waterfall.github.io/2022/01/29/Aframe%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.8.0"><link rel="stylesheet" href="css/custom.css"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 8.1.2"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">主页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">档案</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/reading/"><span class="header-nav-menu-item__icon"><i class="fas fa-book"></i></span><span class="header-nav-menu-item__text">阅读</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">LJY_BLOG</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">Aframe学习笔记</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-01-29</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-03-14</span></span></div></header><div class="post-body">
+
+<p>利用Aframe官网案例的数据，模仿了一下官方案例。<br><img src="https://s3.bmp.ovh/imgs/2022/02/08a29789475fc08a.gif" alt="01"></p>
+
+<span id="more"></span>
+
+<span id="more"></span>
+
+
+        
+        <h1 id="完成链接"   >
+          <a href="#完成链接" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#完成链接" class="heading-link"><i class="fas fa-link"></i></a><a href="#完成链接" class="headerlink" title="完成链接"></a>完成链接</h1>
+      
+      <p><span class="exturl"><span class="exturl"><a class="exturl__link"  class="exturl__link" target="_blank" rel="noopener"  href="https://a37waterfall.gitee.io/test-aframe/" >链接</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        
+        <h1 id="学习过程"   >
+          <a href="#学习过程" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#学习过程" class="heading-link"><i class="fas fa-link"></i></a><a href="#学习过程" class="headerlink" title="学习过程"></a>学习过程</h1>
+      
+      <p>记录一下学习过程。📃📃📃</p>
+<ul>
+<li><span class="exturl"><span class="exturl"><a class="exturl__link"  class="exturl__link" target="_blank" rel="noopener"  href="https://aframe.io/examples/showcase/gunters-of-oasis/" >案例参考</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+<li><span class="exturl"><span class="exturl"><a class="exturl__link"  class="exturl__link" target="_blank" rel="noopener"  href="https://aframe.io/docs/1.2.0/introduction/" >官方文档</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></li>
+</ul>
+
+        
+        <h2 id="引入资源"   >
+          <a href="#引入资源" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#引入资源" class="heading-link"><i class="fas fa-link"></i></a><a href="#引入资源" class="headerlink" title="引入资源"></a>引入资源</h2>
+      
+      <figure class="highlight plain"><div class="table-container"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src="https://aframe.io/releases/1.2.0/aframe.min.js"&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">主要用到的就是这个场景文件，</span><br><span class="line">问：js到底起了什么作用？？？？</span><br><span class="line">&lt;script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"&gt;&lt;/script&gt;</span><br></pre></td></tr></tbody></table></div></div></figure>
+
+
+        
+        <h2 id="创建a-assets"   >
+          <a href="#创建a-assets" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#创建a-assets" class="heading-link"><i class="fas fa-link"></i></a><a href="#创建a-assets" class="headerlink" title="创建a-assets"></a>创建a-assets</h2>
+      
+      <p>方便数据缓存，调用数据，通过id选择器。</p>
+<figure class="highlight plain"><div class="table-container"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;a-assets&gt;</span><br><span class="line">	&lt;img id="arches" src="./img/arches.jpg"&gt;</span><br><span class="line">	&lt;img id="contact" src="./img/contact.jpg"&gt;</span><br><span class="line">	&lt;img id="dream" src="./img/dream.jpg"&gt;</span><br><span class="line">	&lt;img id="egypt" src="./img/egypt.jpg"&gt;</span><br><span class="line">	&lt;img id="forest" src="./img/forest.jpg"&gt;</span><br><span class="line">	&lt;img id="goaland" src="./img/goaland.jpg"&gt;</span><br><span class="line">	&lt;img id="goldmine" src="./img/goldmine.jpg"&gt;</span><br><span class="line">	&lt;img id="japan" src="./img/japan.jpg"&gt;</span><br><span class="line">	&lt;img id="tron" src="./img/tron.jpg"&gt;</span><br><span class="line">	&lt;img id="poison" src="./img/poison.jpg"&gt;</span><br><span class="line">	&lt;img id="volcano" src="./img/volcano.jpg"&gt;</span><br><span class="line">	&lt;img id="yavapai" src="./img/yavapai.jpg"&gt;</span><br><span class="line">	</span><br><span class="line">	&lt;audio id="click-sound" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"&gt;&lt;/audio&gt;</span><br><span class="line">	</span><br><span class="line">	&lt;!-- &lt;a-asset-item id="cityModel" src="https://cdn.aframe.io/test-models/models/glTF-2.0/virtualcity/VC.gltf"&gt;&lt;/a-asset-item&gt; --&gt;</span><br><span class="line">	&lt;a-asset-item id="cityModel" src="./model/model.glb"&gt;&lt;/a-asset-item&gt;</span><br><span class="line">&lt;/a-assets&gt;</span><br></pre></td></tr></tbody></table></div></div></figure>
+
+
+
+        
+        <h2 id="设置交互点"   >
+          <a href="#设置交互点" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#设置交互点" class="heading-link"><i class="fas fa-link"></i></a><a href="#设置交互点" class="headerlink" title="设置交互点"></a>设置交互点</h2>
+      
+      <p>通过camera，嵌套cursor，实现中心点射线交互。<br>屏幕中心会出现一个圆圈，可以与物体交互，也可以改变圆圈的颜色，增加用户体验。</p>
+<figure class="highlight plain"><div class="table-container"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;a-camera&gt;</span><br><span class="line">	&lt;a-cursor intersection-spawn="event: click; mixin: voxel"&gt;&lt;/a-cursor&gt;</span><br><span class="line">&lt;/a-camera&gt;</span><br></pre></td></tr></tbody></table></div></div></figure>
+
+
+
+        
+        <h2 id="创建交互按钮"   >
+          <a href="#创建交互按钮" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#创建交互按钮" class="heading-link"><i class="fas fa-link"></i></a><a href="#创建交互按钮" class="headerlink" title="创建交互按钮"></a>创建交互按钮</h2>
+      
+      <p>创建一系列<strong>球体</strong>，用position控制位置。注意xyz轴的朝向<br>制作鼠标移入移出的放大效果，<br>设置鼠标点击后的声音</p>
+<blockquote>
+<p>这个声音会根据点击的距离来判断大小，距离近，声音大，距离远，声音小！！！</p>
+</blockquote>
+<p>这里是通过clickable这个class来实现事件绑定，在循环中设置交互事件。</p>
+<figure class="highlight plain"><div class="table-container"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;a-sphere id = 'test' class="clickable" src='#arches' position='0 2 15'</span><br><span class="line">			animation="property: rotation; to: 0 360 0; dir: alternate; dur: 20000; loop: true" name='001'</span><br><span class="line">			animation__mouseenter="property: scale; to: 1.8 1.8 1.8; dur: 300; startEvents: mouseenter"</span><br><span class="line">			animation__mouseleave="property: scale; to: 1 1 1; dur: 300; startEvents: mouseleave"</span><br><span class="line">			sound="on: click; src: #click-sound"&gt;&lt;/a-sphere&gt;</span><br><span class="line">			</span><br><span class="line">			</span><br><span class="line">var sphere = document.querySelectorAll('.clickable');  // 全部获取</span><br><span class="line">console.log('sphere', sphere)</span><br><span class="line">for(let i = 0; i &lt; sphere.length; i++) {</span><br><span class="line">	console.log('test001', sphere[i].getAttribute('src'))</span><br><span class="line">	sphere[i].onclick = (evt) =&gt; {</span><br><span class="line">		let temp = evt.srcElement.components.material.attrValue.src; // 通过查找数据信息得到当前球所带的信息</span><br><span class="line">		temp = temp.substring(1) // 去掉前面的#</span><br><span class="line">		console.log(temp)</span><br><span class="line">		entityEl.setAttribute('environment', { // 设置场景的信息，转换场景</span><br><span class="line">			preset: `${temp}`,</span><br><span class="line">			// dressingAmount: 500 // 设置场景的密度。</span><br><span class="line">		});</span><br><span class="line">		</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></div></div></figure>
+
+
+
+        
+        <h2 id="场景初始化"   >
+          <a href="#场景初始化" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#场景初始化" class="heading-link"><i class="fas fa-link"></i></a><a href="#场景初始化" class="headerlink" title="场景初始化"></a>场景初始化</h2>
+      
+      <p>在一开始的时候，加载模型，后面的模型切换，通过点击事件。</p>
+<figure class="highlight plain"><div class="table-container"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">var sceneEl = document.querySelector('a-scene'</span><br><span class="line">AFRAME.registerComponent('do-something-once-loaded', {</span><br><span class="line">	init: function() {</span><br><span class="line">		// This will be called after the entity has properly attached and loaded.</span><br><span class="line">		console.log('I am ready!');</span><br><span class="line">	}</span><br><span class="line">});</span><br><span class="line"></span><br><span class="line">var entityEl = document.createElement('a-entity');</span><br><span class="line">	entityEl.setAttribute('do-something-once-loaded', '')</span><br><span class="line">	entityEl.setAttribute('environment', {</span><br><span class="line">		preset: `tron`,</span><br><span class="line">		// dressingAmount: 500</span><br><span class="line">	});</span><br><span class="line">	sceneEl.appendChild(entityEl);</span><br><span class="line"></span><br></pre></td></tr></tbody></table></div></div></figure>
+
+
+
+        
+        <h2 id="加载模型"   >
+          <a href="#加载模型" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#加载模型" class="heading-link"><i class="fas fa-link"></i></a><a href="#加载模型" class="headerlink" title="加载模型"></a>加载模型</h2>
+      
+      <p>利用现有模板，加载模型，<br>模型来源，官网案例，按f12下载。<br>利用aframe的调试工具，调整模型位置 - 按ctrl + alt + i 跳出调整页面。</p>
+<figure class="highlight plain"><div class="table-container"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">加载模型模板</span><br><span class="line">&lt;script&gt;</span><br><span class="line">  AFRAME.registerComponent('modify-materials', {</span><br><span class="line">    init: function () {</span><br><span class="line">      // Wait for model to load.</span><br><span class="line">      this.el.addEventListener('model-loaded', () =&gt; {</span><br><span class="line">        // Grab the mesh / scene.</span><br><span class="line">        const obj = this.el.getObject3D('mesh');</span><br><span class="line">        // Go over the submeshes and modify materials we want.</span><br><span class="line">        obj.traverse(node =&gt; {</span><br><span class="line">          if (node.name.indexOf('ship') !== -1) {</span><br><span class="line">            node.material.color.set('red');</span><br><span class="line">          }</span><br><span class="line">        });</span><br><span class="line">      });</span><br><span class="line">    }</span><br><span class="line">  });</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;a-scene background="color: #ECECEC"&gt;</span><br><span class="line">  &lt;a-assets&gt;</span><br><span class="line">	// 修改这里的src即可。</span><br><span class="line">    &lt;a-asset-item id="cityModel" src="https://cdn.aframe.io/test-models/models/glTF-2.0/virtualcity/VC.gltf"&gt;&lt;/a-asset-item&gt;</span><br><span class="line">  &lt;/a-assets&gt;</span><br><span class="line">  &lt;a-entity gltf-model="#cityModel" modify-materials&gt;&lt;/a-entity&gt; // </span><br><span class="line">&lt;/a-scene&gt;</span><br><span class="line"></span><br></pre></td></tr></tbody></table></div></div></figure>
+
+
+        
+        <h1 id="后续功能"   >
+          <a href="#后续功能" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#后续功能" class="heading-link"><i class="fas fa-link"></i></a><a href="#后续功能" class="headerlink" title="后续功能"></a>后续功能</h1>
+      
+      <p>添加交互动画，如导弹发射，粒子动画等。</p>
+
+        
+        <h1 id="总结收获"   >
+          <a href="#总结收获" class="heading-link"><i class="fas fa-link"></i></a>
+          <a href="#总结收获" class="heading-link"><i class="fas fa-link"></i></a><a href="#总结收获" class="headerlink" title="总结收获"></a>总结收获</h1>
+      
+      <p>按f12，通过字符串改变场景的时候，很神奇，整个场景的切换是通过改变字符串来是实现的。<br>在找当前物体所带的数据的时候，花了一些时间，成功找到需要的信息。</p>
+<p>阅读文档 + 模仿 + 实践，在学习新内容方面，很有意义！🛒🛒🛒</p>
+
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="https://37waterfall.github.io">37waterfall</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="https://37waterfall.github.io/2022/01/29/Aframe%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">https://37waterfall.github.io/2022/01/29/Aframe%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://37waterfall.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2022/02/02/%E5%89%8D%E7%AB%AF%E9%9D%A2%E7%BB%8F%E6%B1%87%E6%80%BB/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">前端面经汇总</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2022/01/26/TypeScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><span class="paginator-prev__text">TypeScript学习笔记</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%8C%E6%88%90%E9%93%BE%E6%8E%A5"><span class="toc-number">1.</span> <span class="toc-text">
+          
+          完成链接</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E8%BF%87%E7%A8%8B"><span class="toc-number">2.</span> <span class="toc-text">
+          
+          学习过程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E5%85%A5%E8%B5%84%E6%BA%90"><span class="toc-number">2.1.</span> <span class="toc-text">
+          
+          引入资源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BAa-assets"><span class="toc-number">2.2.</span> <span class="toc-text">
+          
+          创建a-assets</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E4%BA%A4%E4%BA%92%E7%82%B9"><span class="toc-number">2.3.</span> <span class="toc-text">
+          
+          设置交互点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E4%BA%A4%E4%BA%92%E6%8C%89%E9%92%AE"><span class="toc-number">2.4.</span> <span class="toc-text">
+          
+          创建交互按钮</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%BA%E6%99%AF%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">2.5.</span> <span class="toc-text">
+          
+          场景初始化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A0%E8%BD%BD%E6%A8%A1%E5%9E%8B"><span class="toc-number">2.6.</span> <span class="toc-text">
+          
+          加载模型</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%8E%E7%BB%AD%E5%8A%9F%E8%83%BD"><span class="toc-number">3.</span> <span class="toc-text">
+          
+          后续功能</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%BB%E7%BB%93%E6%94%B6%E8%8E%B7"><span class="toc-number">4.</span> <span class="toc-text">
+          
+          总结收获</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/icons/stun-logo.svg" alt="avatar"></div><p class="sidebar-ov-author__text">Hello Stun</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">41</div><div class="sidebar-ov-state-item__name">档案</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2026</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>37waterfall</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v8.1.2</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.8.0</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=2.8.0"></script><script src="/js/stun-boot.js?v=2.8.0"></script><script src="/js/scroll.js?v=2.8.0"></script><script src="/js/header.js?v=2.8.0"></script><script src="/js/sidebar.js?v=2.8.0"></script></body></html>
